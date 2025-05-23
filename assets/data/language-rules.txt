@@ -1,0 +1,655 @@
+Basic features
+The script is an alphabet. Both consonants and vowels are indicated by letters. See the table to the right for a brief overview of features for the modern Tai Dam orthography.
+The Tai Viet script is heavily syllable-based, with exceptions being a very small number of unstressed initial syllables, and loan words.
+Tai Viet text runs left to right in horizontal lines. Words are separated by spaces, although this is a recent innovation.
+
+❯ Consonant summary table
+Tai Dam uses 42 consonant charactes, all neatly divided into 2 classes. Each consonant is associated with a high or low class to indicate tone. Tone is indicated by a combination of the consonant class, the syllable type (checked/unchecked), plus any tone mark.
+There are no conjuncts or subjoined consonants.
+The only syllable-initial cluster involves labialisation, using ꪫ w.
+Syllable-final consonant sounds use a subset of 8 ordinary consonant letters, but since there is no inherent vowel, it is still simple to detect syllable boundaries. Syllable-final consonant sounds are also built into 6 vowel-consonant graphemes.
+
+❯ Vowel summary table
+This table only summarises basic vowel to character assignments.
+Plain	
+i
+ꪲ
+ɨ
+ꪳ
+u
+ꪴ
+e
+ꪹ◌ꪸ
+o
+ꪶ◌
+ə
+ꪹ◌ꪷ
+ɛ
+ꪵ◌
+ɔ
+ꪷ
+ɔ
+ꪮ
+ɔ
+ꪯ
+a
+ꪰ
+aː
+ꪱ
+
+Complex	
+iə
+ꪸ
+ɨə
+ꪹ◌
+uə
+ꪺ◌
+əw
+ꪻ◌
+ʷɛ
+ꪵ◌ꪫ
+ʷɛ
+ꪵ◌ꪫꪥ
+aj
+ꪼ◌
+aːw
+ꪹ◌ꪱ
+am
+ꪾ
+an
+ꪽ
+ap
+ꪚꪾ
+
+Standalone	
+ʔɔ
+ꪮ
+ʔɔ
+ꪯ
+
+The Tai Dam orthography is an alphabet (with no inherent vowel). Vowels are written using a mixture of 13 ordinary spacing characters (of which 5 are also consonants) and 7 combining marks.
+Tai Viet uses visual placement: only the vowel components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are typed in the order seen.
+This page lists 6 multipart vowels, made from 6 vowel signs and 3 consonants. Multipart vowels can involve up to 3 glyphs, though usually only 2, and glyphs can surround the base consonant(s) on 2 sides.
+There are 5 pre-base vowel glyphs (all letters), but no circumgraphs.
+There are no independent vowels, and standalone vowel sounds use a vowel sign attached to ꪮU+AAAE LETTER LOW O or ꪯU+AAAF LETTER HIGH O.
+Tone can be indicated either by diacritics or ordinary spacing characters. Both are a recent innovation. Combining tone marks always follow the root consonant and any combining vowels, ie. they come before any post-base vowel. Spacing tone marks always come at the very end of the syllable.
+
+Standalone vowels
+Standalone vowels are vowel sounds that are not preceded by a consonant sound, or are preceded by only a glottal stop. They may appear at the beginning of a word or in the middle of a word after a preceding vowel.
+There are no independent vowels, and Tai Viet represents what look like standalone vowels using a vowel sign attached to ꪮU+AAAE LETTER LOW O or ꪯU+AAAF LETTER HIGH O, and phonetic transcriptions include an initial glottal stop.
+ꪮ꪿ꪱꪉ ʔaːŋ² basin, tub
+ꪵꪮꪚ ʔɛp̚˦˥ to learn
+
+Post-consonant vowels
+Vowels are written using a mixture of 13 ordinary spacing characters (of which 5 are also consonants) and 7 combining marks. Tai Viet uses visual placement: only the vowel components that appear above or below the consonant are combining marks; the others are ordinary spacing characters that are typed in the order seen.
+This page lists 6 multipart vowels, made from 6 vowel signs and 3 consonants. Multipart vowels can involve up to 3 glyphs, though usually only 2, and glyphs can surround the base consonant(s) on 2 sides. There are 5 pre-base vowel glyphs (all letters), but no circumgraphs.
+
+Combining marks used for vowels
+Tai Dam uses the following combining marks for vowels.
+ꪲ
+i
+AAB2
+ꪳ
+ɨ
+AAB3
+ꪴ
+u
+AAB4
+ꪷ
+ɔ
+AAB7
+ꪰ
+a
+AAB0
+ꪸ
+iə
+AAB8
+ꪾ
+am
+AABE
+
+Dedicated vowel letters
+ꪁꪺ
+kuə
+U+AA81 TAI VIET LETTER HIGH KO + U+AABA TAI VIET VOWEL UA
+
+The following additional, vowel-specific characters are ordinary spacing characters, with the general category of 'letter'.
+ꪶ
+o
+AAB6
+ꪵ
+ɛ
+AAB5
+ꪱ
+aː
+AAB1
+ꪹ
+ɨə
+AAB9
+ꪺ
+uə
+AABA
+ꪻ
+əw
+AABB
+ꪼ
+aj
+AABC
+ꪽ
+an
+AABD
+
+Five of these are typed and stored before the onset consonant (see Pre-base vowel signs), and only the following 3 appear after:
+ꪱU+AAB1 VOWEL AA
+ꪽU+AABD VOWEL AN
+ꪺU+AABA VOWEL UA
+
+Consonants used for vowels
+ꪁꪮ
+kɔ
+U+AA81 TAI VIET LETTER HIGH KO + U+AAAE TAI VIET LETTER LOW O
+
+The following characters are also used to create vowel sounds, either alone or as part of a multipart vowel.
+ꪮ
+ʔɔ
+AAAE
+ꪯ
+ʔɔ
+AAAF
+ꪫ
+v -w
+AAAB
+ꪥ
+j
+AAA5
+ꪚ
+b -p
+AA9A
+ꪮU+AAAE LETTER LOW O and ꪯU+AAAF LETTER HIGH O can represent vowels on their own. The following word in fact shows the same character being used as both consonant and vowel in the same word.2
+ꪮꪮꪀ ʔɔʔ² to go out
+The others are used in combination with other vowel signs, see Multipart vowels.
+
+Pre-base vowel signs
+ꪶꪁ
+ko
+U+AAB6 TAI VIET VOWEL O + U+AA81 TAI VIET LETTER HIGH KO
+Five vowel signs appear to the left of the onset consonant after which they are pronounced.
+ꪹ
+ɨə
+AAB9
+ꪶ
+o
+AAB6
+ꪵ
+ɛ
+AAB5
+ꪻ
+əw
+AABB
+ꪼ
+aj
+AABC
+
+Like Lao, Tai Viet uses a visual encoding model, so these characters are not combining characters, but are typed and stored before the base. For example:
+ꪵꪣꪫ mɛw˥ cat
+Note that ꪵU+AAB5 VOWEL E should not be typed as two successive ꪹU+AAB9 VOWEL UEA characters.
+
+These vowel signs are placed before the start of the syllable onset. This means that in a word with more than one consonant at the start (ie. a labialised consonant) the pre-base vowel is placed to the left of the syllable-initial consonant, rather than to the left of the consonant after which it is pronounced.
+Figure 1 shows an example to graphically illustrate the relationships between the characters.
+ꪵꪁꪫꪥ kʷɛ² cinnamon
+A vowel sign that appears 2 characters out of sequence from where it is pronounced, because the syllable onset is 2 characters long.
+
+Multipart vowels
+A composite vowel sign is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel signs, repurposed consonants, and diacritics available. It is the opposite of a circumgraph.
+ꪹꪁꪸ
+ke
+U+AAB9 VOWEL UEA + U+AA81 LETTER HIGH KO + U+AAB8 VOWEL IA
+
+Vowels represented by combinations of the above characters include the following, which mostly add glyphs to different sides of the base:
+ꪹꪱ
+aːw
+AAB9
+AAB1
+ꪹꪸ
+e
+AAB9
+AAB8
+ꪹꪷ
+ə
+AAB9
+AAB7
+ꪵꪫ
+ʷɛ
+AAB5
+AAAB
+ꪵꪫꪥ
+ʷɛ
+AAB5
+AAAB
+AAA5
+ꪚꪾ
+ap
+AA9A
+AABE
+
+Pre-base and post-base vowel glyphs are split around the syllable onset, which may be more than a single character. Figure 1 shows an example.
+ꪫU+AAAB LETTER HIGH VO can be ambiguous in this combination unless there is a tone mark. The sequence ꪵ–ꪫꪥ U+AAB5 VOWEL E + U+AAAB LETTER HIGH VO + U+AAA5 LETTER HIGH YO is sometimes used to remove that ambiguity. For details, see Onsets.
+The last item in the list is rather unusual. Some dialects use the combination ꪚꪾU+AA9A LETTER LOW BO + U+AABE VOWEL AM to make -ap,2 eg.
+ꪀꪚꪾ kap² with, and
+There are 2 possible code point orders that can be used for this: see Structure.
+
+Characters that don't appear in the combinations:
+ꪲ
+i
+AAB2
+ꪳ
+ɨ
+AAB3
+ꪴ
+u
+AAB4
+ꪶ
+o
+AAB6
+ꪮ
+ʔ ɔ
+AAAE
+ꪯ
+ʔ ɔ
+AAAF
+ꪰ
+a
+AAB0
+ꪰ
+a
+AAB0
+ꪻ
+əw
+AABB
+ꪼ
+aj
+AABC
+ꪽ
+an
+AABD
+
+
+Onsets (Consonants)
+The consonant wa can appear immediately after the initial consonant in a syllable. It is written using ꪫU+AAAB LETTER HIGH VO.
+The pronunciation of a syllable containing WA in non-initial position can be ambiguous, unless there is a diacritic, since the WA may or may not be a final consonant.2 Compare
+ꪀꪲꪫ ḵiw
+ꪀꪫꪲ ḵwi
+and
+ꪵꪀ꫁ꪫ ɛḵ²w kʷɛ
+ꪵꪀꪫ꫁ ɛḵw² kɛw
+In order to address the latter ambiguity, the character ꪥU+AAA5 LETTER HIGH YO is sometimes appended to the end of the sequence to indicate the second pronunciation, eg.
+ꪵꪁꪫꪥ kʷɛ² cinnamon
+Since j never occurs after ɛ, this can be done without creating a new ambiguity. This spelling is only used in some dialects of the traditional script, however, it has been adopted as a standard in a project sponsored by the Son La Department of Science and Technology.2
+The sound kʰʷ exists in Tai Don, but not in Tai Dam. The sound kʷ exists in both languages.3
+
+Basic consonants
+ꪝ
+p
+ʰ
+AA9D
+ꪜ
+p
+ˡ
+AA9C
+ꪛ
+b
+ʰ
+AA9B
+ꪚ
+b -p
+ˡ
+AA9A
+ꪕ
+t
+ʰ
+AA95
+ꪔ
+t
+ˡ
+AA94
+ꪓ
+d
+ʰ
+AA93
+ꪒ
+d -t
+ˡ
+AA92
+ꪁ
+k
+ʰ
+AA81
+ꪀ
+k
+ˡ
+AA80
+ꪇ
+g
+ʰ
+AA87
+ꪆ
+g
+ˡ
+AA86
+ꪯ
+ʔ ɔ
+ʰ
+AAAF
+ꪮ
+ʔ ɔ
+ˡ
+AAAE
+ꪗ
+tʰ
+ʰ
+AA97
+ꪖ
+tʰ
+ˡ
+AA96
+ꪋ
+t͡ɕ
+ʰ
+AA8B
+ꪊ
+t͡ɕ
+ˡ
+AA8A
+ꪡ
+f
+ʰ
+AAA1
+ꪠ
+f
+ˡ
+AAA0
+ꪫ
+v -w
+ʰ
+AAAB
+ꪪ
+v
+ˡ
+AAAA
+ꪏ
+s
+ʰ
+AA8F
+ꪎ
+s
+ˡ
+AA8E
+ꪅ
+x
+ʰ
+AA85
+ꪄ
+x
+ˡ
+AA84
+ꪭ
+h
+ʰ
+AAAD
+ꪬ
+h
+ˡ
+AAAC
+ꪣ
+m
+ʰ
+AAA3
+ꪢ
+m
+ˡ
+AAA2
+ꪙ
+n
+ʰ
+AA99
+ꪘ
+n
+ˡ
+AA98
+ꪑ
+ɲ
+ʰ
+AA91
+ꪐ
+ɲ
+ˡ
+AA90
+ꪉ
+ŋ
+ʰ
+AA89
+ꪈ
+ŋ
+ˡ
+AA88
+ꪫ
+v -w
+ʰ
+AAAB
+ꪧ
+r
+ʰ
+AAA7
+ꪦ
+r
+ˡ
+AAA6
+ꪩ
+l
+ʰ
+AAA9
+ꪨ
+l
+ˡ
+AAA8
+ꪥ
+j
+ʰ
+AAA5
+ꪤ
+j
+ˡ
+AAA4
+
+Final consonant sounds
+Finals
+Syllable-final plosives are written using the following low class consonants. These create 'checked' syllables.
+ꪀ
+-k -ʔ
+AA80
+ꪚ
+-p
+AA9A
+ꪒ
+-t
+AA92
+
+For open syllables ending with nasals or glides, the following high class consonants are used.
+ꪣ
+-m
+AAA3
+ꪙ
+-n
+AA99
+ꪉ
+-ŋ
+AA89
+ꪥ
+-y
+AAA5
+ꪫ
+-w
+AAAB
+
+In addition, several vowels carry a final consonant. See Vowels. These include:
+ꪾ
+-am
+AABE
+ꪽ
+-an
+AABD
+-ꪜꪾ
+-ap
+AA9C
+AABE
+ꪹ-ꪱ
+-aw
+AAB9
+AAB1
+ꪼ
+-aj
+AABC
+ꪻ
+-əw
+AABB
+
+Finals	
+-p
+ꪚ
+-t
+ꪒ
+-k
+ꪀ
+-m
+ꪣ
+-n
+ꪙ
+-ŋ
+ꪉ
+-w
+ꪫ
+-j
+ꪥ
+
+-am
+ꪾ
+-an
+ꪽ
+-ap
+ꪜꪾ
+
+this data was taken from:
+https://r12a.github.io/scripts/tavt/blt.html on May 22, 2025
+
+
+// Lesson 1: ꪱ (vowel), ꪉ (consonant), ꪮ (consonant), ꪙ (consonant)
+const lesson1MinimalPairs = [
+  { pair1: "ꪉꪱ", pair2: "ꪙꪱ", translation: ["ŋaː", "naː"] },
+  { pair1: "ꪮꪱ", pair2: "ꪉꪱ", translation: ["ʔɔaː", "ŋaː"] },
+  { pair1: "ꪙꪮ", pair2: "ꪉꪮ", translation: ["nɔ", "ŋɔ"] },
+  { pair1: "ꪱꪉ", pair2: "ꪱꪙ", translation: ["aːŋ", "aːn"] },
+  { pair1: "ꪮ", pair2: "ꪉꪮ", translation: ["ʔɔ", "ŋɔ"] },
+  { pair1: "ꪉꪱ", pair2: "ꪙꪱ", translation: ["ŋaː", "naː"] },
+  { pair1: "ꪱꪉ", pair2: "ꪱꪙ", translation: ["aːŋ", "aːn"] },
+  { pair1: "ꪙꪱ", pair2: "ꪮꪱ", translation: ["naː", "ʔɔaː"] },
+  { pair1: "ꪉ", pair2: "ꪙ", translation: ["ŋ", "n"] },
+  { pair1: "ꪮ", pair2: "ꪱ", translation: ["ʔɔ", "aː"] }
+];
+
+// Lesson 2: ꪹ (vowel), ꪀ (consonant), ꪣ (consonant), ꪒ (consonant)
+const lesson2MinimalPairs = [
+  { pair1: "ꪹꪀ", pair2: "ꪹꪣ", translation: ["ɨək", "ɨəm"] },
+  { pair1: "ꪹꪒ", pair2: "ꪹꪀ", translation: ["ɨət", "ɨək"] },
+  { pair1: "ꪣꪰ", pair2: "ꪒꪰ", translation: ["ma", "da"] },
+  { pair1: "ꪀꪱ", pair2: "ꪣꪱ", translation: ["kaː", "maː"] },
+  { pair1: "ꪒꪱ", pair2: "ꪀꪱ", translation: ["daː", "kaː"] },
+  { pair1: "ꪀꪴ", pair2: "ꪣꪴ", translation: ["ku", "mu"] },
+  { pair1: "ꪒꪴ", pair2: "ꪒꪱ", translation: ["du", "daː"] },
+  { pair1: "ꪣꪹ", pair2: "ꪒꪹ", translation: ["mɨə", "dɨə"] },
+  { pair1: "ꪀ", pair2: "ꪣ", translation: ["k", "m"] },
+  { pair1: "ꪹ", pair2: "ꪒ", translation: ["ɨə", "d"] }
+];
+
+// Lesson 3: ꪲ (vowel), ꪵ (vowel), ꪄ (consonant), ꪚ (consonant)
+const lesson3MinimalPairs = [
+  { pair1: "ꪄꪲ", pair2: "ꪄꪴ", translation: ["xi", "xu"] },
+  { pair1: "ꪚꪲ", pair2: "ꪚꪴ", translation: ["bi", "bu"] },
+  { pair1: "ꪵꪄ", pair2: "ꪵꪚ", translation: ["ɛx", "ɛb"] },
+  { pair1: "ꪲꪀ", pair2: "ꪴꪀ", translation: ["ik", "uk"] },
+  { pair1: "ꪲꪚ", pair2: "ꪴꪚ", translation: ["ip", "up"] },
+  { pair1: "ꪄꪳ", pair2: "ꪚꪳ", translation: ["xɨ", "bɨ"] },
+  { pair1: "ꪚꪲ", pair2: "ꪄꪲ", translation: ["bi", "xi"] },
+  { pair1: "ꪵꪚ", pair2: "ꪵꪄ", translation: ["ɛb", "ɛx"] },
+  { pair1: "ꪲ", pair2: "ꪵ", translation: ["i", "ɛ"] },
+  { pair1: "ꪄ", pair2: "ꪚ", translation: ["x", "b"] }
+];
+
+// Lesson 4: ꪴ (vowel), ꪫ (consonant), ꪥ (consonant), ꪎ (consonant)
+const lesson4MinimalPairs = [
+  { pair1: "ꪫꪴ", pair2: "ꪥꪴ", translation: ["vu", "ju"] },
+  { pair1: "ꪎꪴ", pair2: "ꪫꪴ", translation: ["su", "vu"] },
+  { pair1: "ꪥꪰ", pair2: "ꪎꪰ", translation: ["ja", "sa"] },
+  { pair1: "ꪴꪀ", pair2: "ꪴꪒ", translation: ["uk", "ut"] },
+  { pair1: "ꪴꪉ", pair2: "ꪴꪙ", translation: ["uŋ", "un"] },
+  { pair1: "ꪫꪱ", pair2: "ꪎꪱ", translation: ["vaː", "saː"] },
+  { pair1: "ꪥꪴ", pair2: "ꪎꪴ", translation: ["ju", "su"] },
+  { pair1: "ꪎꪲ", pair2: "ꪥꪲ", translation: ["si", "ji"] },
+  { pair1: "ꪴ", pair2: "ꪫ", translation: ["u", "v"] },
+  { pair1: "ꪥ", pair2: "ꪎ", translation: ["j", "s"] }
+];
+
+// Lesson 5: ꪼ (vowel), ꪶ (vowel), ꪬ (consonant), ꪁ (consonant)
+const lesson5MinimalPairs = [
+  { pair1: "ꪼꪬ", pair2: "ꪶꪬ", translation: ["ajh", "oh"] },
+  { pair1: "ꪼꪁ", pair2: "ꪶꪁ", translation: ["ajk", "ok"] },
+  { pair1: "ꪬꪰ", pair2: "ꪁꪰ", translation: ["ha", "ka"] },
+  { pair1: "ꪼꪀ", pair2: "ꪶꪀ", translation: ["ajk", "ok"] },
+  { pair1: "ꪼꪒ", pair2: "ꪶꪒ", translation: ["ajt", "ot"] },
+  { pair1: "ꪶꪬ", pair2: "ꪶꪁ", translation: ["oh", "ok"] },
+  { pair1: "ꪁꪱ", pair2: "ꪬꪱ", translation: ["kaː", "haː"] },
+  { pair1: "ꪶꪁ", pair2: "ꪼꪁ", translation: ["ok", "ajk"] },
+  { pair1: "ꪼ", pair2: "ꪶ", translation: ["aj", "o"] },
+  { pair1: "ꪬ", pair2: "ꪁ", translation: ["h", "k"] }
+];
+
+// Lesson 6: ꪳ (vowel), ꪜ (consonant), ꪭ (consonant), ꪊ (consonant)
+const lesson6MinimalPairs = [
+  { pair1: "ꪜꪳ", pair2: "ꪭꪳ", translation: ["pɨ", "hɨ"] },
+  { pair1: "ꪊꪳ", pair2: "ꪜꪳ", translation: ["t͡ɕɨ", "pɨ"] },
+  { pair1: "ꪭꪰ", pair2: "ꪜꪰ", translation: ["ha", "pa"] },
+  { pair1: "ꪳꪀ", pair2: "ꪳꪒ", translation: ["ɨk", "ɨt"] },
+  { pair1: "ꪳꪉ", pair2: "ꪳꪙ", translation: ["ɨŋ", "ɨn"] },
+  { pair1: "ꪜꪱ", pair2: "ꪊꪱ", translation: ["paː", "t͡ɕaː"] },
+  { pair1: "ꪭꪳ", pair2: "ꪊꪳ", translation: ["hɨ", "t͡ɕɨ"] },
+  { pair1: "ꪊꪴ", pair2: "ꪭꪴ", translation: ["t͡ɕu", "hu"] },
+  { pair1: "ꪳ", pair2: "ꪜ", translation: ["ɨ", "p"] },
+  { pair1: "ꪭ", pair2: "ꪊ", translation: ["h", "t͡ɕ"] }
+];
+
+// Lesson 7: ꪾ (vowel), ꪺ (vowel), ꪋ (consonant), ꪔ (consonant)
+const lesson7MinimalPairs = [
+  { pair1: "ꪋꪾ", pair2: "ꪋꪺ", translation: ["t͡ɕam", "t͡ɕuə"] },
+  { pair1: "ꪔꪾ", pair2: "ꪔꪺ", translation: ["tam", "tuə"] },
+  { pair1: "ꪋꪰ", pair2: "ꪔꪰ", translation: ["t͡ɕa", "ta"] },
+  { pair1: "ꪾꪀ", pair2: "ꪺꪀ", translation: ["amk", "uək"] },
+  { pair1: "ꪾꪒ", pair2: "ꪺꪒ", translation: ["amt", "uət"] },
+  { pair1: "ꪋꪺ", pair2: "ꪔꪺ", translation: ["t͡ɕuə", "tuə"] },
+  { pair1: "ꪔꪾ", pair2: "ꪋꪾ", translation: ["tam", "t͡ɕam"] },
+  { pair1: "ꪺꪔ", pair2: "ꪾꪔ", translation: ["uət", "amt"] },
+  { pair1: "ꪾ", pair2: "ꪺ", translation: ["am", "uə"] },
+  { pair1: "ꪋ", pair2: "ꪔ", translation: ["t͡ɕ", "t"] }
+];
+
+// Lesson 8: ꪸ (vowel), ꪻ (vowel), ꪡ (consonant), ꪩ (consonant)
+const lesson8MinimalPairs = [
+  { pair1: "ꪡꪸ", pair2: "ꪡꪴ", translation: ["fiə", "fu"] },
+  { pair1: "ꪩꪸ", pair2: "ꪩꪴ", translation: ["liə", "lu"] },
+  { pair1: "ꪡꪰ", pair2: "ꪩꪰ", translation: ["fa", "la"] },
+  { pair1: "ꪸꪀ", pair2: "ꪴꪀ", translation: ["iək", "uk"] },
+  { pair1: "ꪸꪒ", pair2: "ꪴꪒ", translation: ["iət", "ut"] },
+  { pair1: "ꪻꪡ", pair2: "ꪻꪩ", translation: ["əwf", "əwl"] },
+  { pair1: "ꪩꪸ", pair2: "ꪡꪸ", translation: ["liə", "fiə"] },
+  { pair1: "ꪻꪩ", pair2: "ꪻꪡ", translation: ["əwl", "əwf"] },
+  { pair1: "ꪸ", pair2: "ꪻ", translation: ["iə", "əw"] },
+  { pair1: "ꪡ", pair2: "ꪩ", translation: ["f", "l"] }
+];

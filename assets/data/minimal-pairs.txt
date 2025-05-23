@@ -1,0 +1,192 @@
+// Lesson 1: ꪱ (vowel), ꪉ (consonant), ꪮ (consonant), ꪙ (consonant)
+const lesson1MinimalPairs = [
+  { pair1: "ꪉꪱ", pair2: "ꪙꪱ", translation: ["ŋaː", "naː"] },
+  { pair1: "ꪮꪱ", pair2: "ꪉꪱ", translation: ["ʔɔaː", "ŋaː"] },
+  { pair1: "ꪙꪮ", pair2: "ꪉꪮ", translation: ["nʔɔ", "ŋʔɔ"] },
+  { pair1: "ꪱꪉ", pair2: "ꪱꪙ", translation: ["aːŋ", "aːn"] },
+  { pair1: "ꪮꪉ", pair2: "ꪮꪙ", translation: ["ʔɔŋ", "ʔɔn"] },
+  { pair1: "ꪉꪮ", pair2: "ꪙꪮ", translation: ["ŋʔɔ", "nʔɔ"] },
+  { pair1: "ꪱꪮ", pair2: "ꪱꪉ", translation: ["aːʔɔ", "aːŋ"] },
+  { pair1: "ꪙꪱ", pair2: "ꪮꪱ", translation: ["naː", "ʔɔaː"] },
+  { pair1: "ꪉ", pair2: "ꪙ", translation: ["ŋ", "n"] },
+  { pair1: "ꪮ", pair2: "ꪱ", translation: ["ʔɔ", "aː"] }
+];
+
+// Lesson 2: ꪹ (vowel), ꪀ (consonant), ꪣ (consonant), ꪒ (consonant)
+const lesson2MinimalPairs = [
+  { pair1: "ꪀꪹ", pair2: "ꪣꪹ", translation: ["kɨə", "mɨə"] },
+  { pair1: "ꪒꪹ", pair2: "ꪀꪹ", translation: ["dɨə", "kɨə"] },
+  { pair1: "ꪣꪀ", pair2: "ꪒꪀ", translation: ["mk", "dk"] },
+  { pair1: "ꪹꪀ", pair2: "ꪹꪣ", translation: ["ɨək", "ɨəm"] },
+  { pair1: "ꪹꪒ", pair2: "ꪹꪀ", translation: ["ɨəd", "ɨək"] },
+  { pair1: "ꪀꪒ", pair2: "ꪣꪒ", translation: ["kd", "md"] },
+  { pair1: "ꪒꪣ", pair2: "ꪒꪀ", translation: ["dm", "dk"] },
+  { pair1: "ꪣꪹ", pair2: "ꪒꪹ", translation: ["mɨə", "dɨə"] },
+  { pair1: "ꪀ", pair2: "ꪣ", translation: ["k", "m"] },
+  { pair1: "ꪹ", pair2: "ꪒ", translation: ["ɨə", "d"] }
+];
+
+// Lesson 3: ꪲ (vowel), ꪵ (vowel), ꪄ (consonant), ꪚ (consonant)
+const lesson3MinimalPairs = [
+  { pair1: "ꪄꪲ", pair2: "ꪄꪵ", translation: ["xi", "xɛ"] },
+  { pair1: "ꪚꪲ", pair2: "ꪚꪵ", translation: ["bi", "bɛ"] },
+  { pair1: "ꪄꪚ", pair2: "ꪚꪄ", translation: ["xb", "bx"] },
+  { pair1: "ꪲꪄ", pair2: "ꪵꪄ", translation: ["ix", "ɛx"] },
+  { pair1: "ꪲꪚ", pair2: "ꪵꪚ", translation: ["ib", "ɛb"] },
+  { pair1: "ꪄꪵ", pair2: "ꪚꪵ", translation: ["xɛ", "bɛ"] },
+  { pair1: "ꪚꪲ", pair2: "ꪄꪲ", translation: ["bi", "xi"] },
+  { pair1: "ꪵꪚ", pair2: "ꪲꪚ", translation: ["ɛb", "ib"] },
+  { pair1: "ꪲ", pair2: "ꪵ", translation: ["i", "ɛ"] },
+  { pair1: "ꪄ", pair2: "ꪚ", translation: ["x", "b"] }
+];
+
+// Lesson 4: ꪴ (vowel), ꪫ (consonant), ꪥ (consonant), ꪎ (consonant)
+const lesson4MinimalPairs = [
+  { pair1: "ꪫꪴ", pair2: "ꪥꪴ", translation: ["vu", "ju"] },
+  { pair1: "ꪎꪴ", pair2: "ꪫꪴ", translation: ["su", "vu"] },
+  { pair1: "ꪥꪫ", pair2: "ꪎꪫ", translation: ["jv", "sv"] },
+  { pair1: "ꪴꪫ", pair2: "ꪴꪥ", translation: ["uv", "uj"] },
+  { pair1: "ꪴꪎ", pair2: "ꪴꪫ", translation: ["us", "uv"] },
+  { pair1: "ꪫꪥ", pair2: "ꪎꪥ", translation: ["vj", "sj"] },
+  { pair1: "ꪥꪴ", pair2: "ꪎꪴ", translation: ["ju", "su"] },
+  { pair1: "ꪎꪫ", pair2: "ꪥꪫ", translation: ["sv", "jv"] },
+  { pair1: "ꪴ", pair2: "ꪫ", translation: ["u", "v"] },
+  { pair1: "ꪥ", pair2: "ꪎ", translation: ["j", "s"] }
+];
+
+// Lesson 5: ꪼ (vowel), ꪶ (vowel), ꪬ (consonant), ꪁ (consonant)
+const lesson5MinimalPairs = [
+  { pair1: "ꪬꪼ", pair2: "ꪬꪶ", translation: ["haj", "ho"] },
+  { pair1: "ꪁꪼ", pair2: "ꪁꪶ", translation: ["kaj", "ko"] },
+  { pair1: "ꪬꪁ", pair2: "ꪁꪬ", translation: ["hk", "kh"] },
+  { pair1: "ꪼꪬ", pair2: "ꪶꪬ", translation: ["ajh", "oh"] },
+  { pair1: "ꪼꪁ", pair2: "ꪶꪁ", translation: ["ajk", "ok"] },
+  { pair1: "ꪬꪶ", pair2: "ꪁꪶ", translation: ["ho", "ko"] },
+  { pair1: "ꪁꪼ", pair2: "ꪬꪼ", translation: ["kaj", "haj"] },
+  { pair1: "ꪶꪁ", pair2: "ꪼꪁ", translation: ["ok", "ajk"] },
+  { pair1: "ꪼ", pair2: "ꪶ", translation: ["aj", "o"] },
+  { pair1: "ꪬ", pair2: "ꪁ", translation: ["h", "k"] }
+];
+
+// Lesson 6: ꪳ (vowel), ꪜ (consonant), ꪭ (consonant), ꪊ (consonant)
+const lesson6MinimalPairs = [
+  { pair1: "ꪜꪳ", pair2: "ꪭꪳ", translation: ["pɨ", "hɨ"] },
+  { pair1: "ꪊꪳ", pair2: "ꪜꪳ", translation: ["t͡ɕɨ", "pɨ"] },
+  { pair1: "ꪭꪊ", pair2: "ꪜꪊ", translation: ["ht͡ɕ", "pt͡ɕ"] },
+  { pair1: "ꪳꪜ", pair2: "ꪳꪭ", translation: ["ɨp", "ɨh"] },
+  { pair1: "ꪳꪊ", pair2: "ꪳꪜ", translation: ["ɨt͡ɕ", "ɨp"] },
+  { pair1: "ꪜꪭ", pair2: "ꪊꪭ", translation: ["ph", "t͡ɕh"] },
+  { pair1: "ꪭꪳ", pair2: "ꪊꪳ", translation: ["hɨ", "t͡ɕɨ"] },
+  { pair1: "ꪊꪜ", pair2: "ꪭꪜ", translation: ["t͡ɕp", "hp"] },
+  { pair1: "ꪳ", pair2: "ꪜ", translation: ["ɨ", "p"] },
+  { pair1: "ꪭ", pair2: "ꪊ", translation: ["h", "t͡ɕ"] }
+];
+
+// Lesson 7: ꪾ (vowel), ꪺ (vowel), ꪋ (consonant), ꪔ (consonant)
+const lesson7MinimalPairs = [
+  { pair1: "ꪋꪾ", pair2: "ꪋꪺ", translation: ["t͡ɕam", "t͡ɕuə"] },
+  { pair1: "ꪔꪾ", pair2: "ꪔꪺ", translation: ["tam", "tuə"] },
+  { pair1: "ꪋꪔ", pair2: "ꪔꪋ", translation: ["t͡ɕt", "tt͡ɕ"] },
+  { pair1: "ꪾꪋ", pair2: "ꪺꪋ", translation: ["amt͡ɕ", "uət͡ɕ"] },
+  { pair1: "ꪾꪔ", pair2: "ꪺꪔ", translation: ["amt", "uət"] },
+  { pair1: "ꪋꪺ", pair2: "ꪔꪺ", translation: ["t͡ɕuə", "tuə"] },
+  { pair1: "ꪔꪾ", pair2: "ꪋꪾ", translation: ["tam", "t͡ɕam"] },
+  { pair1: "ꪺꪔ", pair2: "ꪾꪔ", translation: ["uət", "amt"] },
+  { pair1: "ꪾ", pair2: "ꪺ", translation: ["am", "uə"] },
+  { pair1: "ꪋ", pair2: "ꪔ", translation: ["t͡ɕ", "t"] }
+];
+
+// Lesson 8: ꪸ (vowel), ꪻ (vowel), ꪡ (consonant), ꪩ (consonant)
+const lesson8MinimalPairs = [
+  { pair1: "ꪡꪸ", pair2: "ꪡꪻ", translation: ["fiə", "fəw"] },
+  { pair1: "ꪩꪸ", pair2: "ꪩꪻ", translation: ["liə", "ləw"] },
+  { pair1: "ꪡꪩ", pair2: "ꪩꪡ", translation: ["fl", "lf"] },
+  { pair1: "ꪸꪡ", pair2: "ꪻꪡ", translation: ["iəf", "əwf"] },
+  { pair1: "ꪸꪩ", pair2: "ꪻꪩ", translation: ["iəl", "əwl"] },
+  { pair1: "ꪡꪻ", pair2: "ꪩꪻ", translation: ["fəw", "ləw"] },
+  { pair1: "ꪩꪸ", pair2: "ꪡꪸ", translation: ["liə", "fiə"] },
+  { pair1: "ꪻꪩ", pair2: "ꪸꪩ", translation: ["əwl", "iəl"] },
+  { pair1: "ꪸ", pair2: "ꪻ", translation: ["iə", "əw"] },
+  { pair1: "ꪡ", pair2: "ꪩ", translation: ["f", "l"] }
+];
+
+// Lesson 9: ꪰ (marker), ꪷ (marker), ꪐ (consonant), ꪠ (consonant)
+const lesson9MinimalPairs = [
+  { pair1: "ꪐꪰ", pair2: "ꪠꪰ", translation: ["ɲa", "fa"] },
+  { pair1: "ꪐꪷ", pair2: "ꪠꪷ", translation: ["ɲɔ", "fɔ"] },
+  { pair1: "ꪐꪠ", pair2: "ꪠꪐ", translation: ["ɲf", "fɲ"] },
+  { pair1: "ꪰꪐ", pair2: "ꪷꪐ", translation: ["aɲ", "ɔɲ"] },
+  { pair1: "ꪰꪠ", pair2: "ꪷꪠ", translation: ["af", "ɔf"] },
+  { pair1: "ꪐꪷ", pair2: "ꪐꪰ", translation: ["ɲɔ", "ɲa"] },
+  { pair1: "ꪠꪷ", pair2: "ꪠꪰ", translation: ["fɔ", "fa"] },
+  { pair1: "ꪷꪠ", pair2: "ꪰꪠ", translation: ["ɔf", "af"] },
+  { pair1: "ꪐ", pair2: "ꪠ", translation: ["ɲ", "f"] },
+  { pair1: "ꪰ", pair2: "ꪷ", translation: ["a", "ɔ"] }
+];
+
+// Lesson 10: ꪢ (consonant), ꪽ (vowel), ꪝ (consonant), ꪑ (consonant)
+const lesson10MinimalPairs = [
+  { pair1: "ꪢꪽ", pair2: "ꪝꪽ", translation: ["man", "pan"] },
+  { pair1: "ꪑꪽ", pair2: "ꪢꪽ", translation: ["ɲan", "man"] },
+  { pair1: "ꪝꪑ", pair2: "ꪢꪑ", translation: ["pɲ", "mɲ"] },
+  { pair1: "ꪽꪢ", pair2: "ꪽꪝ", translation: ["anm", "anp"] },
+  { pair1: "ꪽꪑ", pair2: "ꪽꪢ", translation: ["anɲ", "anm"] },
+  { pair1: "ꪢꪝ", pair2: "ꪑꪝ", translation: ["mp", "ɲp"] },
+  { pair1: "ꪝꪽ", pair2: "ꪑꪽ", translation: ["pan", "ɲan"] },
+  { pair1: "ꪑꪢ", pair2: "ꪝꪢ", translation: ["ɲm", "pm"] },
+  { pair1: "ꪽ", pair2: "ꪢ", translation: ["an", "m"] },
+  { pair1: "ꪝ", pair2: "ꪑ", translation: ["p", "ɲ"] }
+];
+
+// Lesson 11: ꪕ (consonant), ꪘ (consonant), ꪅ (consonant), ꪨ (consonant)
+const lesson11MinimalPairs = [
+  { pair1: "ꪕꪘ", pair2: "ꪅꪘ", translation: ["tn", "xn"] },
+  { pair1: "ꪨꪕ", pair2: "ꪨꪅ", translation: ["lt", "lx"] },
+  { pair1: "ꪘꪨ", pair2: "ꪕꪨ", translation: ["nl", "tl"] },
+  { pair1: "ꪅꪨ", pair2: "ꪅꪘ", translation: ["xl", "xn"] },
+  { pair1: "ꪕꪨ", pair2: "ꪘꪨ", translation: ["tl", "nl"] },
+  { pair1: "ꪨꪘ", pair2: "ꪨꪕ", translation: ["ln", "lt"] },
+  { pair1: "ꪅꪕ", pair2: "ꪘꪕ", translation: ["xt", "nt"] },
+  { pair1: "ꪘꪅ", pair2: "ꪕꪅ", translation: ["nx", "tx"] },
+  { pair1: "ꪕ", pair2: "ꪘ", translation: ["t", "n"] },
+  { pair1: "ꪅ", pair2: "ꪨ", translation: ["x", "l"] }
+];
+
+// Lesson 12: ꪏ (consonant), ꪖ (consonant), ꪤ (consonant), ꪪ (consonant)
+const lesson12MinimalPairs = [
+  { pair1: "ꪏꪖ", pair2: "ꪤꪖ", translation: ["stʰ", "jtʰ"] },
+  { pair1: "ꪪꪏ", pair2: "ꪪꪤ", translation: ["vs", "vj"] },
+  { pair1: "ꪖꪪ", pair2: "ꪏꪪ", translation: ["tʰv", "sv"] },
+  { pair1: "ꪤꪪ", pair2: "ꪤꪖ", translation: ["jv", "jtʰ"] },
+  { pair1: "ꪏꪪ", pair2: "ꪖꪪ", translation: ["sv", "tʰv"] },
+  { pair1: "ꪪꪖ", pair2: "ꪪꪏ", translation: ["vtʰ", "vs"] },
+  { pair1: "ꪤꪏ", pair2: "ꪖꪏ", translation: ["js", "tʰs"] },
+  { pair1: "ꪖꪤ", pair2: "ꪏꪤ", translation: ["tʰj", "sj"] },
+  { pair1: "ꪏ", pair2: "ꪖ", translation: ["s", "tʰ"] },
+  { pair1: "ꪤ", pair2: "ꪪ", translation: ["j", "v"] }
+];
+
+// Lesson 13: ꪛ (consonant), ꫛ (symbol), ꫜ (symbol), ꫀ (tone)
+const lesson13MinimalPairs = [
+  { pair1: "ꪛꫛ", pair2: "ꪛꫜ", translation: ["bkon⁴", "bnɨŋ⁵"] },
+  { pair1: "ꪛꫀ", pair2: "ꪛꫛ", translation: ["b-tone", "bkon⁴"] },
+  { pair1: "ꫛꫜ", pair2: "ꫜꫛ", translation: ["kon⁴nɨŋ⁵", "nɨŋ⁵kon⁴"] },
+  { pair1: "ꫀꪛ", pair2: "ꫛꪛ", translation: ["-toneb", "kon⁴b"] },
+  { pair1: "ꫀꫜ", pair2: "ꫛꫜ", translation: ["-tonenɨŋ⁵", "kon⁴nɨŋ⁵"] },
+  { pair1: "ꪛꫜ", pair2: "ꪛꫀ", translation: ["bnɨŋ⁵", "b-tone"] },
+  { pair1: "ꫜꪛ", pair2: "ꫀꪛ", translation: ["nɨŋ⁵b", "-toneb"] },
+  { pair1: "ꫛꫀ", pair2: "ꫜꫀ", translation: ["kon⁴-tone", "nɨŋ⁵-tone"] },
+  { pair1: "ꫛ", pair2: "ꫜ", translation: ["kon⁴", "nɨŋ⁵"] },
+  { pair1: "ꪛ", pair2: "ꫀ", translation: ["b", "-tone"] }
+];
+
+export { 
+  lesson1MinimalPairs, lesson2MinimalPairs, lesson3MinimalPairs, 
+  lesson4MinimalPairs, lesson5MinimalPairs, lesson6MinimalPairs, 
+  lesson7MinimalPairs, lesson8MinimalPairs,
+  lesson1MinimalPairs, lesson2MinimalPairs, lesson3MinimalPairs, 
+  lesson4MinimalPairs, lesson5MinimalPairs, lesson6MinimalPairs, 
+  lesson7MinimalPairs, lesson8MinimalPairs, lesson9MinimalPairs,
+  lesson10MinimalPairs, lesson11MinimalPairs, lesson12MinimalPairs,
+  lesson13MinimalPairs
+};
