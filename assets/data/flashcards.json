@@ -1,444 +1,759 @@
 [
-  {
+{
     "audio": "a1",
     "image": "a1",
     "question": "ꪼꪀ",
     "answer": "chicken",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄກ່"
+      }
+    ]
   },
   {
     "audio": "a2",
     "image": "a2",
     "question": "ꪁꪮꪉ",
     "answer": "gong",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ກອງ"
+      }
+    ]
   },
   {
     "audio": "a3",
     "image": "a3",
     "question": "ꪀꪲꪙ",
     "answer": "eat",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ກິນ"
+      }
+    ]
   },
   {
     "audio": "a4",
     "image": "a4",
     "question": "ꪁꪲꪣ",
     "answer": "pliers",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ກິມ"
+      }
+    ]
   },
   {
     "audio": "a5",
     "image": "a5",
     "question": "ꪀꪫꪱꪉ",
     "answer": "deer",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ກວາງ"
+      }
+    ]
   },
   {
     "audio": "a6",
     "image": "a6",
     "question": "ꪁꪫꪱꪤ",
     "answer": "water buffalo",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ກວາຍ"
+      }
+    ]
   },
   {
     "audio": "a7",
     "image": "a7",
     "question": "ꪶꪄꪙ",
     "answer": "feather",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຂົນ"
+      }
+    ]
   },
   {
     "audio": "a8",
     "image": "a8",
     "question": "ꪅꪺꪀ",
     "answer": "tadpole",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຂຸ່ອ"
+      }
+    ]
   },
   {
     "audio": "a9",
     "image": "a9",
     "question": "ꪄꪫꪱꪙ",
     "answer": "axe",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຂວານ"
+      }
+    ]
   },
   {
     "audio": "a10",
     "image": "a10",
     "question": "ꪈꪾ",
     "answer": "to think",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຄິດ"
+      }
+    ]
   },
   {
     "audio": "a11",
     "image": "a11",
     "question": "ꪉꪴ",
     "answer": "snake",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ງູ"
+      }
+    ]
   },
   {
     "audio": "a12",
     "image": "a12",
     "question": "ꪊꪜ",
     "answer": "hoe",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຈອບ"
+      }
+    ]
   },
   {
     "audio": "a13",
     "image": "a13",
     "question": "ꪋꪱꪉ",
     "answer": "elephant",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຊ້າງ"
+      }
+    ]
   },
   {
     "audio": "a14",
     "image": "a14",
     "question": "ꪼꪎ",
     "answer": "egg",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄຂ່"
+      }
+    ]
   },
   {
     "audio": "a15",
     "image": "a15",
     "question": "ꪼꪏ",
     "answer": "fish trap",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄສ່"
+      }
+    ]
   },
   {
     "audio": "a16",
     "image": "a16",
     "question": "ꪹꪐꪸꪙ",
     "answer": "otter",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄນ້ເນັນ"
+      }
+    ]
   },
   {
     "audio": "a17",
     "image": "a17",
-    "question": "ꪚꪴꪉ",
+    "question": "ꪑꪴꪉ",
     "answer": "mosquito",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຍຸງ"
+      }
+    ]
   },
   {
     "audio": "a18",
     "image": "a18",
     "question": "ꪒꪴꪀ",
     "answer": "bone",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ດຸ່ອ"
+      }
+    ]
   },
   {
     "audio": "a19",
     "image": "a19",
     "question": "ꪓ",
     "answer": "letter D",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ດ"
+      }
+    ]
   },
   {
     "audio": "a20",
     "image": "a20",
     "question": "ꪔꪷꪉ",
     "answer": "stool",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຕໂອງ"
+      }
+    ]
   },
   {
     "audio": "a21",
     "image": "a21",
     "question": "ꪕꪱꪉ",
     "answer": "path",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຖາງ"
+      }
+    ]
   },
   {
     "audio": "a22",
     "image": "a22",
     "question": "ꪖꪷ",
     "answer": "rabbit",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ທໂອ"
+      }
+    ]
   },
   {
     "audio": "a23",
     "image": "a23",
     "question": "ꪗꪴꪉ",
     "answer": "bucket",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຖຸງ"
+      }
+    ]
   },
   {
     "audio": "a24",
     "image": "a24",
     "question": "ꪘꪴ",
     "answer": "rat",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ນູ"
+      }
+    ]
   },
   {
     "audio": "a25",
     "image": "a25",
     "question": "ꪶꪙꪀ",
     "answer": "bird",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ນົກ"
+      }
+    ]
   },
   {
     "audio": "a26",
     "image": "a26",
     "question": "ꪚꪱꪉ",
     "answer": "flying squirrel",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ບາງ"
+      }
+    ]
   },
   {
     "audio": "a27",
     "image": "a27",
     "question": "ꪛꪱ ꪜꪺ",
     "answer": "king",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ບາ ປຸ່ຍ"
+      }
+    ]
   },
   {
     "audio": "a28",
     "image": "a28",
     "question": "ꪜꪱ",
     "answer": "fish",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ປາ"
+      }
+    ]
   },
   {
     "audio": "a29",
     "image": "a29",
     "question": "ꪝꪱꪴ",
     "answer": "coconut",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ປາຢູ"
+      }
+    ]
   },
   {
     "audio": "a30",
     "image": "a30",
     "question": "ꪠꪱ",
     "answer": "turtle",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຟາ"
+      }
+    ]
   },
   {
     "audio": "a31",
     "image": "a31",
     "question": "ꪼꪡ",
     "answer": "fire",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄຟ"
+      }
+    ]
   },
   {
     "audio": "a32",
     "image": "a32",
     "question": "ꪢꪱ",
     "answer": "dog",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ມາ"
+      }
+    ]
   },
   {
     "audio": "a33",
     "image": "a33",
     "question": "ꪵꪣꪫ",
     "answer": "cat",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ແມວ"
+      }
+    ]
   },
   {
     "audio": "a34",
     "image": "a34",
     "question": "ꪤꪸꪙ",
     "answer": "eel",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຍ້ເນັນ"
+      }
+    ]
   },
   {
     "audio": "a35",
     "image": "a35",
     "question": "ꪥꪷ",
     "answer": "sheep",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຣໂອ"
+      }
+    ]
   },
   {
     "audio": "a36",
     "image": "a36",
     "question": "ꪨꪱꪙ",
     "answer": "grandchild",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ລານ"
+      }
+    ]
   },
   {
     "audio": "a37",
     "image": "a37",
     "question": "ꪩꪲꪉ",
     "answer": "monkey",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ລິງ"
+      }
+    ]
   },
   {
     "audio": "a38",
     "image": "a38",
     "question": "ꪵꪪꪙ ꪣꪳ",
     "answer": "ring",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ແວນ ມື"
+      }
+    ]
   },
   {
     "audio": "a39",
     "image": "a39",
     "question": "ꪵꪪꪙ ꪔꪱ",
     "answer": "eye glasses",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ແວນ ຕາ"
+      }
+    ]
   },
   {
     "audio": "a40",
     "image": "a40",
     "question": "ꪵꪬ",
     "answer": "fishnet",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ແຫ"
+      }
+    ]
   },
   {
     "audio": "a41",
     "image": "a41",
     "question": "ꪭꪮꪀ",
     "answer": "squirrel",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຫອກ"
+      }
+    ]
   },
   {
     "audio": "a42",
     "image": "a42",
     "question": "ꪮꪱꪉ",
     "answer": "water basin",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ອາງ"
+      }
+    ]
   },
   {
     "audio": "a43",
     "image": "a43",
     "question": "ꪹꪯꪸꪣ",
     "answer": "mother",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄອ້ເນັມ"
+      }
+    ]
   },
   {
     "audio": "a44",
     "image": "a44",
     "question": "ꫛ",
     "answer": "person",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຄົນ"
+      }
+    ]
   },
   {
     "audio": "a45",
     "image": "a45",
     "question": "ꫜ",
     "answer": "one",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ນຶ່ງ"
+      }
+    ]
   },
   {
     "audio": "a18",
     "image": "a18",
     "question": "ꪒꪴꪀ",
     "answer": "bone",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ດຸ່ອ"
+      }
+    ]
   },
   {
     "image": "b48b",
     "question": "ꪔꪱ",
     "answer": "eye",
     "audio": "b48b-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຕາ"
+      }
+    ]
   },
   {
     "image": "b51a",
     "question": "ꪢꪲ",
     "answer": "bear",
     "audio": "b51a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ມີ"
+      }
+    ]
   },
   {
     "image": "b54a",
     "question": "ꪢꪴ",
     "answer": "pig",
     "audio": "b54a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ມູ"
+      }
+    ]
   },
   {
     "image": "b57a",
     "question": "ꪣꪳ",
     "answer": "hand",
     "audio": "b57a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ມື"
+      }
+    ]
   },
   {
     "image": "b59b",
     "question": "ꪌꪸ",
     "answer": "paper",
     "audio": "b59b-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ເຈ້"
+      }
+    ]
   },
   {
     "image": "b61c",
     "question": "ꪢꪷ",
     "answer": "pot",
     "audio": "b61c-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ມໂອ"
+      }
+    ]
   },
   {
     "image": "b64a",
     "question": "ꪬꪺ",
     "answer": "head",
     "audio": "b64a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ຫຸ່ຍ"
+      }
+    ]
   },
   {
     "image": "b67b",
     "question": "ꪶꪁ ꪼꪣ",
     "answer": "log",
     "audio": "b67b-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ກົນ ໄມ"
+      }
+    ]
   },
   {
     "image": "b69a",
     "question": "ꪼꪡ",
     "answer": "fire",
     "audio": "b69a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄຟ"
+      }
+    ]
   },
   {
     "image": "b70a",
     "question": "ꪻꪚ",
     "answer": "leaf",
     "audio": "b70a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ບາຍ"
+      }
+    ]
   },
   {
     "image": "b72a",
     "question": "ꪣꪾ",
     "answer": "water",
     "audio": "b72a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ມ້າມ"
+      }
+    ]
   },
   {
     "image": "b73b",
     "question": "ꪜꪽ",
     "answer": "squeeze",
     "audio": "b73b-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ປັນ"
+      }
+    ]
   },
   {
     "image": "b75b",
     "question": "ꪵꪚ",
     "answer": "goat",
     "audio": "b75b-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ແບ"
+      }
+    ]
   },
   {
     "image": "b78a",
     "question": "ꪹꪎ",
     "answer": "tiger",
     "audio": "b78a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄສ"
+      }
+    ]
   },
   {
     "image": "b81c",
     "question": "ꪹꪠꪷꪉ",
     "answer": "bee",
     "audio": "b81c-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄຟຟໂອງ"
+      }
+    ]
   },
   {
     "image": "b82a",
     "question": "ꪹꪜꪸ",
     "answer": "carry",
     "audio": "b82a-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄປ້"
+      }
+    ]
   },
   {
     "image": "b84b",
     "question": "ꪹꪁꪱ",
     "answer": "owl",
     "audio": "b84b-word",
-    "hints": []
+    "hints": [
+      {
+        "hintType": "lao",
+        "content": "ໄກາ"
+      }
+    ]
   },
   {
     "question": "ꪀꪚꪾ",
@@ -1960,7 +2275,7 @@
         "content": "[vaːŋ˥]"
       }
     ],
-    "answer": "to leave, abandon, quit U+AAAB U+AAB1 U+AA89",
+    "answer": "to leave, abandon, quit",
     "image": "",
     "audio": ""
   },
