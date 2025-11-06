@@ -18,4 +18,5 @@ Map<String, dynamic> _$HintToJson(Hint instance) => <String, dynamic>{
 
 const _$HintTypeEnumMap = {
   HintType.soundIpa: 'soundIpa',
+  HintType.lao: 'lao',
 };
