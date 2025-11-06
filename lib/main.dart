@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
+import 'package:taidam_tutor/feature/alphabet_practice/alphabet_practice_page.dart';
 import 'package:taidam_tutor/feature/character_list/character_list.dart';
 import 'package:taidam_tutor/feature/letter_search/letter_search.dart';
 import 'package:taidam_tutor/feature/quiz/quiz_page.dart';
@@ -120,6 +121,11 @@ class App extends StatelessWidget {
                 label: 'Characters',
               ),
               BottomNavigationBarItem(
+                icon: Icon(Icons.school_outlined),
+                activeIcon: Icon(Icons.school),
+                label: 'Practice',
+              ),
+              BottomNavigationBarItem(
                 icon: Icon(Icons.search_outlined),
                 activeIcon: Icon(Icons.search),
                 label: 'Finder',
@@ -131,7 +137,10 @@ class App extends StatelessWidget {
               ),
             ],
             currentIndex: state,
-            unselectedItemColor: Colors.grey.shade500,
+            unselectedItemColor: Theme.of(context).brightness == Brightness.dark
+                ? Colors.grey.shade400
+                : Colors.grey.shade600,
+            selectedItemColor: Theme.of(context).colorScheme.primary,
             onTap: context.read<AppCubit>().onItemTapped,
             showUnselectedLabels: true,
           ),
@@ -142,6 +151,7 @@ class App extends StatelessWidget {
 
   static final List<Widget> _widgetOptions = <Widget>[
     CharacterListPage(),
+    const AlphabetPracticePage(),
     LetterSearchGame(),
     QuizPage(),
   ];
