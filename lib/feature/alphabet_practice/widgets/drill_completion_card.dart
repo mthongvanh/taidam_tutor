@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taidam_tutor/core/data/alphabet_practice/models/achievement.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 
 class DrillCompletionCard extends StatelessWidget {
@@ -6,6 +7,7 @@ class DrillCompletionCard extends StatelessWidget {
   final int correctAnswers;
   final double accuracy;
   final String characterClass;
+  final List<Achievement> newlyUnlockedAchievements;
   final VoidCallback onContinue;
   final VoidCallback onRestart;
 
@@ -15,6 +17,7 @@ class DrillCompletionCard extends StatelessWidget {
     required this.correctAnswers,
     required this.accuracy,
     required this.characterClass,
+    this.newlyUnlockedAchievements = const [],
     required this.onContinue,
     required this.onRestart,
   });
@@ -120,6 +123,85 @@ class DrillCompletionCard extends StatelessWidget {
               style: theme.textTheme.bodyLarge,
               textAlign: TextAlign.center,
             ),
+
+            // Newly unlocked achievements
+            if (newlyUnlockedAchievements.isNotEmpty) ...[
+              const SizedBox(height: 32),
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.amber.withOpacity(0.2),
+                      Colors.orange.withOpacity(0.1),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: Colors.amber.withOpacity(0.3),
+                    width: 2,
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.celebration,
+                          color: Colors.amber,
+                          size: 24,
+                        ),
+                        const SizedBox(width: 8),
+                        Flexible(
+                          child: Text(
+                            'Achievement${newlyUnlockedAchievements.length > 1 ? 's' : ''} Unlocked!',
+                            style: theme.textTheme.titleLarge?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.amber.shade700,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    ...newlyUnlockedAchievements.map((achievement) => Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: Row(
+                            children: [
+                              Text(
+                                achievement.icon,
+                                style: const TextStyle(fontSize: 32),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      achievement.title,
+                                      style:
+                                          theme.textTheme.titleMedium?.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      achievement.description,
+                                      style: theme.textTheme.bodySmall,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        )),
+                  ],
+                ),
+              ),
+            ],
 
             const SizedBox(height: 32),
 

@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:taidam_tutor/core/data/alphabet_practice/models/achievement.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
 
 sealed class CharacterDrillState extends Equatable {
@@ -94,12 +95,14 @@ class CharacterDrillCompleted extends CharacterDrillState {
   final int correctAnswers;
   final double accuracy;
   final String characterClass;
+  final List<Achievement> newlyUnlockedAchievements;
 
   const CharacterDrillCompleted({
     required this.totalQuestions,
     required this.correctAnswers,
     required this.accuracy,
     required this.characterClass,
+    this.newlyUnlockedAchievements = const [],
   });
 
   @override
@@ -108,6 +111,7 @@ class CharacterDrillCompleted extends CharacterDrillState {
         correctAnswers,
         accuracy,
         characterClass,
+        newlyUnlockedAchievements,
       ];
 }
 

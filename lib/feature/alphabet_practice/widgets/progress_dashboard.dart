@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
+import 'package:taidam_tutor/feature/alphabet_practice/progress_info_page.dart';
 
 class ProgressDashboard extends StatelessWidget {
   final Map<String, double> classProgress;
@@ -28,11 +29,27 @@ class ProgressDashboard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Your Progress',
-              style: theme.textTheme.headlineSmall?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Your Progress',
+                  style: theme.textTheme.headlineSmall?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.help_outline),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const ProgressInfoPage(),
+                      ),
+                    );
+                  },
+                  tooltip: 'Learn about progress tracking',
+                ),
+              ],
             ),
             const SizedBox(height: 20),
 

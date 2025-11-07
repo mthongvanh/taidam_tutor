@@ -2,10 +2,12 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/models/character_mastery.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/models/learning_session.dart';
+import 'package:taidam_tutor/core/data/alphabet_practice/models/achievement.dart';
 
 class AlphabetPracticeRepository {
   static const String _masteryKey = 'character_mastery_data';
   static const String _sessionsKey = 'learning_sessions_data';
+  static const String _achievementsKey = 'unlocked_achievements';
 
   bool _isInitialized = false;
   SharedPreferences? _prefs;
@@ -136,5 +138,55 @@ class AlphabetPracticeRepository {
       'overallAccuracy': overallAccuracy,
       'totalSessions': sessions.length,
     };
+  }
+
+  /// Get all unlocked achievements
+  Future<List<Achievement>> getUnlockedAchievements() async {
+    await init();
+    final jsonString = _prefs?.getString(_achievementsKey);
+    if (jsonString == null) return [];
+
+    try {
+      final List<dynamic> decoded = json.decode(jsonString);
+      return decoded.map((e) => Achievement.fromJson(e)).toList();
+    } catch (e) {
+      return [];
+    }
+  }
+
+  /// Save an unlocked achievement
+  Future<void> unlockAchievement(Achievement achievement) async {
+    await init();
+    final achievements = await getUnlockedAchievements();
+
+    // Check if already unlocked
+    if (achievements.any((a) => a.type == achievement.type)) {
+      return;
+    }
+
+    achievements.add(achievement.unlock());
+    final encoded = json.encode(achievements.map((e) => e.toJson()).toList());
+    await _prefs?.setString(_achievementsKey, encoded);
+  }
+
+  /// Check if an achievement is unlocked
+  Future<bool> isAchievementUnlocked(AchievementType type) async {
+    final achievements = await getUnlockedAchievements();
+    return achievements.any((a) => a.type == type);
+  }
+
+  /// Get all achievements (both locked and unlocked)
+  Future<List<Achievement>> getAllAchievementsWithStatus() async {
+    final unlocked = await getUnlockedAchievements();
+    final unlockedTypes = unlocked.map((a) => a.type).toSet();
+
+    return Achievement.getAllAchievements().map((achievement) {
+      if (unlockedTypes.contains(achievement.type)) {
+        final unlockedVersion =
+            unlocked.firstWhere((a) => a.type == achievement.type);
+        return unlockedVersion;
+      }
+      return achievement;
+    }).toList();
   }
 }

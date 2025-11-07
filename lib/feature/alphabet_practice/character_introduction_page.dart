@@ -6,11 +6,13 @@ import 'package:taidam_tutor/feature/alphabet_practice/widgets/character_intro_c
 class CharacterIntroductionPage extends StatefulWidget {
   final List<Character> characters;
   final String characterClass;
+  final Map<String, List<Character>> characterGroups;
 
   const CharacterIntroductionPage({
     super.key,
     required this.characters,
     required this.characterClass,
+    required this.characterGroups,
   });
 
   @override
@@ -144,6 +146,7 @@ class _CharacterIntroductionPageState extends State<CharacterIntroductionPage> {
                                   builder: (context) => CharacterDrillPage(
                                     characters: widget.characters,
                                     characterClass: widget.characterClass,
+                                    characterGroups: widget.characterGroups,
                                   ),
                                 ),
                               );

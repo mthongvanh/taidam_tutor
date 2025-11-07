@@ -14,11 +14,13 @@ import 'package:taidam_tutor/widgets/error/tai_error.dart';
 class CharacterDrillPage extends StatelessWidget {
   final List<Character> characters;
   final String characterClass;
+  final Map<String, List<Character>> characterGroups;
 
   const CharacterDrillPage({
     super.key,
     required this.characters,
     required this.characterClass,
+    required this.characterGroups,
   });
 
   @override
@@ -28,6 +30,7 @@ class CharacterDrillPage extends StatelessWidget {
         practiceRepository: dm.get<AlphabetPracticeRepository>(),
         characters: characters,
         characterClass: characterClass,
+        characterGroups: characterGroups,
       )..init(),
       child: _CharacterDrillView(characterClass: characterClass),
     );
@@ -371,6 +374,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
           correctAnswers: state.correctAnswers,
           accuracy: state.accuracy,
           characterClass: state.characterClass,
+          newlyUnlockedAchievements: state.newlyUnlockedAchievements,
           onContinue: () => Navigator.of(context).pop(),
           onRestart: () {
             setState(() {

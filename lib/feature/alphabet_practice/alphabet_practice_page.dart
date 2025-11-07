@@ -4,6 +4,7 @@ import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repos
 import 'package:taidam_tutor/core/data/characters/character_repository.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
+import 'package:taidam_tutor/feature/alphabet_practice/analytics_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/character_drill_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/character_introduction_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/alphabet_practice_cubit.dart';
@@ -111,6 +112,37 @@ class _AlphabetPracticeView extends StatelessWidget {
 
           const SizedBox(height: 16),
 
+          // Analytics button
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: ElevatedButton.icon(
+              onPressed: () async {
+                final practiceRepo = dm.get<AlphabetPracticeRepository>();
+                final sessions = await practiceRepo.getAllSessions();
+                if (context.mounted) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => AnalyticsPage(
+                        sessions: sessions,
+                        masteryData: state.masteryData,
+                        characterGroups: state.characterGroups,
+                        stats: state.stats,
+                        overallProgress: state.overallProgress,
+                      ),
+                    ),
+                  );
+                }
+              },
+              icon: const Icon(Icons.analytics),
+              label: const Text('View Analytics & Achievements'),
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(double.infinity, 48),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 16),
+
           // Character Group Selector
           CharacterGroupSelector(
             classProgress: classProgress,
@@ -150,6 +182,7 @@ class _AlphabetPracticeView extends StatelessWidget {
         builder: (context) => CharacterDrillPage(
           characters: characters,
           characterClass: characterClass,
+          characterGroups: state.characterGroups,
         ),
       ),
     );
@@ -183,6 +216,7 @@ class _AlphabetPracticeView extends StatelessWidget {
         builder: (context) => CharacterIntroductionPage(
           characters: batch,
           characterClass: characterClass,
+          characterGroups: state.characterGroups,
         ),
       ),
     );
