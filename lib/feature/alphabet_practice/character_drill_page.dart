@@ -1,13 +1,13 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repository.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/character_drill_cubit.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/character_drill_state.dart';
-import 'package:taidam_tutor/feature/alphabet_practice/widgets/character_option_card.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/widgets/drill_completion_card.dart';
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
 
@@ -151,40 +151,66 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Listen and select the correct character',
+                  'What sound does this character make?',
                   style: theme.textTheme.bodyMedium,
                 ),
               ],
             ),
           ),
 
-          const SizedBox(height: 16),
-
-          // Audio play button
+          // Display the target character
           Container(
-            padding: const EdgeInsets.all(24),
-            child: ElevatedButton.icon(
-              onPressed: () => _playAudio(state.targetCharacter.audio),
-              icon: const Icon(Icons.volume_up, size: 32),
-              label: const Text(
-                'Play Sound',
-                style: TextStyle(fontSize: 18),
+            margin: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.all(32),
+            decoration: BoxDecoration(
+              color: theme.colorScheme.primaryContainer.withOpacity(0.3),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: theme.colorScheme.primary.withOpacity(0.3),
+                width: 2,
               ),
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 48,
-                  vertical: 20,
+            ),
+            child: Column(
+              children: [
+                Text(
+                  state.targetCharacter.character,
+                  style: const TextStyle(
+                    fontFamily: 'Tai Heritage Pro',
+                    fontSize: 100,
+                  ),
                 ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+                const SizedBox(height: 16),
+                ElevatedButton.icon(
+                  onPressed: () => _playAudio(state.targetCharacter.audio),
+                  icon: const Icon(Icons.volume_up),
+                  label: const Text('Hint'),
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 12,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ),
 
           const SizedBox(height: 24),
 
-          // Options grid
+          // Instructions
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              'Select the correct sound:',
+              style: theme.textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 16),
+
+          // Options grid - showing only sounds
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -192,21 +218,16 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
+                childAspectRatio: 2.5,
                 children: state.options.map((character) {
                   final isSelected =
                       _selectedCharacter?.characterId == character.characterId;
 
-                  return CharacterOptionCard(
-                    character: character,
-                    isSelected: isSelected,
-                    onTap: () {
-                      setState(() {
-                        _selectedCharacter = character;
-                      });
-                      context
-                          .read<CharacterDrillCubit>()
-                          .selectAnswer(character);
-                    },
+                  return _buildSoundOptionButton(
+                    context,
+                    character,
+                    isSelected,
+                    theme,
                   );
                 }).toList(),
               ),
@@ -308,7 +329,57 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
 
           const SizedBox(height: 24),
 
-          // Options grid with feedback
+          // Show the character with feedback
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.all(32),
+            decoration: BoxDecoration(
+              color: state.isCorrect
+                  ? theme.colorScheme.primaryContainer.withOpacity(0.3)
+                  : theme.colorScheme.errorContainer.withOpacity(0.3),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: state.isCorrect
+                    ? theme.colorScheme.primary
+                    : theme.colorScheme.error,
+                width: 2,
+              ),
+            ),
+            child: Column(
+              children: [
+                Text(
+                  state.targetCharacter.character,
+                  style: const TextStyle(
+                    fontFamily: 'Tai Heritage Pro',
+                    fontSize: 80,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Sound: ',
+                      style: theme.textTheme.titleMedium,
+                    ),
+                    Text(
+                      state.targetCharacter.sound,
+                      style: theme.textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: state.isCorrect
+                            ? theme.colorScheme.primary
+                            : theme.colorScheme.error,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 24),
+
+          // Options grid with feedback - showing only sounds
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -316,18 +387,19 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
+                childAspectRatio: 2.5,
                 children: state.options.map((character) {
                   final isSelected = character.characterId ==
                       state.selectedCharacter.characterId;
                   final isCorrectAnswer = character.characterId ==
                       state.targetCharacter.characterId;
 
-                  return CharacterOptionCard(
-                    character: character,
-                    isSelected: isSelected || isCorrectAnswer,
-                    showFeedback: true,
-                    isCorrect: isCorrectAnswer,
-                    onTap: () {},
+                  return _buildSoundOptionButtonWithFeedback(
+                    context,
+                    character,
+                    isSelected,
+                    isCorrectAnswer,
+                    theme,
                   );
                 }).toList(),
               ),
@@ -382,6 +454,112 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
             });
             context.read<CharacterDrillCubit>().init();
           },
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSoundOptionButtonWithFeedback(
+    BuildContext context,
+    Character character,
+    bool isSelected,
+    bool isCorrectAnswer,
+    ThemeData theme,
+  ) {
+    Color? backgroundColor;
+    Color? borderColor;
+
+    if (isCorrectAnswer) {
+      backgroundColor = theme.colorScheme.primaryContainer;
+      borderColor = theme.colorScheme.primary;
+    } else if (isSelected) {
+      backgroundColor = theme.colorScheme.errorContainer;
+      borderColor = theme.colorScheme.error;
+    } else {
+      backgroundColor = theme.colorScheme.surface;
+      borderColor = theme.colorScheme.outline.withOpacity(0.3);
+    }
+
+    return Container(
+      decoration: BoxDecoration(
+        color: backgroundColor,
+        border: Border.all(
+          color: borderColor,
+          width: isSelected || isCorrectAnswer ? 3 : 1,
+        ),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Stack(
+        children: [
+          Center(
+            child: Text(
+              character.sound,
+              style: theme.textTheme.titleLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+                color: isCorrectAnswer
+                    ? theme.colorScheme.primary
+                    : isSelected
+                        ? theme.colorScheme.error
+                        : theme.textTheme.bodyLarge?.color,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          if (isSelected || isCorrectAnswer)
+            Positioned(
+              top: 8,
+              right: 8,
+              child: Icon(
+                isCorrectAnswer ? Icons.check_circle : Icons.cancel,
+                color: isCorrectAnswer
+                    ? theme.colorScheme.primary
+                    : theme.colorScheme.error,
+                size: 24,
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSoundOptionButton(
+    BuildContext context,
+    Character character,
+    bool isSelected,
+    ThemeData theme,
+  ) {
+    return InkWell(
+      onTap: () {
+        setState(() {
+          _selectedCharacter = character;
+        });
+        context.read<CharacterDrillCubit>().selectAnswer(character);
+      },
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        decoration: BoxDecoration(
+          color: isSelected
+              ? theme.colorScheme.primaryContainer
+              : theme.colorScheme.surface,
+          border: Border.all(
+            color: isSelected
+                ? theme.colorScheme.primary
+                : theme.colorScheme.outline.withOpacity(0.3),
+            width: isSelected ? 3 : 1,
+          ),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Center(
+          child: Text(
+            character.sound,
+            style: theme.textTheme.titleLarge?.copyWith(
+              fontWeight: FontWeight.bold,
+              color: isSelected
+                  ? theme.colorScheme.primary
+                  : theme.textTheme.bodyLarge?.color,
+            ),
+            textAlign: TextAlign.center,
+          ),
         ),
       ),
     );
