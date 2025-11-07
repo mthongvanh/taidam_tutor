@@ -760,6 +760,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kap̚˦˥]"
       }
     ],
@@ -772,6 +773,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kʷaːŋ˨]"
       }
     ],
@@ -784,6 +786,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kaː˨]"
       }
     ],
@@ -796,6 +799,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kɨː˦˥]"
       }
     ],
@@ -808,6 +812,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kap̚˦˥]"
       }
     ],
@@ -820,6 +825,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kaː˦˥]"
       }
     ],
@@ -832,6 +838,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kʷaːm˥]"
       }
     ],
@@ -844,6 +851,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kʷaːj˥]"
       }
     ],
@@ -856,6 +864,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kʷaː˦]"
       }
     ],
@@ -868,6 +877,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kɔŋ˧˩ˀ]"
       }
     ],
@@ -880,6 +890,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kim˥]"
       }
     ],
@@ -892,6 +903,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kɨt̚˦]"
       }
     ],
@@ -904,6 +916,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kaː˦]"
       }
     ],
@@ -916,6 +929,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kɔŋ˧˩ˀ]"
       }
     ],
@@ -928,6 +942,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kaː˧˩ˀ]"
       }
     ],
@@ -940,6 +955,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xʷaːn˨]"
       }
     ],
@@ -952,6 +968,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xʷaː˦˥]"
       }
     ],
@@ -964,6 +981,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xaːm˨]"
       }
     ],
@@ -976,6 +994,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xaːj˨]"
       }
     ],
@@ -988,6 +1007,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɨn˨˩ˀ]"
       }
     ],
@@ -1000,6 +1020,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɨn˨˩ˀ]"
       }
     ],
@@ -1012,6 +1033,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɔː˨]"
       }
     ],
@@ -1024,6 +1046,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɔj˨˩ˀ]"
       }
     ],
@@ -1036,6 +1059,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɔj˨˩ˀ]"
       }
     ],
@@ -1048,6 +1072,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xaː˨˩ˀ]"
       }
     ],
@@ -1060,6 +1085,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xaː˨˩ˀ]"
       }
     ],
@@ -1072,6 +1098,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xuə̯ʔ˦]"
       }
     ],
@@ -1084,6 +1111,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ŋɔʔ˦]"
       }
     ],
@@ -1096,6 +1124,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ŋuː˥]"
       }
     ],
@@ -1108,6 +1137,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ŋuə̯˥]"
       }
     ],
@@ -1120,6 +1150,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ŋaːj˦]"
       }
     ],
@@ -1132,6 +1163,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕɔp̚˦˥]"
       }
     ],
@@ -1144,6 +1176,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕaŋ˦˥]"
       }
     ],
@@ -1156,6 +1189,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕaŋ˥]"
       }
     ],
@@ -1168,6 +1202,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕɨː˦]"
       }
     ],
@@ -1180,6 +1215,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕɔj˦]"
       }
     ],
@@ -1192,6 +1228,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕɔŋ˧˩ˀ]"
       }
     ],
@@ -1204,6 +1241,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "t͡ɕaːŋ˧˩ˀ]"
       }
     ],
@@ -1216,6 +1254,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕaːŋ˧˩ˀ]"
       }
     ],
@@ -1228,6 +1267,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[sɔŋ˨]"
       }
     ],
@@ -1240,6 +1280,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[sɔn˨]"
       }
     ],
@@ -1252,6 +1293,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[saːʔ˦˥]"
       }
     ],
@@ -1264,6 +1306,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[saːm˨]"
       }
     ],
@@ -1276,6 +1319,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[sip̚˦˥]"
       }
     ],
@@ -1288,6 +1332,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[siw˨]"
       }
     ],
@@ -1300,6 +1345,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[siː˦˥]"
       }
     ],
@@ -1312,6 +1358,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[siː˦˥]"
       }
     ],
@@ -1324,6 +1371,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[sɨː˨]"
       }
     ],
@@ -1336,6 +1384,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[suŋ˨]"
       }
     ],
@@ -1348,6 +1397,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[suj˨]"
       }
     ],
@@ -1360,6 +1410,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[saːw˦˥]"
       }
     ],
@@ -1372,6 +1423,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[saːj˥]"
       }
     ],
@@ -1384,6 +1436,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[sɨː˧˩ˀ]"
       }
     ],
@@ -1396,6 +1449,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ɲaː˨˩ˀ]"
       }
     ],
@@ -1408,6 +1462,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ɲaː˨˩ˀ]"
       }
     ],
@@ -1420,6 +1475,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ɲaːm˥]"
       }
     ],
@@ -1432,6 +1488,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ɲip̚˦]"
       }
     ],
@@ -1444,6 +1501,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ɲɔm˧˩ˀ]"
       }
     ],
@@ -1456,6 +1514,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[dap̚˦˥]"
       }
     ],
@@ -1468,6 +1527,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[daːw˨]"
       }
     ],
@@ -1480,6 +1540,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[diː˨]"
       }
     ],
@@ -1492,6 +1553,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[dit̚˦˥]"
       }
     ],
@@ -1504,6 +1566,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[din˨]"
       }
     ],
@@ -1516,6 +1579,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[duʔ˦˥]"
       }
     ],
@@ -1528,6 +1592,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[dap̚˦˥]"
       }
     ],
@@ -1540,6 +1605,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tat̚˦˥]"
       }
     ],
@@ -1552,6 +1618,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[taː˨]"
       }
     ],
@@ -1564,6 +1631,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[taːj˨]"
       }
     ],
@@ -1576,6 +1644,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tuː˨]"
       }
     ],
@@ -1588,6 +1657,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[taːŋ˦˥]"
       }
     ],
@@ -1600,6 +1670,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tɔŋ˧˩ˀ]"
       }
     ],
@@ -1612,6 +1683,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tɔŋ˧˩ˀ]"
       }
     ],
@@ -1624,6 +1696,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tʰim˨˩ˀ]"
       }
     ],
@@ -1636,6 +1709,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tʰam˨˩ˀ]"
       }
     ],
@@ -1648,6 +1722,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[naŋ˨]"
       }
     ],
@@ -1660,6 +1735,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[naː˨˩ˀ]"
       }
     ],
@@ -1672,6 +1748,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[naː˨˩ˀ]"
       }
     ],
@@ -1684,6 +1761,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[nɔn˥]"
       }
     ],
@@ -1696,6 +1774,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[naŋ˦]"
       }
     ],
@@ -1708,6 +1787,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[naŋ˦]"
       }
     ],
@@ -1720,6 +1800,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[niː˧˩ˀ]"
       }
     ],
@@ -1732,6 +1813,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[niw˧˩ˀ]"
       }
     ],
@@ -1744,6 +1826,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[nɨŋ˦]"
       }
     ],
@@ -1756,6 +1839,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[nam˧˩ˀ]"
       }
     ],
@@ -1768,6 +1852,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[nam˧˩ˀ]"
       }
     ],
@@ -1780,6 +1865,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[nɔj˧˩ˀ]"
       }
     ],
@@ -1792,6 +1878,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[bɔʔ˦˥]"
       }
     ],
@@ -1804,6 +1891,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[bin˨]"
       }
     ],
@@ -1816,6 +1904,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[buə̯˨]"
       }
     ],
@@ -1828,6 +1917,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[paː˨]"
       }
     ],
@@ -1840,6 +1930,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[paːʔ˦˥]"
       }
     ],
@@ -1852,6 +1943,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[piː˨]"
       }
     ],
@@ -1864,6 +1956,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[piʔ˦˥]"
       }
     ],
@@ -1876,6 +1969,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[puː˨]"
       }
     ],
@@ -1888,6 +1982,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[puə̯˨]"
       }
     ],
@@ -1900,6 +1995,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[puː˥]"
       }
     ],
@@ -1912,6 +2008,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[pɔm˦]"
       }
     ],
@@ -1924,6 +2021,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[faŋ˨]"
       }
     ],
@@ -1936,6 +2034,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[faː˨]"
       }
     ],
@@ -1948,6 +2047,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[fuː˨˩ˀ]"
       }
     ],
@@ -1960,6 +2060,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[fan˨]"
       }
     ],
@@ -1972,6 +2073,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[faː˨˩ˀ]"
       }
     ],
@@ -1984,6 +2086,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[faː˧˩ˀ]"
       }
     ],
@@ -1996,6 +2099,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[faː˧˩ˀ]"
       }
     ],
@@ -2008,6 +2112,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɔn˨]"
       }
     ],
@@ -2020,6 +2125,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[maː˨]"
       }
     ],
@@ -2032,6 +2138,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[maːʔ˦˥]"
       }
     ],
@@ -2044,6 +2151,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[miː˨]"
       }
     ],
@@ -2056,6 +2164,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[muː˨]"
       }
     ],
@@ -2068,6 +2177,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[maː˨˩ˀ]"
       }
     ],
@@ -2080,6 +2190,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[maː˨˩ˀ]"
       }
     ],
@@ -2092,6 +2203,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[miː˥]"
       }
     ],
@@ -2104,6 +2216,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɨː˥]"
       }
     ],
@@ -2116,6 +2229,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɨŋ˥]"
       }
     ],
@@ -2128,6 +2242,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[miə̯˥]"
       }
     ],
@@ -2140,6 +2255,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[maː˧˩ˀ]"
       }
     ],
@@ -2152,6 +2268,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[jaː˨]"
       }
     ],
@@ -2164,6 +2281,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[jaːn˨˩ˀ]"
       }
     ],
@@ -2176,6 +2294,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[laŋ˨]"
       }
     ],
@@ -2188,6 +2307,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[laːj˨]"
       }
     ],
@@ -2200,6 +2320,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[liŋ˥]"
       }
     ],
@@ -2212,6 +2333,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[lɨm˥]"
       }
     ],
@@ -2224,6 +2346,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[luʔ˦]"
       }
     ],
@@ -2236,6 +2359,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[luə̯ŋ˥]"
       }
     ],
@@ -2248,6 +2372,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[vaːn˨]"
       }
     ],
@@ -2260,6 +2385,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[viː˨]"
       }
     ],
@@ -2272,6 +2398,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[vaːŋ˥]"
       }
     ],
@@ -2284,6 +2411,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[viə̯ʔ˦]"
       }
     ],
@@ -2296,6 +2424,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[van˥]"
       }
     ],
@@ -2308,6 +2437,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔʔ˦˥]"
       }
     ],
@@ -2320,6 +2450,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔm˨]"
       }
     ],
@@ -2332,6 +2463,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔj˨]"
       }
     ],
@@ -2344,6 +2476,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[huː˨]"
       }
     ],
@@ -2356,6 +2489,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[huə̯˨]"
       }
     ],
@@ -2368,6 +2502,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[haːn˦˥]"
       }
     ],
@@ -2380,6 +2515,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[haː˨˩ˀ]"
       }
     ],
@@ -2392,6 +2528,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[haː˨˩ˀ]"
       }
     ],
@@ -2404,6 +2541,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔʔ˦]"
       }
     ],
@@ -2416,6 +2554,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔt̚˦]"
       }
     ],
@@ -2428,6 +2567,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[haŋ˥]"
       }
     ],
@@ -2440,6 +2580,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[huː˥]"
       }
     ],
@@ -2452,6 +2593,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[huː˧˩ˀ]"
       }
     ],
@@ -2464,6 +2606,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[huː˧˩ˀ]"
       }
     ],
@@ -2476,6 +2619,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔŋ˧˩ˀ]"
       }
     ],
@@ -2488,6 +2632,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔŋ˧˩ˀ]"
       }
     ],
@@ -2500,6 +2645,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔj˧˩ˀ]"
       }
     ],
@@ -2512,6 +2658,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɔj˧˩ˀ]"
       }
     ],
@@ -2524,6 +2671,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ʔaːp̚˦˥]"
       }
     ],
@@ -2536,6 +2684,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ʔit̚˦˥]"
       }
     ],
@@ -2548,6 +2697,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kon˥]"
       }
     ],
@@ -2560,6 +2710,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[nɨŋ˦]"
       }
     ],
@@ -2572,6 +2723,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kɔː˨.kɛː˨]"
       }
     ],
@@ -2584,6 +2736,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xiː˨˩ˀ.ɲɨə̯˨˩ˀ]"
       }
     ],
@@ -2596,6 +2749,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɔː˨.xʷaː˦˥]"
       }
     ],
@@ -2608,6 +2762,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕaʔ˦˥.t͡ɕan˦˥]"
       }
     ],
@@ -2620,6 +2775,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[saː˨.fɔŋ˧˩ˀ]"
       }
     ],
@@ -2632,6 +2788,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[nam˧˩ˀ.beː˨˩ˀ]"
       }
     ],
@@ -2644,6 +2801,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[baː˥.puə̯˨]"
       }
     ],
@@ -2656,6 +2814,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɨː˧˩ˀ.puʔ˦]"
       }
     ],
@@ -2668,6 +2827,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[luʔ˦.t͡ɕaːj˥]"
       }
     ],
@@ -2680,6 +2840,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[luʔ˦.ɲiŋ˥]"
       }
     ],
@@ -2692,6 +2853,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[viə̯t̚˦.naːm˥]"
       }
     ],
@@ -2704,6 +2866,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[haː˨.t͡ɕaɰ˨]"
       }
     ],
@@ -2716,6 +2879,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ʔɔn˦˥.nɔj˧˩ˀ]"
       }
     ],
@@ -2728,6 +2892,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ʔɔn˦˥.nɔj˧˩ˀ]"
       }
     ],
@@ -2740,6 +2905,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɛʔ˦˥]"
       }
     ],
@@ -2752,6 +2918,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɛŋ˨]"
       }
     ],
@@ -2764,6 +2931,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xɛw˨]"
       }
     ],
@@ -2776,6 +2944,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕɛː˥]"
       }
     ],
@@ -2788,6 +2957,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[dɛn˨]"
       }
     ],
@@ -2800,6 +2970,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tɛm˨˩ˀ]"
       }
     ],
@@ -2812,6 +2983,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tɛm˨˩ˀ]"
       }
     ],
@@ -2824,6 +2996,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[pɛt̚˦˥]"
       }
     ],
@@ -2836,6 +3009,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[pɛʔ˦]"
       }
     ],
@@ -2848,6 +3022,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɛw˥]"
       }
     ],
@@ -2860,6 +3035,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɛː˦]"
       }
     ],
@@ -2872,6 +3048,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɛː˦]"
       }
     ],
@@ -2884,6 +3061,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ʔɛː˨]"
       }
     ],
@@ -2896,6 +3074,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ʔɛʔ˦˥]"
       }
     ],
@@ -2908,6 +3087,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ʔɛp̚˦˥]"
       }
     ],
@@ -2920,6 +3100,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kop̚˦˥]"
       }
     ],
@@ -2932,6 +3113,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kon˥]"
       }
     ],
@@ -2944,6 +3126,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xon˨]"
       }
     ],
@@ -2956,6 +3139,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕop̚˦˥]"
       }
     ],
@@ -2968,6 +3152,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tot̚˦˥]"
       }
     ],
@@ -2980,6 +3165,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[noʔ˦]"
       }
     ],
@@ -2992,6 +3178,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[nom˥]"
       }
     ],
@@ -3004,6 +3191,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[fon˨]"
       }
     ],
@@ -3016,6 +3204,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[moŋ˥]"
       }
     ],
@@ -3028,6 +3217,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mot̚˦]"
       }
     ],
@@ -3040,6 +3230,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[loŋ˥]"
       }
     ],
@@ -3052,6 +3243,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[lom˥]"
       }
     ],
@@ -3064,6 +3256,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hoʔ˦˥]"
       }
     ],
@@ -3076,6 +3269,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kaw˨˩ˀ]"
       }
     ],
@@ -3088,6 +3282,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kaw˨˩ˀ]"
       }
     ],
@@ -3100,6 +3295,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kəː˥]"
       }
     ],
@@ -3112,6 +3308,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xem˨]"
       }
     ],
@@ -3124,6 +3321,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xaw˨˩ˀ]"
       }
     ],
@@ -3136,6 +3334,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ŋən˥]"
       }
     ],
@@ -3148,6 +3347,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕet̚˦˥]"
       }
     ],
@@ -3160,6 +3360,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕaw˨˩ˀ]"
       }
     ],
@@ -3172,6 +3373,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕaw˨˩ˀ]"
       }
     ],
@@ -3184,6 +3386,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕəː˥]"
       }
     ],
@@ -3196,6 +3399,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[sɨə̯˨˩ˀ]"
       }
     ],
@@ -3208,6 +3412,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[sɨə̯˨˩ˀ]"
       }
     ],
@@ -3220,6 +3425,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ɲɨə̯˨˩ˀ]"
       }
     ],
@@ -3232,6 +3438,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[bɨə̯n˨]"
       }
     ],
@@ -3244,6 +3451,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[baw˦˥]"
       }
     ],
@@ -3256,6 +3464,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[baw˦˥]"
       }
     ],
@@ -3268,6 +3477,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[pet̚˦˥]"
       }
     ],
@@ -3280,6 +3490,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[pen˨]"
       }
     ],
@@ -3292,6 +3503,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɨə̯ŋ˥]"
       }
     ],
@@ -3304,6 +3516,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɨə̯j˦]"
       }
     ],
@@ -3316,6 +3529,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[vaw˧˩ˀ]"
       }
     ],
@@ -3328,6 +3542,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[vaw˧˩ˀ]"
       }
     ],
@@ -3340,6 +3555,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hen˨]"
       }
     ],
@@ -3352,6 +3568,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɨə̯˦˥]"
       }
     ],
@@ -3364,6 +3581,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[hɨə̯˥]"
       }
     ],
@@ -3376,6 +3594,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕaɰ˨]"
       }
     ],
@@ -3388,6 +3607,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[t͡ɕaɰ˧˩ˀ]"
       }
     ],
@@ -3400,6 +3620,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ɲaɰ˦˥]"
       }
     ],
@@ -3412,6 +3633,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ɲaɰ˦˥]"
       }
     ],
@@ -3424,6 +3646,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[baɰ˨˨]"
       }
     ],
@@ -3436,6 +3659,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kaj˦˥]"
       }
     ],
@@ -3448,6 +3672,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[kaj˦˥]"
       }
     ],
@@ -3460,6 +3685,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xaj˧˩ˀ]"
       }
     ],
@@ -3472,6 +3698,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[taj˥]"
       }
     ],
@@ -3484,6 +3711,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[tʰaj˥]"
       }
     ],
@@ -3496,6 +3724,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[paj˨]"
       }
     ],
@@ -3508,6 +3737,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[faj˥]"
       }
     ],
@@ -3520,6 +3750,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[maj˧˩ˀ]"
       }
     ],
@@ -3532,6 +3763,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[maj˧˩ˀ]"
       }
     ],
@@ -3544,6 +3776,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[haj˨˩ˀ]"
       }
     ],
@@ -3556,6 +3789,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[haj˨˩ˀ]"
       }
     ],
@@ -3568,6 +3802,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[ʔaj˨]"
       }
     ],
@@ -3580,6 +3815,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[dɛn˨.din˨]"
       }
     ],
@@ -3592,6 +3828,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[bɛŋ˦˥.taj˨]"
       }
     ],
@@ -3604,6 +3841,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[xaw˨˩ˀ.t͡ɕaɰ˨]"
       }
     ],
@@ -3616,6 +3854,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɨə̯ŋ˥.faː˧˩ˀ]"
       }
     ],
@@ -3628,6 +3867,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[mɨə̯ŋ˥.faː˧˩ˀ]"
       }
     ],
@@ -3640,6 +3880,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[baɰ˨.maj˧˩ˀ]"
       }
     ],
@@ -3652,6 +3893,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[baɰ˨.maj˧˩ˀ]"
       }
     ],
@@ -3664,6 +3906,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[taj˥.dam˨]"
       }
     ],
@@ -3676,6 +3919,7 @@
     "hints": [
       {
         "hintType": "soundIpa",
+        "hintDisplayText": "IPA",
         "content": "[faj˥.faː˧˩ˀ]"
       }
     ],

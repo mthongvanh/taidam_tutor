@@ -14,10 +14,14 @@ class Hint extends Equatable {
   /// The content of the hint, which can be a URL for an image or text.
   final String content;
 
+  /// Optional display text for the hint (user-friendly label)
+  final String? hintDisplayText;
+
   /// Constructor for the Hint class.
   const Hint({
     required this.type,
     required this.content,
+    this.hintDisplayText,
   });
 
   /// Creates a Hint instance from a JSON object.
@@ -30,5 +34,6 @@ class Hint extends Equatable {
   List<Object?> get props => [
         type,
         content,
+        hintDisplayText,
       ];
 }
