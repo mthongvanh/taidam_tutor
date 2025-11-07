@@ -4,6 +4,7 @@ import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repos
 import 'package:taidam_tutor/core/data/characters/character_repository.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
+import 'package:taidam_tutor/feature/alphabet_practice/character_drill_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/character_introduction_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/alphabet_practice_cubit.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/alphabet_practice_state.dart';
@@ -113,13 +114,43 @@ class _AlphabetPracticeView extends StatelessWidget {
           // Character Group Selector
           CharacterGroupSelector(
             classProgress: classProgress,
-            onClassSelected: (className) {
-              _navigateToIntroduction(context, state, className);
+            onClassSelected: (className, isPractice) {
+              if (isPractice) {
+                _navigateToPractice(context, state, className);
+              } else {
+                _navigateToIntroduction(context, state, className);
+              }
             },
           ),
 
           const SizedBox(height: 32),
         ],
+      ),
+    );
+  }
+
+  void _navigateToPractice(
+    BuildContext context,
+    AlphabetPracticeLoaded state,
+    String characterClass,
+  ) {
+    final characters = state.characterGroups[characterClass] ?? [];
+
+    if (characters.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('No characters found for $characterClass'),
+        ),
+      );
+      return;
+    }
+
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CharacterDrillPage(
+          characters: characters,
+          characterClass: characterClass,
+        ),
       ),
     );
   }

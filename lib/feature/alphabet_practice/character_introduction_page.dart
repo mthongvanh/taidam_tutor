@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/feature/alphabet_practice/character_drill_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/widgets/character_intro_card.dart';
 
 class CharacterIntroductionPage extends StatefulWidget {
@@ -138,10 +139,11 @@ class _CharacterIntroductionPageState extends State<CharacterIntroductionPage> {
                       onPressed: _currentIndex == widget.characters.length - 1
                           ? () {
                               // Navigate to practice/drill mode
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text(
-                                    'Practice mode coming in Sprint 2!',
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => CharacterDrillPage(
+                                    characters: widget.characters,
+                                    characterClass: widget.characterClass,
                                   ),
                                 ),
                               );
