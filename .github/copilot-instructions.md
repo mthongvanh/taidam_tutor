@@ -54,6 +54,10 @@ Uses **BLoC pattern** (flutter_bloc) with Cubits exclusively:
 - **Gradients**: Custom gradient background in `main.dart` scaffold
 - **Custom Extensions**: `TaiText.appBarTitle()` for consistent title styling
 - **Navigation**: Simple `BottomNavigationBar` in `main.dart`, direct `Navigator.push()` for detail screens
+- **Spacing**: Use `Spacing` enum from `lib/core/constants/spacing.dart` for consistent spacing:
+  - `Spacing.xs` (4.0), `Spacing.s` (8.0), `Spacing.m` (16.0)
+  - `Spacing.l` (32.0), `Spacing.xl` (64.0)
+  - Example: `SizedBox(height: Spacing.m)`, `EdgeInsets.all(Spacing.s)`
 
 ### Code Generation
 **Critical**: After changing models with `@JsonSerializable`:
@@ -87,6 +91,7 @@ flutter run
 - `Character` model has `characterClass` (consonant, vowel, vowel-combo, special)
 - `highLow` property for consonants (tone class), `prePost` for vowel positioning
 - Flashcards link to characters via regex matching (see `Character.regEx`)
+- Always consider the language rules when implementing features involving script representation which can be found in the `assets/data/language-rules.txt`
 
 ### Audio Strategy
 Both `audioplayers` and `just_audio` packages present—prefer `audioplayers` (used in flashcard/quiz):
@@ -105,3 +110,4 @@ No formal i18n yet. English UI with Tai Dam/Lao script display via custom fonts.
 - Don't register dependencies outside `DependencyManager`
 - Don't create functions that returns widgets in build methods; use separate widget classes instead
 - Don't hardcode strings; use or create constants in `lib/core/constants/` when possible
+- Don't use magic numbers for spacing; use `Spacing` enum values instead (e.g., `Spacing.m` not `16.0`)
