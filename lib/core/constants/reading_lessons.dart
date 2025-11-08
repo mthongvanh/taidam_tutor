@@ -2,8 +2,10 @@ abstract class ReadingLessons {
   static const Map<String, dynamic> lesson1 = {
     "lesson": {
       "number": 1,
-      "title": "Lesson 1",
-      "description": "Final sounds: come at the end of syllables",
+      "title": "After consonants",
+      "shortDescription": "Vowels can be on the right side of consonants.",
+      "description":
+          "In Tai Dam, a syllable starts with a consonant. If the vowel is a post-position form, it's written right next to the consonant, without any space in between. Imagine a right-vowel syllable that looks like this: 𝐶 + 𝑉.\nSo:\n  ꪀ + ꪱ becomes ꪀꪱ (\"kaa\"),\n  ꪁ + ꪽ becomes ꪁꪽ (\"kan\"),\nand\n  ꪉ + ꪺ becomes ꪉꪺ (\"ngua\").",
       "goals": [
         {
           "letter": "ꪱ",
@@ -65,9 +67,10 @@ abstract class ReadingLessons {
   static const Map<String, dynamic> lesson2 = {
     "lesson": {
       "number": 2,
-      "title": "ꪛꪱꪥ 2",
-      "titleRomanization": "baaj 2",
-      "description": "Introduction to Tai Dam vowels and consonants",
+      "title": "Above consonants",
+      "shortDescription": "Vowels can appear above consonants in syllables.",
+      "description":
+          "Some Tai Dam vowels can sit above the consonant they follow. Start with the base consonant on the writing line, then place the vowel sign directly above it to finish the syllable—no extra marks are added to the left or right. For example,\n  ꪊ + ꪲ becomes ꪊꪲ (\"chi\")\n  ꪎ + ꪳ becomes ꪎꪳ (\"su\"),\nand\n  ꪐ + ꪷ becomes ꪐꪷ (\"hgno\").",
       "goals": [
         {
           "letter": "ꪲ",

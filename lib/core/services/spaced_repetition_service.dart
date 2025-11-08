@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:taidam_tutor/core/data/alphabet_practice/models/character_mastery.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
 
@@ -139,5 +141,103 @@ class SpacedRepetitionService {
     }
 
     return streak;
+  }
+
+  /// Select a balanced set of characters for a practice session using
+  /// spaced repetition principles.
+  ///
+  /// [sessionSize] determines the maximum number of characters to return.
+  /// [reviewRatio] and [newRatio] control the mix between review and new items.
+  /// Remaining slots are filled with well-known characters to maintain variety.
+  static List<Character> selectCharactersForSession({
+    required List<Character> characters,
+    required Map<int, CharacterMastery> masteryData,
+    int sessionSize = 10,
+    double reviewRatio = 0.4,
+    double newRatio = 0.3,
+  }) {
+    if (characters.isEmpty || sessionSize <= 0) {
+      return [];
+    }
+
+    final random = Random();
+
+    final newCharacters = <Character>[];
+    final reviewCharacters = <Character>[];
+    final masteredCharacters = <Character>[];
+
+    for (final character in characters) {
+      final mastery = masteryData[character.characterId];
+
+      if (mastery == null || mastery.totalAttempts == 0) {
+        newCharacters.add(character);
+      } else if (shouldReview(mastery)) {
+        reviewCharacters.add(character);
+      } else {
+        masteredCharacters.add(character);
+      }
+    }
+
+    void shuffleList(List<Character> list) {
+      if (list.length > 1) {
+        list.shuffle(random);
+      }
+    }
+
+    shuffleList(newCharacters);
+    shuffleList(reviewCharacters);
+    shuffleList(masteredCharacters);
+
+    final int cappedSessionSize = max(1, min(sessionSize, characters.length));
+
+    int desiredReview = (cappedSessionSize * reviewRatio).round();
+    int desiredNew = (cappedSessionSize * newRatio).round();
+
+    if (desiredReview + desiredNew > cappedSessionSize) {
+      final overflow = desiredReview + desiredNew - cappedSessionSize;
+      if (desiredNew >= overflow) {
+        desiredNew -= overflow;
+      } else {
+        final remainingOverflow = overflow - desiredNew;
+        desiredNew = 0;
+        desiredReview = max(0, desiredReview - remainingOverflow);
+      }
+    }
+
+    int desiredMastered = cappedSessionSize - desiredReview - desiredNew;
+
+    List<Character> pick(List<Character> source, int count) {
+      if (count <= 0 || source.isEmpty) return [];
+      final actual = min(count, source.length);
+      final selection = source.sublist(0, actual);
+      source.removeRange(0, actual);
+      return selection;
+    }
+
+    final selected = <Character>[];
+
+    selected.addAll(pick(reviewCharacters, desiredReview));
+    selected.addAll(pick(newCharacters, desiredNew));
+    selected.addAll(pick(masteredCharacters, desiredMastered));
+
+    // Fill any remaining slots prioritizing review, then new, then mastered.
+    while (selected.length < cappedSessionSize) {
+      if (reviewCharacters.isNotEmpty) {
+        selected.add(reviewCharacters.removeAt(0));
+      } else if (newCharacters.isNotEmpty) {
+        selected.add(newCharacters.removeAt(0));
+      } else if (masteredCharacters.isNotEmpty) {
+        selected.add(masteredCharacters.removeAt(0));
+      } else {
+        break;
+      }
+    }
+
+    // Final shuffle so the order isn't predictable.
+    if (selected.length > 1) {
+      selected.shuffle(random);
+    }
+
+    return selected;
   }
 }

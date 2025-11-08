@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repository.dart';
+import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/data/characters/character_repository.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
+import 'package:taidam_tutor/core/services/spaced_repetition_service.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/analytics_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/character_drill_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/character_introduction_page.dart';
@@ -177,10 +179,31 @@ class _AlphabetPracticeView extends StatelessWidget {
       return;
     }
 
+    final sessionSize =
+        SpacedRepetitionService.getRecommendedSessionSize(characters.length);
+    final selectedCharacters =
+        SpacedRepetitionService.selectCharactersForSession(
+      characters: characters,
+      masteryData: state.masteryData,
+      sessionSize: sessionSize,
+    );
+
+    final practiceCharacters = List<Character>.from(
+      selectedCharacters.isNotEmpty
+          ? selectedCharacters
+          : characters.take(sessionSize).toList(),
+    );
+
+    if (practiceCharacters.length < 4 && characters.length >= 4) {
+      practiceCharacters
+        ..clear()
+        ..addAll(characters.take(sessionSize).toList());
+    }
+
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => CharacterDrillPage(
-          characters: characters,
+          characters: practiceCharacters,
           characterClass: characterClass,
           characterGroups: state.characterGroups,
         ),
@@ -204,12 +227,22 @@ class _AlphabetPracticeView extends StatelessWidget {
       return;
     }
 
-    // Get a learning batch (first 5-10 characters to avoid overwhelming)
-    final batch = CharacterGroupingService.getLearningBatch(
-      characters,
-      batchSize: 10,
-      offset: 0,
+    final sessionSize =
+        SpacedRepetitionService.getRecommendedSessionSize(characters.length);
+    final batch = SpacedRepetitionService.selectCharactersForSession(
+      characters: characters,
+      masteryData: state.masteryData,
+      sessionSize: sessionSize,
     );
+
+    if (batch.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Unable to select characters for $characterClass'),
+        ),
+      );
+      return;
+    }
 
     Navigator.of(context).push(
       MaterialPageRoute(
