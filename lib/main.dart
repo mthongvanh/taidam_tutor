@@ -6,8 +6,8 @@ import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/alphabet_practice_page.dart';
 import 'package:taidam_tutor/feature/character_list/character_list.dart';
-import 'package:taidam_tutor/feature/flashcard/flashcard_practice_page.dart';
 import 'package:taidam_tutor/feature/letter_search/letter_search.dart';
+import 'package:taidam_tutor/feature/more/more_page.dart';
 import 'package:taidam_tutor/feature/quiz/quiz_page.dart';
 
 void main() async {
@@ -114,19 +114,6 @@ class App extends StatelessWidget {
             ),
           ),
           resizeToAvoidBottomInset: true,
-          floatingActionButton: FloatingActionButton.extended(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => FlashcardPracticePage(),
-                ),
-              );
-            },
-            icon: const Icon(Icons.style),
-            label: const Text('Practice Flashcards'),
-            tooltip: 'Practice with flashcards',
-          ),
           bottomNavigationBar: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
@@ -149,6 +136,11 @@ class App extends StatelessWidget {
                 activeIcon: Icon(Icons.quiz),
                 label: 'Quiz',
               ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.more_horiz_outlined),
+                activeIcon: Icon(Icons.more_horiz),
+                label: 'More',
+              ),
             ],
             currentIndex: state,
             unselectedItemColor: Theme.of(context).brightness == Brightness.dark
@@ -168,5 +160,6 @@ class App extends StatelessWidget {
     const AlphabetPracticePage(),
     LetterSearchGame(),
     QuizPage(),
+    const MorePage(),
   ];
 }
