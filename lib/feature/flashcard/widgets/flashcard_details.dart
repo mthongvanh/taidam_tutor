@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:taidam_tutor/core/data/flashcards/models/flashcard_model.dart';
-import 'package:taidam_tutor/core/data/flashcards/models/hint_type.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
 
 class FlaschardDetails extends StatelessWidget {
@@ -62,15 +61,14 @@ class FlaschardDetails extends StatelessWidget {
   }
 
   Widget _buildHints(Flashcard flashcard) {
+    final sortedHints = List.from(flashcard.hints ?? [])
+      ..sort((a, b) => (a.hintOrder ?? 999).compareTo(b.hintOrder ?? 999));
+
     return Column(
       spacing: 8,
-      children: List.from((flashcard.hints ?? []).map((hint) {
-        if (hint.type == HintType.soundIpa) {
-          return Text('IPA: ${hint.content}');
-        }
-        return Text(
-          hint.content,
-        );
+      children: List.from(sortedHints.map((hint) {
+        final label = hint.hintDisplayText ?? hint.type.name;
+        return Text('$label: ${hint.content}');
       })),
     );
   }

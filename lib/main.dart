@@ -6,6 +6,7 @@ import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/alphabet_practice_page.dart';
 import 'package:taidam_tutor/feature/character_list/character_list.dart';
+import 'package:taidam_tutor/feature/flashcard/flashcard_practice_page.dart';
 import 'package:taidam_tutor/feature/letter_search/letter_search.dart';
 import 'package:taidam_tutor/feature/quiz/quiz_page.dart';
 
@@ -113,6 +114,19 @@ class App extends StatelessWidget {
             ),
           ),
           resizeToAvoidBottomInset: true,
+          floatingActionButton: FloatingActionButton.extended(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FlashcardPracticePage(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.style),
+            label: const Text('Practice Flashcards'),
+            tooltip: 'Practice with flashcards',
+          ),
           bottomNavigationBar: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
@@ -123,7 +137,7 @@ class App extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: Icon(Icons.school_outlined),
                 activeIcon: Icon(Icons.school),
-                label: 'Practice',
+                label: 'Learn',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.search_outlined),
