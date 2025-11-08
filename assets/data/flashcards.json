@@ -1,5 +1,5 @@
 [
-{
+  {
     "audio": "a1",
     "image": "a1",
     "question": "ꪼꪀ",
@@ -7,7 +7,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄກ່"
+        "content": "ໄກ່",
+        "hintOrder": 3
       }
     ]
   },
@@ -19,7 +20,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ກອງ"
+        "content": "ກອງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -31,7 +33,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ກິນ"
+        "content": "ກິນ",
+        "hintOrder": 3
       }
     ]
   },
@@ -43,7 +46,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ກິມ"
+        "content": "ກິມ",
+        "hintOrder": 3
       }
     ]
   },
@@ -55,7 +59,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ກວາງ"
+        "content": "ກວາງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -67,7 +72,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ກວາຍ"
+        "content": "ກວາຍ",
+        "hintOrder": 3
       }
     ]
   },
@@ -79,7 +85,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຂົນ"
+        "content": "ຂົນ",
+        "hintOrder": 3
       }
     ]
   },
@@ -91,7 +98,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຂຸ່ອ"
+        "content": "ຂຸ່ອ",
+        "hintOrder": 3
       }
     ]
   },
@@ -103,7 +111,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຂວານ"
+        "content": "ຂວານ",
+        "hintOrder": 3
       }
     ]
   },
@@ -115,7 +124,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຄິດ"
+        "content": "ຄິດ",
+        "hintOrder": 3
       }
     ]
   },
@@ -127,7 +137,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ງູ"
+        "content": "ງູ",
+        "hintOrder": 3
       }
     ]
   },
@@ -139,7 +150,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຈອບ"
+        "content": "ຈອບ",
+        "hintOrder": 3
       }
     ]
   },
@@ -151,7 +163,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຊ້າງ"
+        "content": "ຊ້າງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -163,7 +176,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄຂ່"
+        "content": "ໄຂ່",
+        "hintOrder": 3
       }
     ]
   },
@@ -175,7 +189,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄສ່"
+        "content": "ໄສ່",
+        "hintOrder": 3
       }
     ]
   },
@@ -187,7 +202,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄນ້ເນັນ"
+        "content": "ໄນ້ເນັນ",
+        "hintOrder": 3
       }
     ]
   },
@@ -199,7 +215,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຍຸງ"
+        "content": "ຍຸງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -211,7 +228,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ດຸ່ອ"
+        "content": "ດຸ່ອ",
+        "hintOrder": 3
       }
     ]
   },
@@ -223,7 +241,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ດ"
+        "content": "ດ",
+        "hintOrder": 3
       }
     ]
   },
@@ -235,7 +254,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຕໂອງ"
+        "content": "ຕໂອງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -247,7 +267,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຖາງ"
+        "content": "ຖາງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -259,7 +280,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ທໂອ"
+        "content": "ທໂອ",
+        "hintOrder": 3
       }
     ]
   },
@@ -271,7 +293,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຖຸງ"
+        "content": "ຖຸງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -283,7 +306,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ນູ"
+        "content": "ນູ",
+        "hintOrder": 3
       }
     ]
   },
@@ -295,7 +319,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ນົກ"
+        "content": "ນົກ",
+        "hintOrder": 3
       }
     ]
   },
@@ -307,7 +332,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ບາງ"
+        "content": "ບາງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -319,7 +345,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ບາ ປຸ່ຍ"
+        "content": "ບາ ປຸ່ຍ",
+        "hintOrder": 3
       }
     ]
   },
@@ -331,7 +358,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ປາ"
+        "content": "ປາ",
+        "hintOrder": 3
       }
     ]
   },
@@ -343,7 +371,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ປາຢູ"
+        "content": "ປາຢູ",
+        "hintOrder": 3
       }
     ]
   },
@@ -355,7 +384,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຟາ"
+        "content": "ຟາ",
+        "hintOrder": 3
       }
     ]
   },
@@ -367,7 +397,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄຟ"
+        "content": "ໄຟ",
+        "hintOrder": 3
       }
     ]
   },
@@ -379,7 +410,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ມາ"
+        "content": "ມາ",
+        "hintOrder": 3
       }
     ]
   },
@@ -391,7 +423,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ແມວ"
+        "content": "ແມວ",
+        "hintOrder": 3
       }
     ]
   },
@@ -403,7 +436,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຍ້ເນັນ"
+        "content": "ຍ້ເນັນ",
+        "hintOrder": 3
       }
     ]
   },
@@ -415,7 +449,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຣໂອ"
+        "content": "ຣໂອ",
+        "hintOrder": 3
       }
     ]
   },
@@ -427,7 +462,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ລານ"
+        "content": "ລານ",
+        "hintOrder": 3
       }
     ]
   },
@@ -439,7 +475,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ລິງ"
+        "content": "ລິງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -451,7 +488,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ແວນ ມື"
+        "content": "ແວນ ມື",
+        "hintOrder": 3
       }
     ]
   },
@@ -463,7 +501,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ແວນ ຕາ"
+        "content": "ແວນ ຕາ",
+        "hintOrder": 3
       }
     ]
   },
@@ -475,7 +514,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ແຫ"
+        "content": "ແຫ",
+        "hintOrder": 3
       }
     ]
   },
@@ -487,7 +527,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຫອກ"
+        "content": "ຫອກ",
+        "hintOrder": 3
       }
     ]
   },
@@ -499,7 +540,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ອາງ"
+        "content": "ອາງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -511,7 +553,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄອ້ເນັມ"
+        "content": "ໄອ້ເນັມ",
+        "hintOrder": 3
       }
     ]
   },
@@ -523,7 +566,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຄົນ"
+        "content": "ຄົນ",
+        "hintOrder": 3
       }
     ]
   },
@@ -535,7 +579,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ນຶ່ງ"
+        "content": "ນຶ່ງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -547,7 +592,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ດຸ່ອ"
+        "content": "ດຸ່ອ",
+        "hintOrder": 3
       }
     ]
   },
@@ -559,7 +605,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຕາ"
+        "content": "ຕາ",
+        "hintOrder": 3
       }
     ]
   },
@@ -571,7 +618,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ມີ"
+        "content": "ມີ",
+        "hintOrder": 3
       }
     ]
   },
@@ -583,7 +631,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ມູ"
+        "content": "ມູ",
+        "hintOrder": 3
       }
     ]
   },
@@ -595,7 +644,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ມື"
+        "content": "ມື",
+        "hintOrder": 3
       }
     ]
   },
@@ -607,7 +657,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ເຈ້"
+        "content": "ເຈ້",
+        "hintOrder": 3
       }
     ]
   },
@@ -619,7 +670,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ມໂອ"
+        "content": "ມໂອ",
+        "hintOrder": 3
       }
     ]
   },
@@ -631,7 +683,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ຫຸ່ຍ"
+        "content": "ຫຸ່ຍ",
+        "hintOrder": 3
       }
     ]
   },
@@ -643,7 +696,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ກົນ ໄມ"
+        "content": "ກົນ ໄມ",
+        "hintOrder": 3
       }
     ]
   },
@@ -655,7 +709,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄຟ"
+        "content": "ໄຟ",
+        "hintOrder": 3
       }
     ]
   },
@@ -667,7 +722,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ບາຍ"
+        "content": "ບາຍ",
+        "hintOrder": 3
       }
     ]
   },
@@ -679,7 +735,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ມ້າມ"
+        "content": "ມ້າມ",
+        "hintOrder": 3
       }
     ]
   },
@@ -691,7 +748,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ປັນ"
+        "content": "ປັນ",
+        "hintOrder": 3
       }
     ]
   },
@@ -703,7 +761,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ແບ"
+        "content": "ແບ",
+        "hintOrder": 3
       }
     ]
   },
@@ -715,7 +774,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄສ"
+        "content": "ໄສ",
+        "hintOrder": 3
       }
     ]
   },
@@ -727,7 +787,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄຟຟໂອງ"
+        "content": "ໄຟຟໂອງ",
+        "hintOrder": 3
       }
     ]
   },
@@ -739,7 +800,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄປ້"
+        "content": "ໄປ້",
+        "hintOrder": 3
       }
     ]
   },
@@ -751,7 +813,8 @@
     "hints": [
       {
         "hintType": "lao",
-        "content": "ໄກາ"
+        "content": "ໄກາ",
+        "hintOrder": 3
       }
     ]
   },
@@ -761,7 +824,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kap̚˦˥]"
+        "content": "[kap̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kap",
+        "hintOrder": 1
       }
     ],
     "answer": "with",
@@ -774,7 +844,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kʷaːŋ˨]"
+        "content": "[kʷaːŋ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kwang",
+        "hintOrder": 1
       }
     ],
     "answer": "deer",
@@ -787,7 +864,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kaː˨]"
+        "content": "[kaː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ka",
+        "hintOrder": 1
       }
     ],
     "answer": "crow",
@@ -800,7 +884,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kɨː˦˥]"
+        "content": "[kɨː˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "keu",
+        "hintOrder": 1
       }
     ],
     "answer": "continue\npersevere",
@@ -813,7 +904,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kap̚˦˥]"
+        "content": "[kap̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kap",
+        "hintOrder": 1
       }
     ],
     "answer": "with",
@@ -826,7 +924,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kaː˦˥]"
+        "content": "[kaː˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ka",
+        "hintOrder": 1
       }
     ],
     "answer": "place",
@@ -839,7 +944,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kʷaːm˥]"
+        "content": "[kʷaːm˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kwam",
+        "hintOrder": 1
       }
     ],
     "answer": "word\nlanguage",
@@ -852,7 +964,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kʷaːj˥]"
+        "content": "[kʷaːj˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kwaj",
+        "hintOrder": 1
       }
     ],
     "answer": "water buffalo",
@@ -865,7 +984,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kʷaː˦]"
+        "content": "[kʷaː˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kwa",
+        "hintOrder": 1
       }
     ],
     "answer": "to visit",
@@ -878,7 +1004,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kɔŋ˧˩ˀ]"
+        "content": "[kɔŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kawng",
+        "hintOrder": 1
       }
     ],
     "answer": "gong",
@@ -891,7 +1024,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kim˥]"
+        "content": "[kim˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kim",
+        "hintOrder": 1
       }
     ],
     "answer": "pliers, tongs",
@@ -904,7 +1044,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kɨt̚˦]"
+        "content": "[kɨt̚˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "keut",
+        "hintOrder": 1
       }
     ],
     "answer": "to think",
@@ -917,7 +1064,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kaː˦]"
+        "content": "[kaː˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ka",
+        "hintOrder": 1
       }
     ],
     "answer": "price",
@@ -930,7 +1084,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kɔŋ˧˩ˀ]"
+        "content": "[kɔŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kawng",
+        "hintOrder": 1
       }
     ],
     "answer": "gong",
@@ -943,7 +1104,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kaː˧˩ˀ]"
+        "content": "[kaː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ka",
+        "hintOrder": 1
       }
     ],
     "answer": "to trade",
@@ -956,7 +1124,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xʷaːn˨]"
+        "content": "[xʷaːn˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khwan",
+        "hintOrder": 1
       }
     ],
     "answer": "axe",
@@ -969,7 +1144,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xʷaː˦˥]"
+        "content": "[xʷaː˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khwa",
+        "hintOrder": 1
       }
     ],
     "answer": "lock",
@@ -982,7 +1164,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xaːm˨]"
+        "content": "[xaːm˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kham",
+        "hintOrder": 1
       }
     ],
     "answer": "tamarind",
@@ -995,7 +1184,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xaːj˨]"
+        "content": "[xaːj˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khaj",
+        "hintOrder": 1
       }
     ],
     "answer": "to sell",
@@ -1008,7 +1204,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɨn˨˩ˀ]"
+        "content": "[xɨn˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kheun",
+        "hintOrder": 1
       }
     ],
     "answer": "to rise\nto go up",
@@ -1021,7 +1224,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɨn˨˩ˀ]"
+        "content": "[xɨn˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kheun",
+        "hintOrder": 1
       }
     ],
     "answer": "to rise\nto go up",
@@ -1034,7 +1244,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɔː˨]"
+        "content": "[xɔː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khaw",
+        "hintOrder": 1
       }
     ],
     "answer": "hook",
@@ -1047,7 +1264,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɔj˨˩ˀ]"
+        "content": "[xɔj˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khawj",
+        "hintOrder": 1
       }
     ],
     "answer": "I\nme",
@@ -1060,7 +1284,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɔj˨˩ˀ]"
+        "content": "[xɔj˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khawj",
+        "hintOrder": 1
       }
     ],
     "answer": "I\nme",
@@ -1073,7 +1304,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xaː˨˩ˀ]"
+        "content": "[xaː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kha",
+        "hintOrder": 1
       }
     ],
     "answer": "to kill",
@@ -1086,7 +1324,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xaː˨˩ˀ]"
+        "content": "[xaː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kha",
+        "hintOrder": 1
       }
     ],
     "answer": "to kill",
@@ -1099,7 +1344,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xuə̯ʔ˦]"
+        "content": "[xuə̯ʔ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khuuh",
+        "hintOrder": 1
       }
     ],
     "answer": "tadpole",
@@ -1112,7 +1364,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ŋɔʔ˦]"
+        "content": "[ŋɔʔ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ngaw",
+        "hintOrder": 1
       }
     ],
     "answer": "to sprout\nto germinate",
@@ -1125,7 +1384,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ŋuː˥]"
+        "content": "[ŋuː˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ngu",
+        "hintOrder": 1
       }
     ],
     "answer": "snake",
@@ -1138,7 +1404,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ŋuə̯˥]"
+        "content": "[ŋuə̯˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nguuh",
+        "hintOrder": 1
       }
     ],
     "answer": "ox\ncow",
@@ -1151,7 +1424,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ŋaːj˦]"
+        "content": "[ŋaːj˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ngaj",
+        "hintOrder": 1
       }
     ],
     "answer": "easy; simple",
@@ -1164,7 +1444,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕɔp̚˦˥]"
+        "content": "[t͡ɕɔp̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chawp",
+        "hintOrder": 1
       }
     ],
     "answer": "hoe",
@@ -1177,7 +1464,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕaŋ˦˥]"
+        "content": "[t͡ɕaŋ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chang",
+        "hintOrder": 1
       }
     ],
     "answer": "so; then",
@@ -1190,7 +1484,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕaŋ˥]"
+        "content": "[t͡ɕaŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chang",
+        "hintOrder": 1
       }
     ],
     "answer": "to hate\nto detest",
@@ -1203,7 +1504,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕɨː˦]"
+        "content": "[t͡ɕɨː˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "cheu",
+        "hintOrder": 1
       }
     ],
     "answer": "name",
@@ -1216,7 +1524,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕɔj˦]"
+        "content": "[t͡ɕɔj˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chawj",
+        "hintOrder": 1
       }
     ],
     "answer": "to help\nto aid",
@@ -1229,7 +1544,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕɔŋ˧˩ˀ]"
+        "content": "[t͡ɕɔŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chawng",
+        "hintOrder": 1
       }
     ],
     "answer": "lasso\nindustrious",
@@ -1242,7 +1564,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "t͡ɕaːŋ˧˩ˀ]"
+        "content": "t͡ɕaːŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chang",
+        "hintOrder": 1
       }
     ],
     "answer": "elephant",
@@ -1255,7 +1584,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕaːŋ˧˩ˀ]"
+        "content": "[t͡ɕaːŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chang",
+        "hintOrder": 1
       }
     ],
     "answer": "elephant",
@@ -1268,7 +1604,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[sɔŋ˨]"
+        "content": "[sɔŋ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "sawng",
+        "hintOrder": 1
       }
     ],
     "answer": "two",
@@ -1281,7 +1624,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[sɔn˨]"
+        "content": "[sɔn˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "sawn",
+        "hintOrder": 1
       }
     ],
     "answer": "to imitate",
@@ -1294,7 +1644,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[saːʔ˦˥]"
+        "content": "[saːʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "sa",
+        "hintOrder": 1
       }
     ],
     "answer": "pestle",
@@ -1307,7 +1664,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[saːm˨]"
+        "content": "[saːm˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "sam",
+        "hintOrder": 1
       }
     ],
     "answer": "three",
@@ -1320,7 +1684,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[sip̚˦˥]"
+        "content": "[sip̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "sip",
+        "hintOrder": 1
       }
     ],
     "answer": "ten",
@@ -1333,7 +1704,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[siw˨]"
+        "content": "[siw˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "siw",
+        "hintOrder": 1
       }
     ],
     "answer": "pimple",
@@ -1346,7 +1724,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[siː˦˥]"
+        "content": "[siː˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "si",
+        "hintOrder": 1
       }
     ],
     "answer": "four",
@@ -1359,7 +1744,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[siː˦˥]"
+        "content": "[siː˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "si",
+        "hintOrder": 1
       }
     ],
     "answer": "four",
@@ -1372,7 +1764,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[sɨː˨]"
+        "content": "[sɨː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "seu",
+        "hintOrder": 1
       }
     ],
     "answer": "script\nlanguage",
@@ -1385,7 +1784,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[suŋ˨]"
+        "content": "[suŋ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "sung",
+        "hintOrder": 1
       }
     ],
     "answer": "tall\nhigh",
@@ -1398,7 +1804,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[suj˨]"
+        "content": "[suj˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "suj",
+        "hintOrder": 1
       }
     ],
     "answer": "to push",
@@ -1411,7 +1824,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[saːw˦˥]"
+        "content": "[saːw˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "saw",
+        "hintOrder": 1
       }
     ],
     "answer": "to look for",
@@ -1424,7 +1844,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[saːj˥]"
+        "content": "[saːj˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "saj",
+        "hintOrder": 1
       }
     ],
     "answer": "sand",
@@ -1437,7 +1864,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[sɨː˧˩ˀ]"
+        "content": "[sɨː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "seu",
+        "hintOrder": 1
       }
     ],
     "answer": "to buy",
@@ -1450,7 +1884,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ɲaː˨˩ˀ]"
+        "content": "[ɲaː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nya",
+        "hintOrder": 1
       }
     ],
     "answer": "grass",
@@ -1463,7 +1904,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ɲaː˨˩ˀ]"
+        "content": "[ɲaː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nya",
+        "hintOrder": 1
       }
     ],
     "answer": "grass",
@@ -1476,7 +1924,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ɲaːm˥]"
+        "content": "[ɲaːm˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nyam",
+        "hintOrder": 1
       }
     ],
     "answer": "time",
@@ -1489,7 +1944,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ɲip̚˦]"
+        "content": "[ɲip̚˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nyip",
+        "hintOrder": 1
       }
     ],
     "answer": "to sew",
@@ -1502,7 +1964,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ɲɔm˧˩ˀ]"
+        "content": "[ɲɔm˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nyawm",
+        "hintOrder": 1
       }
     ],
     "answer": "to dye",
@@ -1515,7 +1984,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[dap̚˦˥]"
+        "content": "[dap̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "dap",
+        "hintOrder": 1
       }
     ],
     "answer": "to extinguish",
@@ -1528,7 +2004,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[daːw˨]"
+        "content": "[daːw˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "daw",
+        "hintOrder": 1
       }
     ],
     "answer": "star",
@@ -1541,7 +2024,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[diː˨]"
+        "content": "[diː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "di",
+        "hintOrder": 1
       }
     ],
     "answer": "good",
@@ -1554,7 +2044,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[dit̚˦˥]"
+        "content": "[dit̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "dit",
+        "hintOrder": 1
       }
     ],
     "answer": "to flick\nto jump",
@@ -1567,7 +2064,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[din˨]"
+        "content": "[din˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "din",
+        "hintOrder": 1
       }
     ],
     "answer": "earth; soil",
@@ -1580,7 +2084,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[duʔ˦˥]"
+        "content": "[duʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "du",
+        "hintOrder": 1
       }
     ],
     "answer": "bone",
@@ -1593,7 +2104,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[dap̚˦˥]"
+        "content": "[dap̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "dap",
+        "hintOrder": 1
       }
     ],
     "answer": "to extinguish",
@@ -1606,7 +2124,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tat̚˦˥]"
+        "content": "[tat̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tat",
+        "hintOrder": 1
       }
     ],
     "answer": "to cut",
@@ -1619,7 +2144,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[taː˨]"
+        "content": "[taː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ta",
+        "hintOrder": 1
       }
     ],
     "answer": "eye",
@@ -1632,7 +2164,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[taːj˨]"
+        "content": "[taːj˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "taj",
+        "hintOrder": 1
       }
     ],
     "answer": "to die",
@@ -1645,7 +2184,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tuː˨]"
+        "content": "[tuː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tu",
+        "hintOrder": 1
       }
     ],
     "answer": "door",
@@ -1658,7 +2204,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[taːŋ˦˥]"
+        "content": "[taːŋ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tang",
+        "hintOrder": 1
       }
     ],
     "answer": "different\nwindow",
@@ -1671,7 +2224,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tɔŋ˧˩ˀ]"
+        "content": "[tɔŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tawng",
+        "hintOrder": 1
       }
     ],
     "answer": " abdomen\nstomach",
@@ -1684,7 +2244,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tɔŋ˧˩ˀ]"
+        "content": "[tɔŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tawng",
+        "hintOrder": 1
       }
     ],
     "answer": " abdomen\nstomach",
@@ -1697,7 +2264,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tʰim˨˩ˀ]"
+        "content": "[tʰim˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tʰim",
+        "hintOrder": 1
       }
     ],
     "answer": "to discard\nto drop",
@@ -1710,7 +2284,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tʰam˨˩ˀ]"
+        "content": "[tʰam˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tʰam",
+        "hintOrder": 1
       }
     ],
     "answer": "cave; tunnel",
@@ -1723,7 +2304,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[naŋ˨]"
+        "content": "[naŋ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nang",
+        "hintOrder": 1
       }
     ],
     "answer": "skin; leather",
@@ -1736,7 +2324,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[naː˨˩ˀ]"
+        "content": "[naː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "na",
+        "hintOrder": 1
       }
     ],
     "answer": "face\nin font of; before\ncrossbow",
@@ -1749,7 +2344,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[naː˨˩ˀ]"
+        "content": "[naː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "na",
+        "hintOrder": 1
       }
     ],
     "answer": "face\nin font of; before\ncrossbow",
@@ -1762,7 +2364,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[nɔn˥]"
+        "content": "[nɔn˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nawn",
+        "hintOrder": 1
       }
     ],
     "answer": "to lie down\nto sleep",
@@ -1775,7 +2384,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[naŋ˦]"
+        "content": "[naŋ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nang",
+        "hintOrder": 1
       }
     ],
     "answer": "to sit",
@@ -1788,7 +2404,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[naŋ˦]"
+        "content": "[naŋ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nang",
+        "hintOrder": 1
       }
     ],
     "answer": "to sit",
@@ -1801,7 +2424,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[niː˧˩ˀ]"
+        "content": "[niː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ni",
+        "hintOrder": 1
       }
     ],
     "answer": "this",
@@ -1814,7 +2444,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[niw˧˩ˀ]"
+        "content": "[niw˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "niw",
+        "hintOrder": 1
       }
     ],
     "answer": "finger, toe",
@@ -1827,7 +2464,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[nɨŋ˦]"
+        "content": "[nɨŋ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "neung",
+        "hintOrder": 1
       }
     ],
     "answer": "one",
@@ -1840,7 +2484,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[nam˧˩ˀ]"
+        "content": "[nam˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nam",
+        "hintOrder": 1
       }
     ],
     "answer": "water",
@@ -1853,7 +2504,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[nam˧˩ˀ]"
+        "content": "[nam˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nam",
+        "hintOrder": 1
       }
     ],
     "answer": "water",
@@ -1866,7 +2524,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[nɔj˧˩ˀ]"
+        "content": "[nɔj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nawj",
+        "hintOrder": 1
       }
     ],
     "answer": "small, little; few",
@@ -1879,7 +2544,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[bɔʔ˦˥]"
+        "content": "[bɔʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "baw",
+        "hintOrder": 1
       }
     ],
     "answer": "flower\nto teach\nto command",
@@ -1892,7 +2564,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[bin˨]"
+        "content": "[bin˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "bin",
+        "hintOrder": 1
       }
     ],
     "answer": "to fly",
@@ -1905,7 +2584,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[buə̯˨]"
+        "content": "[buə̯˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "buuh",
+        "hintOrder": 1
       }
     ],
     "answer": "lotus",
@@ -1918,7 +2604,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[paː˨]"
+        "content": "[paː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pa",
+        "hintOrder": 1
       }
     ],
     "answer": "fish",
@@ -1931,7 +2624,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[paːʔ˦˥]"
+        "content": "[paːʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pa",
+        "hintOrder": 1
       }
     ],
     "answer": "mouth\nspeech",
@@ -1944,7 +2644,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[piː˨]"
+        "content": "[piː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pi",
+        "hintOrder": 1
       }
     ],
     "answer": "year",
@@ -1957,7 +2664,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[piʔ˦˥]"
+        "content": "[piʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pi",
+        "hintOrder": 1
       }
     ],
     "answer": "wing",
@@ -1970,7 +2684,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[puː˨]"
+        "content": "[puː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pu",
+        "hintOrder": 1
       }
     ],
     "answer": "crab",
@@ -1983,7 +2704,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[puə̯˨]"
+        "content": "[puə̯˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "puuh",
+        "hintOrder": 1
       }
     ],
     "answer": "king",
@@ -1996,7 +2724,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[puː˥]"
+        "content": "[puː˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pu",
+        "hintOrder": 1
       }
     ],
     "answer": "mountain\nbetel",
@@ -2009,7 +2744,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[pɔm˦]"
+        "content": "[pɔm˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pawm",
+        "hintOrder": 1
       }
     ],
     "answer": "apple",
@@ -2022,7 +2764,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[faŋ˨]"
+        "content": "[faŋ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "fang",
+        "hintOrder": 1
       }
     ],
     "answer": "to bury",
@@ -2035,7 +2784,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[faː˨]"
+        "content": "[faː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "fa",
+        "hintOrder": 1
       }
     ],
     "answer": "lid\npartition",
@@ -2048,7 +2804,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[fuː˨˩ˀ]"
+        "content": "[fuː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "fu",
+        "hintOrder": 1
       }
     ],
     "answer": "person, people",
@@ -2061,7 +2824,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[fan˨]"
+        "content": "[fan˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "fan",
+        "hintOrder": 1
       }
     ],
     "answer": "to dream",
@@ -2074,7 +2844,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[faː˨˩ˀ]"
+        "content": "[faː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "fa",
+        "hintOrder": 1
       }
     ],
     "answer": "cloth",
@@ -2087,7 +2864,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[faː˧˩ˀ]"
+        "content": "[faː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "fa",
+        "hintOrder": 1
       }
     ],
     "answer": "sky",
@@ -2100,7 +2884,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[faː˧˩ˀ]"
+        "content": "[faː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "fa",
+        "hintOrder": 1
       }
     ],
     "answer": "sky",
@@ -2113,7 +2904,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɔn˨]"
+        "content": "[mɔn˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mawn",
+        "hintOrder": 1
       }
     ],
     "answer": "pillow; cushion",
@@ -2126,7 +2924,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[maː˨]"
+        "content": "[maː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ma",
+        "hintOrder": 1
       }
     ],
     "answer": "dog",
@@ -2139,7 +2944,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[maːʔ˦˥]"
+        "content": "[maːʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ma",
+        "hintOrder": 1
       }
     ],
     "answer": "fruit",
@@ -2152,7 +2964,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[miː˨]"
+        "content": "[miː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mi",
+        "hintOrder": 1
       }
     ],
     "answer": "bear",
@@ -2165,7 +2984,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[muː˨]"
+        "content": "[muː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mu",
+        "hintOrder": 1
       }
     ],
     "answer": "pig; hog; boar",
@@ -2178,7 +3004,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[maː˨˩ˀ]"
+        "content": "[maː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ma",
+        "hintOrder": 1
       }
     ],
     "answer": "to rise",
@@ -2191,7 +3024,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[maː˨˩ˀ]"
+        "content": "[maː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ma",
+        "hintOrder": 1
       }
     ],
     "answer": "to come",
@@ -2204,7 +3044,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[miː˥]"
+        "content": "[miː˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mi",
+        "hintOrder": 1
       }
     ],
     "answer": "to have",
@@ -2217,7 +3064,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɨː˥]"
+        "content": "[mɨː˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "meu",
+        "hintOrder": 1
       }
     ],
     "answer": "hand",
@@ -2230,7 +3084,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɨŋ˥]"
+        "content": "[mɨŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "meung",
+        "hintOrder": 1
       }
     ],
     "answer": "you informal",
@@ -2243,7 +3104,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[miə̯˥]"
+        "content": "[miə̯˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "miuh",
+        "hintOrder": 1
       }
     ],
     "answer": "wife",
@@ -2256,7 +3124,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[maː˧˩ˀ]"
+        "content": "[maː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ma",
+        "hintOrder": 1
       }
     ],
     "answer": "horse",
@@ -2269,7 +3144,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[jaː˨]"
+        "content": "[jaː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ja",
+        "hintOrder": 1
       }
     ],
     "answer": "medicine",
@@ -2282,7 +3164,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[jaːn˨˩ˀ]"
+        "content": "[jaːn˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "jan",
+        "hintOrder": 1
       }
     ],
     "answer": "to be afraid\nto fear",
@@ -2295,7 +3184,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[laŋ˨]"
+        "content": "[laŋ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "lang",
+        "hintOrder": 1
       }
     ],
     "answer": "back\nbehind; after",
@@ -2308,7 +3204,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[laːj˨]"
+        "content": "[laːj˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "laj",
+        "hintOrder": 1
       }
     ],
     "answer": "many",
@@ -2321,7 +3224,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[liŋ˥]"
+        "content": "[liŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ling",
+        "hintOrder": 1
       }
     ],
     "answer": "monkey",
@@ -2334,7 +3244,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[lɨm˥]"
+        "content": "[lɨm˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "leum",
+        "hintOrder": 1
       }
     ],
     "answer": "to forget",
@@ -2347,7 +3264,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[luʔ˦]"
+        "content": "[luʔ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "lu",
+        "hintOrder": 1
       }
     ],
     "answer": "child",
@@ -2360,7 +3284,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[luə̯ŋ˥]"
+        "content": "[luə̯ŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "luuhng",
+        "hintOrder": 1
       }
     ],
     "answer": "side, dimension\ndirection",
@@ -2373,7 +3304,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[vaːn˨]"
+        "content": "[vaːn˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "van",
+        "hintOrder": 1
       }
     ],
     "answer": "sweet",
@@ -2386,7 +3324,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[viː˨]"
+        "content": "[viː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "vi",
+        "hintOrder": 1
       }
     ],
     "answer": "comb",
@@ -2399,7 +3344,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[vaːŋ˥]"
+        "content": "[vaːŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "vang",
+        "hintOrder": 1
       }
     ],
     "answer": "to leave, abandon, quit",
@@ -2412,7 +3364,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[viə̯ʔ˦]"
+        "content": "[viə̯ʔ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "viuh",
+        "hintOrder": 1
       }
     ],
     "answer": "work; job",
@@ -2425,7 +3384,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[van˥]"
+        "content": "[van˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "van",
+        "hintOrder": 1
       }
     ],
     "answer": "day",
@@ -2438,7 +3404,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔʔ˦˥]"
+        "content": "[hɔʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "haw",
+        "hintOrder": 1
       }
     ],
     "answer": "spear",
@@ -2451,7 +3424,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔm˨]"
+        "content": "[hɔm˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hawm",
+        "hintOrder": 1
       }
     ],
     "answer": "fragrant, nice-smelling",
@@ -2464,7 +3444,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔj˨]"
+        "content": "[hɔj˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hawj",
+        "hintOrder": 1
       }
     ],
     "answer": "mollusk",
@@ -2477,7 +3464,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[huː˨]"
+        "content": "[huː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hu",
+        "hintOrder": 1
       }
     ],
     "answer": "ear",
@@ -2490,7 +3484,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[huə̯˨]"
+        "content": "[huə̯˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "huuh",
+        "hintOrder": 1
       }
     ],
     "answer": "head",
@@ -2503,7 +3504,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[haːn˦˥]"
+        "content": "[haːn˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "han",
+        "hintOrder": 1
       }
     ],
     "answer": "goose",
@@ -2516,7 +3524,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[haː˨˩ˀ]"
+        "content": "[haː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ha",
+        "hintOrder": 1
       }
     ],
     "answer": "five",
@@ -2529,7 +3544,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[haː˨˩ˀ]"
+        "content": "[haː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ha",
+        "hintOrder": 1
       }
     ],
     "answer": "five",
@@ -2542,7 +3564,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔʔ˦]"
+        "content": "[hɔʔ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "haw",
+        "hintOrder": 1
       }
     ],
     "answer": "squirrel",
@@ -2555,7 +3584,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔt̚˦]"
+        "content": "[hɔt̚˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hawt",
+        "hintOrder": 1
       }
     ],
     "answer": "to, at",
@@ -2568,7 +3604,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[haŋ˥]"
+        "content": "[haŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hang",
+        "hintOrder": 1
       }
     ],
     "answer": "nest",
@@ -2581,7 +3624,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[huː˥]"
+        "content": "[huː˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hu",
+        "hintOrder": 1
       }
     ],
     "answer": "hole",
@@ -2594,7 +3644,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[huː˧˩ˀ]"
+        "content": "[huː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hu",
+        "hintOrder": 1
       }
     ],
     "answer": "to know",
@@ -2607,7 +3664,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[huː˧˩ˀ]"
+        "content": "[huː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hu",
+        "hintOrder": 1
       }
     ],
     "answer": "to know",
@@ -2620,7 +3684,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔŋ˧˩ˀ]"
+        "content": "[hɔŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hawng",
+        "hintOrder": 1
       }
     ],
     "answer": "",
@@ -2633,7 +3704,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔŋ˧˩ˀ]"
+        "content": "[hɔŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hawng",
+        "hintOrder": 1
       }
     ],
     "answer": "to shout, to yell\nto cry",
@@ -2646,7 +3724,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔj˧˩ˀ]"
+        "content": "[hɔj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hawj",
+        "hintOrder": 1
       }
     ],
     "answer": "hundred",
@@ -2659,7 +3744,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɔj˧˩ˀ]"
+        "content": "[hɔj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hawj",
+        "hintOrder": 1
       }
     ],
     "answer": "hundred",
@@ -2672,7 +3764,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ʔaːp̚˦˥]"
+        "content": "[ʔaːp̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ap",
+        "hintOrder": 1
       }
     ],
     "answer": "to bathe",
@@ -2685,7 +3784,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ʔit̚˦˥]"
+        "content": "[ʔit̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "it",
+        "hintOrder": 1
       }
     ],
     "answer": "grapes",
@@ -2698,7 +3804,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kon˥]"
+        "content": "[kon˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kon",
+        "hintOrder": 1
       }
     ],
     "answer": "person",
@@ -2711,7 +3824,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[nɨŋ˦]"
+        "content": "[nɨŋ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "neung",
+        "hintOrder": 1
       }
     ],
     "answer": "one",
@@ -2724,7 +3844,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kɔː˨.kɛː˨]"
+        "content": "[kɔː˨.kɛː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kaw.kɛ",
+        "hintOrder": 1
       }
     ],
     "answer": "pigeon",
@@ -2737,7 +3864,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xiː˨˩ˀ.ɲɨə̯˨˩ˀ]"
+        "content": "[xiː˨˩ˀ.ɲɨə̯˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khi.nyeuuh",
+        "hintOrder": 1
       }
     ],
     "answer": "garbage",
@@ -2750,7 +3884,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɔː˨.xʷaː˦˥]"
+        "content": "[xɔː˨.xʷaː˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khaw.khwa",
+        "hintOrder": 1
       }
     ],
     "answer": "key",
@@ -2763,7 +3904,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕaʔ˦˥.t͡ɕan˦˥]"
+        "content": "[t͡ɕaʔ˦˥.t͡ɕan˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "cha.chan",
+        "hintOrder": 1
       }
     ],
     "answer": "cicada",
@@ -2776,7 +3924,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[saː˨.fɔŋ˧˩ˀ]"
+        "content": "[saː˨.fɔŋ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "sa.fawng",
+        "hintOrder": 1
       }
     ],
     "answer": "soap",
@@ -2789,7 +3944,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[nam˧˩ˀ.beː˨˩ˀ]"
+        "content": "[nam˧˩ˀ.beː˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nam.be",
+        "hintOrder": 1
       }
     ],
     "answer": "ocean, sea",
@@ -2802,7 +3964,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[baː˥.puə̯˨]"
+        "content": "[baː˥.puə̯˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ba.puuh",
+        "hintOrder": 1
       }
     ],
     "answer": "queen",
@@ -2815,7 +3984,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɨː˧˩ˀ.puʔ˦]"
+        "content": "[mɨː˧˩ˀ.puʔ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "meu.pu",
+        "hintOrder": 1
       }
     ],
     "answer": "tomorrow",
@@ -2828,7 +4004,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[luʔ˦.t͡ɕaːj˥]"
+        "content": "[luʔ˦.t͡ɕaːj˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "lu.chaj",
+        "hintOrder": 1
       }
     ],
     "answer": "son",
@@ -2841,7 +4024,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[luʔ˦.ɲiŋ˥]"
+        "content": "[luʔ˦.ɲiŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "lu.nying",
+        "hintOrder": 1
       }
     ],
     "answer": "daughter",
@@ -2854,7 +4044,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[viə̯t̚˦.naːm˥]"
+        "content": "[viə̯t̚˦.naːm˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "viuht.nam",
+        "hintOrder": 1
       }
     ],
     "answer": "Vietnam",
@@ -2867,7 +4064,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[haː˨.t͡ɕaɰ˨]"
+        "content": "[haː˨.t͡ɕaɰ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ha.chaɰ",
+        "hintOrder": 1
       }
     ],
     "answer": "breathe",
@@ -2880,7 +4084,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ʔɔn˦˥.nɔj˧˩ˀ]"
+        "content": "[ʔɔn˦˥.nɔj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "awn.nawj",
+        "hintOrder": 1
       }
     ],
     "answer": "",
@@ -2893,7 +4104,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ʔɔn˦˥.nɔj˧˩ˀ]"
+        "content": "[ʔɔn˦˥.nɔj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "awn.nawj",
+        "hintOrder": 1
       }
     ],
     "answer": "infant; baby",
@@ -2906,7 +4124,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɛʔ˦˥]"
+        "content": "[xɛʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khɛ",
+        "hintOrder": 1
       }
     ],
     "answer": "guest\nto call",
@@ -2919,7 +4144,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɛŋ˨]"
+        "content": "[xɛŋ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khɛng",
+        "hintOrder": 1
       }
     ],
     "answer": "hard; rigid",
@@ -2932,7 +4164,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xɛw˨]"
+        "content": "[xɛw˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khɛw",
+        "hintOrder": 1
       }
     ],
     "answer": "green",
@@ -2945,7 +4184,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕɛː˥]"
+        "content": "[t͡ɕɛː˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chɛ",
+        "hintOrder": 1
       }
     ],
     "answer": "tea",
@@ -2958,7 +4204,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[dɛn˨]"
+        "content": "[dɛn˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "dɛn",
+        "hintOrder": 1
       }
     ],
     "answer": "border",
@@ -2971,7 +4224,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tɛm˨˩ˀ]"
+        "content": "[tɛm˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tɛm",
+        "hintOrder": 1
       }
     ],
     "answer": "to write\nto draw",
@@ -2984,7 +4244,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tɛm˨˩ˀ]"
+        "content": "[tɛm˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tɛm",
+        "hintOrder": 1
       }
     ],
     "answer": "to write\nto draw",
@@ -2997,7 +4264,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[pɛt̚˦˥]"
+        "content": "[pɛt̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pɛt",
+        "hintOrder": 1
       }
     ],
     "answer": "eight",
@@ -3010,7 +4284,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[pɛʔ˦]"
+        "content": "[pɛʔ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pɛ",
+        "hintOrder": 1
       }
     ],
     "answer": "clean",
@@ -3023,7 +4304,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɛw˥]"
+        "content": "[mɛw˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mɛw",
+        "hintOrder": 1
       }
     ],
     "answer": "cat",
@@ -3036,7 +4324,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɛː˦]"
+        "content": "[mɛː˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mɛ",
+        "hintOrder": 1
       }
     ],
     "answer": "female",
@@ -3049,7 +4344,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɛː˦]"
+        "content": "[mɛː˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mɛ",
+        "hintOrder": 1
       }
     ],
     "answer": "female",
@@ -3062,7 +4364,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ʔɛː˨]"
+        "content": "[ʔɛː˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ɛ",
+        "hintOrder": 1
       }
     ],
     "answer": "to want",
@@ -3075,7 +4384,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ʔɛʔ˦˥]"
+        "content": "[ʔɛʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ɛ",
+        "hintOrder": 1
       }
     ],
     "answer": "brain\nyoke",
@@ -3088,7 +4404,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ʔɛp̚˦˥]"
+        "content": "[ʔɛp̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ɛp",
+        "hintOrder": 1
       }
     ],
     "answer": "to learn",
@@ -3101,7 +4424,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kop̚˦˥]"
+        "content": "[kop̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kop",
+        "hintOrder": 1
       }
     ],
     "answer": "frog\nplaner",
@@ -3114,7 +4444,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kon˥]"
+        "content": "[kon˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kon",
+        "hintOrder": 1
       }
     ],
     "answer": "person\nstir",
@@ -3127,7 +4464,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xon˨]"
+        "content": "[xon˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khon",
+        "hintOrder": 1
       }
     ],
     "answer": "hair\nfeather",
@@ -3140,7 +4484,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕop̚˦˥]"
+        "content": "[t͡ɕop̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chop",
+        "hintOrder": 1
       }
     ],
     "answer": "hoe",
@@ -3153,7 +4504,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tot̚˦˥]"
+        "content": "[tot̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tot",
+        "hintOrder": 1
       }
     ],
     "answer": "to fart",
@@ -3166,7 +4524,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[noʔ˦]"
+        "content": "[noʔ˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "no",
+        "hintOrder": 1
       }
     ],
     "answer": "bird",
@@ -3179,7 +4544,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[nom˥]"
+        "content": "[nom˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nom",
+        "hintOrder": 1
       }
     ],
     "answer": "breast\nmilk",
@@ -3192,7 +4564,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[fon˨]"
+        "content": "[fon˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "fon",
+        "hintOrder": 1
       }
     ],
     "answer": "rain",
@@ -3205,7 +4584,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[moŋ˥]"
+        "content": "[moŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mong",
+        "hintOrder": 1
       }
     ],
     "answer": "hour\nclock",
@@ -3218,7 +4604,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mot̚˦]"
+        "content": "[mot̚˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "mot",
+        "hintOrder": 1
       }
     ],
     "answer": "ant",
@@ -3231,7 +4624,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[loŋ˥]"
+        "content": "[loŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "long",
+        "hintOrder": 1
       }
     ],
     "answer": "to descend; to go down\ndown; downwards",
@@ -3244,7 +4644,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[lom˥]"
+        "content": "[lom˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "lom",
+        "hintOrder": 1
       }
     ],
     "answer": "wind",
@@ -3257,7 +4664,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hoʔ˦˥]"
+        "content": "[hoʔ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "ho",
+        "hintOrder": 1
       }
     ],
     "answer": "six",
@@ -3270,7 +4684,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kaw˨˩ˀ]"
+        "content": "[kaw˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kaw",
+        "hintOrder": 1
       }
     ],
     "answer": "nine",
@@ -3283,7 +4704,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kaw˨˩ˀ]"
+        "content": "[kaw˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kaw",
+        "hintOrder": 1
       }
     ],
     "answer": "nine",
@@ -3296,7 +4724,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kəː˥]"
+        "content": "[kəː˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kuh",
+        "hintOrder": 1
       }
     ],
     "answer": "flag",
@@ -3309,7 +4744,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xem˨]"
+        "content": "[xem˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khem",
+        "hintOrder": 1
       }
     ],
     "answer": "needle",
@@ -3322,7 +4764,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xaw˨˩ˀ]"
+        "content": "[xaw˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khaw",
+        "hintOrder": 1
       }
     ],
     "answer": "rice\nto enter\nentering; inside",
@@ -3335,7 +4784,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ŋən˥]"
+        "content": "[ŋən˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nguhn",
+        "hintOrder": 1
       }
     ],
     "answer": "silver\nmoney",
@@ -3348,7 +4804,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕet̚˦˥]"
+        "content": "[t͡ɕet̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chet",
+        "hintOrder": 1
       }
     ],
     "answer": "seven",
@@ -3361,7 +4824,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕaw˨˩ˀ]"
+        "content": "[t͡ɕaw˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chaw",
+        "hintOrder": 1
       }
     ],
     "answer": "you",
@@ -3374,7 +4844,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕaw˨˩ˀ]"
+        "content": "[t͡ɕaw˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chaw",
+        "hintOrder": 1
       }
     ],
     "answer": "you",
@@ -3387,7 +4864,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕəː˥]"
+        "content": "[t͡ɕəː˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chuh",
+        "hintOrder": 1
       }
     ],
     "answer": "time\nhour, oclock\nwhen",
@@ -3400,7 +4884,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[sɨə̯˨˩ˀ]"
+        "content": "[sɨə̯˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "seuuh",
+        "hintOrder": 1
       }
     ],
     "answer": "shirt",
@@ -3413,7 +4904,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[sɨə̯˨˩ˀ]"
+        "content": "[sɨə̯˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "seuuh",
+        "hintOrder": 1
       }
     ],
     "answer": "shirt",
@@ -3426,7 +4924,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ɲɨə̯˨˩ˀ]"
+        "content": "[ɲɨə̯˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nyeuuh",
+        "hintOrder": 1
       }
     ],
     "answer": "residue",
@@ -3439,7 +4944,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[bɨə̯n˨]"
+        "content": "[bɨə̯n˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "beuuhn",
+        "hintOrder": 1
       }
     ],
     "answer": "moon\nmonth",
@@ -3452,7 +4964,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[baw˦˥]"
+        "content": "[baw˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "baw",
+        "hintOrder": 1
       }
     ],
     "answer": "not",
@@ -3465,7 +4984,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[baw˦˥]"
+        "content": "[baw˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "baw",
+        "hintOrder": 1
       }
     ],
     "answer": "not",
@@ -3478,7 +5004,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[pet̚˦˥]"
+        "content": "[pet̚˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pet",
+        "hintOrder": 1
       }
     ],
     "answer": "duck",
@@ -3491,7 +5024,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[pen˨]"
+        "content": "[pen˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "pen",
+        "hintOrder": 1
       }
     ],
     "answer": "to be\nto become",
@@ -3504,7 +5044,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɨə̯ŋ˥]"
+        "content": "[mɨə̯ŋ˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "meuuhng",
+        "hintOrder": 1
       }
     ],
     "answer": "city, country",
@@ -3517,7 +5064,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɨə̯j˦]"
+        "content": "[mɨə̯j˦]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "meuuhj",
+        "hintOrder": 1
       }
     ],
     "answer": "weary\nweak",
@@ -3530,7 +5084,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[vaw˧˩ˀ]"
+        "content": "[vaw˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "vaw",
+        "hintOrder": 1
       }
     ],
     "answer": "to say; to speak",
@@ -3543,7 +5104,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[vaw˧˩ˀ]"
+        "content": "[vaw˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "vaw",
+        "hintOrder": 1
       }
     ],
     "answer": "to say; to speak",
@@ -3556,7 +5124,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hen˨]"
+        "content": "[hen˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "hen",
+        "hintOrder": 1
       }
     ],
     "answer": "to see",
@@ -3569,7 +5144,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɨə̯˦˥]"
+        "content": "[hɨə̯˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "heuuh",
+        "hintOrder": 1
       }
     ],
     "answer": "perspiration",
@@ -3582,7 +5164,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[hɨə̯˥]"
+        "content": "[hɨə̯˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "heuuh",
+        "hintOrder": 1
       }
     ],
     "answer": "boat",
@@ -3595,7 +5184,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕaɰ˨]"
+        "content": "[t͡ɕaɰ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chaɰ",
+        "hintOrder": 1
       }
     ],
     "answer": "heart\nmind; feeling",
@@ -3608,7 +5204,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[t͡ɕaɰ˧˩ˀ]"
+        "content": "[t͡ɕaɰ˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "chaɰ",
+        "hintOrder": 1
       }
     ],
     "answer": "to serve\nto use\nto have or make",
@@ -3621,7 +5224,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ɲaɰ˦˥]"
+        "content": "[ɲaɰ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nyaɰ",
+        "hintOrder": 1
       }
     ],
     "answer": "big; large",
@@ -3634,7 +5244,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ɲaɰ˦˥]"
+        "content": "[ɲaɰ˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "nyaɰ",
+        "hintOrder": 1
       }
     ],
     "answer": "big; large",
@@ -3647,7 +5264,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[baɰ˨˨]"
+        "content": "[baɰ˨˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "baɰ",
+        "hintOrder": 1
       }
     ],
     "answer": "leaf",
@@ -3660,7 +5284,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kaj˦˥]"
+        "content": "[kaj˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kaj",
+        "hintOrder": 1
       }
     ],
     "answer": "chicken",
@@ -3673,7 +5304,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[kaj˦˥]"
+        "content": "[kaj˦˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "kaj",
+        "hintOrder": 1
       }
     ],
     "answer": "chicken",
@@ -3686,7 +5324,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xaj˧˩ˀ]"
+        "content": "[xaj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khaj",
+        "hintOrder": 1
       }
     ],
     "answer": "now, at present, at this time, at the moment",
@@ -3699,7 +5344,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[taj˥]"
+        "content": "[taj˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "taj",
+        "hintOrder": 1
       }
     ],
     "answer": "Tai (person)\nTai (languages)",
@@ -3712,7 +5364,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[tʰaj˥]"
+        "content": "[tʰaj˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "tʰaj",
+        "hintOrder": 1
       }
     ],
     "answer": "Thailand",
@@ -3725,7 +5384,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[paj˨]"
+        "content": "[paj˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "paj",
+        "hintOrder": 1
       }
     ],
     "answer": "to go",
@@ -3738,7 +5404,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[faj˥]"
+        "content": "[faj˥]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "faj",
+        "hintOrder": 1
       }
     ],
     "answer": "fire",
@@ -3751,7 +5424,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[maj˧˩ˀ]"
+        "content": "[maj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "maj",
+        "hintOrder": 1
       }
     ],
     "answer": "wood; stick\ntree",
@@ -3764,7 +5444,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[maj˧˩ˀ]"
+        "content": "[maj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "maj",
+        "hintOrder": 1
       }
     ],
     "answer": "wood; stick\ntree",
@@ -3777,7 +5464,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[haj˨˩ˀ]"
+        "content": "[haj˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "haj",
+        "hintOrder": 1
       }
     ],
     "answer": "to cry",
@@ -3790,7 +5484,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[haj˨˩ˀ]"
+        "content": "[haj˨˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "haj",
+        "hintOrder": 1
       }
     ],
     "answer": "to cry",
@@ -3803,7 +5504,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[ʔaj˨]"
+        "content": "[ʔaj˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "aj",
+        "hintOrder": 1
       }
     ],
     "answer": "to cough",
@@ -3816,7 +5524,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[dɛn˨.din˨]"
+        "content": "[dɛn˨.din˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "dɛn.din",
+        "hintOrder": 1
       }
     ],
     "answer": "boundary",
@@ -3829,7 +5544,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[bɛŋ˦˥.taj˨]"
+        "content": "[bɛŋ˦˥.taj˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "bɛng.taj",
+        "hintOrder": 1
       }
     ],
     "answer": "bread",
@@ -3842,7 +5564,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[xaw˨˩ˀ.t͡ɕaɰ˨]"
+        "content": "[xaw˨˩ˀ.t͡ɕaɰ˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "khaw.chaɰ",
+        "hintOrder": 1
       }
     ],
     "answer": "understand",
@@ -3855,7 +5584,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɨə̯ŋ˥.faː˧˩ˀ]"
+        "content": "[mɨə̯ŋ˥.faː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "meuuhng.fa",
+        "hintOrder": 1
       }
     ],
     "answer": "heaven",
@@ -3868,7 +5604,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[mɨə̯ŋ˥.faː˧˩ˀ]"
+        "content": "[mɨə̯ŋ˥.faː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "meuuhng.fa",
+        "hintOrder": 1
       }
     ],
     "answer": "heaven",
@@ -3881,7 +5624,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[baɰ˨.maj˧˩ˀ]"
+        "content": "[baɰ˨.maj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "baɰ.maj",
+        "hintOrder": 1
       }
     ],
     "answer": "leaf; foliage",
@@ -3894,7 +5644,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[baɰ˨.maj˧˩ˀ]"
+        "content": "[baɰ˨.maj˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "baɰ.maj",
+        "hintOrder": 1
       }
     ],
     "answer": "leaf; foliage",
@@ -3907,7 +5664,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[taj˥.dam˨]"
+        "content": "[taj˥.dam˨]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "taj.dam",
+        "hintOrder": 1
       }
     ],
     "answer": "Tai Dam (language)\nTai Dam (people)",
@@ -3920,7 +5684,14 @@
       {
         "hintType": "soundIpa",
         "hintDisplayText": "IPA",
-        "content": "[faj˥.faː˧˩ˀ]"
+        "content": "[faj˥.faː˧˩ˀ]",
+        "hintOrder": 2
+      },
+      {
+        "hintType": "romanization",
+        "hintDisplayText": "Sounds like",
+        "content": "faj.fa",
+        "hintOrder": 1
       }
     ],
     "answer": "electricity",

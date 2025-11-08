@@ -17,11 +17,15 @@ class Hint extends Equatable {
   /// Optional display text for the hint (user-friendly label)
   final String? hintDisplayText;
 
+  /// Display order for the hint (lower numbers shown first)
+  final int? hintOrder;
+
   /// Constructor for the Hint class.
   const Hint({
     required this.type,
     required this.content,
     this.hintDisplayText,
+    this.hintOrder,
   });
 
   /// Creates a Hint instance from a JSON object.
@@ -35,5 +39,6 @@ class Hint extends Equatable {
         type,
         content,
         hintDisplayText,
+        hintOrder,
       ];
 }
