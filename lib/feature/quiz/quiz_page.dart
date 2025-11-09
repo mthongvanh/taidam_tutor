@@ -20,22 +20,6 @@ class QuizPage extends StatelessWidget {
       child: Builder(builder: (context) {
         return Scaffold(
           appBar: AppBar(
-            leading: PopupMenuButton<String>(
-              icon: const Icon(Icons.filter_list),
-              tooltip: 'Select Filter',
-              onSelected: context.read<QuizCubit>().updateFilter,
-              itemBuilder: (BuildContext context) {
-                return context
-                    .read<QuizCubit>()
-                    .quizFilters
-                    .map((FilterType filter) {
-                  return PopupMenuItem<String>(
-                    value: filter.name,
-                    child: Text(filter.name),
-                  );
-                }).toList();
-              },
-            ),
             title: const Text('Quiz'),
             actions: [
               BlocBuilder<QuizCubit, QuizState>(
@@ -49,7 +33,23 @@ class QuizPage extends StatelessWidget {
                   }
                   return SizedBox.shrink();
                 },
-              )
+              ),
+              PopupMenuButton<String>(
+                icon: const Icon(Icons.filter_list),
+                tooltip: 'Select Filter',
+                onSelected: context.read<QuizCubit>().updateFilter,
+                itemBuilder: (BuildContext context) {
+                  return context
+                      .read<QuizCubit>()
+                      .quizFilters
+                      .map((FilterType filter) {
+                    return PopupMenuItem<String>(
+                      value: filter.name,
+                      child: Text(filter.name),
+                    );
+                  }).toList();
+                },
+              ),
             ],
           ),
           body: BlocConsumer<QuizCubit, QuizState>(
