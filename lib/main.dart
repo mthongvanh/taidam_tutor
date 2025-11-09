@@ -6,9 +6,8 @@ import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/alphabet_practice_page.dart';
 import 'package:taidam_tutor/feature/character_list/character_list.dart';
-import 'package:taidam_tutor/feature/letter_search/letter_search.dart';
 import 'package:taidam_tutor/feature/more/more_page.dart';
-import 'package:taidam_tutor/feature/quiz/quiz_page.dart';
+import 'package:taidam_tutor/feature/reading_lesson/lesson_selection_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -117,24 +116,19 @@ class App extends StatelessWidget {
           bottomNavigationBar: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
+                icon: Icon(Icons.school_outlined),
+                activeIcon: Icon(Icons.school),
+                label: 'Alphabet',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.menu_book_outlined),
+                activeIcon: Icon(Icons.menu_book),
+                label: 'Reading',
+              ),
+              BottomNavigationBarItem(
                 icon: Icon(Icons.list_alt_outlined),
                 activeIcon: Icon(Icons.list_alt),
                 label: 'Characters',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.school_outlined),
-                activeIcon: Icon(Icons.school),
-                label: 'Learn',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.search_outlined),
-                activeIcon: Icon(Icons.search),
-                label: 'Finder',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.quiz_outlined),
-                activeIcon: Icon(Icons.quiz),
-                label: 'Quiz',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.more_horiz_outlined),
@@ -156,10 +150,9 @@ class App extends StatelessWidget {
   }
 
   static final List<Widget> _widgetOptions = <Widget>[
-    CharacterListPage(),
     const AlphabetPracticePage(),
-    LetterSearchGame(),
-    QuizPage(),
+    const LessonSelectionPage(),
+    const CharacterListPage(),
     const MorePage(),
   ];
 }
