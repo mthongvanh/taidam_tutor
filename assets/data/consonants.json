@@ -1,0 +1,310 @@
+{
+  "title": "Tai Dam Consonant Order",
+  "description": "Consonants in the Tai Dam script, along with their Lao representations, romanizations, and IPA representations. Taken from 'Pap Pe Khot 'Quam Tay-Ang-kit' by Baccam Don, Baccam Faluang, Baccam Hung, Dorothy Fippinger",
+  "data": [
+    {
+      "id": 1,
+      "taiDam": "ꪀ",
+      "lao": "ກ",
+      "romanization": "c, k, q",
+      "ipa": "/k-/",
+      "highLow": "low"
+    },
+    {
+      "id": 2,
+      "taiDam": "ꪁ",
+      "lao": "ກ່",
+      "romanization": "'c, 'k, 'q",
+      "ipa": "/k-/",
+      "highLow": "high"
+    },
+    {
+      "id": 3,
+      "taiDam": "ꪄ",
+      "lao": "ຂ",
+      "romanization": "kh",
+      "ipa": "/x-/",
+      "highLow": "low"
+    },
+    {
+      "id": 4,
+      "taiDam": "ꪅ",
+      "lao": "ຄ",
+      "romanization": "'kh",
+      "ipa": "/x-/",
+      "highLow": "high"
+    },
+    {
+      "id": 5,
+      "taiDam": "ꪈ",
+      "lao": "ຫງ",
+      "romanization": "ng",
+      "ipa": "/ŋ-/",
+      "highLow": "low"
+    },
+    {
+      "id": 6,
+      "taiDam": "ꪉ",
+      "lao": "ງ",
+      "romanization": "'ng",
+      "ipa": "/ŋ-/",
+      "highLow": "high"
+    },
+    {
+      "id": 7,
+      "taiDam": "ꪊ",
+      "lao": "ຈ",
+      "romanization": "ch",
+      "ipa": "/t͡ɕ-/",
+      "highLow": "low"
+    },
+    {
+      "id": 8,
+      "taiDam": "ꪋ",
+      "lao": "ຈ່",
+      "romanization": "'ch",
+      "ipa": "/t͡ɕ-/",
+      "highLow": "high"
+    },
+    {
+      "id": 9,
+      "taiDam": "ꪎ",
+      "lao": "ສ",
+      "romanization": "s",
+      "ipa": "/s-/",
+      "highLow": "low"
+    },
+    {
+      "id": 10,
+      "taiDam": "ꪏ",
+      "lao": "ຊ",
+      "romanization": "'s",
+      "ipa": "/s-/",
+      "highLow": "high"
+    },
+    {
+      "id": 11,
+      "taiDam": "ꪐ",
+      "lao": "ຫຍ",
+      "romanization": "ny",
+      "ipa": "/ɲ-/",
+      "highLow": "low"
+    },
+    {
+      "id": 12,
+      "taiDam": "ꪑ",
+      "lao": "ຍ",
+      "romanization": "'ny",
+      "ipa": "/ɲ-/",
+      "highLow": "high"
+    },
+    {
+      "id": 13,
+      "taiDam": "ꪒ",
+      "lao": "ດ",
+      "romanization": "d",
+      "ipa": "/d-/",
+      "highLow": "low"
+    },
+    {
+      "id": 37,
+      "taiDam": "ꪓ",
+      "lao": "unknown",
+      "romanization": "'d",
+      "ipa": "/d-/",
+      "highLow": "high"
+    },
+    {
+      "id": 14,
+      "taiDam": "ꪔ",
+      "lao": "ຕ",
+      "romanization": "t",
+      "ipa": "/t-/",
+      "highLow": "low"
+    },
+    {
+      "id": 15,
+      "taiDam": "ꪕ",
+      "lao": "ຕ່",
+      "romanization": "'t",
+      "ipa": "/t-/",
+      "highLow": "high"
+    },
+    {
+      "id": 16,
+      "taiDam": "ꪖ",
+      "lao": "ຖ",
+      "romanization": "th",
+      "ipa": "/tʰ-/",
+      "highLow": "low"
+    },
+    {
+      "id": 38,
+      "taiDam": "ꪗ",
+      "lao": "ທ",
+      "romanization": "th",
+      "ipa": "/tʰ-/",
+      "highLow": "high"
+    },
+    {
+      "id": 17,
+      "taiDam": "ꪘ",
+      "lao": "ໜ",
+      "romanization": "n",
+      "ipa": "/n-/",
+      "highLow": "low"
+    },
+    {
+      "id": 18,
+      "taiDam": "ꪙ",
+      "lao": "ນ",
+      "romanization": "'n",
+      "ipa": "/n-/",
+      "highLow": "high"
+    },
+    {
+      "id": 19,
+      "taiDam": "ꪚ",
+      "lao": "ບ",
+      "romanization": "b",
+      "ipa": "/b-/",
+      "highLow": "low"
+    },
+    {
+      "id": 20,
+      "taiDam": "ꪛ",
+      "lao": "ບ່",
+      "romanization": "'b",
+      "ipa": "/b-/",
+      "highLow": "high"
+    },
+    {
+      "id": 21,
+      "taiDam": "ꪜ",
+      "lao": "ປ",
+      "romanization": "p",
+      "ipa": "/p-/",
+      "highLow": "low"
+    },
+    {
+      "id": 22,
+      "taiDam": "ꪝ",
+      "lao": "ປ່",
+      "romanization": "'p",
+      "ipa": "/p-/",
+      "highLow": "high"
+    },
+    {
+      "id": 23,
+      "taiDam": "ꪠ",
+      "lao": "ຝ",
+      "romanization": "f (ph)",
+      "ipa": "/f-/",
+      "highLow": "low"
+    },
+    {
+      "id": 24,
+      "taiDam": "ꪡ",
+      "lao": "ຟ",
+      "romanization": "'f ('ph)",
+      "ipa": "/f-/",
+      "highLow": "high"
+    },
+    {
+      "id": 25,
+      "taiDam": "ꪢ",
+      "lao": "ມ",
+      "romanization": "m",
+      "ipa": "/m-/",
+      "highLow": "low"
+    },
+    {
+      "id": 26,
+      "taiDam": "ꪣ",
+      "lao": "ໝ",
+      "romanization": "'m",
+      "ipa": "/m-/",
+      "highLow": "high"
+    },
+    {
+      "id": 27,
+      "taiDam": "ꪤ",
+      "lao": "ຢ",
+      "romanization": "y/z (d)",
+      "ipa": "/j-/",
+      "highLow": "low"
+    },
+    {
+      "id": 28,
+      "taiDam": "ꪥ",
+      "lao": "ຢ່",
+      "romanization": "'y ('d)",
+      "ipa": "/j-/",
+      "highLow": "high"
+    },
+    {
+      "id": 29,
+      "taiDam": "ꪨ",
+      "lao": "ຫຼ",
+      "romanization": "l",
+      "ipa": "/l-/",
+      "highLow": "low"
+    },
+    {
+      "id": 30,
+      "taiDam": "ꪩ",
+      "lao": "ລ",
+      "romanization": "'l",
+      "ipa": "/l-/",
+      "highLow": "high"
+    },
+    {
+      "id": 31,
+      "taiDam": "ꪪ",
+      "lao": "ຫວ",
+      "romanization": "v",
+      "ipa": "/v-/",
+      "highLow": "low"
+    },
+    {
+      "id": 32,
+      "taiDam": "ꪫ",
+      "lao": "ວ",
+      "romanization": "'v",
+      "ipa": "/v-/",
+      "highLow": "high"
+    },
+    {
+      "id": 33,
+      "taiDam": "ꪬ",
+      "lao": "ຫ",
+      "romanization": "h",
+      "ipa": "/h-/",
+      "highLow": "low"
+    },
+    {
+      "id": 34,
+      "taiDam": "ꪭ",
+      "lao": "ຮ",
+      "romanization": "'h",
+      "ipa": "/h-/",
+      "highLow": "high"
+    },
+    {
+      "id": 35,
+      "taiDam": "ꪮ",
+      "lao": "ອ",
+      "romanization": "(vowel initial)",
+      "ipa": "/ʔ-/",
+      "highLow": "low"
+    },
+    {
+      "id": 36,
+      "taiDam": "ꪯ",
+      "lao": "ອ່",
+      "romanization": "(vowel initial)",
+      "ipa": "/ʔ-/",
+      "highLow": "high"
+    }
+  ]
+}

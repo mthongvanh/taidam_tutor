@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taidam_tutor/core/data/flashcards/models/flashcard_model.dart';
+import 'package:taidam_tutor/core/data/flashcards/models/hint_type.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
 
 class FlaschardDetails extends StatelessWidget {
@@ -67,9 +68,20 @@ class FlaschardDetails extends StatelessWidget {
     return Column(
       spacing: 8,
       children: List.from(sortedHints.map((hint) {
-        final label = hint.hintDisplayText ?? hint.type.name;
+        final label = hint.hintDisplayText ?? _labelForHintType(hint.type);
         return Text('$label: ${hint.content}');
       })),
     );
+  }
+
+  String _labelForHintType(HintType type) {
+    switch (type) {
+      case HintType.soundIpa:
+        return 'IPA';
+      case HintType.romanization:
+        return 'Romanization';
+      case HintType.lao:
+        return 'Lao';
+    }
   }
 }
