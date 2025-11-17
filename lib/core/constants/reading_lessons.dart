@@ -8,56 +8,114 @@ abstract class ReadingLessons {
           "In Tai Dam, a syllable starts with a consonant. If the vowel is a post-position form, it's written right next to the consonant, without any space in between. Imagine a right-vowel syllable that looks like this: 𝐶 + 𝑉.\nSo:\n  ꪀ + ꪱ becomes ꪀꪱ (\"kaa\"),\n  ꪁ + ꪽ becomes ꪁꪽ (\"kan\"),\nand\n  ꪉ + ꪺ becomes ꪉꪺ (\"ngua\").",
       "goals": [
         {
-          "letter": "ꪱ",
+          "letter": {
+            "character": "ꪱ",
+            "characterId": 5,
+          },
           "sound": "aa",
           "description": "Long vowel sound 'aa' as in 'father'",
         },
         {
-          "letter": "ꪺ",
-          "sounds": "ua",
+          "letter": {
+            "character": "ꪺ",
+            "characterId": 18,
+          },
+          "sound": "ua",
           "description": "Diphthong sound 'ua' as in 'guava' (-oowa-)",
         },
         {
-          "letter": "ꪽ",
+          "letter": {
+            "character": "ꪽ",
+            "characterId": 22,
+          },
           "sound": "an",
           "description": "Nasal sound 'an'",
         }
       ],
       "combinations": [
         {
-          "components": ["ꪀ", "ꪱ"],
+          "components": [
+            {
+              "character": "ꪀ",
+              "characterId": 24,
+            },
+            {
+              "character": "ꪱ",
+              "characterId": 5,
+            }
+          ],
           "result": "ꪀꪱ",
-          "romanization": "kaa",
           "description": "Combining consonant 'k' with vowel 'aa'",
         },
         {
-          "components": ["ꪁ", "ꪽ"],
+          "components": [
+            {
+              "character": "ꪁ",
+              "characterId": 25,
+            },
+            {
+              "character": "ꪽ",
+              "characterId": 22,
+            }
+          ],
           "result": "ꪁꪽ",
-          "romanization": "'kan",
           "description": "Combining consonant 'kh' with vowel 'an'",
         },
         {
-          "components": ["ꪄ", "ꪺ"],
+          "components": [
+            {
+              "character": "ꪄ",
+              "characterId": 26,
+            },
+            {
+              "character": "ꪺ",
+              "characterId": 18,
+            }
+          ],
           "result": "ꪄꪺ",
           "romanization": "khua",
           "description": "Combining consonant 'kh' with vowel 'ua'",
         },
         {
-          "components": ["ꪅ", "ꪽ"],
+          "components": [
+            {
+              "character": "ꪅ",
+              "characterId": 27,
+            },
+            {
+              "character": "ꪽ",
+              "characterId": 22,
+            }
+          ],
           "result": "ꪅꪽ",
-          "romanization": "'khan",
           "description": "Combining consonant 'kh' with vowel 'an'",
         },
         {
-          "components": ["ꪈ", "ꪱ"],
+          "components": [
+            {
+              "character": "ꪈ",
+              "characterId": 28,
+            },
+            {
+              "character": "ꪱ",
+              "characterId": 5,
+            }
+          ],
           "result": "ꪈꪱ",
-          "romanization": "hngaa",
-          "description": "Combining consonant 'hng' with vowel 'aa'",
+          "description": "Combining consonant 'ng' with vowel 'aa'",
         },
         {
-          "components": ["ꪉ", "ꪺ"],
+          "components": [
+            {
+              "character": "ꪉ",
+              "characterId": 29,
+            },
+            {
+              "character": "ꪺ",
+              "characterId": 18,
+            }
+          ],
           "result": "ꪉꪺ",
-          "romanization": "ngua",
           "description": "Combining consonant 'ng' with vowel 'ua'",
         }
       ]
@@ -73,64 +131,133 @@ abstract class ReadingLessons {
           "Some Tai Dam vowels can sit above the consonant they follow. Start with the base consonant on the writing line, then place the vowel sign directly above it to finish the syllable—no extra marks are added to the left or right. For example,\n  ꪊ + ꪲ becomes ꪊꪲ (\"chi\")\n  ꪎ + ꪳ becomes ꪎꪳ (\"su\"),\nand\n  ꪐ + ꪷ becomes ꪐꪷ (\"hgno\").",
       "goals": [
         {
-          "letter": "ꪲ",
+          "letter": {
+            "character": "ꪲ",
+            "characterId": 7,
+          },
           "sound": "i",
           "description": "Vowel sound 'i' as in 'see'",
         },
         {
-          "letter": "ꪾ",
+          "letter": {
+            "character": "ꪾ",
+            "characterId": 23,
+          },
           "sound": "am",
           "description": "Vowel with final nasal 'um'",
         },
         {
-          "letter": "ꪳ",
+          "letter": {
+            "character": "ꪳ",
+            "characterId": 8,
+          },
           "sound": "ue",
           "description": "Vowel sound 'ue' as in 'food'",
         },
         {
-          "letter": "ꪸ",
+          "letter": {
+            "character": "ꪸ",
+            "characterId": 16,
+          },
           "sound": "ia",
           "description": "Diphthong vowel sound 'ia'",
         },
         {
-          "letter": "ꪷ",
+          "letter": {
+            "character": "ꪷ",
+            "characterId": 4,
+          },
           "sound": "-aw",
           "description": "'aw' as in 'saw'",
         }
       ],
       "combinations": [
         {
-          "components": ["ꪊ", "\uAAB2"],
+          "components": [
+            {
+              "character": "ꪊ",
+              "characterId": 30,
+            },
+            {
+              "character": "ꪲ",
+              "characterId": 7,
+            }
+          ],
           "result": "ꪊꪲ",
           "romanization": "chi",
           "description": "Combining consonant 'ch' with vowel 'i'",
         },
         {
-          "components": ["ꪋ", "\uAABE"],
+          "components": [
+            {
+              "character": "ꪋ",
+              "characterId": 31,
+            },
+            {
+              "character": "ꪾ",
+              "characterId": 23,
+            }
+          ],
           "result": "ꪋꪾ",
           "romanization": "'chum",
           "description": "Combining consonant 'ch' with vowel 'um'",
         },
         {
-          "components": ["ꪎ", "\uAAB3"],
+          "components": [
+            {
+              "character": "ꪎ",
+              "characterId": 32,
+            },
+            {
+              "character": "ꪳ",
+              "characterId": 8,
+            }
+          ],
           "result": "ꪎꪳ",
           "romanization": "sue",
           "description": "Combining consonant 's' with vowel 'ue'",
         },
         {
-          "components": ["ꪏ", "\uAAB8"],
+          "components": [
+            {
+              "character": "ꪏ",
+              "characterId": 33,
+            },
+            {
+              "character": "ꪸ",
+              "characterId": 16,
+            }
+          ],
           "result": "ꪏꪸ",
           "romanization": "'sia",
           "description": "Combining consonant 's' with vowel 'u'",
         },
         {
-          "components": ["ꪐ", "\uAAB7"],
+          "components": [
+            {
+              "character": "ꪐ",
+              "characterId": 34,
+            },
+            {
+              "character": "ꪷ",
+              "characterId": 4,
+            }
+          ],
           "result": "ꪐꪷ",
           "romanization": "nyaw",
           "description": "Combining consonant 'ny' with vowel 'aw'",
         },
         {
-          "components": ["ꪑ", "\uAAB7"],
+          "components": [
+            {
+              "character": "ꪑ",
+              "characterId": 35,
+            },
+            {
+              "character": "ꪷ",
+              "characterId": 4,
+            }
+          ],
           "result": "ꪑꪷ",
           "romanization": "'nyaw",
           "description": "Combining consonant 'ny' with vowel 'aw'",
