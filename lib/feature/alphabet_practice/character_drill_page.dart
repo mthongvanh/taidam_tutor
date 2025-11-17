@@ -1,7 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repository.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
@@ -164,10 +163,10 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
             margin: const EdgeInsets.symmetric(horizontal: 16),
             padding: const EdgeInsets.all(32),
             decoration: BoxDecoration(
-              color: theme.colorScheme.primaryContainer.withOpacity(0.3),
+              color: theme.colorScheme.primaryContainer.withAlpha(77),
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                color: theme.colorScheme.primary.withOpacity(0.3),
+                color: theme.colorScheme.primary.withAlpha(77),
                 width: 2,
               ),
             ),
@@ -245,7 +244,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
               color: theme.colorScheme.surface,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
+                  color: Colors.black.withAlpha(25),
                   blurRadius: 4,
                   offset: const Offset(0, -2),
                 ),
@@ -299,8 +298,8 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
             width: double.infinity,
             padding: const EdgeInsets.all(24),
             color: state.isCorrect
-                ? theme.colorScheme.primaryContainer.withOpacity(0.3)
-                : theme.colorScheme.errorContainer.withOpacity(0.3),
+                ? theme.colorScheme.primaryContainer.withAlpha(77)
+                : theme.colorScheme.errorContainer.withAlpha(77),
             child: Column(
               children: [
                 Icon(
@@ -339,8 +338,8 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
             padding: const EdgeInsets.all(32),
             decoration: BoxDecoration(
               color: state.isCorrect
-                  ? theme.colorScheme.primaryContainer.withOpacity(0.3)
-                  : theme.colorScheme.errorContainer.withOpacity(0.3),
+                  ? theme.colorScheme.primaryContainer.withAlpha(77)
+                  : theme.colorScheme.errorContainer.withAlpha(77),
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
                 color: state.isCorrect
@@ -481,7 +480,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
       borderColor = theme.colorScheme.error;
     } else {
       backgroundColor = theme.colorScheme.surface;
-      borderColor = theme.colorScheme.outline.withOpacity(0.3);
+      borderColor = theme.colorScheme.outline.withAlpha(77);
     }
 
     return Container(
@@ -548,7 +547,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
           border: Border.all(
             color: isSelected
                 ? theme.colorScheme.primary
-                : theme.colorScheme.outline.withOpacity(0.3),
+                : theme.colorScheme.outline.withAlpha(77),
             width: isSelected ? 3 : 1,
           ),
           borderRadius: BorderRadius.circular(12),

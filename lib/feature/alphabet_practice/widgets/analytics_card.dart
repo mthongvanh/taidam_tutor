@@ -60,8 +60,8 @@ class AnalyticsCard extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: stat.color?.withOpacity(0.2) ??
-                theme.colorScheme.primaryContainer.withOpacity(0.3),
+            color: stat.color?.withAlpha(51) ??
+                theme.colorScheme.primaryContainer.withAlpha(77),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(
@@ -84,7 +84,7 @@ class AnalyticsCard extends StatelessWidget {
                 Text(
                   stat.subtitle!,
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.textTheme.bodySmall?.color?.withOpacity(0.7),
+                    color: theme.textTheme.bodySmall?.color?.withAlpha(179),
                   ),
                 ),
               ],

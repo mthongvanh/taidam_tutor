@@ -401,7 +401,7 @@ class AnalyticsPage extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: theme.colorScheme.primaryContainer.withOpacity(0.3),
+                  color: theme.colorScheme.primaryContainer.withAlpha(77),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Row(

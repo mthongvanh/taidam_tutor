@@ -26,8 +26,8 @@ class CharacterGroupSelector extends StatelessWidget {
                 ),
           ),
         ),
-    ...CharacterGroupingService.getRecommendedLearningOrder()
-      .map((className) => _buildClassCard(context, className)),
+        ...CharacterGroupingService.getRecommendedLearningOrder()
+            .map((className) => _buildClassCard(context, className)),
       ],
     );
   }
@@ -55,8 +55,7 @@ class CharacterGroupSelector extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color:
-                        _getColorForClass(context, className).withOpacity(0.2),
+                    color: _getColorForClass(context, className).withAlpha(51),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Icon(
@@ -80,8 +79,8 @@ class CharacterGroupSelector extends StatelessWidget {
                       Text(
                         description,
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.textTheme.bodySmall?.color
-                              ?.withOpacity(0.7),
+                          color:
+                              theme.textTheme.bodySmall?.color?.withAlpha(179),
                         ),
                       ),
                     ],

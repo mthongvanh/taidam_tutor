@@ -124,8 +124,8 @@ class PracticeView extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: state.selectedAnswerIndex ==
                               currentQuestion.correctAnswerIndex
-                          ? Colors.green.withOpacity(0.1)
-                          : Colors.red.withOpacity(0.1),
+                          ? Colors.green.withAlpha(26)
+                          : Colors.red.withAlpha(26),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         color: state.selectedAnswerIndex ==

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repository.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/models/character_mastery.dart';
@@ -95,7 +96,7 @@ class AlphabetPracticeCubit extends Cubit<AlphabetPracticeState> {
       ));
     } catch (e) {
       // Don't emit error, just log it
-      print('Error recording attempt: $e');
+      debugPrint('Error recording attempt: $e');
     }
   }
 

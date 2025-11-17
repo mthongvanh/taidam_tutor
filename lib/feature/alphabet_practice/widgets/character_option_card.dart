@@ -27,8 +27,8 @@ class CharacterOptionCard extends StatelessWidget {
 
     if (showFeedback && isSelected) {
       backgroundColor = isCorrect
-          ? theme.colorScheme.primaryContainer.withOpacity(0.3)
-          : theme.colorScheme.errorContainer.withOpacity(0.3);
+          ? theme.colorScheme.primaryContainer.withAlpha(77)
+          : theme.colorScheme.errorContainer.withAlpha(77);
       borderColor =
           isCorrect ? theme.colorScheme.primary : theme.colorScheme.error;
     } else if (isSelected) {
@@ -43,7 +43,7 @@ class CharacterOptionCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: backgroundColor,
           border: Border.all(
-            color: borderColor ?? theme.colorScheme.outline.withOpacity(0.3),
+            color: borderColor ?? theme.colorScheme.outline.withAlpha(77),
             width: borderColor != null ? 3 : 1,
           ),
           borderRadius: BorderRadius.circular(12),

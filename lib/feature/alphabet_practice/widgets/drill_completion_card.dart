@@ -44,7 +44,7 @@ class DrillCompletionCard extends StatelessWidget {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: _getColorForAccuracy(accuracy, theme).withOpacity(0.2),
+                color: _getColorForAccuracy(accuracy, theme).withAlpha(51),
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -71,7 +71,7 @@ class DrillCompletionCard extends StatelessWidget {
             Text(
               CharacterGroupingService.getClassTitle(characterClass),
               style: theme.textTheme.titleMedium?.copyWith(
-                color: theme.textTheme.bodySmall?.color?.withOpacity(0.7),
+                color: theme.textTheme.bodySmall?.color?.withAlpha(179),
               ),
               textAlign: TextAlign.center,
             ),
@@ -82,7 +82,7 @@ class DrillCompletionCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: theme.colorScheme.primaryContainer.withOpacity(0.3),
+                color: theme.colorScheme.primaryContainer.withAlpha(77),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
@@ -133,15 +133,15 @@ class DrillCompletionCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Colors.amber.withOpacity(0.2),
-                      Colors.orange.withOpacity(0.1),
+                      Colors.amber.withAlpha(51),
+                      Colors.orange.withAlpha(26),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: Colors.amber.withOpacity(0.3),
+                    color: Colors.amber.withAlpha(77),
                     width: 2,
                   ),
                 ),

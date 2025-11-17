@@ -91,7 +91,7 @@ class _CharacterIntroCardState extends State<CharacterIntroCard> {
               width: 200,
               height: 200,
               decoration: BoxDecoration(
-                color: theme.colorScheme.primaryContainer.withOpacity(0.3),
+                color: theme.colorScheme.primaryContainer.withAlpha(77),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Center(

@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repository.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/models/achievement.dart';
@@ -167,7 +168,7 @@ class CharacterDrillCubit extends Cubit<CharacterDrillState> {
       await _practiceRepository.saveMasteryData(mastery);
     } catch (e) {
       // Log error but don't fail the drill
-      print('Error recording attempt: $e');
+      debugPrint('Error recording attempt: $e');
     }
   }
 
@@ -195,7 +196,7 @@ class CharacterDrillCubit extends Cubit<CharacterDrillState> {
           newlyUnlockedAchievements: newlyUnlocked,
         ));
       } catch (e) {
-        print('Error ending session: $e');
+        debugPrint('Error ending session: $e');
         emit(CharacterDrillCompleted(
           totalQuestions: _totalAttempts,
           correctAnswers: _correctAnswers,
@@ -231,8 +232,8 @@ class CharacterDrillCubit extends Cubit<CharacterDrillState> {
       final hadPerfectSession = sessionAccuracy >= 1.0;
 
       // Get mastered counts by class
-  final consonants = _characterGroups[CharacterClass.consonant] ?? [];
-  final vowels = _characterGroups[CharacterClass.vowel] ?? [];
+      final consonants = _characterGroups[CharacterClass.consonant] ?? [];
+      final vowels = _characterGroups[CharacterClass.vowel] ?? [];
       final masteredConsonants = consonants
           .where((c) => masteryData[c.characterId]?.isMastered ?? false)
           .length;
@@ -270,7 +271,7 @@ class CharacterDrillCubit extends Cubit<CharacterDrillState> {
 
       return newlyUnlocked;
     } catch (e) {
-      print('Error checking achievements: $e');
+      debugPrint('Error checking achievements: $e');
       return [];
     }
   }

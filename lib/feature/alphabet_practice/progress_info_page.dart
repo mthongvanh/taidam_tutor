@@ -127,7 +127,7 @@ class ProgressInfoPage extends StatelessWidget {
 
             // How to Improve Section
             Card(
-              color: theme.colorScheme.primaryContainer.withOpacity(0.3),
+              color: theme.colorScheme.primaryContainer.withAlpha(77),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
@@ -233,7 +233,7 @@ class ProgressInfoPage extends StatelessWidget {
 
             // Call to Action
             Card(
-              color: theme.colorScheme.secondaryContainer.withOpacity(0.3),
+              color: theme.colorScheme.secondaryContainer.withAlpha(77),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
@@ -412,7 +412,7 @@ class ProgressInfoPage extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
           decoration: BoxDecoration(
-            color: color.withOpacity(0.2),
+            color: color.withAlpha(51),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Text(

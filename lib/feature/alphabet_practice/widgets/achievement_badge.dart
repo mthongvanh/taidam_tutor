@@ -23,13 +23,13 @@ class AchievementBadge extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           color: isUnlocked
-              ? theme.colorScheme.primaryContainer.withOpacity(0.3)
+              ? theme.colorScheme.primaryContainer.withAlpha(77)
               : theme.colorScheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: isUnlocked
-                ? theme.colorScheme.primary.withOpacity(0.5)
-                : theme.colorScheme.outline.withOpacity(0.2),
+                ? theme.colorScheme.primary.withAlpha(128)
+                : theme.colorScheme.outline.withAlpha(51),
           ),
         ),
         child: Column(
