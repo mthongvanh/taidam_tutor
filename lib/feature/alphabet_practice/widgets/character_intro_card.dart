@@ -119,7 +119,7 @@ class _CharacterIntroCardState extends State<CharacterIntroCard> {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  widget.character.sound,
+                  widget.character.romanization ?? '',
                   style: theme.textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
@@ -137,7 +137,7 @@ class _CharacterIntroCardState extends State<CharacterIntroCard> {
               children: [
                 _buildInfoChip(
                   context,
-                  widget.character.characterClass,
+                  widget.character.characterClass.name,
                   Icons.category,
                 ),
                 if (widget.character.highLow != null)

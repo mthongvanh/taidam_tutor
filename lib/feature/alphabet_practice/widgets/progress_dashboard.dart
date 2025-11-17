@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/progress_info_page.dart';
 
 class ProgressDashboard extends StatelessWidget {
-  final Map<String, double> classProgress;
+  final Map<CharacterClass, double> classProgress;
   final double overallProgress;
   final Map<String, dynamic> stats;
 
@@ -71,7 +72,7 @@ class ProgressDashboard extends StatelessWidget {
             const SizedBox(height: 12),
 
             ...CharacterGroupingService.getRecommendedLearningOrder()
-                .map((className) => _buildClassProgress(
+          .map((className) => _buildClassProgress(
                       context,
                       className,
                       classProgress[className] ?? 0.0,
@@ -198,7 +199,7 @@ class ProgressDashboard extends StatelessWidget {
 
   Widget _buildClassProgress(
     BuildContext context,
-    String className,
+    CharacterClass className,
     double progress,
   ) {
     final theme = Theme.of(context);
@@ -243,17 +244,17 @@ class ProgressDashboard extends StatelessWidget {
     );
   }
 
-  Color _getColorForClass(BuildContext context, String className) {
+  Color _getColorForClass(BuildContext context, CharacterClass className) {
     final colorScheme = Theme.of(context).colorScheme;
 
     switch (className) {
-      case 'consonant':
+      case CharacterClass.consonant:
         return colorScheme.primary;
-      case 'vowel':
+      case CharacterClass.vowel:
         return colorScheme.secondary;
-      case 'vowel-combo':
+      case CharacterClass.vowelCombo:
         return colorScheme.tertiary;
-      case 'special':
+      case CharacterClass.special:
         return colorScheme.error;
       default:
         return colorScheme.primary;

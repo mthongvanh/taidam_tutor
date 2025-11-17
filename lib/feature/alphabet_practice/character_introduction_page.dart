@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/character_drill_page.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/widgets/character_intro_card.dart';
 
 class CharacterIntroductionPage extends StatefulWidget {
   final List<Character> characters;
-  final String characterClass;
-  final Map<String, List<Character>> characterGroups;
+  final CharacterClass characterClass;
+  final Map<CharacterClass, List<Character>> characterGroups;
 
   const CharacterIntroductionPage({
     super.key,
@@ -169,17 +170,6 @@ class _CharacterIntroductionPageState extends State<CharacterIntroductionPage> {
   }
 
   String _getClassTitle() {
-    switch (widget.characterClass) {
-      case 'consonant':
-        return 'Learn Consonants';
-      case 'vowel':
-        return 'Learn Vowels';
-      case 'vowel-combo':
-        return 'Learn Vowel Combinations';
-      case 'special':
-        return 'Learn Special Characters';
-      default:
-        return 'Learn Characters';
-    }
+    return 'Learn ${widget.characterClass.title}';
   }
 }

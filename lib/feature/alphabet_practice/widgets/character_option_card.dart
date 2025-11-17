@@ -60,7 +60,7 @@ class CharacterOptionCard extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              character.sound,
+              character.character,
               style: theme.textTheme.bodyMedium?.copyWith(
                 fontWeight: FontWeight.bold,
               ),

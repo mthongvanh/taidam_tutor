@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 
 class CharacterGroupSelector extends StatelessWidget {
-  final Map<String, double> classProgress;
-  final Function(String, bool) onClassSelected; // bool isPractice
+  final Map<CharacterClass, double> classProgress;
+  final Function(CharacterClass, bool) onClassSelected; // bool isPractice
 
   const CharacterGroupSelector({
     super.key,
@@ -25,13 +26,13 @@ class CharacterGroupSelector extends StatelessWidget {
                 ),
           ),
         ),
-        ...CharacterGroupingService.getRecommendedLearningOrder()
-            .map((className) => _buildClassCard(context, className)),
+    ...CharacterGroupingService.getRecommendedLearningOrder()
+      .map((className) => _buildClassCard(context, className)),
       ],
     );
   }
 
-  Widget _buildClassCard(BuildContext context, String className) {
+  Widget _buildClassCard(BuildContext context, CharacterClass className) {
     final theme = Theme.of(context);
     final title = CharacterGroupingService.getClassTitle(className);
     final description = CharacterGroupingService.getClassDescription(className);
@@ -147,32 +148,32 @@ class CharacterGroupSelector extends StatelessWidget {
     );
   }
 
-  IconData _getIconForClass(String className) {
+  IconData _getIconForClass(CharacterClass className) {
     switch (className) {
-      case 'consonant':
+      case CharacterClass.consonant:
         return Icons.text_fields;
-      case 'vowel':
+      case CharacterClass.vowel:
         return Icons.circle;
-      case 'vowel-combo':
+      case CharacterClass.vowelCombo:
         return Icons.compare_arrows;
-      case 'special':
+      case CharacterClass.special:
         return Icons.star;
       default:
         return Icons.help;
     }
   }
 
-  Color _getColorForClass(BuildContext context, String className) {
+  Color _getColorForClass(BuildContext context, CharacterClass className) {
     final colorScheme = Theme.of(context).colorScheme;
 
     switch (className) {
-      case 'consonant':
+      case CharacterClass.consonant:
         return colorScheme.primary;
-      case 'vowel':
+      case CharacterClass.vowel:
         return colorScheme.secondary;
-      case 'vowel-combo':
+      case CharacterClass.vowelCombo:
         return colorScheme.tertiary;
-      case 'special':
+      case CharacterClass.special:
         return Colors.amber;
       default:
         return colorScheme.primary;

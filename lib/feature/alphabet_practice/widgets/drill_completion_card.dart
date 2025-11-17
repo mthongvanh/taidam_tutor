@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/models/achievement.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 
 class DrillCompletionCard extends StatelessWidget {
   final int totalQuestions;
   final int correctAnswers;
   final double accuracy;
-  final String characterClass;
+  final CharacterClass characterClass;
   final List<Achievement> newlyUnlockedAchievements;
   final VoidCallback onContinue;
   final VoidCallback onRestart;
