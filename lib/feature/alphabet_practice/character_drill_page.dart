@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repository.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/character_drill_cubit.dart';
@@ -13,8 +14,8 @@ import 'package:taidam_tutor/widgets/error/tai_error.dart';
 
 class CharacterDrillPage extends StatelessWidget {
   final List<Character> characters;
-  final String characterClass;
-  final Map<String, List<Character>> characterGroups;
+  final CharacterClass characterClass;
+  final Map<CharacterClass, List<Character>> characterGroups;
 
   const CharacterDrillPage({
     super.key,
@@ -38,7 +39,7 @@ class CharacterDrillPage extends StatelessWidget {
 }
 
 class _CharacterDrillView extends StatefulWidget {
-  final String characterClass;
+  final CharacterClass characterClass;
 
   const _CharacterDrillView({required this.characterClass});
 
@@ -179,18 +180,21 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
                     fontSize: 100,
                   ),
                 ),
-                const SizedBox(height: 16),
-                ElevatedButton.icon(
-                  onPressed: () => _playAudio(state.targetCharacter.audio),
-                  icon: const Icon(Icons.volume_up),
-                  label: const Text('Hint'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 24,
-                      vertical: 12,
+                if (state.targetCharacter.audio?.isNotEmpty ?? false) ...[
+                  const SizedBox(height: 16),
+                  ElevatedButton.icon(
+                    onPressed: () =>
+                        _playAudio(state.targetCharacter.audio ?? ''),
+                    icon: const Icon(Icons.volume_up),
+                    label: const Text('Hint'),
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 24,
+                        vertical: 12,
+                      ),
                     ),
                   ),
-                ),
+                ],
               ],
             ),
           ),
@@ -319,7 +323,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
                 if (!state.isCorrect) ...[
                   const SizedBox(height: 8),
                   Text(
-                    'The correct answer is "${state.targetCharacter.sound}"',
+                    'The correct answer is "${state.targetCharacter.romanization ?? ''}"',
                     style: theme.textTheme.titleMedium,
                   ),
                 ],
@@ -363,7 +367,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
                       style: theme.textTheme.titleMedium,
                     ),
                     Text(
-                      state.targetCharacter.sound,
+                      state.targetCharacter.romanization ?? '',
                       style: theme.textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: state.isCorrect
@@ -493,7 +497,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
         children: [
           Center(
             child: Text(
-              character.sound,
+              character.romanization ?? '',
               style: theme.textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: isCorrectAnswer
@@ -551,7 +555,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
         ),
         child: Center(
           child: Text(
-            character.sound,
+            character.romanization ?? '',
             style: theme.textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.bold,
               color: isSelected

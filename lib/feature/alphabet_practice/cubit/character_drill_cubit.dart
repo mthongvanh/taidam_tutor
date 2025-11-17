@@ -6,6 +6,7 @@ import 'package:taidam_tutor/core/data/alphabet_practice/models/achievement.dart
 import 'package:taidam_tutor/core/data/alphabet_practice/models/character_mastery.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/models/learning_session.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 import 'package:taidam_tutor/core/services/spaced_repetition_service.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/character_drill_state.dart';
@@ -14,9 +15,9 @@ import 'package:uuid/uuid.dart';
 class CharacterDrillCubit extends Cubit<CharacterDrillState> {
   final AlphabetPracticeRepository _practiceRepository;
   final List<Character> _characters;
-  final String _characterClass;
+  final CharacterClass _characterClass;
   final Random _random = Random();
-  final Map<String, List<Character>> _characterGroups;
+  final Map<CharacterClass, List<Character>> _characterGroups;
 
   List<Character> _remainingCharacters = [];
   int _currentQuestionNumber = 0;
@@ -27,8 +28,8 @@ class CharacterDrillCubit extends Cubit<CharacterDrillState> {
   CharacterDrillCubit({
     required AlphabetPracticeRepository practiceRepository,
     required List<Character> characters,
-    required String characterClass,
-    required Map<String, List<Character>> characterGroups,
+    required CharacterClass characterClass,
+    required Map<CharacterClass, List<Character>> characterGroups,
   })  : _practiceRepository = practiceRepository,
         _characters = characters,
         _characterClass = characterClass,
@@ -230,8 +231,8 @@ class CharacterDrillCubit extends Cubit<CharacterDrillState> {
       final hadPerfectSession = sessionAccuracy >= 1.0;
 
       // Get mastered counts by class
-      final consonants = _characterGroups['consonant'] ?? [];
-      final vowels = _characterGroups['vowel'] ?? [];
+  final consonants = _characterGroups[CharacterClass.consonant] ?? [];
+  final vowels = _characterGroups[CharacterClass.vowel] ?? [];
       final masteredConsonants = consonants
           .where((c) => masteryData[c.characterId]?.isMastered ?? false)
           .length;
