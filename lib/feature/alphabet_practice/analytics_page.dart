@@ -3,6 +3,7 @@ import 'package:taidam_tutor/core/data/alphabet_practice/models/achievement.dart
 import 'package:taidam_tutor/core/data/alphabet_practice/models/character_mastery.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/models/learning_session.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 import 'package:taidam_tutor/core/services/spaced_repetition_service.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/widgets/achievement_badge.dart';
@@ -11,7 +12,7 @@ import 'package:taidam_tutor/feature/alphabet_practice/widgets/analytics_card.da
 class AnalyticsPage extends StatelessWidget {
   final List<LearningSession> sessions;
   final Map<int, CharacterMastery> masteryData;
-  final Map<String, List<Character>> characterGroups;
+  final Map<CharacterClass, List<Character>> characterGroups;
   final Map<String, dynamic> stats;
   final double overallProgress;
 
@@ -174,8 +175,8 @@ class AnalyticsPage extends StatelessWidget {
     final hadPerfectSession = completedSessions.any((s) => s.accuracy >= 1.0);
 
     // Get mastered counts by class
-    final consonants = characterGroups['consonant'] ?? [];
-    final vowels = characterGroups['vowel'] ?? [];
+  final consonants = characterGroups[CharacterClass.consonant] ?? [];
+  final vowels = characterGroups[CharacterClass.vowel] ?? [];
     final masteredConsonants = consonants
         .where((c) => masteryData[c.characterId]?.isMastered ?? false)
         .length;
@@ -348,7 +349,7 @@ class AnalyticsPage extends StatelessWidget {
                 final mastery = masteryData[character.characterId];
                 return Chip(
                   label: Text(
-                    character.sound,
+                    character.romanization ?? '',
                     style: theme.textTheme.bodySmall,
                   ),
                   avatar: Text(
