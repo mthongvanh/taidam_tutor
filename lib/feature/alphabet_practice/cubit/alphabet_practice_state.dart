@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/models/character_mastery.dart';
 
 sealed class AlphabetPracticeState extends Equatable {
@@ -21,7 +22,7 @@ class AlphabetPracticeLoading extends AlphabetPracticeState {
 
 /// State when data is successfully loaded
 class AlphabetPracticeLoaded extends AlphabetPracticeState {
-  final Map<String, List<Character>> characterGroups;
+  final Map<CharacterClass, List<Character>> characterGroups;
   final Map<int, CharacterMastery> masteryData;
   final Map<String, dynamic> stats;
 
@@ -44,7 +45,7 @@ class AlphabetPracticeLoaded extends AlphabetPracticeState {
   }
 
   /// Get progress for a specific character class
-  double getClassProgress(String characterClass) {
+  double getClassProgress(CharacterClass characterClass) {
     final classCharacters = characterGroups[characterClass] ?? [];
     if (classCharacters.isEmpty) return 0.0;
 

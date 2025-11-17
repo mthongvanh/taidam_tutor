@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repository.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/data/characters/character_repository.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/core/services/character_grouping_service.dart';
@@ -95,7 +96,7 @@ class _AlphabetPracticeView extends StatelessWidget {
 
   Widget _buildContent(BuildContext context, AlphabetPracticeLoaded state) {
     // Calculate progress for each character class
-    final classProgress = <String, double>{};
+    final classProgress = <CharacterClass, double>{};
     for (final className
         in CharacterGroupingService.getRecommendedLearningOrder()) {
       classProgress[className] = state.getClassProgress(className);
@@ -166,14 +167,14 @@ class _AlphabetPracticeView extends StatelessWidget {
   void _navigateToPractice(
     BuildContext context,
     AlphabetPracticeLoaded state,
-    String characterClass,
+    CharacterClass characterClass,
   ) {
     final characters = state.characterGroups[characterClass] ?? [];
 
     if (characters.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('No characters found for $characterClass'),
+          content: Text('No characters found for ${characterClass.title}'),
         ),
       );
       return;
@@ -214,14 +215,14 @@ class _AlphabetPracticeView extends StatelessWidget {
   void _navigateToIntroduction(
     BuildContext context,
     AlphabetPracticeLoaded state,
-    String characterClass,
+    CharacterClass characterClass,
   ) {
     final characters = state.characterGroups[characterClass] ?? [];
 
     if (characters.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('No characters found for $characterClass'),
+          content: Text('No characters found for ${characterClass.title}'),
         ),
       );
       return;
@@ -238,7 +239,8 @@ class _AlphabetPracticeView extends StatelessWidget {
     if (batch.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Unable to select characters for $characterClass'),
+          content:
+              Text('Unable to select characters for ${characterClass.title}'),
         ),
       );
       return;
