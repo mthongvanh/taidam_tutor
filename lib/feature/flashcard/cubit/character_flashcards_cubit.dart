@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/data/flashcards/flashcard_repository.dart';
 import 'package:taidam_tutor/core/data/flashcards/models/flashcard_model.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
@@ -23,7 +24,7 @@ class CharacterFlashcardsCubit extends Cubit<CharacterFlashcardsState> {
       // Filter flashcards based on the character model
       final filteredFlashcards = flashcards.where(
         (flashcard) {
-          if (characterModel.characterClass == 'vowel-combo') {
+          if (characterModel.characterClass == CharacterClass.vowelCombo) {
             final regEx = RegExp(characterModel.regEx ?? '');
             return regEx.hasMatch(flashcard.question) ||
                 regEx.hasMatch(flashcard.answer);

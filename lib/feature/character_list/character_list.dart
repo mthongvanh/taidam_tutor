@@ -163,7 +163,7 @@ class _CharacterListCard extends StatelessWidget {
               ),
               const SizedBox(height: 4), // Spacing between character and sound
               Text(
-                character.sound,
+                character.romanization ?? '',
                 style: TextStyle(
                   fontSize: 14, // Adjusted for grid cell
                   color: Theme.of(context).colorScheme.onSurfaceVariant,

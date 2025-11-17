@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taidam_tutor/core/data/characters/character_repository.dart';
+import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/character_list/cubit/character_list_state.dart';
 
@@ -17,23 +19,29 @@ class CharacterListCubit extends Cubit<CharacterListState> {
       emit(CharacterLoading());
       final characters = await _repository.getCharacters();
 
-      final consonants =
-          characters.where((c) => c.characterClass == "consonant").toList();
-      final vowels =
-          characters.where((c) => c.characterClass == "vowel").toList();
-      final vowelFinals =
-          characters.where((c) => c.characterClass == "vowel-final").toList();
-      final vowelCombinations =
-          characters.where((c) => c.characterClass == "vowel-combo").toList();
-      final specialCharacters =
-          characters.where((c) => c.characterClass == "special").toList();
+    final consonants = characters
+      .where((c) => c.characterClass == CharacterClass.consonant)
+      .toList();
+    final vowels = characters
+      .where((c) => c.characterClass == CharacterClass.vowel)
+      .toList();
+    final specialCharacters = characters
+      .where((c) => c.characterClass == CharacterClass.special)
+      .toList();
+
+      final vowelFinals = <Character>[];
+      final vowelCombinations = <Character>[];
+      if (vowels.isNotEmpty) {
+        characters.where((c) => c.position == "after").toList();
+        characters.where((c) => c.position == "split").toList();
+      }
 
       // Optionally, sort each list if needed (e.g., by sound or a specific order)
-      consonants.sort((a, b) => a.sound.compareTo(b.sound));
-      vowels.sort((a, b) => a.sound.compareTo(b.sound));
-      vowelFinals.sort((a, b) => a.sound.compareTo(b.sound));
-      vowelCombinations.sort((a, b) => a.sound.compareTo(b.sound));
-      specialCharacters.sort((a, b) => a.sound.compareTo(b.sound));
+      consonants.sort((a, b) => a.characterId.compareTo(b.characterId));
+      vowels.sort((a, b) => a.characterId.compareTo(b.characterId));
+      vowelFinals.sort((a, b) => a.characterId.compareTo(b.characterId));
+      vowelCombinations.sort((a, b) => a.characterId.compareTo(b.characterId));
+      specialCharacters.sort((a, b) => a.characterId.compareTo(b.characterId));
 
       emit(CharacterLoaded(
         consonants: consonants,

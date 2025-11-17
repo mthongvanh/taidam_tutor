@@ -17,9 +17,10 @@ class CharacterLocalDataSource {
       final List<dynamic> jsonList = json.decode(jsonString);
       _characters = jsonList.map((json) => Character.fromJson(json)).toList();
       _isInitialized = true;
-    } catch (e) {
+    } catch (e, stackTrace) {
       _characters = [];
       debugPrint('Error loading characters: $e');
+      debugPrintStack(stackTrace: stackTrace);
     }
   }
 
