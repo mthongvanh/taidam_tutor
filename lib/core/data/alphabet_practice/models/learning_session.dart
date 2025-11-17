@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 
 part 'learning_session.g.dart';
 
@@ -15,7 +16,8 @@ class LearningSession extends Equatable {
   final DateTime? endTime;
 
   /// Character class being practiced (consonant, vowel, etc.)
-  final String characterClass;
+  @JsonKey(unknownEnumValue: CharacterClass.unknown)
+  final CharacterClass characterClass;
 
   /// Character IDs included in this session
   final List<int> characterIds;
@@ -54,7 +56,7 @@ class LearningSession extends Equatable {
     String? sessionId,
     DateTime? startTime,
     DateTime? endTime,
-    String? characterClass,
+    CharacterClass? characterClass,
     List<int>? characterIds,
     int? questionsAnswered,
     int? correctAnswers,
@@ -93,7 +95,7 @@ class LearningSession extends Equatable {
         sessionId,
         startTime,
         endTime,
-        characterClass,
+  characterClass,
         characterIds,
         questionsAnswered,
         correctAnswers,
