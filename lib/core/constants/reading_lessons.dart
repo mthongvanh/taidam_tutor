@@ -15,7 +15,7 @@ abstract class ReadingLessons {
         {
           "letter": "ꪺ",
           "sounds": "ua",
-          "description": "Diphthong sound 'ua' as in 'guava'"
+          "description": "Diphthong sound 'ua' as in 'guava' (-oowa-)",
         },
         {
           "letter": "ꪽ",
@@ -33,7 +33,7 @@ abstract class ReadingLessons {
         {
           "components": ["ꪁ", "ꪽ"],
           "result": "ꪁꪽ",
-          "romanization": "kan",
+          "romanization": "'kan",
           "description": "Combining consonant 'kh' with vowel 'an'",
         },
         {
@@ -45,14 +45,14 @@ abstract class ReadingLessons {
         {
           "components": ["ꪅ", "ꪽ"],
           "result": "ꪅꪽ",
-          "romanization": "khan",
+          "romanization": "'khan",
           "description": "Combining consonant 'kh' with vowel 'an'",
         },
         {
           "components": ["ꪈ", "ꪱ"],
           "result": "ꪈꪱ",
-          "romanization": "ngaa",
-          "description": "Combining consonant 'ng' with vowel 'aa'",
+          "romanization": "hngaa",
+          "description": "Combining consonant 'hng' with vowel 'aa'",
         },
         {
           "components": ["ꪉ", "ꪺ"],
@@ -80,22 +80,22 @@ abstract class ReadingLessons {
         {
           "letter": "ꪾ",
           "sound": "am",
-          "description": "Vowel with final nasal 'am'",
+          "description": "Vowel with final nasal 'um'",
         },
         {
           "letter": "ꪳ",
-          "sound": "u",
-          "description": "Vowel sound 'u' as in 'food'",
+          "sound": "ue",
+          "description": "Vowel sound 'ue' as in 'food'",
         },
         {
           "letter": "ꪸ",
-          "sound": "ie",
-          "description": "Diphthong vowel sound 'ie'",
+          "sound": "ia",
+          "description": "Diphthong vowel sound 'ia'",
         },
         {
           "letter": "ꪷ",
-          "sound": "o",
-          "description": "Vowel sound 'o'",
+          "sound": "-aw",
+          "description": "'aw' as in 'saw'",
         }
       ],
       "combinations": [
@@ -108,32 +108,32 @@ abstract class ReadingLessons {
         {
           "components": ["ꪋ", "\uAABE"],
           "result": "ꪋꪾ",
-          "romanization": "cham",
-          "description": "Combining consonant 'ch' with vowel 'am'",
+          "romanization": "'chum",
+          "description": "Combining consonant 'ch' with vowel 'um'",
         },
         {
           "components": ["ꪎ", "\uAAB3"],
           "result": "ꪎꪳ",
-          "romanization": "su",
-          "description": "Combining consonant 's' with vowel 'u'",
+          "romanization": "sue",
+          "description": "Combining consonant 's' with vowel 'ue'",
         },
         {
           "components": ["ꪏ", "\uAAB8"],
-          "result": "ꪏ",
-          "romanization": "sie",
+          "result": "ꪏꪸ",
+          "romanization": "'sia",
           "description": "Combining consonant 's' with vowel 'u'",
         },
         {
           "components": ["ꪐ", "\uAAB7"],
           "result": "ꪐꪷ",
-          "romanization": "hgno",
-          "description": "Combining consonant 'hg' with vowel 'o'",
+          "romanization": "nyaw",
+          "description": "Combining consonant 'ny' with vowel 'aw'",
         },
         {
           "components": ["ꪑ", "\uAAB7"],
           "result": "ꪑꪷ",
-          "romanization": "gno",
-          "description": "Combining consonant 'g' with vowel 'o'",
+          "romanization": "'nyaw",
+          "description": "Combining consonant 'ny' with vowel 'aw'",
         },
       ],
       "examples": [
@@ -151,7 +151,7 @@ abstract class ReadingLessons {
         },
         {
           "word": "ꪎꪸ",
-          "romanization": "sie",
+          "romanization": "sia",
         },
         {
           "word": "ꪊꪾ",
@@ -159,7 +159,7 @@ abstract class ReadingLessons {
         },
         {
           "word": "ꪏꪸ",
-          "romanization": "sie",
+          "romanization": "'sia",
         },
         {
           "word": "ꪎꪲ",
@@ -167,19 +167,19 @@ abstract class ReadingLessons {
         },
         {
           "word": "ꪋꪲ",
-          "romanization": "chi",
+          "romanization": "'chi",
         },
         {
           "word": "ꪎꪷ",
-          "romanization": "so",
+          "romanization": "saw",
         },
         {
           "word": "ꪋꪾ",
-          "romanization": "cham",
+          "romanization": "'cham",
         },
         {
           "word": "ꪏꪷ",
-          "romanization": "so",
+          "romanization": "'saw",
         },
       ]
     }

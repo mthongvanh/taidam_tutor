@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:taidam_tutor/core/data/characters/character_repository.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 import 'package:taidam_tutor/core/data/filter/filter_type.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/quiz/core/data/models/quiz_question.dart';
@@ -15,11 +16,21 @@ class CharacterQuizQuestionGenerator {
   }) async {
     final characters = dm.get<CharacterRepository>();
     final allCharacters = await characters.getCharacters();
-    if (filter != FilterType.none) {
-      final filterValue = filter.value.toLowerCase();
+    CharacterClass? filterClass;
+    switch (filter) {
+      case FilterType.vowel:
+        filterClass = CharacterClass.vowel;
+        break;
+      case FilterType.consonant:
+        filterClass = CharacterClass.consonant;
+        break;
+      default:
+        filterClass = null;
+    }
+
+    if (filterClass != null) {
       allCharacters.removeWhere(
-        (character) =>
-            !character.characterClass.toLowerCase().contains(filterValue),
+        (character) => character.characterClass != filterClass,
       );
     }
 
@@ -61,23 +72,22 @@ class CharacterQuizQuestionGenerator {
     final Random random = Random();
 
     // Add the correct answer
-    options.add(correctCharacter.sound);
+    options.add(correctCharacter.romanization ?? '');
 
     // Add distractors
     final List<Character> distractors = List<Character>.from(allCharacters)
-      ..removeWhere((char) =>
-          char.characterId ==
-          correctCharacter
-              .characterId); // Ensure no duplicates of correct answer model
+      ..removeWhere(
+        (char) => char.romanization == correctCharacter.romanization,
+      ); // Ensure no duplicates of correct answer model
 
     distractors.shuffle(random);
 
     for (int i = 0;
         options.length < numberOfOptions && i < distractors.length;
         i++) {
-      if (!options.contains(distractors[i].sound)) {
+      if (!options.contains(distractors[i].romanization)) {
         // Ensure unique sound options
-        options.add(distractors[i].sound);
+        options.add(distractors[i].romanization ?? '');
       }
     }
 
@@ -87,7 +97,8 @@ class CharacterQuizQuestionGenerator {
 
     options.shuffle(random); // Shuffle all options
 
-    final int correctAnswerIndex = options.indexOf(correctCharacter.sound);
+    final int correctAnswerIndex =
+        options.indexOf(correctCharacter.romanization ?? '');
 
     return QuizQuestion(
       id: 'char_${correctCharacter.characterId}_${DateTime.now().millisecondsSinceEpoch}',

@@ -1,16 +1,20 @@
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 
 /// Service for grouping and filtering characters for learning purposes
 class CharacterGroupingService {
   /// Group characters by their character class
-  static Map<String, List<Character>> groupByClass(List<Character> characters) {
-    final Map<String, List<Character>> groups = {};
+  static Map<CharacterClass, List<Character>> groupByClass(
+      List<Character> characters) {
+    final Map<CharacterClass, List<Character>> groups = {
+      for (final cls in CharacterClassX.recommendedLearningOrder) cls: [],
+      CharacterClass.vowelFinal: [],
+      CharacterClass.unknown: [],
+    };
 
     for (final character in characters) {
       final className = character.characterClass;
-      if (!groups.containsKey(className)) {
-        groups[className] = [];
-      }
+      groups.putIfAbsent(className, () => []);
       groups[className]!.add(character);
     }
 
@@ -23,7 +27,7 @@ class CharacterGroupingService {
     String? highLow,
   }) {
     return characters.where((char) {
-      if (char.characterClass != 'consonant') return false;
+      if (char.characterClass != CharacterClass.consonant) return false;
       if (highLow != null && char.highLow != highLow) return false;
       return true;
     }).toList();
@@ -35,7 +39,7 @@ class CharacterGroupingService {
     String? prePost,
   }) {
     return characters.where((char) {
-      if (char.characterClass != 'vowel') return false;
+      if (char.characterClass != CharacterClass.vowel) return false;
       if (prePost != null && char.prePost != prePost) return false;
       return true;
     }).toList();
@@ -43,22 +47,22 @@ class CharacterGroupingService {
 
   /// Get vowel combinations
   static List<Character> getVowelCombos(List<Character> characters) {
-    return characters
-        .where((char) => char.characterClass == 'vowel-combo')
-        .toList();
+  return characters
+    .where((char) => char.characterClass == CharacterClass.vowelCombo)
+    .toList();
   }
 
   /// Get special characters
   static List<Character> getSpecialCharacters(List<Character> characters) {
-    return characters
-        .where((char) => char.characterClass == 'special')
-        .toList();
+  return characters
+    .where((char) => char.characterClass == CharacterClass.special)
+    .toList();
   }
 
   /// Get characters by specific class
   static List<Character> getByClass(
     List<Character> characters,
-    String characterClass,
+    CharacterClass characterClass,
   ) {
     return characters
         .where((char) => char.characterClass == characterClass)
@@ -90,7 +94,7 @@ class CharacterGroupingService {
     // Filter by same character class
     final sameClass = allCharacters
         .where((char) =>
-            char.characterClass == target.characterClass &&
+      char.characterClass == target.characterClass &&
             char.characterId != target.characterId)
         .toList();
 
@@ -110,44 +114,17 @@ class CharacterGroupingService {
   }
 
   /// Get recommended learning order for character classes
-  static List<String> getRecommendedLearningOrder() {
-    return [
-      'consonant',
-      'vowel',
-      'vowel-combo',
-      'special',
-    ];
+  static List<CharacterClass> getRecommendedLearningOrder() {
+    return CharacterClassX.recommendedLearningOrder;
   }
 
   /// Get a descriptive title for a character class
-  static String getClassTitle(String characterClass) {
-    switch (characterClass) {
-      case 'consonant':
-        return 'Consonants';
-      case 'vowel':
-        return 'Vowels';
-      case 'vowel-combo':
-        return 'Vowel Combinations';
-      case 'special':
-        return 'Special Characters';
-      default:
-        return characterClass;
-    }
+  static String getClassTitle(CharacterClass characterClass) {
+    return characterClass.title;
   }
 
   /// Get a description for a character class
-  static String getClassDescription(String characterClass) {
-    switch (characterClass) {
-      case 'consonant':
-        return 'Learn the consonant sounds of the Tai Dam alphabet';
-      case 'vowel':
-        return 'Practice vowel sounds and their positions';
-      case 'vowel-combo':
-        return 'Master vowel combinations and diphthongs';
-      case 'special':
-        return 'Study tone marks and special characters';
-      default:
-        return '';
-    }
+  static String getClassDescription(CharacterClass characterClass) {
+    return characterClass.description;
   }
 }

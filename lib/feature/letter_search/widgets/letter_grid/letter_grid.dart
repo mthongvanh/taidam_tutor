@@ -132,7 +132,7 @@ class LetterGrid extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'sounds like "${state.targetLetter?.sound ?? ''}"',
+                        'sounds like "${state.targetLetter?.romanization ?? '(whoops! no sound found)'}"',
                         style: const TextStyle(
                           fontSize: 25,
                           fontStyle: FontStyle.italic,
