@@ -93,6 +93,12 @@ flutter run
 - Flashcards link to characters via regex matching (see `Character.regEx`)
 - Always consider the language rules when implementing features involving script representation which can be found in the `assets/data/language-rules.txt`
 
+### Character Class Enum Migration
+- `CharacterClass` lives in `lib/core/data/characters/models/character_class.dart` and must be used everywhere instead of raw strings (it exposes helper getters for titles/descriptions).
+- `Character.characterClass` is an enum field; repositories/services/widgets should pass around `CharacterClass` keys (e.g., `Map<CharacterClass, List<Character>>`).
+- Alphabet practice widgets/cubits are mid-migration—when you touch those areas, continue converting any remaining string-based logic to use the enum.
+- After modifying enum or model annotations, re-run `dart run build_runner build --delete-conflicting-outputs` and fix downstream usages before committing.
+
 ### Audio Strategy
 Both `audioplayers` and `just_audio` packages present—prefer `audioplayers` (used in flashcard/quiz):
 ```dart
