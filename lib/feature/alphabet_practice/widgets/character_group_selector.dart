@@ -153,8 +153,6 @@ class CharacterGroupSelector extends StatelessWidget {
         return Icons.text_fields;
       case CharacterClass.vowel:
         return Icons.circle;
-      case CharacterClass.vowelCombo:
-        return Icons.compare_arrows;
       case CharacterClass.special:
         return Icons.star;
       default:
@@ -170,8 +168,6 @@ class CharacterGroupSelector extends StatelessWidget {
         return colorScheme.primary;
       case CharacterClass.vowel:
         return colorScheme.secondary;
-      case CharacterClass.vowelCombo:
-        return colorScheme.tertiary;
       case CharacterClass.special:
         return Colors.amber;
       default:

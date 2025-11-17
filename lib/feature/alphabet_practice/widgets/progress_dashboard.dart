@@ -72,7 +72,7 @@ class ProgressDashboard extends StatelessWidget {
             const SizedBox(height: 12),
 
             ...CharacterGroupingService.getRecommendedLearningOrder()
-          .map((className) => _buildClassProgress(
+                .map((className) => _buildClassProgress(
                       context,
                       className,
                       classProgress[className] ?? 0.0,
@@ -252,8 +252,6 @@ class ProgressDashboard extends StatelessWidget {
         return colorScheme.primary;
       case CharacterClass.vowel:
         return colorScheme.secondary;
-      case CharacterClass.vowelCombo:
-        return colorScheme.tertiary;
       case CharacterClass.special:
         return colorScheme.error;
       default:

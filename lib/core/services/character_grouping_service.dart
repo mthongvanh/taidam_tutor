@@ -8,7 +8,6 @@ class CharacterGroupingService {
       List<Character> characters) {
     final Map<CharacterClass, List<Character>> groups = {
       for (final cls in CharacterClassX.recommendedLearningOrder) cls: [],
-      CharacterClass.vowelFinal: [],
       CharacterClass.unknown: [],
     };
 
@@ -37,26 +36,30 @@ class CharacterGroupingService {
   static List<Character> getVowels(
     List<Character> characters, {
     String? prePost,
+    bool excludeCombos = false,
   }) {
     return characters.where((char) {
       if (char.characterClass != CharacterClass.vowel) return false;
       if (prePost != null && char.prePost != prePost) return false;
+      if (excludeCombos && char.position == 'split') return false;
       return true;
     }).toList();
   }
 
   /// Get vowel combinations
   static List<Character> getVowelCombos(List<Character> characters) {
-  return characters
-    .where((char) => char.characterClass == CharacterClass.vowelCombo)
-    .toList();
+    return characters
+        .where((char) =>
+            char.characterClass == CharacterClass.vowel &&
+            char.position == 'split')
+        .toList();
   }
 
   /// Get special characters
   static List<Character> getSpecialCharacters(List<Character> characters) {
-  return characters
-    .where((char) => char.characterClass == CharacterClass.special)
-    .toList();
+    return characters
+        .where((char) => char.characterClass == CharacterClass.special)
+        .toList();
   }
 
   /// Get characters by specific class
@@ -94,7 +97,7 @@ class CharacterGroupingService {
     // Filter by same character class
     final sameClass = allCharacters
         .where((char) =>
-      char.characterClass == target.characterClass &&
+            char.characterClass == target.characterClass &&
             char.characterId != target.characterId)
         .toList();
 

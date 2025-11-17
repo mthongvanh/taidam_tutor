@@ -51,8 +51,6 @@ Map<String, dynamic> _$CharacterToJson(Character instance) => <String, dynamic>{
 const _$CharacterClassEnumMap = {
   CharacterClass.consonant: 'consonant',
   CharacterClass.vowel: 'vowel',
-  CharacterClass.vowelCombo: 'vowel-combo',
-  CharacterClass.vowelFinal: 'vowel-final',
   CharacterClass.special: 'special',
   CharacterClass.unknown: 'unknown',
 };

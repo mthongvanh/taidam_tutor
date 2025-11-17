@@ -24,7 +24,10 @@ class CharacterFlashcardsCubit extends Cubit<CharacterFlashcardsState> {
       // Filter flashcards based on the character model
       final filteredFlashcards = flashcards.where(
         (flashcard) {
-          if (characterModel.characterClass == CharacterClass.vowelCombo) {
+          bool isVowelCombination =
+              characterModel.characterClass == CharacterClass.vowel &&
+                  (characterModel.position == 'split');
+          if (isVowelCombination) {
             final regEx = RegExp(characterModel.regEx ?? '');
             return regEx.hasMatch(flashcard.question) ||
                 regEx.hasMatch(flashcard.answer);

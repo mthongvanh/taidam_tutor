@@ -7,10 +7,6 @@ enum CharacterClass {
   consonant,
   @JsonValue('vowel')
   vowel,
-  @JsonValue('vowel-combo')
-  vowelCombo,
-  @JsonValue('vowel-final')
-  vowelFinal,
   @JsonValue('special')
   special,
   @JsonValue('unknown')
@@ -22,8 +18,6 @@ extension CharacterClassX on CharacterClass {
   String get value => const {
         CharacterClass.consonant: 'consonant',
         CharacterClass.vowel: 'vowel',
-        CharacterClass.vowelCombo: 'vowel-combo',
-        CharacterClass.vowelFinal: 'vowel-final',
         CharacterClass.special: 'special',
         CharacterClass.unknown: 'unknown',
       }[this]!;
@@ -32,8 +26,6 @@ extension CharacterClassX on CharacterClass {
   String get title => const {
         CharacterClass.consonant: 'Consonants',
         CharacterClass.vowel: 'Vowels',
-        CharacterClass.vowelCombo: 'Vowel Combinations',
-        CharacterClass.vowelFinal: 'Vowel Finals',
         CharacterClass.special: 'Special Characters',
         CharacterClass.unknown: 'Characters',
       }[this]!;
@@ -43,9 +35,6 @@ extension CharacterClassX on CharacterClass {
         CharacterClass.consonant: 'Learn consonant sounds and tone classes',
         CharacterClass.vowel:
             'Practice simple vowels and their positions around consonants',
-        CharacterClass.vowelCombo: 'Master vowel combinations and diphthongs',
-        CharacterClass.vowelFinal:
-            'Review vowel endings and combined final sequences',
         CharacterClass.special: 'Study tone markers and special purpose glyphs',
         CharacterClass.unknown: 'General character practice',
       }[this]!;
@@ -53,14 +42,11 @@ extension CharacterClassX on CharacterClass {
   /// Convenience flag for vowel-focused categories.
   bool get isVowelCategory => {
         CharacterClass.vowel,
-        CharacterClass.vowelCombo,
-        CharacterClass.vowelFinal,
       }.contains(this);
 
   static List<CharacterClass> get recommendedLearningOrder => const [
         CharacterClass.consonant,
         CharacterClass.vowel,
-        CharacterClass.vowelCombo,
         CharacterClass.special,
       ];
 

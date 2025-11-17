@@ -37,8 +37,6 @@ Map<String, dynamic> _$LearningSessionToJson(LearningSession instance) =>
 const _$CharacterClassEnumMap = {
   CharacterClass.consonant: 'consonant',
   CharacterClass.vowel: 'vowel',
-  CharacterClass.vowelCombo: 'vowel-combo',
-  CharacterClass.vowelFinal: 'vowel-final',
   CharacterClass.special: 'special',
   CharacterClass.unknown: 'unknown',
 };
