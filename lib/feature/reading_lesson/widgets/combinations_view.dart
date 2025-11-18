@@ -19,6 +19,7 @@ class CombinationsView extends StatelessWidget {
     }
 
     final combination = combinations[state.currentIndex];
+    final componentRomanizations = combination.componentRomanizations;
     final progress = (state.currentIndex + 1) / combinations.length;
     final hasExamples = state.activeExamples.isNotEmpty;
 
@@ -64,36 +65,64 @@ class CombinationsView extends StatelessWidget {
                       SizedBox(height: Spacing.m),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-              ...combination.componentGlyphs.map((component) => Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: Spacing.xs),
-                                child: Container(
-                                  padding: EdgeInsets.all(Spacing.m),
-                                  decoration: BoxDecoration(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .primaryContainer,
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: Text(
-                                    component,
-                                    style: const TextStyle(
-                                      fontFamily: 'Tai Heritage Pro',
-                                      fontSize: 48,
+                          for (var i = 0;
+                              i < combination.componentGlyphs.length;
+                              i++) ...[
+                            Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: Spacing.xs,
+                              ),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.all(Spacing.m),
+                                    decoration: BoxDecoration(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .primaryContainer,
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Text(
+                                      combination.componentGlyphs[i],
+                                      style: const TextStyle(
+                                        fontFamily: 'Tai Heritage Pro',
+                                        fontSize: 48,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              )),
-                          Padding(
-                            padding:
-                                EdgeInsets.symmetric(horizontal: Spacing.s),
-                            child: Icon(
-                              Icons.add,
-                              size: 32,
-                              color: Theme.of(context).colorScheme.primary,
+                                  SizedBox(height: Spacing.xs),
+                                  Text(
+                                    componentRomanizations.length > i &&
+                                            componentRomanizations[i].isNotEmpty
+                                        ? componentRomanizations[i]
+                                        : '—',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall
+                                        ?.copyWith(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondary,
+                                        ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
+                            if (i < combination.componentGlyphs.length - 1)
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: Spacing.s,
+                                  vertical: Spacing.s,
+                                ),
+                                child: Icon(
+                                  Icons.add,
+                                  size: 32,
+                                  color: Theme.of(context).colorScheme.primary,
+                                ),
+                              ),
+                          ],
                         ],
                       ),
                     ],
@@ -147,8 +176,7 @@ class CombinationsView extends StatelessWidget {
                               .headlineSmall
                               ?.copyWith(
                                 fontWeight: FontWeight.bold,
-                                color:
-                                    Theme.of(context).colorScheme.primary,
+                                color: Theme.of(context).colorScheme.primary,
                               ),
                         ),
                     ],

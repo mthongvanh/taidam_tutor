@@ -99,6 +99,9 @@ class Combination extends Equatable {
 
   List<String> get componentGlyphs => characters.glyphs;
 
+  List<String> get componentRomanizations =>
+    characters.characters.map(_primaryRomanizationFor).toList();
+
   String get romanization => characters.primaryRomanization;
 
   String get practiceDescription {
