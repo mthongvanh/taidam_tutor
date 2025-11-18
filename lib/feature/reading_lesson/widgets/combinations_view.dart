@@ -12,9 +12,15 @@ class CombinationsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final combination = state.lesson.combinations[state.currentIndex];
-    final progress =
-        (state.currentIndex + 1) / state.lesson.combinations.length;
+    final combinations = state.activeCombinations;
+
+    if (combinations.isEmpty) {
+      return _EmptyCombinations(state: state);
+    }
+
+    final combination = combinations[state.currentIndex];
+    final progress = (state.currentIndex + 1) / combinations.length;
+    final hasExamples = state.activeExamples.isNotEmpty;
 
     return Column(
       children: [
@@ -37,7 +43,7 @@ class CombinationsView extends StatelessWidget {
               children: [
                 // Progress counter
                 Text(
-                  'Combination ${state.currentIndex + 1} of ${state.lesson.combinations.length}',
+                  'Goal ${state.currentGoalIndex + 1}: Combination ${state.currentIndex + 1} of ${combinations.length}',
                   style: Theme.of(context).textTheme.titleMedium,
                   textAlign: TextAlign.center,
                 ),
@@ -183,10 +189,9 @@ class CombinationsView extends StatelessWidget {
                     minimumSize: const Size.fromHeight(48),
                   ),
                   child: Text(
-                    state.currentIndex < state.lesson.combinations.length - 1
+                    state.currentIndex < combinations.length - 1
                         ? 'Next Combination'
-                        : state.lesson.examples != null &&
-                                state.lesson.examples!.isNotEmpty
+                        : hasExamples
                             ? 'See Examples'
                             : 'Start Practice',
                     style: const TextStyle(fontSize: 18),
@@ -197,6 +202,49 @@ class CombinationsView extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _EmptyCombinations extends StatelessWidget {
+  final ReadingLessonActive state;
+
+  const _EmptyCombinations({required this.state});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(Spacing.l),
+      child: TaiCard.margin(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.extension_off,
+              size: 48,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+            SizedBox(height: Spacing.m),
+            Text(
+              'No direct combinations use ${state.currentGoal.displayText} in this lesson.',
+              style: Theme.of(context).textTheme.titleMedium,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: Spacing.s),
+            Text(
+              'Continue to see examples or practice with this goal.',
+              style: Theme.of(context).textTheme.bodyLarge,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: Spacing.l),
+            ElevatedButton(
+              onPressed: () =>
+                  context.read<ReadingLessonCubit>().proceedToNextStage(),
+              child: const Text('Continue'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

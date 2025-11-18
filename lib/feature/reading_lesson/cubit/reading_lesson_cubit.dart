@@ -10,6 +10,7 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   List<PracticeQuestion> _practiceQuestions = [];
   final CharacterRepository _characterRepository;
   Map<String, dynamic>? _currentLessonData;
+  int _totalPracticeQuestionsOverall = 0;
 
   ReadingLessonCubit({CharacterRepository? characterRepository})
       : _characterRepository =
@@ -29,10 +30,14 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
       final lesson = ReadingLesson.fromJson(lessonData, characterMap);
 
       _practiceQuestions = [];
+      _totalPracticeQuestionsOverall = 0;
 
       emit(ReadingLessonActive(
         lesson: lesson,
-        stage: LessonStage.goals,
+        stage: LessonStage.goalOverview,
+        currentGoalIndex: 0,
+        activeCombinations: _combinationsForGoal(lesson, 0),
+        activeExamples: _examplesForGoal(lesson, 0),
       ));
     } catch (error) {
       emit(const ReadingLessonError('Failed to load lesson. Please try again.'));
@@ -43,37 +48,28 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
     final currentState = state;
     if (currentState is! ReadingLessonActive) return;
 
-    final lesson = currentState.lesson;
-
     switch (currentState.stage) {
-      case LessonStage.goals:
-        emit(currentState.copyWith(
-          stage: LessonStage.combinations,
-          currentIndex: 0,
-        ));
+      case LessonStage.goalOverview:
+        _advanceFromGoalOverview(currentState);
         break;
 
-      case LessonStage.combinations:
-        if (lesson.examples != null && lesson.examples!.isNotEmpty) {
+      case LessonStage.goalCombinations:
+        if (currentState.activeExamples.isNotEmpty) {
           emit(currentState.copyWith(
-            stage: LessonStage.examples,
+            stage: LessonStage.goalExamples,
             currentIndex: 0,
           ));
         } else {
-          _startPractice(lesson);
+          _startPractice(currentState);
         }
         break;
 
-      case LessonStage.examples:
-        _startPractice(lesson);
+      case LessonStage.goalExamples:
+        _startPractice(currentState);
         break;
 
-      case LessonStage.practice:
-        emit(ReadingLessonCompleted(
-          lesson: lesson,
-          score: currentState.score,
-          totalQuestions: _practiceQuestions.length,
-        ));
+      case LessonStage.goalPractice:
+        _advanceToNextGoalOrComplete(currentState);
         break;
 
       case LessonStage.completed:
@@ -84,10 +80,16 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   void nextCombination() {
     final currentState = state;
     if (currentState is! ReadingLessonActive) return;
-    if (currentState.stage != LessonStage.combinations) return;
+    if (currentState.stage != LessonStage.goalCombinations) return;
+
+    final combinations = currentState.activeCombinations;
+    if (combinations.isEmpty) {
+      proceedToNextStage();
+      return;
+    }
 
     final nextIndex = currentState.currentIndex + 1;
-    if (nextIndex < currentState.lesson.combinations.length) {
+    if (nextIndex < combinations.length) {
       emit(currentState.copyWith(currentIndex: nextIndex));
     } else {
       proceedToNextStage();
@@ -97,10 +99,13 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   void nextExample() {
     final currentState = state;
     if (currentState is! ReadingLessonActive) return;
-    if (currentState.stage != LessonStage.examples) return;
+    if (currentState.stage != LessonStage.goalExamples) return;
 
-    final examples = currentState.lesson.examples;
-    if (examples == null) return;
+  final examples = currentState.activeExamples;
+    if (examples.isEmpty) {
+      proceedToNextStage();
+      return;
+    }
 
     final nextIndex = currentState.currentIndex + 1;
     if (nextIndex < examples.length) {
@@ -110,15 +115,23 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
     }
   }
 
-  void _startPractice(ReadingLesson lesson) {
+  void _startPractice(ReadingLessonActive currentState) {
     // Generate practice questions from combinations
-    _practiceQuestions = _generatePracticeQuestions(lesson.combinations);
+    if (currentState.activeCombinations.isEmpty) {
+      _advanceToNextGoalOrComplete(currentState);
+      return;
+    }
 
-    emit(ReadingLessonActive(
-      lesson: lesson,
-      stage: LessonStage.practice,
+    _practiceQuestions =
+        _generatePracticeQuestions(currentState.activeCombinations);
+    _totalPracticeQuestionsOverall += _practiceQuestions.length;
+
+    emit(currentState.copyWith(
+      stage: LessonStage.goalPractice,
       currentIndex: 0,
-      totalPracticeQuestions: _practiceQuestions.length,
+      totalPracticeQuestions: _totalPracticeQuestionsOverall,
+      selectedAnswerIndex: null,
+      isCorrect: null,
       practiceQuestions: _practiceQuestions,
     ));
   }
@@ -161,7 +174,7 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   void selectAnswer(int answerIndex) {
     final currentState = state;
     if (currentState is! ReadingLessonActive) return;
-    if (currentState.stage != LessonStage.practice) return;
+  if (currentState.stage != LessonStage.goalPractice) return;
     if (currentState.selectedAnswerIndex != null) return; // Already answered
 
     final question = _practiceQuestions[currentState.currentIndex];
@@ -177,7 +190,7 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   void nextPracticeQuestion() {
     final currentState = state;
     if (currentState is! ReadingLessonActive) return;
-    if (currentState.stage != LessonStage.practice) return;
+    if (currentState.stage != LessonStage.goalPractice) return;
 
     final nextIndex = currentState.currentIndex + 1;
     if (nextIndex < _practiceQuestions.length) {
@@ -195,6 +208,83 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
     final data = _currentLessonData;
     if (data == null) return;
     startLesson(data);
+  }
+
+  void _advanceFromGoalOverview(ReadingLessonActive currentState) {
+    if (currentState.activeCombinations.isNotEmpty) {
+      emit(currentState.copyWith(
+        stage: LessonStage.goalCombinations,
+        currentIndex: 0,
+      ));
+    } else if (currentState.activeExamples.isNotEmpty) {
+      emit(currentState.copyWith(
+        stage: LessonStage.goalExamples,
+        currentIndex: 0,
+      ));
+    } else {
+      _startPractice(currentState);
+    }
+  }
+
+  void _advanceToNextGoalOrComplete(ReadingLessonActive currentState) {
+    final nextGoalIndex = currentState.currentGoalIndex + 1;
+    if (nextGoalIndex < currentState.lesson.goals.length) {
+      emit(ReadingLessonActive(
+        lesson: currentState.lesson,
+        stage: LessonStage.goalOverview,
+        score: currentState.score,
+        totalPracticeQuestions: _totalPracticeQuestionsOverall,
+        currentGoalIndex: nextGoalIndex,
+        activeCombinations:
+            _combinationsForGoal(currentState.lesson, nextGoalIndex),
+        activeExamples: _examplesForGoal(currentState.lesson, nextGoalIndex),
+      ));
+    } else {
+      emit(ReadingLessonCompleted(
+        lesson: currentState.lesson,
+        score: currentState.score,
+        totalQuestions: _totalPracticeQuestionsOverall,
+      ));
+    }
+  }
+
+  List<Combination> _combinationsForGoal(
+    ReadingLesson lesson,
+    int goalIndex,
+  ) {
+    final goal = lesson.goals[goalIndex];
+    return lesson.combinations
+        .where(
+          (combination) =>
+              _matchesGoalCharacters(combination.characters, goal),
+        )
+        .toList();
+  }
+
+  List<Example> _examplesForGoal(
+    ReadingLesson lesson,
+    int goalIndex,
+  ) {
+    final goal = lesson.goals[goalIndex];
+    final examples = lesson.examples ?? const <Example>[];
+    return examples
+        .where(
+          (example) => _matchesGoalCharacters(example.characters, goal),
+        )
+        .toList();
+  }
+
+  bool _matchesGoalCharacters(
+    LessonCharacterSet source,
+    LessonGoal goal,
+  ) {
+    final goalIds = goal.characters.characterIds;
+    if (goalIds.isEmpty) {
+      return false;
+    }
+    final goalSet = goalIds.toSet();
+    final sourceSet = source.characterIds.toSet();
+    return goalSet.every(sourceSet.contains);
   }
 }
 

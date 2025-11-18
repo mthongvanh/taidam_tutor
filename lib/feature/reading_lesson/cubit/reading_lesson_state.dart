@@ -4,10 +4,10 @@ import 'package:taidam_tutor/feature/reading_lesson/models/reading_lesson_models
 
 /// Enum representing the different stages of a reading lesson
 enum LessonStage {
-  goals,
-  combinations,
-  examples,
-  practice,
+  goalOverview,
+  goalCombinations,
+  goalExamples,
+  goalPractice,
   completed,
 }
 
@@ -38,7 +38,10 @@ class ReadingLessonActive extends ReadingLessonState {
   final bool? isCorrect;
   final int score;
   final int totalPracticeQuestions;
-  final List<PracticeQuestion>? practiceQuestions;
+  final List<PracticeQuestion> practiceQuestions;
+  final int currentGoalIndex;
+  final List<Combination> activeCombinations;
+  final List<Example> activeExamples;
 
   const ReadingLessonActive({
     required this.lesson,
@@ -48,7 +51,10 @@ class ReadingLessonActive extends ReadingLessonState {
     this.isCorrect,
     this.score = 0,
     this.totalPracticeQuestions = 0,
-    this.practiceQuestions,
+    this.practiceQuestions = const [],
+    this.currentGoalIndex = 0,
+    this.activeCombinations = const [],
+    this.activeExamples = const [],
   });
 
   ReadingLessonActive copyWith({
@@ -59,6 +65,9 @@ class ReadingLessonActive extends ReadingLessonState {
     bool? isCorrect,
     int? score,
     int? totalPracticeQuestions,
+    int? currentGoalIndex,
+    List<Combination>? activeCombinations,
+    List<Example>? activeExamples,
     List<PracticeQuestion>? practiceQuestions,
   }) {
     return ReadingLessonActive(
@@ -71,8 +80,13 @@ class ReadingLessonActive extends ReadingLessonState {
       totalPracticeQuestions:
           totalPracticeQuestions ?? this.totalPracticeQuestions,
       practiceQuestions: practiceQuestions ?? this.practiceQuestions,
+      currentGoalIndex: currentGoalIndex ?? this.currentGoalIndex,
+      activeCombinations: activeCombinations ?? this.activeCombinations,
+      activeExamples: activeExamples ?? this.activeExamples,
     );
   }
+
+  LessonGoal get currentGoal => lesson.goals[currentGoalIndex];
 
   @override
   List<Object?> get props => [
@@ -84,6 +98,9 @@ class ReadingLessonActive extends ReadingLessonState {
         score,
         totalPracticeQuestions,
         practiceQuestions,
+        currentGoalIndex,
+        activeCombinations,
+        activeExamples,
       ];
 }
 

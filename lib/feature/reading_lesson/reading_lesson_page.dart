@@ -79,10 +79,10 @@ class ReadingLessonPage extends StatelessWidget {
 
   Widget _buildActiveLesson(BuildContext context, ReadingLessonActive state) {
     return switch (state.stage) {
-      LessonStage.goals => GoalsView(state: state),
-      LessonStage.combinations => CombinationsView(state: state),
-      LessonStage.examples => ExamplesView(state: state),
-      LessonStage.practice => PracticeView(state: state),
+      LessonStage.goalOverview => GoalsView(state: state),
+      LessonStage.goalCombinations => CombinationsView(state: state),
+      LessonStage.goalExamples => ExamplesView(state: state),
+      LessonStage.goalPractice => PracticeView(state: state),
       LessonStage.completed => CompletionView(
           state: ReadingLessonCompleted(
             lesson: state.lesson,

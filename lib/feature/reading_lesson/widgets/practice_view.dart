@@ -12,10 +12,14 @@ class PracticeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final practiceQuestions = state.practiceQuestions!;
+    final practiceQuestions = state.practiceQuestions;
     final currentQuestion = practiceQuestions[state.currentIndex];
     final progress = (state.currentIndex + 1) / practiceQuestions.length;
     final hasAnswered = state.selectedAnswerIndex != null;
+    final totalQuestions = state.totalPracticeQuestions;
+    final overallScoreText = totalQuestions > 0
+        ? 'Lesson Score: ${state.score} / $totalQuestions'
+        : 'Lesson Score: ${state.score}';
 
     return Column(
       children: [
@@ -52,12 +56,25 @@ class PracticeView extends StatelessWidget {
                     color: Theme.of(context).colorScheme.secondaryContainer,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Text(
-                    'Score: ${state.score} / ${practiceQuestions.length}',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                    textAlign: TextAlign.center,
+                  child: Column(
+                    children: [
+                      Text(
+                        overallScoreText,
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium
+                            ?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: Spacing.xs),
+                      Text(
+                        'Current goal: ${state.currentGoal.displayText}${state.currentGoal.romanization.isNotEmpty ? ' (${state.currentGoal.romanization})' : ''}',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                   ),
                 ),
 

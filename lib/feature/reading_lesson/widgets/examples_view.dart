@@ -12,7 +12,12 @@ class ExamplesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final examples = state.lesson.examples!;
+    final examples = state.activeExamples;
+
+    if (examples.isEmpty) {
+      return _EmptyExamples(state: state);
+    }
+
     final progress = (state.currentIndex + 1) / examples.length;
 
     return Column(
@@ -147,6 +152,49 @@ class ExamplesView extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _EmptyExamples extends StatelessWidget {
+  final ReadingLessonActive state;
+
+  const _EmptyExamples({required this.state});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(Spacing.l),
+      child: TaiCard.margin(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.menu_book_outlined,
+              size: 48,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+            SizedBox(height: Spacing.m),
+            Text(
+              'No examples for ${state.currentGoal.displayText} in this lesson.',
+              style: Theme.of(context).textTheme.titleMedium,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: Spacing.s),
+            Text(
+              'Jump straight into practice to reinforce this goal.',
+              style: Theme.of(context).textTheme.bodyLarge,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: Spacing.l),
+            ElevatedButton(
+              onPressed: () =>
+                  context.read<ReadingLessonCubit>().proceedToNextStage(),
+              child: const Text('Start Practice'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
