@@ -65,7 +65,7 @@ class PracticeView extends StatelessWidget {
 
                 // Question prompt
                 Text(
-                  'What is the romanization for:',
+                  'Which description matches this syllable?',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),

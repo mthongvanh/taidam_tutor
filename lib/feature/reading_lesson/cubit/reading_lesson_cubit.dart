@@ -1,19 +1,42 @@
 import 'dart:math';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:taidam_tutor/core/data/characters/character_repository.dart';
+import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_state.dart';
 import 'package:taidam_tutor/feature/reading_lesson/models/reading_lesson_models.dart';
 
 class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   final Random _random = Random();
   List<PracticeQuestion> _practiceQuestions = [];
+  final CharacterRepository _characterRepository;
+  Map<String, dynamic>? _currentLessonData;
 
-  ReadingLessonCubit() : super(const ReadingLessonInitial());
+  ReadingLessonCubit({CharacterRepository? characterRepository})
+      : _characterRepository =
+            characterRepository ?? dm.get<CharacterRepository>(),
+        super(const ReadingLessonInitial());
 
-  void startLesson(ReadingLesson lesson) {
-    emit(ReadingLessonActive(
-      lesson: lesson,
-      stage: LessonStage.goals,
-    ));
+  Future<void> startLesson(Map<String, dynamic> lessonData) async {
+    _currentLessonData = lessonData;
+    emit(const ReadingLessonLoading());
+
+    try {
+      final characters = await _characterRepository.getCharacters();
+      final characterMap = {
+        for (final character in characters) character.characterId: character
+      };
+
+      final lesson = ReadingLesson.fromJson(lessonData, characterMap);
+
+      _practiceQuestions = [];
+
+      emit(ReadingLessonActive(
+        lesson: lesson,
+        stage: LessonStage.goals,
+      ));
+    } catch (error) {
+      emit(const ReadingLessonError('Failed to load lesson. Please try again.'));
+    }
   }
 
   void proceedToNextStage() {
@@ -105,33 +128,31 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   ) {
     // Create a practice question for each combination
     return combinations.map((combination) {
-      // Get 3 random wrong answers
-      final wrongAnswers = <String>[];
-      final otherCombinations = combinations
-          .where((c) => c.romanization != combination.romanization)
+      final wrongAnswers = combinations
+          .where((c) => c != combination)
+          .map((c) => c.practiceDescription)
           .toList()
         ..shuffle(_random);
 
-      for (final combo in otherCombinations) {
-        if (wrongAnswers.length >= 3) break;
-        if (!wrongAnswers.contains(combo.romanization)) {
-          wrongAnswers.add(combo.romanization);
+      final options = <String>[combination.practiceDescription];
+
+      for (final answer in wrongAnswers) {
+        if (options.length >= 4) break;
+        if (!options.contains(answer)) {
+          options.add(answer);
         }
       }
 
-      // Pad with placeholders if not enough unique answers
-      while (wrongAnswers.length < 3) {
-        wrongAnswers.add('Option ${wrongAnswers.length + 1}');
+      while (options.length < 4) {
+        options.add('Review the lesson content');
       }
 
-      // Combine and shuffle
-      final options = [combination.romanization, ...wrongAnswers]
-        ..shuffle(_random);
+      options.shuffle(_random);
 
       return PracticeQuestion(
         character: combination.result,
         options: options,
-        correctAnswerIndex: options.indexOf(combination.romanization),
+        correctAnswerIndex: options.indexOf(combination.practiceDescription),
       );
     }).toList()
       ..shuffle(_random); // Shuffle question order
@@ -171,10 +192,9 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   }
 
   void restartLesson() {
-    final currentState = state;
-    if (currentState is ReadingLessonCompleted) {
-      startLesson(currentState.lesson);
-    }
+    final data = _currentLessonData;
+    if (data == null) return;
+    startLesson(data);
   }
 }
 

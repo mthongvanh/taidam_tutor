@@ -8,114 +8,41 @@ abstract class ReadingLessons {
           "In Tai Dam, a syllable starts with a consonant. If the vowel is a post-position form, it's written right next to the consonant, without any space in between. Imagine a right-vowel syllable that looks like this: 𝐶 + 𝑉.\nSo:\n  ꪀ + ꪱ becomes ꪀꪱ (\"kaa\"),\n  ꪁ + ꪽ becomes ꪁꪽ (\"kan\"),\nand\n  ꪉ + ꪺ becomes ꪉꪺ (\"ngua\").",
       "goals": [
         {
-          "letter": {
-            "character": "ꪱ",
-            "characterId": 5,
-          },
-          "sound": "aa",
+          "characterIds": [5],
           "description": "Long vowel sound 'aa' as in 'father'",
         },
         {
-          "letter": {
-            "character": "ꪺ",
-            "characterId": 18,
-          },
-          "sound": "ua",
+          "characterIds": [18],
           "description": "Diphthong sound 'ua' as in 'guava' (-oowa-)",
         },
         {
-          "letter": {
-            "character": "ꪽ",
-            "characterId": 22,
-          },
-          "sound": "an",
+          "characterIds": [22],
           "description": "Nasal sound 'an'",
         }
       ],
       "combinations": [
         {
-          "components": [
-            {
-              "character": "ꪀ",
-              "characterId": 24,
-            },
-            {
-              "character": "ꪱ",
-              "characterId": 5,
-            }
-          ],
-          "result": "ꪀꪱ",
+          "characterIds": [24, 5],
           "description": "Combining consonant 'k' with vowel 'aa'",
         },
         {
-          "components": [
-            {
-              "character": "ꪁ",
-              "characterId": 25,
-            },
-            {
-              "character": "ꪽ",
-              "characterId": 22,
-            }
-          ],
-          "result": "ꪁꪽ",
+          "characterIds": [25, 22],
           "description": "Combining consonant 'kh' with vowel 'an'",
         },
         {
-          "components": [
-            {
-              "character": "ꪄ",
-              "characterId": 26,
-            },
-            {
-              "character": "ꪺ",
-              "characterId": 18,
-            }
-          ],
-          "result": "ꪄꪺ",
-          "romanization": "khua",
+          "characterIds": [26, 18],
           "description": "Combining consonant 'kh' with vowel 'ua'",
         },
         {
-          "components": [
-            {
-              "character": "ꪅ",
-              "characterId": 27,
-            },
-            {
-              "character": "ꪽ",
-              "characterId": 22,
-            }
-          ],
-          "result": "ꪅꪽ",
+          "characterIds": [27, 22],
           "description": "Combining consonant 'kh' with vowel 'an'",
         },
         {
-          "components": [
-            {
-              "character": "ꪈ",
-              "characterId": 28,
-            },
-            {
-              "character": "ꪱ",
-              "characterId": 5,
-            }
-          ],
-          "result": "ꪈꪱ",
+          "characterIds": [28, 5],
           "description": "Combining consonant 'ng' with vowel 'aa'",
         },
         {
-          "components": [
-            {
-              "character": "ꪉ",
-              "characterId": 29,
-            },
-            {
-              "character": "ꪺ",
-              "characterId": 18,
-            }
-          ],
-          "result": "ꪉꪺ",
+          "characterIds": [29, 18],
           "description": "Combining consonant 'ng' with vowel 'ua'",
         }
       ]
@@ -131,182 +58,95 @@ abstract class ReadingLessons {
           "Some Tai Dam vowels can sit above the consonant they follow. Start with the base consonant on the writing line, then place the vowel sign directly above it to finish the syllable—no extra marks are added to the left or right. For example,\n  ꪊ + ꪲ becomes ꪊꪲ (\"chi\")\n  ꪎ + ꪳ becomes ꪎꪳ (\"su\"),\nand\n  ꪐ + ꪷ becomes ꪐꪷ (\"hgno\").",
       "goals": [
         {
-          "letter": {
-            "character": "ꪲ",
-            "characterId": 7,
-          },
-          "sound": "i",
+          "characterIds": [7],
           "description": "Vowel sound 'i' as in 'see'",
         },
         {
-          "letter": {
-            "character": "ꪾ",
-            "characterId": 23,
-          },
-          "sound": "am",
+          "characterIds": [23],
           "description": "Vowel with final nasal 'um'",
         },
         {
-          "letter": {
-            "character": "ꪳ",
-            "characterId": 8,
-          },
-          "sound": "ue",
+          "characterIds": [8],
           "description": "Vowel sound 'ue' as in 'food'",
         },
         {
-          "letter": {
-            "character": "ꪸ",
-            "characterId": 16,
-          },
-          "sound": "ia",
+          "characterIds": [16],
           "description": "Diphthong vowel sound 'ia'",
         },
         {
-          "letter": {
-            "character": "ꪷ",
-            "characterId": 4,
-          },
-          "sound": "-aw",
+          "characterIds": [4],
           "description": "'aw' as in 'saw'",
         }
       ],
       "combinations": [
         {
-          "components": [
-            {
-              "character": "ꪊ",
-              "characterId": 30,
-            },
-            {
-              "character": "ꪲ",
-              "characterId": 7,
-            }
-          ],
-          "result": "ꪊꪲ",
-          "romanization": "chi",
+          "characterIds": [30, 7],
           "description": "Combining consonant 'ch' with vowel 'i'",
         },
         {
-          "components": [
-            {
-              "character": "ꪋ",
-              "characterId": 31,
-            },
-            {
-              "character": "ꪾ",
-              "characterId": 23,
-            }
-          ],
-          "result": "ꪋꪾ",
-          "romanization": "'chum",
+          "characterIds": [31, 23],
           "description": "Combining consonant 'ch' with vowel 'um'",
         },
         {
-          "components": [
-            {
-              "character": "ꪎ",
-              "characterId": 32,
-            },
-            {
-              "character": "ꪳ",
-              "characterId": 8,
-            }
-          ],
-          "result": "ꪎꪳ",
-          "romanization": "sue",
+          "characterIds": [32, 8],
           "description": "Combining consonant 's' with vowel 'ue'",
         },
         {
-          "components": [
-            {
-              "character": "ꪏ",
-              "characterId": 33,
-            },
-            {
-              "character": "ꪸ",
-              "characterId": 16,
-            }
-          ],
-          "result": "ꪏꪸ",
-          "romanization": "'sia",
+          "characterIds": [33, 16],
           "description": "Combining consonant 's' with vowel 'u'",
         },
         {
-          "components": [
-            {
-              "character": "ꪐ",
-              "characterId": 34,
-            },
-            {
-              "character": "ꪷ",
-              "characterId": 4,
-            }
-          ],
-          "result": "ꪐꪷ",
-          "romanization": "nyaw",
+          "characterIds": [34, 4],
           "description": "Combining consonant 'ny' with vowel 'aw'",
         },
         {
-          "components": [
-            {
-              "character": "ꪑ",
-              "characterId": 35,
-            },
-            {
-              "character": "ꪷ",
-              "characterId": 4,
-            }
-          ],
-          "result": "ꪑꪷ",
-          "romanization": "'nyaw",
+          "characterIds": [35, 4],
           "description": "Combining consonant 'ny' with vowel 'aw'",
         },
       ],
       "examples": [
         {
-          "word": "ꪎꪳ",
-          "romanization": "su",
+          "characterIds": [32, 8],
         },
         {
           "word": "ꪐꪷ",
-          "romanization": "hgno",
+          "characterIds": [34, 4],
         },
         {
           "word": "ꪑꪷ",
-          "romanization": "gno",
+          "characterIds": [35, 4],
         },
         {
           "word": "ꪎꪸ",
-          "romanization": "sia",
+          "characterIds": [32, 16],
         },
         {
           "word": "ꪊꪾ",
-          "romanization": "cham",
+          "characterIds": [30, 23],
         },
         {
           "word": "ꪏꪸ",
-          "romanization": "'sia",
+          "characterIds": [33, 16],
         },
         {
           "word": "ꪎꪲ",
-          "romanization": "si",
+          "characterIds": [32, 7],
         },
         {
           "word": "ꪋꪲ",
-          "romanization": "'chi",
+          "characterIds": [31, 7],
         },
         {
           "word": "ꪎꪷ",
-          "romanization": "saw",
+          "characterIds": [32, 4],
         },
         {
           "word": "ꪋꪾ",
-          "romanization": "'cham",
+          "characterIds": [31, 23],
         },
         {
           "word": "ꪏꪷ",
-          "romanization": "'saw",
+          "characterIds": [33, 4],
         },
       ]
     }

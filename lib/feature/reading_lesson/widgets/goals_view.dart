@@ -63,7 +63,7 @@ class GoalsView extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          goal.letter,
+                          goal.displayText,
                           style: const TextStyle(
                             fontFamily: 'Tai Heritage Pro',
                             fontSize: 32,
@@ -79,16 +79,22 @@ class GoalsView extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Sound: ${goal.sound}',
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleMedium
-                                ?.copyWith(
-                                  fontWeight: FontWeight.bold,
+                          if (goal.romanization.isNotEmpty)
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Pronunciation: ${goal.romanization}',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleMedium
+                                      ?.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                 ),
-                          ),
-                          SizedBox(height: Spacing.xs),
+                                SizedBox(height: Spacing.xs),
+                              ],
+                            ),
                           Text(
                             goal.description,
                             style: Theme.of(context).textTheme.bodyMedium,

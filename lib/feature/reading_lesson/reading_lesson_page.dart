@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taidam_tutor/core/constants/reading_lessons.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_cubit.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_state.dart';
-import 'package:taidam_tutor/feature/reading_lesson/models/reading_lesson_models.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/combinations_view.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/completion_view.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/examples_view.dart';
@@ -23,13 +22,23 @@ class ReadingLessonPage extends StatelessWidget {
     // Get lesson data
     final lessonData =
         lessonNumber == 1 ? ReadingLessons.lesson1 : ReadingLessons.lesson2;
-    final lesson = ReadingLesson.fromJson(lessonData);
+    final lessonMeta = lessonData['lesson'] as Map<String, dynamic>;
+    final fallbackTitle = lessonMeta['title'] as String? ?? 'Reading Lesson';
 
     return BlocProvider(
-      create: (context) => ReadingLessonCubit()..startLesson(lesson),
+      create: (context) => ReadingLessonCubit()..startLesson(lessonData),
       child: Scaffold(
         appBar: AppBar(
-          title: Text(lesson.title),
+          title: BlocBuilder<ReadingLessonCubit, ReadingLessonState>(
+            builder: (context, state) {
+              final title = switch (state) {
+                ReadingLessonActive() => state.lesson.title,
+                ReadingLessonCompleted() => state.lesson.title,
+                _ => fallbackTitle,
+              };
+              return Text(title);
+            },
+          ),
           actions: [
             BlocBuilder<ReadingLessonCubit, ReadingLessonState>(
               builder: (context, state) {
@@ -37,7 +46,9 @@ class ReadingLessonPage extends StatelessWidget {
                   return IconButton(
                     icon: const Icon(Icons.refresh),
                     onPressed: () {
-                      context.read<ReadingLessonCubit>().startLesson(lesson);
+                      context
+                          .read<ReadingLessonCubit>()
+                          .startLesson(lessonData);
                     },
                     tooltip: 'Restart Lesson',
                   );

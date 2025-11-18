@@ -66,7 +66,7 @@ class ExamplesView extends StatelessWidget {
                           ),
                         ),
                         child: Text(
-                          examples[state.currentIndex].word,
+                          examples[state.currentIndex].displayWord,
                           style: const TextStyle(
                             fontFamily: 'Tai Heritage Pro',
                             fontSize: 72,
@@ -86,7 +86,7 @@ class ExamplesView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Text(
-                          examples[state.currentIndex].romanization,
+                          examples[state.currentIndex].displayRomanization,
                           style: Theme.of(context)
                               .textTheme
                               .headlineMedium

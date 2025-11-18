@@ -59,7 +59,7 @@ class CombinationsView extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ...combination.components.map((component) => Padding(
+              ...combination.componentGlyphs.map((component) => Padding(
                                 padding: EdgeInsets.symmetric(
                                     horizontal: Spacing.xs),
                                 child: Container(
@@ -133,14 +133,18 @@ class CombinationsView extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: Spacing.m),
-                      Text(
-                        'Sound: ${combination.romanization}',
-                        style:
-                            Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: Theme.of(context).colorScheme.primary,
-                                ),
-                      ),
+                      if (combination.romanization.isNotEmpty)
+                        Text(
+                          'Pronunciation: ${combination.romanization}',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall
+                              ?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color:
+                                    Theme.of(context).colorScheme.primary,
+                              ),
+                        ),
                     ],
                   ),
                 ),
