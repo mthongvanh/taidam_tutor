@@ -17,10 +17,8 @@ class LessonCharacterSet extends Equatable {
     Map<int, Character> characterMap,
   ) {
     final parsedIds = ids.map((id) => (id as num).toInt()).toList();
-    final resolvedCharacters = parsedIds
-        .map((id) => characterMap[id])
-        .whereType<Character>()
-        .toList();
+    final resolvedCharacters =
+        parsedIds.map((id) => characterMap[id]).whereType<Character>().toList();
 
     return LessonCharacterSet(
       characterIds: parsedIds,
@@ -104,11 +102,13 @@ class Combination extends Equatable {
   String get romanization => characters.primaryRomanization;
 
   String get practiceDescription {
-    final glyphParts = componentGlyphs.join(' + ');
-    final pronunciation = romanization;
-    final pronunciationSuffix =
-        pronunciation.isNotEmpty ? ' [$pronunciation]' : '';
-    return '$description ($glyphParts)$pronunciationSuffix';
+    // produces: Sounds like 'ng-ooah' in 'sung-ooah' (ꪉ + ꪺ) [ngua]
+    // final glyphParts = componentGlyphs.join(' + ');
+    // final pronunciation = romanization;
+    // final pronunciationSuffix =
+    //     pronunciation.isNotEmpty ? ' [$pronunciation]' : '';
+    // return '$description ($glyphParts)$pronunciationSuffix';
+    return romanization;
   }
 
   @override

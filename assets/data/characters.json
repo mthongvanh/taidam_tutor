@@ -143,7 +143,7 @@
   },
   {
     "characterId": 11,
-    "character": "ꪵ◌",
+    "character": "ꪵ",
     "lao": "ແ-",
     "romanization": "eh",
     "ipa": "/ɛ/",
@@ -151,14 +151,14 @@
     "preComponent": "ꪵ",
     "postComponent": null,
     "unicode": "ꪵ",
-    "example": "ꪵ-",
+    "example": "ꪵ◌",
     "audio": "b75b-vowel",
     "image": "b75",
     "characterClass": "vowel"
   },
   {
     "characterId": 12,
-    "character": "ꪶ◌",
+    "character": "ꪶ",
     "lao": "ໂ-,-ົ-",
     "romanization": "aw",
     "ipa": "/o/",
@@ -166,7 +166,7 @@
     "preComponent": "ꪶ",
     "postComponent": null,
     "unicode": "ꪶ",
-    "example": "ꪶ-",
+    "example": "ꪶ◌",
     "audio": "b67b-vowel",
     "image": "b67",
     "characterClass": "vowel"
@@ -233,7 +233,7 @@
   },
   {
     "characterId": 17,
-    "character": "ꪹ◌",
+    "character": "ꪹ",
     "lao": "ເືອ",
     "romanization": "eua",
     "ipa": "/ɨə/",
@@ -241,7 +241,7 @@
     "preComponent": "ꪹ",
     "postComponent": null,
     "unicode": "ꪹ",
-    "example": "ꪹ-",
+    "example": "ꪹ◌",
     "audio": "b78a-vowel",
     "image": "b78",
     "characterClass": "vowel"
@@ -264,7 +264,7 @@
   },
   {
     "characterId": 19,
-    "character": "ꪻ◌",
+    "character": "ꪻ",
     "lao": "ົໃ-",
     "romanization": "aư",
     "ipa": "/əw/",
@@ -272,14 +272,14 @@
     "preComponent": "ꪻ",
     "postComponent": null,
     "unicode": "ꪻ",
-    "example": "ꪻ-",
+    "example": "ꪻ◌",
     "audio": "b70a-vowel",
     "image": "b70",
     "characterClass": "vowel"
   },
   {
     "characterId": 20,
-    "character": "ꪼ◌",
+    "character": "ꪼ",
     "lao": "ໄ-",
     "romanization": "ay",
     "ipa": "/əy/",
