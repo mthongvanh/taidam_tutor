@@ -9,41 +9,41 @@ abstract class ReadingLessons {
       "goals": [
         {
           "characterIds": [5],
-          "description": "Long vowel sound 'aa' as in 'father'",
+          "description": "Sound like 'ah' in 'father'",
         },
         {
           "characterIds": [18],
-          "description": "Diphthong sound 'ua' as in 'guava' (-oowa-)",
+          "description": "Sounds like 'oo-wah' in 'guava'",
         },
         {
           "characterIds": [22],
-          "description": "Nasal sound 'an'",
+          "description": "Nasal sound like at the end of 'man'",
         }
       ],
       "combinations": [
         {
           "characterIds": [24, 5],
-          "description": "Combining consonant 'k' with vowel 'aa'",
+          "description": "Sounds like 'cau' in 'cause'",
         },
         {
           "characterIds": [25, 22],
-          "description": "Combining consonant 'kh' with vowel 'an'",
+          "description": "Sounds like 'coun' in 'country'",
         },
         {
           "characterIds": [26, 18],
-          "description": "Combining consonant 'kh' with vowel 'ua'",
+          "description": "Sounds like 'qua' in 'squat'",
         },
         {
           "characterIds": [27, 22],
-          "description": "Combining consonant 'kh' with vowel 'an'",
+          "description": "Sounds like 'khan' in 'Genghis Khan'",
         },
         {
           "characterIds": [28, 5],
-          "description": "Combining consonant 'ng' with vowel 'aa'",
+          "description": "Sounds like 'ng-ah' in 'sung-ah'",
         },
         {
           "characterIds": [29, 18],
-          "description": "Combining consonant 'ng' with vowel 'ua'",
+          "description": "Sounds like 'ng-ooah' in 'sung-ooah'",
         }
       ]
     }
@@ -59,49 +59,49 @@ abstract class ReadingLessons {
       "goals": [
         {
           "characterIds": [7],
-          "description": "Vowel sound 'i' as in 'see'",
+          "description": "Sounds like 'ee' as in 'see'",
         },
         {
           "characterIds": [23],
-          "description": "Vowel with final nasal 'um'",
+          "description": "Sounds like 'um' in 'sum'",
         },
         {
           "characterIds": [8],
-          "description": "Vowel sound 'ue' as in 'food'",
+          "description": "Sounds like 'oo' as in 'food'",
         },
         {
           "characterIds": [16],
-          "description": "Diphthong vowel sound 'ia'",
+          "description": "Sounds like 'ee-ya' as in 'see-ya'",
         },
         {
           "characterIds": [4],
-          "description": "'aw' as in 'saw'",
+          "description": "Sounds like 'aw' as in 'saw'",
         }
       ],
       "combinations": [
         {
           "characterIds": [30, 7],
-          "description": "Combining consonant 'ch' with vowel 'i'",
+          "description": "Sounds like 'chea-' in 'cheat'",
         },
         {
           "characterIds": [31, 23],
-          "description": "Combining consonant 'ch' with vowel 'um'",
+          "description": "Sounds like 'jum-' in 'jump'",
         },
         {
           "characterIds": [32, 8],
-          "description": "Combining consonant 's' with vowel 'ue'",
+          "description": "Sounds like 'sue' in 'suit'",
         },
         {
           "characterIds": [33, 16],
-          "description": "Combining consonant 's' with vowel 'u'",
+          "description": "Sounds like 'see-ya'",
         },
         {
           "characterIds": [34, 4],
-          "description": "Combining consonant 'ny' with vowel 'aw'",
+          "description": "Sounds like 'knee-awe' which rhymes with 'yee-haw'",
         },
         {
           "characterIds": [35, 4],
-          "description": "Combining consonant 'ny' with vowel 'aw'",
+          "description": "Sounds like 'knee-awe' which rhymes with 'yee-haw'",
         },
       ],
       "examples": [
