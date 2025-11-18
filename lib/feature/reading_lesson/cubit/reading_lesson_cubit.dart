@@ -207,6 +207,31 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
     startLesson(data);
   }
 
+  void selectGoal(int goalIndex) {
+    final currentState = state;
+    if (currentState is! ReadingLessonActive) return;
+    if (goalIndex < 0 || goalIndex >= currentState.lesson.goals.length) {
+      return;
+    }
+
+    _practiceQuestions = [];
+    _totalPracticeQuestionsOverall = 0;
+
+    emit(currentState.copyWith(
+      stage: LessonStage.goalOverview,
+      currentGoalIndex: goalIndex,
+      currentIndex: 0,
+      score: 0,
+      totalPracticeQuestions: 0,
+      selectedAnswerIndex: null,
+      isCorrect: null,
+      activeCombinations:
+          _combinationsForGoal(currentState.lesson, goalIndex),
+      activeExamples: _examplesForGoal(currentState.lesson, goalIndex),
+      practiceQuestions: const [],
+    ));
+  }
+
   void _advanceFromGoalOverview(ReadingLessonActive currentState) {
     if (currentState.activeCombinations.isNotEmpty) {
       emit(currentState.copyWith(

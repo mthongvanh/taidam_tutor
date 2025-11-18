@@ -43,14 +43,24 @@ class ReadingLessonPage extends StatelessWidget {
             BlocBuilder<ReadingLessonCubit, ReadingLessonState>(
               builder: (context, state) {
                 if (state is ReadingLessonActive) {
-                  return IconButton(
-                    icon: const Icon(Icons.refresh),
-                    onPressed: () {
-                      context
-                          .read<ReadingLessonCubit>()
-                          .startLesson(lessonData);
-                    },
-                    tooltip: 'Restart Lesson',
+                  return Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.flag_outlined),
+                        tooltip: 'Choose goal to start from',
+                        onPressed: () => showGoalSelectionSheet(context, state),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.refresh),
+                        onPressed: () {
+                          context
+                              .read<ReadingLessonCubit>()
+                              .startLesson(lessonData);
+                        },
+                        tooltip: 'Restart Lesson',
+                      ),
+                    ],
                   );
                 }
                 return const SizedBox.shrink();

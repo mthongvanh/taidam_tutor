@@ -18,18 +18,11 @@ class GoalsView extends StatelessWidget {
     final hasCombinations = state.activeCombinations.isNotEmpty;
     final hasExamples = state.activeExamples.isNotEmpty;
 
-    final nextActionLabel = hasCombinations
-        ? 'See Combinations'
-        : hasExamples
-            ? 'Review Examples'
-            : 'Start Practice';
-
     return SingleChildScrollView(
       padding: EdgeInsets.all(Spacing.m),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // Lesson description
           TaiCard.margin(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,9 +41,7 @@ class GoalsView extends StatelessWidget {
               ],
             ),
           ),
-
           SizedBox(height: Spacing.m),
-
           TaiCard.margin(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,9 +84,7 @@ class GoalsView extends StatelessWidget {
                               style: Theme.of(context)
                                   .textTheme
                                   .titleMedium
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                  ?.copyWith(fontWeight: FontWeight.bold),
                             ),
                           if (goal.romanization.isNotEmpty)
                             SizedBox(height: Spacing.xs),
@@ -125,13 +114,42 @@ class GoalsView extends StatelessWidget {
                     ),
                   ],
                 ),
+                if (!hasCombinations && !hasExamples) ...[
+                  SizedBox(height: Spacing.m),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.info_outline,
+                        size: 18,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      SizedBox(width: Spacing.xs),
+                      Expanded(
+                        child: Text(
+                          'This goal will take you straight to practice.',
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ],
             ),
           ),
-
           SizedBox(height: Spacing.l),
-
-          // Begin button
+          OutlinedButton.icon(
+            onPressed: () => showGoalSelectionSheet(context, state),
+            icon: const Icon(Icons.flag_outlined),
+            style: OutlinedButton.styleFrom(
+              padding: EdgeInsets.symmetric(vertical: Spacing.m),
+              minimumSize: const Size.fromHeight(48),
+            ),
+            label: const Text(
+              'Choose Goal to Start From',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+          SizedBox(height: Spacing.s),
           ElevatedButton(
             onPressed: () =>
                 context.read<ReadingLessonCubit>().proceedToNextStage(),
@@ -139,15 +157,128 @@ class GoalsView extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: Spacing.m),
               minimumSize: const Size.fromHeight(48),
             ),
-            child: Text(
-              nextActionLabel,
-              style: const TextStyle(fontSize: 18),
+            child: const Text(
+              'Begin Lesson',
+              style: TextStyle(fontSize: 18),
             ),
+          ),
+          SizedBox(height: Spacing.xs),
+          Text(
+            hasCombinations
+                ? 'You will explore how this goal combines with other glyphs next.'
+                : hasExamples
+                    ? 'You will review examples that include this goal next.'
+                    : 'You will jump straight into practice for this goal.',
+            style: Theme.of(context)
+                .textTheme
+                .bodySmall
+                ?.copyWith(color: Theme.of(context).colorScheme.secondary),
+          ),
+          SizedBox(height: Spacing.xs),
+          Text(
+            'Tap the flag icon to switch goals anytime.',
+            style: Theme.of(context)
+                .textTheme
+                .bodySmall
+                ?.copyWith(color: Theme.of(context).colorScheme.secondary),
           ),
         ],
       ),
     );
   }
+}
+
+Future<void> showGoalSelectionSheet(
+  BuildContext context,
+  ReadingLessonActive state,
+) async {
+  final cubit = context.read<ReadingLessonCubit>();
+
+  await showModalBottomSheet<void>(
+    context: context,
+    isScrollControlled: true,
+    showDragHandle: true,
+    builder: (sheetContext) {
+      final theme = Theme.of(sheetContext);
+
+      return FractionallySizedBox(
+        heightFactor: 0.85,
+        child: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(Spacing.m),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Jump to a Goal',
+                  style: theme.textTheme.headlineSmall?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                SizedBox(height: Spacing.s),
+                Text(
+                  'Pick any goal below to start practicing from there.',
+                  style: theme.textTheme.bodyMedium,
+                ),
+                SizedBox(height: Spacing.m),
+                Expanded(
+                  child: ListView.separated(
+                    itemCount: state.lesson.goals.length,
+                    separatorBuilder: (_, __) => SizedBox(height: Spacing.s),
+                    itemBuilder: (_, index) {
+                      final goal = state.lesson.goals[index];
+                      final isCurrent = index == state.currentGoalIndex;
+
+                      return ListTile(
+                        tileColor: isCurrent
+                            ? theme.colorScheme.secondaryContainer
+                            : theme.colorScheme.surface,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          side: BorderSide(
+                            color: theme.colorScheme.outlineVariant,
+                          ),
+                        ),
+                        leading: CircleAvatar(
+                          backgroundColor: theme.colorScheme.primaryContainer,
+                          child: Text(
+                            '${index + 1}',
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        title: Text(
+                          goal.displayText,
+                          style: const TextStyle(
+                            fontFamily: 'Tai Heritage Pro',
+                            fontSize: 28,
+                          ),
+                        ),
+                        subtitle: Text(
+                          goal.description,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        trailing: Icon(
+                          isCurrent ? Icons.flag : Icons.play_arrow,
+                          color: theme.colorScheme.primary,
+                        ),
+                        onTap: () {
+                          Navigator.of(sheetContext).pop();
+                          cubit.selectGoal(index);
+                        },
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    },
+  );
 }
 
 class _LessonChip extends StatelessWidget {
@@ -183,9 +314,7 @@ class _LessonChip extends StatelessWidget {
             label,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.w600,
-                  color: Theme.of(context)
-                      .colorScheme
-                      .onSecondaryContainer,
+                  color: Theme.of(context).colorScheme.onSecondaryContainer,
                 ),
           ),
         ],
