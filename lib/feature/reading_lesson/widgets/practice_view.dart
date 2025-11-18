@@ -17,9 +17,17 @@ class PracticeView extends StatelessWidget {
     final progress = (state.currentIndex + 1) / practiceQuestions.length;
     final hasAnswered = state.selectedAnswerIndex != null;
     final totalQuestions = state.totalPracticeQuestions;
+    final isLastQuestion = state.currentIndex >= practiceQuestions.length - 1;
+    final hasMoreGoals = state.currentGoalIndex < state.lesson.goals.length - 1;
     final overallScoreText = totalQuestions > 0
         ? 'Lesson Score: ${state.score} / $totalQuestions'
         : 'Lesson Score: ${state.score}';
+
+    String _ctaLabel() {
+      if (!hasAnswered) return 'Next Question';
+      if (!isLastQuestion) return 'Next Question';
+      return hasMoreGoals ? 'Continue Lesson' : 'See Results';
+    }
 
     return Column(
       children: [
@@ -60,12 +68,10 @@ class PracticeView extends StatelessWidget {
                     children: [
                       Text(
                         overallScoreText,
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleMedium
-                            ?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                ),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: Spacing.xs),
@@ -194,9 +200,7 @@ class PracticeView extends StatelessWidget {
                       minimumSize: const Size.fromHeight(48),
                     ),
                     child: Text(
-                      state.currentIndex < practiceQuestions.length - 1
-                          ? 'Next Question'
-                          : 'See Results',
+                      _ctaLabel(),
                       style: const TextStyle(fontSize: 18),
                     ),
                   ),
@@ -282,8 +286,8 @@ class _AnswerOptionButton extends StatelessWidget {
               child: Center(
                 child: Text(
                   label,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onPrimary,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
