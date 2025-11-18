@@ -40,7 +40,8 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
         activeExamples: _examplesForGoal(lesson, 0),
       ));
     } catch (error) {
-      emit(const ReadingLessonError('Failed to load lesson. Please try again.'));
+      emit(
+          const ReadingLessonError('Failed to load lesson. Please try again.'));
     }
   }
 
@@ -101,7 +102,7 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
     if (currentState is! ReadingLessonActive) return;
     if (currentState.stage != LessonStage.goalExamples) return;
 
-  final examples = currentState.activeExamples;
+    final examples = currentState.activeExamples;
     if (examples.isEmpty) {
       proceedToNextStage();
       return;
@@ -156,10 +157,6 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
         }
       }
 
-      while (options.length < 4) {
-        options.add('Review the lesson content');
-      }
-
       options.shuffle(_random);
 
       return PracticeQuestion(
@@ -174,7 +171,7 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   void selectAnswer(int answerIndex) {
     final currentState = state;
     if (currentState is! ReadingLessonActive) return;
-  if (currentState.stage != LessonStage.goalPractice) return;
+    if (currentState.stage != LessonStage.goalPractice) return;
     if (currentState.selectedAnswerIndex != null) return; // Already answered
 
     final question = _practiceQuestions[currentState.currentIndex];
@@ -255,8 +252,7 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
     final goal = lesson.goals[goalIndex];
     return lesson.combinations
         .where(
-          (combination) =>
-              _matchesGoalCharacters(combination.characters, goal),
+          (combination) => _matchesGoalCharacters(combination.characters, goal),
         )
         .toList();
   }
