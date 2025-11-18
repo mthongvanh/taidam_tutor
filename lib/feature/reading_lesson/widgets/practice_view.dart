@@ -23,7 +23,7 @@ class PracticeView extends StatelessWidget {
         ? 'Lesson Score: ${state.score} / $totalQuestions'
         : 'Lesson Score: ${state.score}';
 
-    String _ctaLabel() {
+    String ctaLabel() {
       if (!hasAnswered) return 'Next Question';
       if (!isLastQuestion) return 'Next Question';
       return hasMoreGoals ? 'Continue Lesson' : 'See Results';
@@ -200,7 +200,7 @@ class PracticeView extends StatelessWidget {
                       minimumSize: const Size.fromHeight(48),
                     ),
                     child: Text(
-                      _ctaLabel(),
+                      ctaLabel(),
                       style: const TextStyle(fontSize: 18),
                     ),
                   ),
