@@ -44,6 +44,7 @@ class MorePage extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             child: TaiCard.margin(
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     padding: EdgeInsets.all(Spacing.s),
@@ -62,12 +63,29 @@ class MorePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Flashcard Practice',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleMedium
-                              ?.copyWith(fontWeight: FontWeight.bold),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Flashcard Practice',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            SizedBox(width: Spacing.s),
+                            _LevelTag(
+                              label: 'Advanced',
+                              backgroundColor: Theme.of(context)
+                                  .colorScheme
+                                  .primaryContainer,
+                              textColor: Theme.of(context)
+                                  .colorScheme
+                                  .onPrimaryContainer,
+                            ),
+                          ],
                         ),
                         SizedBox(height: Spacing.xs),
                         Text(
@@ -77,9 +95,14 @@ class MorePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Theme.of(context).colorScheme.primary,
+                  SizedBox(
+                    height: 64,
+                    child: Center(
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -97,6 +120,7 @@ class MorePage extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             child: TaiCard.margin(
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     padding: EdgeInsets.all(Spacing.s),
@@ -115,24 +139,46 @@ class MorePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Letter Finder Game',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleMedium
-                              ?.copyWith(fontWeight: FontWeight.bold),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Letter Finder Game',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            SizedBox(width: Spacing.s),
+                            _LevelTag(
+                              label: 'Beginner',
+                              backgroundColor: Theme.of(context)
+                                  .colorScheme
+                                  .tertiaryContainer,
+                              textColor: Theme.of(context)
+                                  .colorScheme
+                                  .onTertiaryContainer,
+                            ),
+                          ],
                         ),
                         SizedBox(height: Spacing.xs),
                         Text(
-                          'Search for matching characters as quickly as you can.',
+                          'Search for matching characters to improve your recognition skills.',
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],
                     ),
                   ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Theme.of(context).colorScheme.primary,
+                  SizedBox(
+                    height: 64,
+                    child: Center(
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -150,6 +196,7 @@ class MorePage extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             child: TaiCard.margin(
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     padding: EdgeInsets.all(Spacing.s),
@@ -168,12 +215,29 @@ class MorePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Quiz Yourself',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleMedium
-                              ?.copyWith(fontWeight: FontWeight.bold),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Quiz Yourself',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            SizedBox(width: Spacing.s),
+                            _LevelTag(
+                              label: 'Advanced',
+                              backgroundColor: Theme.of(context)
+                                  .colorScheme
+                                  .primaryContainer,
+                              textColor: Theme.of(context)
+                                  .colorScheme
+                                  .onPrimaryContainer,
+                            ),
+                          ],
                         ),
                         SizedBox(height: Spacing.xs),
                         Text(
@@ -183,15 +247,53 @@ class MorePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Theme.of(context).colorScheme.primary,
+                  SizedBox(
+                    height: 64,
+                    child: Center(
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _LevelTag extends StatelessWidget {
+  final String label;
+  final Color backgroundColor;
+  final Color textColor;
+
+  const _LevelTag({
+    required this.label,
+    required this.backgroundColor,
+    required this.textColor,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: Spacing.s,
+        vertical: Spacing.xs,
+      ),
+      decoration: BoxDecoration(
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(100),
+      ),
+      child: Text(
+        label,
+        style: Theme.of(context).textTheme.labelMedium?.copyWith(
+              fontWeight: FontWeight.bold,
+              color: textColor,
+            ),
       ),
     );
   }
