@@ -10,7 +10,8 @@
     "postComponent": "ꪱꪀ",
     "unicode": "ꪱꪁ",
     "regEx": "\\uaab1\\uaa81",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say a long 'ahhh' like 'spa,' then slam the sound shut with a quick throat stop."
   },
   {
     "characterId": 2,
@@ -23,7 +24,8 @@
     "postComponent": "ꪮꪀ",
     "unicode": "ꪮꪁ",
     "regEx": "\\uaaae\\uaa81",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'aw' as in 'saw,' then cut it off instantly with your throat."
   },
   {
     "characterId": 3,
@@ -36,7 +38,8 @@
     "postComponent": "ꪚꪾ",
     "unicode": "ꪾꪜ",
     "regEx": "\\uaabe\\uaa9c",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say a short 'ah' and close your lips for a very light, unfinished 'p.'"
   },
   {
     "characterId": 4,
@@ -50,7 +53,8 @@
     "unicode": "ꪷ",
     "audio": "b61c-vowel",
     "image": "b61",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say a quick 'ah' like the start of 'aha.'"
   },
   {
     "characterId": 5,
@@ -65,7 +69,8 @@
     "example": "-ꪱ",
     "audio": "b48b-vowel",
     "image": "b48",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Hold 'ahhh' for a moment, the way you'd yawn."
   },
   {
     "characterId": 6,
@@ -78,7 +83,8 @@
     "preComponent": null,
     "postComponent": "ꪰ",
     "unicode": "ꪰ",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say a short 'ah' like in 'father.'"
   },
   {
     "characterId": 7,
@@ -93,7 +99,8 @@
     "example": "ꪲ",
     "audio": "b51a-vowel",
     "image": "b51",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'ee' as in 'machine.'"
   },
   {
     "characterId": 8,
@@ -108,7 +115,8 @@
     "example": "ꪳ",
     "audio": "b57a-vowel",
     "image": "b57",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Make a sound halfway between 'ee' and 'uh,' like saying 'eu.'"
   },
   {
     "characterId": 9,
@@ -123,7 +131,8 @@
     "example": "ꪴ",
     "audio": "b54a-vowel",
     "image": "b54",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'oo' like 'food.'"
   },
   {
     "characterId": 10,
@@ -139,7 +148,8 @@
     "example": "ꪹꪁꪸ",
     "audio": "b82a-vowel",
     "image": "b82",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'ay' as in 'say,' but end it cleanly."
   },
   {
     "characterId": 11,
@@ -154,7 +164,8 @@
     "example": "ꪵ◌",
     "audio": "b75b-vowel",
     "image": "b75",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'eh' like 'bed.'"
   },
   {
     "characterId": 12,
@@ -169,7 +180,8 @@
     "example": "ꪶ◌",
     "audio": "b67b-vowel",
     "image": "b67",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'oh' as in 'go.'"
   },
   {
     "characterId": 13,
@@ -184,7 +196,8 @@
     "example": "ꪷ",
     "audio": "b61c-vowel",
     "image": "b61",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'aw' like 'law.'"
   },
   {
     "characterId": 14,
@@ -197,7 +210,8 @@
     "postComponent": "ꪮ",
     "unicode": "ꪮ",
     "example": "-ꪮ-",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say the rounded 'aw' sound you hear in 'thought.'"
   },
   {
     "characterId": 15,
@@ -213,7 +227,8 @@
     "example": "ꪹꪁꪷ",
     "audio": "b81c-vowel",
     "image": "b81",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say the lazy 'uh' from the first syllable of 'about.'"
   },
   {
     "characterId": 16,
@@ -229,7 +244,8 @@
     "example": "ꪸ",
     "audio": "b59b-vowel",
     "image": "b59",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Start with 'ee' and slide into 'uh' (think 'ee-uh')."
   },
   {
     "characterId": 17,
@@ -244,7 +260,8 @@
     "example": "ꪹ◌",
     "audio": "b78a-vowel",
     "image": "b78",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Start with the tight 'eu' between 'ee' and 'uh,' then relax into 'uh.'"
   },
   {
     "characterId": 18,
@@ -256,11 +273,12 @@
     "position": "after",
     "preComponent": "null",
     "postComponent": "ꪺ",
-    "unicode": "\uAABA",
+    "unicode": "ꪺ",
     "example": "-ꪺ",
     "audio": "b69a-vowel",
     "image": "b69",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'oo' and relax it into 'uh' ('oo-uh')."
   },
   {
     "characterId": 19,
@@ -275,7 +293,8 @@
     "example": "ꪻ◌",
     "audio": "b70a-vowel",
     "image": "b70",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Start with 'uh' and round it off with a soft 'oo.'"
   },
   {
     "characterId": 20,
@@ -290,7 +309,8 @@
     "example": "ꪼ◌",
     "audio": "b64a-vowel",
     "image": "b64",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Start with 'uh' and slide up to 'ee,' like 'uh-ee.'"
   },
   {
     "characterId": 21,
@@ -306,7 +326,8 @@
     "example": "ꪹ-ꪱ",
     "audio": "b84b-vowel",
     "image": "b84",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'ahhh' and drift into a 'w' sound, like stretching 'cow.'"
   },
   {
     "characterId": 22,
@@ -321,7 +342,8 @@
     "example": "-ꪽ",
     "audio": "b73b-vowel",
     "image": "b73",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'ahn' with your tongue touching for 'n.'"
   },
   {
     "characterId": 23,
@@ -336,7 +358,8 @@
     "example": "ꪾ",
     "audio": "b72a-vowel",
     "image": "b72",
-    "characterClass": "vowel"
+    "characterClass": "vowel",
+    "ipaDescription": "Say 'ahm,' ending with closed lips for 'm.'"
   },
   {
     "characterId": 24,
@@ -347,7 +370,8 @@
     "highLow": "low",
     "audio": "a1",
     "image": "a1",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Begin with a firm 'k,' like the start of 'skate.'"
   },
   {
     "characterId": 25,
@@ -359,7 +383,8 @@
     "highLow": "high",
     "audio": "a2",
     "image": "a2",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with a crisp 'k,' like the consonant in 'skit.'"
   },
   {
     "characterId": 26,
@@ -370,7 +395,8 @@
     "highLow": "low",
     "audio": "a7",
     "image": "a7",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Make the back-of-the-throat 'kh' from 'Bach.'"
   },
   {
     "characterId": 27,
@@ -381,7 +407,8 @@
     "highLow": "high",
     "audio": "a8",
     "image": "a8",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Use the raspy 'kh' you hear in 'loch.'"
   },
   {
     "characterId": 28,
@@ -392,7 +419,8 @@
     "highLow": "low",
     "audio": "a10",
     "image": "a10",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Begin the word with 'ng,' as if the 'ng' from 'sing' were at the front."
   },
   {
     "characterId": 29,
@@ -403,7 +431,8 @@
     "highLow": "high",
     "audio": "a11",
     "image": "a11",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Lead with an 'ng' sound, like starting the word 'ngoma.'"
   },
   {
     "characterId": 30,
@@ -414,7 +443,8 @@
     "highLow": "low",
     "audio": "a12",
     "image": "a12",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with 'ch' like 'chew.'"
   },
   {
     "characterId": 31,
@@ -425,7 +455,8 @@
     "highLow": "high",
     "audio": "a13",
     "image": "a13",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Use a sharp 'ch' like the start of 'cheek.'"
   },
   {
     "characterId": 32,
@@ -436,7 +467,8 @@
     "highLow": "low",
     "audio": "a14",
     "image": "a14",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with 's' as in 'sun.'"
   },
   {
     "characterId": 33,
@@ -447,7 +479,8 @@
     "highLow": "high",
     "audio": "a15",
     "image": "a15",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Use a clear 's' like in 'silk.'"
   },
   {
     "characterId": 34,
@@ -458,7 +491,8 @@
     "highLow": "low",
     "audio": "a16",
     "image": "a16",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Say 'ny' like the 'ñ' in 'niño.'"
   },
   {
     "characterId": 35,
@@ -469,7 +503,8 @@
     "highLow": "high",
     "audio": "a17",
     "image": "a17",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Begin with the 'ny' sound you hear in 'canyon.'"
   },
   {
     "characterId": 36,
@@ -480,7 +515,8 @@
     "highLow": "low",
     "audio": "a18",
     "image": "a18",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with 'd' as in 'day.'"
   },
   {
     "characterId": 37,
@@ -491,7 +527,8 @@
     "highLow": "high",
     "audio": "a19",
     "image": "a19",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Use a voiced 'd,' like the start of 'dog.'"
   },
   {
     "characterId": 38,
@@ -502,7 +539,8 @@
     "highLow": "low",
     "audio": "a20",
     "image": "a20",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Say a tight 't' like the consonant in 'stop.'"
   },
   {
     "characterId": 39,
@@ -513,7 +551,8 @@
     "highLow": "high",
     "audio": "a21",
     "image": "a21",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Make an unpuffed 't,' like the 't' in 'sting.'"
   },
   {
     "characterId": 40,
@@ -524,7 +563,8 @@
     "highLow": "low",
     "audio": "a22",
     "image": "a22",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Say 't' with a big puff of air, like in the word 'Thai.'"
   },
   {
     "characterId": 41,
@@ -535,7 +575,8 @@
     "highLow": "high",
     "audio": "a23",
     "image": "a23",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Use a breathy 't' that releases a noticeable burst of air."
   },
   {
     "characterId": 42,
@@ -546,7 +587,8 @@
     "highLow": "low",
     "audio": "a24",
     "image": "a24",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with 'n' like 'note.'"
   },
   {
     "characterId": 43,
@@ -557,7 +599,8 @@
     "highLow": "high",
     "audio": "a25",
     "image": "a25",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Begin with an 'n' sound, as in 'night.'"
   },
   {
     "characterId": 44,
@@ -568,7 +611,8 @@
     "highLow": "low",
     "audio": "a26",
     "image": "a26",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with 'b' like 'bat.'"
   },
   {
     "characterId": 45,
@@ -579,7 +623,8 @@
     "highLow": "high",
     "audio": "a27",
     "image": "a27",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Use a voiced 'b' like the start of 'boy.'"
   },
   {
     "characterId": 46,
@@ -590,7 +635,8 @@
     "highLow": "low",
     "audio": "a28",
     "image": "a28",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Say a gentle 'p,' like the consonant in 'spin.'"
   },
   {
     "characterId": 47,
@@ -601,7 +647,8 @@
     "highLow": "high",
     "audio": "a29",
     "image": "a29",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Begin with an unpuffed 'p,' as in 'speak.'"
   },
   {
     "characterId": 48,
@@ -612,7 +659,8 @@
     "highLow": "low",
     "audio": "a30",
     "image": "a30",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Use 'f' like in 'fan.'"
   },
   {
     "characterId": 49,
@@ -623,7 +671,8 @@
     "highLow": "high",
     "audio": "a31",
     "image": "a31",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Say 'f' the way you would in 'phone.'"
   },
   {
     "characterId": 50,
@@ -634,7 +683,8 @@
     "highLow": "low",
     "audio": "a32",
     "image": "a32",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Begin with 'm,' lips closed, like 'moon.'"
   },
   {
     "characterId": 51,
@@ -645,7 +695,8 @@
     "highLow": "high",
     "audio": "a33",
     "image": "a33",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with the 'm' sound that begins 'mother.'"
   },
   {
     "characterId": 52,
@@ -657,7 +708,8 @@
     "highLow": "low",
     "audio": "a34",
     "image": "a34",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Say the 'y' sound from 'yes.'"
   },
   {
     "characterId": 53,
@@ -669,7 +721,8 @@
     "highLow": "high",
     "audio": "a35",
     "image": "a35",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Make a quick 'y' glide like in 'yellow.'"
   },
   {
     "characterId": 54,
@@ -680,7 +733,8 @@
     "highLow": "low",
     "audio": "a36",
     "image": "a36",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Begin with 'l' as in 'light.'"
   },
   {
     "characterId": 55,
@@ -691,7 +745,8 @@
     "highLow": "high",
     "audio": "a37",
     "image": "a37",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Use the 'l' sound you hear in 'leaf.'"
   },
   {
     "characterId": 56,
@@ -702,7 +757,8 @@
     "highLow": "low",
     "audio": "a38",
     "image": "a38",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with 'v,' teeth on lip, like 'vine.'"
   },
   {
     "characterId": 57,
@@ -713,7 +769,8 @@
     "highLow": "high",
     "audio": "a39",
     "image": "a39",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Say a voiced 'v' that can lean toward 'w,' as in 'vowel.'"
   },
   {
     "characterId": 58,
@@ -724,7 +781,8 @@
     "highLow": "low",
     "audio": "a40",
     "image": "a40",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Breathe out an 'h' like in 'hat.'"
   },
   {
     "characterId": 59,
@@ -735,7 +793,8 @@
     "highLow": "high",
     "audio": "a41",
     "image": "a41",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with a breathy 'h' like the one in 'hope.'"
   },
   {
     "characterId": 60,
@@ -744,7 +803,8 @@
     "romanization": "(vowel initial)",
     "ipa": "/ʔ-/",
     "highLow": "low",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Begin with a tiny pause, like the break in 'uh-oh.'"
   },
   {
     "characterId": 61,
@@ -755,7 +815,8 @@
     "highLow": "high",
     "audio": "a43",
     "image": "a43",
-    "characterClass": "consonant"
+    "characterClass": "consonant",
+    "ipaDescription": "Start with a quick throat stop, as if holding your breath for an instant."
   },
   {
     "characterId": 62,
@@ -766,7 +827,8 @@
     "highLow": "low",
     "romanization": "kon",
     "prePost": "",
-    "characterClass": "special"
+    "characterClass": "special",
+    "ipaDescription": "IPA isn't provided; use the romanization 'kon' (roughly 'kawn') as a guide."
   },
   {
     "characterId": 63,
@@ -777,6 +839,7 @@
     "highLow": "low",
     "romanization": "nung",
     "prePost": "",
-    "characterClass": "special"
+    "characterClass": "special",
+    "ipaDescription": "IPA isn't provided; the romanization 'nung' (like 'noong') is your hint."
   }
 ]
