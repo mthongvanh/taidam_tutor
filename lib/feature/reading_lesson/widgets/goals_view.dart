@@ -165,6 +165,13 @@ class GoalsView extends StatelessWidget {
             ),
           ),
           SizedBox(height: Spacing.xs),
+          TextButton.icon(
+            onPressed: () =>
+                context.read<ReadingLessonCubit>().skipToPractice(),
+            icon: const Icon(Icons.skip_next),
+            label: const Text('Skip to Practice'),
+          ),
+          SizedBox(height: Spacing.xs),
           Text(
             hasCombinations
                 ? 'You will explore how this goal combines with other glyphs next.'

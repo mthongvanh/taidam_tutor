@@ -116,6 +116,12 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
     }
   }
 
+  void skipToPractice() {
+    final currentState = state;
+    if (currentState is! ReadingLessonActive) return;
+    _startPractice(currentState);
+  }
+
   void _startPractice(ReadingLessonActive currentState) {
     // Generate practice questions from combinations
     if (currentState.activeCombinations.isEmpty) {
