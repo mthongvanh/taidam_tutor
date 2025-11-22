@@ -2,6 +2,7 @@ import 'package:get_it/get_it.dart';
 import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repository.dart';
 import 'package:taidam_tutor/core/data/characters/character_repository.dart';
 import 'package:taidam_tutor/core/data/flashcards/flashcard_repository.dart';
+import 'package:taidam_tutor/core/data/reading_lessons/reading_lessons_repository.dart';
 
 class DependencyManager {
   static final DependencyManager _instance = DependencyManager._internal();
@@ -17,6 +18,9 @@ class DependencyManager {
     GetIt.I.registerSingleton<CharacterRepository>(CharacterRepository());
     GetIt.I.registerSingleton<AlphabetPracticeRepository>(
       AlphabetPracticeRepository(),
+    );
+    GetIt.I.registerSingleton<ReadingLessonsRepository>(
+      ReadingLessonsRepository(),
     );
   }
 
