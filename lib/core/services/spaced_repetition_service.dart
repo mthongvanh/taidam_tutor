@@ -73,10 +73,13 @@ class SpacedRepetitionService {
 
   /// Get recommended practice session size based on total characters
   static int getRecommendedSessionSize(int totalCharacters) {
-    if (totalCharacters <= 5) return totalCharacters;
-    if (totalCharacters <= 10) return 5;
-    if (totalCharacters <= 20) return 8;
-    return 10;
+    // Minimum session size
+    return 5;
+    // // Simple heuristic for session size
+    // if (totalCharacters <= 5) return totalCharacters;
+    // if (totalCharacters <= 10) return 5;
+    // if (totalCharacters <= 20) return 8;
+    // return 10;
   }
 
   /// Calculate retention rate (how well mastered characters are retained)
