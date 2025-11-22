@@ -19,10 +19,24 @@ class ReadingLessonPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get lesson data
-    final lessonData =
-        lessonNumber == 1 ? ReadingLessons.lesson1 : ReadingLessons.lesson2;
-    final lessonMeta = lessonData['lesson'] as Map<String, dynamic>;
+    final lessonData = ReadingLessons.getLesson(lessonNumber);
+
+    if (lessonData == null) {
+      return Scaffold(
+        appBar: AppBar(
+          title: const Text('Reading Lesson'),
+        ),
+        body: Center(
+          child: Text(
+            'Lesson $lessonNumber not found.',
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+        ),
+      );
+    }
+
+    final lessonMeta = lessonData['lesson'] as Map<String, dynamic>? ??
+      const <String, dynamic>{};
     final fallbackTitle = lessonMeta['title'] as String? ?? 'Reading Lesson';
 
     return BlocProvider(

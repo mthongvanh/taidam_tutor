@@ -9,79 +9,65 @@ class LessonSelectionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final lesson1Data =
-        ReadingLessons.lesson1['lesson'] as Map<String, dynamic>;
-    final lesson2Data =
-        ReadingLessons.lesson2['lesson'] as Map<String, dynamic>;
-    final lesson1ShortDescription =
-        lesson1Data['shortDescription'] as String? ??
-            lesson1Data['description'] as String;
-    final lesson2ShortDescription =
-        lesson2Data['shortDescription'] as String? ??
-            lesson2Data['description'] as String;
+    final lessons = ReadingLessons.lessons
+        .map((lesson) => lesson['lesson'] as Map<String, dynamic>)
+        .toList();
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Reading Lessons'),
       ),
-      body: ListView(
+      body: ListView.separated(
         padding: EdgeInsets.all(Spacing.m),
-        children: [
-          // Page header
-          TaiCard.margin(
-            child: Column(
-              children: [
-                Icon(
-                  Icons.menu_book,
-                  size: 64,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-                SizedBox(height: Spacing.m),
-                Text(
-                  'Choose a Lesson',
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(height: Spacing.s),
-                Text(
-                  'Select a reading lesson to study character combinations and practice reading.',
-                  style: Theme.of(context).textTheme.bodyLarge,
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-          ),
+        itemCount: lessons.length + 1,
+        separatorBuilder: (context, index) => SizedBox(height: Spacing.m),
+        itemBuilder: (context, index) {
+          if (index == 0) {
+            return TaiCard.margin(
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.menu_book,
+                    size: 64,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  SizedBox(height: Spacing.m),
+                  Text(
+                    'Choose a Lesson',
+                    style:
+                        Theme.of(context).textTheme.headlineMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: Spacing.s),
+                  Text(
+                    'Select a reading lesson to study character combinations and practice reading.',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            );
+          }
 
-          SizedBox(height: Spacing.m),
+          final lessonData = lessons[index - 1];
+          final lessonNumber = lessonData['number'] as int? ?? index;
+          final shortDescription = lessonData['shortDescription'] as String? ??
+              lessonData['description'] as String? ?? '';
+          final goals = lessonData['goals'] as List? ?? const [];
+          final combinations = lessonData['combinations'] as List? ?? const [];
+          final examples = lessonData['examples'] as List?;
 
-          // Lesson 1
-          _LessonCard(
-            lessonNumber: 1,
-            title: lesson1Data['title'] as String,
-            shortDescription: lesson1ShortDescription,
-            goalCount: (lesson1Data['goals'] as List).length,
-            combinationCount: (lesson1Data['combinations'] as List).length,
-            exampleCount: lesson1Data['examples'] != null
-                ? (lesson1Data['examples'] as List).length
-                : 0,
-          ),
-
-          SizedBox(height: Spacing.m),
-
-          // Lesson 2
-          _LessonCard(
-            lessonNumber: 2,
-            title: lesson2Data['title'] as String,
-            shortDescription: lesson2ShortDescription,
-            goalCount: (lesson2Data['goals'] as List).length,
-            combinationCount: (lesson2Data['combinations'] as List).length,
-            exampleCount: lesson2Data['examples'] != null
-                ? (lesson2Data['examples'] as List).length
-                : 0,
-          ),
-        ],
+          return _LessonCard(
+            lessonNumber: lessonNumber,
+            title: lessonData['title'] as String? ?? 'Lesson $lessonNumber',
+            shortDescription: shortDescription,
+            goalCount: goals.length,
+            combinationCount: combinations.length,
+            exampleCount: examples?.length ?? 0,
+          );
+        },
       ),
     );
   }

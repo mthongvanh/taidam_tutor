@@ -1,4 +1,23 @@
 abstract class ReadingLessons {
+  static const List<Map<String, dynamic>> lessons = [
+    lesson1,
+    lesson2,
+    lesson3,
+  ];
+
+  static Map<String, dynamic>? getLesson(int lessonNumber) {
+    for (final lesson in lessons) {
+      final meta = lesson['lesson'];
+      if (meta is Map<String, dynamic>) {
+        final number = meta['number'];
+        if (number is int && number == lessonNumber) {
+          return lesson;
+        }
+      }
+    }
+    return null;
+  }
+
   static const Map<String, dynamic> lesson1 = {
     "lesson": {
       "number": 1,
@@ -9,15 +28,15 @@ abstract class ReadingLessons {
       "goals": [
         {
           "characterIds": [5],
-          "description": "Sound like 'ah' in 'father'",
+          "description": null,
         },
         {
           "characterIds": [18],
-          "description": "Sounds like 'oo-wah' in 'guava'",
+          "description": null,
         },
         {
           "characterIds": [22],
-          "description": "Nasal sound like at the end of 'man'",
+          "description": null,
         }
       ],
       "combinations": [
@@ -59,23 +78,23 @@ abstract class ReadingLessons {
       "goals": [
         {
           "characterIds": [7],
-          "description": "Sounds like 'ee' as in 'see'",
+          "description": null,
         },
         {
           "characterIds": [23],
-          "description": "Sounds like 'um' in 'sum'",
+          "description": null,
         },
         {
           "characterIds": [8],
-          "description": "Sounds like 'oo' as in 'food'",
+          "description": null,
         },
         {
           "characterIds": [16],
-          "description": "Sounds like 'ee-ya' as in 'see-ya'",
+          "description": null,
         },
         {
           "characterIds": [4],
-          "description": "Sounds like 'aw' as in 'saw'",
+          "description": null,
         }
       ],
       "combinations": [
@@ -148,6 +167,249 @@ abstract class ReadingLessons {
           "word": "ꪏꪷ",
           "characterIds": [33, 4],
         },
+      ]
+    }
+  };
+
+  static const Map<String, dynamic> lesson3 = {
+    "lesson": {
+      "number": 3,
+      "title": "More practice",
+      "description":
+          "Extended practice with vowels that appear to the right and above consonants in Tai Dam syllables.",
+      "goals": [
+        {
+          "characterIds": [5],
+          "description": null,
+        },
+        {
+          "characterIds": [18],
+          "description": null,
+        },
+        {
+          "characterIds": [22],
+          "description": null,
+        },
+        {
+          "characterIds": [7],
+          "description": null,
+        },
+        {
+          "characterIds": [23],
+          "description": null,
+        },
+        {
+          "characterIds": [8],
+          "description": null,
+        },
+        {
+          "characterIds": [16],
+          "description": null,
+        },
+        {
+          "characterIds": [4],
+          "description": null,
+        },
+        {
+          "characterIds": [24],
+          "description": null
+        },
+        {
+          "characterIds": [25],
+          "description": null
+        },
+        {
+          "characterIds": [26],
+          "description": null
+        },
+        {
+          "characterIds": [27],
+          "description": null
+        },
+        {
+          "characterIds": [28],
+          "description": null,
+        },
+        {
+          "characterIds": [29],
+          "description": null,
+        },
+        {
+          "characterIds": [30],
+          "description": null,
+        },
+        {
+          "characterIds": [31],
+          "description": null,
+        },
+        {
+          "characterIds": [32],
+          "description": null,
+        },
+        {
+          "characterIds": [33],
+          "description": null,
+        },
+        {
+          "characterIds": [34],
+          "description": null,
+        },
+        {
+          "characterIds": [35],
+          "description": null,
+        }
+      ],
+      "combinations": [
+        {
+          "characterIds": [24, 5],
+          "description": "Combining consonant 'k' with vowel 'aa'"
+        },
+        {
+          "characterIds": [32, 5],
+          "description": "Combining consonant 's' with vowel 'aa'"
+        },
+        {
+          "characterIds": [31, 16],
+          "description": "Combining consonant 'ch' with vowel 'ie'"
+        },
+        {
+          "characterIds": [29, 5],
+          "description": "Combining consonant 'ng' with vowel 'aa'"
+        },
+        {
+          "characterIds": [32, 7],
+          "description": "Combining consonant 's' with vowel 'i'"
+        },
+        {
+          "characterIds": [33, 13],
+          "description": "Combining consonant 's' with vowel 'o'"
+        },
+        {
+          "characterIds": [32, 7],
+          "description": "Combining consonant 's' with vowel 'i'"
+        },
+        {
+          "characterIds": [25, 23],
+          "description": "Combining consonant 'k' with vowel 'am'"
+        },
+        {
+          "characterIds": [32, 7],
+          "description": "Combining consonant 's' with vowel 'i'"
+        },
+        {
+          "characterIds": [32, 5],
+          "description": "Combining consonant 's' with vowel 'aa'"
+        },
+        {
+          "characterIds": [31, 18],
+          "description": "Combining consonant 'ch' with vowel 'ua'"
+        },
+        {
+          "characterIds": [29, 18],
+          "description": "Combining consonant 'ng' with vowel 'ua'"
+        },
+        {
+          "characterIds": [25, 22],
+          "description": "Combining consonant 'k' with vowel 'an'"
+        },
+        {
+          "characterIds": [26, 5],
+          "description": "Combining consonant 'kh' with vowel 'aa'"
+        },
+        {
+          "characterIds": [31, 23],
+          "description": "Combining consonant 'ch' with vowel 'am'"
+        },
+        {
+          "characterIds": [25, 13],
+          "description": "Combining consonant 'k' with vowel 'o'"
+        },
+        {
+          "characterIds": [35, 5],
+          "description": "Combining consonant 'ny' with vowel 'aa'"
+        },
+        {
+          "characterIds": [35, 13],
+          "description": "Combining consonant 'ny' with vowel 'o'"
+        },
+        {
+          "characterIds": [26, 5],
+          "description": "Combining consonant 'kh' with vowel 'aa'"
+        },
+        {
+          "characterIds": [24, 16],
+          "description": "Combining consonant 'k' with vowel 'ie'"
+        },
+        {
+          "characterIds": [25, 5],
+          "description": "Combining consonant 'k' with vowel 'aa'"
+        },
+        {
+          "characterIds": [26, 18],
+          "description": "Combining consonant 'kh' with vowel 'ua'"
+        },
+        {
+          "characterIds": [32, 18],
+          "description": "Combining consonant 's' with vowel 'ua'"
+        },
+        {
+          "characterIds": [32, 16],
+          "description": "Combining consonant 's' with vowel 'i'"
+        },
+        {
+          "characterIds": [25, 8],
+          "description": "Combining consonant 'k' with vowel 'u'"
+        },
+        {
+          "characterIds": [32, 7],
+          "description": "Combining consonant 's' with vowel 'i'"
+        },
+        {
+          "characterIds": [26, 13],
+          "description": "Combining consonant 's' with vowel 'o'"
+        },
+        {
+          "characterIds": [25, 13],
+          "description": "Combining consonant 'k' with vowel 'o'"
+        },
+        {
+          "characterIds": [32, 5],
+          "description": "Combining consonant 's' with vowel 'aa'"
+        },
+        {
+          "characterIds": [31, 5],
+          "description": "Combining consonant 'ch' with vowel 'aa'"
+        },
+        {
+          "characterIds": [29, 5],
+          "description": "Combining consonant 'ng' with vowel 'aa'"
+        },
+        {
+          "characterIds": [25, 23],
+          "description": "Combining consonant 'k' with vowel 'am'"
+        },
+        {
+          "characterIds": [32, 16],
+          "description": "Combining consonant 's' with vowel 'ie'"
+        },
+        {
+          "characterIds": [28, 5],
+          "description": "Combining consonant 'hng' with vowel 'aa'"
+        },
+        {
+          "characterIds": [24, 23],
+          "description": "Combining consonant 'k' with vowel 'am'"
+        },
+        {
+          "characterIds": [25, 13],
+          "result": "ꪀꪶ",
+          "romanization": "'ko",
+          "description": "Combining consonant 'k' with vowel 'o'"
+        },
+        {
+          "characterIds": [24, 5],
+          "description": "Combining consonant 'k' with vowel 'aa'"
+        }
       ]
     }
   };

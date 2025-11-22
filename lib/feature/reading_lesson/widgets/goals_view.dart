@@ -17,6 +17,8 @@ class GoalsView extends StatelessWidget {
     final totalGoals = state.lesson.goals.length;
     final hasCombinations = state.activeCombinations.isNotEmpty;
     final hasExamples = state.activeExamples.isNotEmpty;
+    final ipaDescription = goal.ipaDescription;
+    final goalDetailText = goal.description ?? ipaDescription;
 
     return SingleChildScrollView(
       padding: EdgeInsets.all(Spacing.m),
@@ -89,7 +91,7 @@ class GoalsView extends StatelessWidget {
                           if (goal.romanization.isNotEmpty)
                             SizedBox(height: Spacing.xs),
                           Text(
-                            goal.description,
+                            goalDetailText,
                             style: Theme.of(context).textTheme.bodyLarge,
                           ),
                         ],
@@ -212,8 +214,8 @@ Future<void> showGoalSelectionSheet(
                 Text(
                   'Jump to a Goal',
                   style: theme.textTheme.headlineSmall?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 SizedBox(height: Spacing.s),
                 Text(
@@ -256,7 +258,7 @@ Future<void> showGoalSelectionSheet(
                           ),
                         ),
                         subtitle: Text(
-                          goal.description,
+                          goal.description ?? goal.ipaDescription,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                         ),

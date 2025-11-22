@@ -21,6 +21,9 @@ class Character extends Equatable {
   /// International Phonetic Alphabet value.
   final String? ipa;
 
+  /// Human readable explanation of the IPA pronunciation.
+  final String? ipaDescription;
+
   /// Vowel placement metadata when applicable (before/after/above/etc.).
   final String? position;
 
@@ -63,6 +66,7 @@ class Character extends Equatable {
     this.lao,
     this.romanization,
     this.ipa,
+    this.ipaDescription,
     this.position,
     this.preComponent,
     this.postComponent,
@@ -88,6 +92,7 @@ class Character extends Equatable {
         lao,
         romanization,
         ipa,
+        ipaDescription,
         position,
         preComponent,
         postComponent,

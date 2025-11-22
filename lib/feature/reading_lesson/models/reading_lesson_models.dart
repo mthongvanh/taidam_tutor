@@ -35,6 +35,16 @@ class LessonCharacterSet extends Equatable {
       .where((value) => value.isNotEmpty)
       .join();
 
+  String get primaryIpaDescription {
+    for (final character in characters) {
+      final description = character.ipaDescription;
+      if (description != null && description.trim().isNotEmpty) {
+        return description.trim();
+      }
+    }
+    return '';
+  }
+
   bool get hasMissingCharacters => characters.length != characterIds.length;
 
   @override
@@ -44,7 +54,7 @@ class LessonCharacterSet extends Equatable {
 /// Represents a learning goal for a lesson
 class LessonGoal extends Equatable {
   final LessonCharacterSet characters;
-  final String description;
+  final String? description;
 
   const LessonGoal({
     required this.characters,
@@ -60,13 +70,15 @@ class LessonGoal extends Equatable {
         _characterIdsFromJson(json),
         characterMap,
       ),
-      description: json['description'] as String,
+      description: json['description'] as String?,
     );
   }
 
   String get displayText => characters.combinedGlyph;
 
   String get romanization => characters.primaryRomanization;
+
+  String get ipaDescription => characters.primaryIpaDescription;
 
   @override
   List<Object?> get props => [characters, description];
@@ -100,7 +112,7 @@ class Combination extends Equatable {
   List<String> get componentGlyphs => characters.glyphs;
 
   List<String> get componentRomanizations =>
-    characters.characters.map(_primaryRomanizationFor).toList();
+      characters.characters.map(_primaryRomanizationFor).toList();
 
   String get romanization => characters.primaryRomanization;
 
