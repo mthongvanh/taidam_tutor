@@ -627,7 +627,7 @@
         {
             "lesson": {
                 "number": 4,
-                "title": "Multi-part vowels (Before consonants)",
+                "title": "Multi-part vowels (Before and above consonants)",
                 "description": "Some Tai Dam vowels have two parts. These parts can appear before and above the consonant they belong to in a syllable. Imagine a left-vowel syllable that looks like this: 𝑉₁ + 𝐶 + 𝑉₂.\nSo:\n  ꪹ + ꪎ becomes ꪹꪎ (\"sue\"),\n  ꪹꪷ + ꪁ becomes ꪹꪁꪷ (\"koe\"),\nand\n  ꪹꪸ + ꪎ becomes ꪹꪎꪸ (\"se\").",
                 "goals": [
                     {
@@ -816,6 +816,177 @@
                         "characterIds": [
                             30,
                             10
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "lesson": {
+                "number": 5,
+                "title": "Below consonants, Multi-part before & after",
+                "description": "Tai Dam vowels can also sit below the consonant they belong to in a syllable. Vowels can also appear in combination before a consonant and after it. Imagine a syllable that looks like this: 𝑉₁ + 𝐶 + 𝑉₂.\nSo:\n  ꪎ +  ꪴ becomes ꪎꪴ (\"su\"),\nand\n  ꪹ + ꪎ + ꪱ becomes ꪹꪎꪱ (\"saw\").",
+                "goals": [
+                    {
+                        "characterIds": [9],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [21],
+                        "description": null
+                    }
+                ],
+                "combinations": [
+                    {
+                        "characterIds": [
+                            42,
+                            9
+                        ],
+                        "description": "Combining consonant 'n' and vowel 'u'"
+                    },
+                    {
+                        "characterIds": [
+                            43,
+                            21
+                        ],
+                        "description": "Combining consonant 'n' and vowel 'ow'"
+                    },
+                    {
+                        "characterIds": [
+                            44,
+                            21
+                        ],
+                        "description": "Combining consonant 'b' and vowel 'ow'"
+                    },
+                    {
+                        "characterIds": [
+                            45,
+                            21
+                        ],
+                        "description": "Combining consonant ''b' and vowel 'ow'"
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            9            
+                        ],
+                        "description": "Combining consonant 'p' and vowel 'u'"
+                    },
+                    {
+                        "characterIds": [
+                            47,
+                            9
+                        ],
+                        "description": "Combining consonant ''p' and vowel 'u'"
+                    }
+                ],
+                "examples": [
+                    {
+                        "characterIds": [
+                            42,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            47,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            45,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            58,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            44,
+                            17                            
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            42,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            42,
+                            4
+                        ]                           
+                    },
+                    {
+                        "characterIds": [
+                            47,
+                            4
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            47,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            42,
+                            17
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            44,
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            8
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            47,
+                            8
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            58,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            43,
+                            18
                         ]
                     }
                 ]
