@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
 
 /// Holds the canonical character IDs used in a lesson section alongside the
 /// resolved [Character] models for rendering.
@@ -28,7 +29,46 @@ class LessonCharacterSet extends Equatable {
 
   List<String> get glyphs => characters.map((c) => c.character).toList();
 
-  String get combinedGlyph => glyphs.join();
+  String get combinedGlyph {
+    // for single characters, just return the glyph
+    if (characters.length <= 1) {
+      return glyphs.join();
+    }
+
+    // for multiple characters, handle vowel combinations specially
+    String combined = '';
+    for (final character in characters.indexed) {
+      final component = character.$2;
+      if (component.characterClass == CharacterClass.consonant) {
+        // for consonants, we need to check the next character to see if it's a vowel
+        // that modifies the consonant glyph
+        final nextIndex = character.$1 + 1;
+        if (nextIndex < characters.length) {
+          // there is a next character. Check if it's a vowel that modifies this consonant
+          // e.g., a consonant followed by a vowel with pre/post components
+          // The logic is:
+          // - If the vowel has a pre-component, prepend it to the consonant glyph
+          // - If the vowel has a post-component, append it to the consonant glyph
+          final nextComponent = characters[nextIndex];
+          if (nextComponent.characterClass == CharacterClass.vowel) {
+            if (nextComponent.preComponent?.isNotEmpty ?? false) {
+              combined += nextComponent.preComponent!;
+            }
+            if (nextComponent.postComponent?.isNotEmpty ?? false) {
+              combined +=
+                  "${component.character}${nextComponent.postComponent ?? ''}";
+            } else {
+              combined += component.character;
+            }
+          }
+        }
+      } else {
+        // Standalone vowel or vowel not following a consonant: include its glyph
+        combined += component.character;
+      }
+    }
+    return combined;
+  }
 
   String get primaryRomanization => characters
       .map(_primaryRomanizationFor)

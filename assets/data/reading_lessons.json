@@ -1,392 +1,825 @@
 {
-  "lessons": [
-    {
-      "lesson": {
-        "number": 1,
-        "title": "After consonants",
-        "shortDescription": "Vowels can be on the right side of consonants.",
-        "description": "In Tai Dam, a syllable starts with a consonant. If the vowel is a post-position form, it's written right next to the consonant, without any space in between. Imagine a right-vowel syllable that looks like this: 𝐶 + 𝑉.\nSo:\n  ꪀ + ꪱ becomes ꪀꪱ (\"kaa\"),\n  ꪁ + ꪽ becomes ꪁꪽ (\"kan\"),\nand\n  ꪉ + ꪺ becomes ꪉꪺ (\"ngua\").",
-        "goals": [
-          {
-            "characterIds": [5],
-            "description": null
-          },
-          {
-            "characterIds": [18],
-            "description": null
-          },
-          {
-            "characterIds": [22],
-            "description": null
-          }
-        ],
-        "combinations": [
-          {
-            "characterIds": [24, 5],
-            "description": "Sounds like 'cau' in 'cause'"
-          },
-          {
-            "characterIds": [25, 22],
-            "description": "Sounds like 'coun' in 'country'"
-          },
-          {
-            "characterIds": [26, 18],
-            "description": "Sounds like 'qua' in 'squat'"
-          },
-          {
-            "characterIds": [27, 22],
-            "description": "Sounds like 'khan' in 'Genghis Khan'"
-          },
-          {
-            "characterIds": [28, 5],
-            "description": "Sounds like 'ng-ah' in 'sung-ah'"
-          },
-          {
-            "characterIds": [29, 18],
-            "description": "Sounds like 'ng-ooah' in 'sung-ooah'"
-          }
-        ]
-      }
-    },
-    {
-      "lesson": {
-        "number": 2,
-        "title": "Above consonants",
-        "shortDescription": "Vowels can appear above consonants in syllables.",
-        "description": "Some Tai Dam vowels can sit above the consonant they follow. Start with the base consonant on the writing line, then place the vowel sign directly above it to finish the syllable—no extra marks are added to the left or right. For example,\n  ꪊ + ꪲ becomes ꪊꪲ (\"chi\")\n  ꪎ + ꪳ becomes ꪎꪳ (\"su\"),\nand\n  ꪐ + ꪷ becomes ꪐꪷ (\"hgno\").",
-        "goals": [
-          {
-            "characterIds": [7],
-            "description": null
-          },
-          {
-            "characterIds": [23],
-            "description": null
-          },
-          {
-            "characterIds": [8],
-            "description": null
-          },
-          {
-            "characterIds": [16],
-            "description": null
-          },
-          {
-            "characterIds": [4],
-            "description": null
-          }
-        ],
-        "combinations": [
-          {
-            "characterIds": [30, 7],
-            "description": "Sounds like 'chea-' in 'cheat'"
-          },
-          {
-            "characterIds": [31, 23],
-            "description": "Sounds like 'jum-' in 'jump'"
-          },
-          {
-            "characterIds": [32, 8],
-            "description": "Sounds like 'sue' in 'suit'"
-          },
-          {
-            "characterIds": [33, 16],
-            "description": "Sounds like 'see-ya'"
-          },
-          {
-            "characterIds": [34, 4],
-            "description": "Sounds like 'knee-awe' which rhymes with 'yee-haw'"
-          },
-          {
-            "characterIds": [35, 4],
-            "description": "Sounds like 'knee-awe' which rhymes with 'yee-haw'"
-          }
-        ],
-        "examples": [
-          {
-            "characterIds": [32, 8]
-          },
-          {
-            "word": "ꪐꪷ",
-            "characterIds": [34, 4]
-          },
-          {
-            "word": "ꪑꪷ",
-            "characterIds": [35, 4]
-          },
-          {
-            "word": "ꪎꪸ",
-            "characterIds": [32, 16]
-          },
-          {
-            "word": "ꪊꪾ",
-            "characterIds": [30, 23]
-          },
-          {
-            "word": "ꪏꪸ",
-            "characterIds": [33, 16]
-          },
-          {
-            "word": "ꪎꪲ",
-            "characterIds": [32, 7]
-          },
-          {
-            "word": "ꪋꪲ",
-            "characterIds": [31, 7]
-          },
-          {
-            "word": "ꪎꪷ",
-            "characterIds": [32, 4]
-          },
-          {
-            "word": "ꪋꪾ",
-            "characterIds": [31, 23]
-          },
-          {
-            "word": "ꪏꪷ",
-            "characterIds": [33, 4]
-          }
-        ]
-      }
-    },
-    {
-      "lesson": {
-        "number": 3,
-        "title": "More practice",
-        "description": "Extended practice with vowels that appear to the right and above consonants in Tai Dam syllables.",
-        "goals": [
-          {
-            "characterIds": [5],
-            "description": null
-          },
-          {
-            "characterIds": [18],
-            "description": null
-          },
-          {
-            "characterIds": [22],
-            "description": null
-          },
-          {
-            "characterIds": [7],
-            "description": null
-          },
-          {
-            "characterIds": [23],
-            "description": null
-          },
-          {
-            "characterIds": [8],
-            "description": null
-          },
-          {
-            "characterIds": [16],
-            "description": null
-          },
-          {
-            "characterIds": [4],
-            "description": null
-          },
-          {
-            "characterIds": [24],
-            "description": null
-          },
-          {
-            "characterIds": [25],
-            "description": null
-          },
-          {
-            "characterIds": [26],
-            "description": null
-          },
-          {
-            "characterIds": [27],
-            "description": null
-          },
-          {
-            "characterIds": [28],
-            "description": null
-          },
-          {
-            "characterIds": [29],
-            "description": null
-          },
-          {
-            "characterIds": [30],
-            "description": null
-          },
-          {
-            "characterIds": [31],
-            "description": null
-          },
-          {
-            "characterIds": [32],
-            "description": null
-          },
-          {
-            "characterIds": [33],
-            "description": null
-          },
-          {
-            "characterIds": [34],
-            "description": null
-          },
-          {
-            "characterIds": [35],
-            "description": null
-          }
-        ],
-        "combinations": [
-          {
-            "characterIds": [24, 5],
-            "description": "Combining consonant 'k' with vowel 'aa'"
-          },
-          {
-            "characterIds": [32, 5],
-            "description": "Combining consonant 's' with vowel 'aa'"
-          },
-          {
-            "characterIds": [31, 16],
-            "description": "Combining consonant 'ch' with vowel 'ie'"
-          },
-          {
-            "characterIds": [29, 5],
-            "description": "Combining consonant 'ng' with vowel 'aa'"
-          },
-          {
-            "characterIds": [32, 7],
-            "description": "Combining consonant 's' with vowel 'i'"
-          },
-          {
-            "characterIds": [33, 13],
-            "description": "Combining consonant 's' with vowel 'o'"
-          },
-          {
-            "characterIds": [32, 7],
-            "description": "Combining consonant 's' with vowel 'i'"
-          },
-          {
-            "characterIds": [25, 23],
-            "description": "Combining consonant 'k' with vowel 'am'"
-          },
-          {
-            "characterIds": [32, 7],
-            "description": "Combining consonant 's' with vowel 'i'"
-          },
-          {
-            "characterIds": [32, 5],
-            "description": "Combining consonant 's' with vowel 'aa'"
-          },
-          {
-            "characterIds": [31, 18],
-            "description": "Combining consonant 'ch' with vowel 'ua'"
-          },
-          {
-            "characterIds": [29, 18],
-            "description": "Combining consonant 'ng' with vowel 'ua'"
-          },
-          {
-            "characterIds": [25, 22],
-            "description": "Combining consonant 'k' with vowel 'an'"
-          },
-          {
-            "characterIds": [26, 5],
-            "description": "Combining consonant 'kh' with vowel 'aa'"
-          },
-          {
-            "characterIds": [31, 23],
-            "description": "Combining consonant 'ch' with vowel 'am'"
-          },
-          {
-            "characterIds": [25, 13],
-            "description": "Combining consonant 'k' with vowel 'o'"
-          },
-          {
-            "characterIds": [35, 5],
-            "description": "Combining consonant 'ny' with vowel 'aa'"
-          },
-          {
-            "characterIds": [35, 13],
-            "description": "Combining consonant 'ny' with vowel 'o'"
-          },
-          {
-            "characterIds": [26, 5],
-            "description": "Combining consonant 'kh' with vowel 'aa'"
-          },
-          {
-            "characterIds": [24, 16],
-            "description": "Combining consonant 'k' with vowel 'ie'"
-          },
-          {
-            "characterIds": [25, 5],
-            "description": "Combining consonant 'k' with vowel 'aa'"
-          },
-          {
-            "characterIds": [26, 18],
-            "description": "Combining consonant 'kh' with vowel 'ua'"
-          },
-          {
-            "characterIds": [32, 18],
-            "description": "Combining consonant 's' with vowel 'ua'"
-          },
-          {
-            "characterIds": [32, 16],
-            "description": "Combining consonant 's' with vowel 'i'"
-          },
-          {
-            "characterIds": [25, 8],
-            "description": "Combining consonant 'k' with vowel 'u'"
-          },
-          {
-            "characterIds": [32, 7],
-            "description": "Combining consonant 's' with vowel 'i'"
-          },
-          {
-            "characterIds": [26, 13],
-            "description": "Combining consonant 's' with vowel 'o'"
-          },
-          {
-            "characterIds": [25, 13],
-            "description": "Combining consonant 'k' with vowel 'o'"
-          },
-          {
-            "characterIds": [32, 5],
-            "description": "Combining consonant 's' with vowel 'aa'"
-          },
-          {
-            "characterIds": [31, 5],
-            "description": "Combining consonant 'ch' with vowel 'aa'"
-          },
-          {
-            "characterIds": [29, 5],
-            "description": "Combining consonant 'ng' with vowel 'aa'"
-          },
-          {
-            "characterIds": [25, 23],
-            "description": "Combining consonant 'k' with vowel 'am'"
-          },
-          {
-            "characterIds": [32, 16],
-            "description": "Combining consonant 's' with vowel 'ie'"
-          },
-          {
-            "characterIds": [28, 5],
-            "description": "Combining consonant 'hng' with vowel 'aa'"
-          },
-          {
-            "characterIds": [24, 23],
-            "description": "Combining consonant 'k' with vowel 'am'"
-          },
-          {
-            "characterIds": [25, 13],
-            "description": "Combining consonant 'k' with vowel 'o'"
-          },
-          {
-            "characterIds": [24, 5],
-            "description": "Combining consonant 'k' with vowel 'aa'"
-          }
-        ]
-      }
-    }
-  ]
+    "lessons": [
+        {
+            "lesson": {
+                "number": 1,
+                "title": "After consonants",
+                "shortDescription": "Vowels can be on the right side of consonants.",
+                "description": "In Tai Dam, a syllable starts with a consonant. If the vowel is a post-position form, it's written right next to the consonant, without any space in between. Imagine a right-vowel syllable that looks like this: 𝐶 + 𝑉.\nSo:\n  ꪀ + ꪱ becomes ꪀꪱ (\"kaa\"),\n  ꪁ + ꪽ becomes ꪁꪽ (\"kan\"),\nand\n  ꪉ + ꪺ becomes ꪉꪺ (\"ngua\").",
+                "goals": [
+                    {
+                        "characterIds": [
+                            5
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            18
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            22
+                        ],
+                        "description": null
+                    }
+                ],
+                "combinations": [
+                    {
+                        "characterIds": [
+                            24,
+                            5
+                        ],
+                        "description": "Sounds like 'cau' in 'cause'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            22
+                        ],
+                        "description": "Sounds like 'coun' in 'country'"
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            18
+                        ],
+                        "description": "Sounds like 'qua' in 'squat'"
+                    },
+                    {
+                        "characterIds": [
+                            27,
+                            22
+                        ],
+                        "description": "Sounds like 'khan' in 'Genghis Khan'"
+                    },
+                    {
+                        "characterIds": [
+                            28,
+                            5
+                        ],
+                        "description": "Sounds like 'ng-ah' in 'sung-ah'"
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            18
+                        ],
+                        "description": "Sounds like 'ng-ooah' in 'sung-ooah'"
+                    }
+                ]
+            }
+        },
+        {
+            "lesson": {
+                "number": 2,
+                "title": "Above consonants",
+                "shortDescription": "Vowels can appear above consonants in syllables.",
+                "description": "Some Tai Dam vowels can sit above the consonant they follow. Start with the base consonant on the writing line, then place the vowel sign directly above it to finish the syllable—no extra marks are added to the left or right. For example,\n  ꪊ + ꪲ becomes ꪊꪲ (\"chi\")\n  ꪎ + ꪳ becomes ꪎꪳ (\"su\"),\nand\n  ꪐ + ꪷ becomes ꪐꪷ (\"hgno\").",
+                "goals": [
+                    {
+                        "characterIds": [
+                            7
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            23
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            8
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            16
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            4
+                        ],
+                        "description": null
+                    }
+                ],
+                "combinations": [
+                    {
+                        "characterIds": [
+                            30,
+                            7
+                        ],
+                        "description": "Sounds like 'chea-' in 'cheat'"
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            23
+                        ],
+                        "description": "Sounds like 'jum-' in 'jump'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            8
+                        ],
+                        "description": "Sounds like 'sue' in 'suit'"
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            16
+                        ],
+                        "description": "Sounds like 'see-ya'"
+                    },
+                    {
+                        "characterIds": [
+                            34,
+                            4
+                        ],
+                        "description": "Sounds like 'knee-awe' which rhymes with 'yee-haw'"
+                    },
+                    {
+                        "characterIds": [
+                            35,
+                            4
+                        ],
+                        "description": "Sounds like 'knee-awe' which rhymes with 'yee-haw'"
+                    }
+                ],
+                "examples": [
+                    {
+                        "characterIds": [
+                            32,
+                            8
+                        ]
+                    },
+                    {
+                        "word": "ꪐꪷ",
+                        "characterIds": [
+                            34,
+                            4
+                        ]
+                    },
+                    {
+                        "word": "ꪑꪷ",
+                        "characterIds": [
+                            35,
+                            4
+                        ]
+                    },
+                    {
+                        "word": "ꪎꪸ",
+                        "characterIds": [
+                            32,
+                            16
+                        ]
+                    },
+                    {
+                        "word": "ꪊꪾ",
+                        "characterIds": [
+                            30,
+                            23
+                        ]
+                    },
+                    {
+                        "word": "ꪏꪸ",
+                        "characterIds": [
+                            33,
+                            16
+                        ]
+                    },
+                    {
+                        "word": "ꪎꪲ",
+                        "characterIds": [
+                            32,
+                            7
+                        ]
+                    },
+                    {
+                        "word": "ꪋꪲ",
+                        "characterIds": [
+                            31,
+                            7
+                        ]
+                    },
+                    {
+                        "word": "ꪎꪷ",
+                        "characterIds": [
+                            32,
+                            4
+                        ]
+                    },
+                    {
+                        "word": "ꪋꪾ",
+                        "characterIds": [
+                            31,
+                            23
+                        ]
+                    },
+                    {
+                        "word": "ꪏꪷ",
+                        "characterIds": [
+                            33,
+                            4
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "lesson": {
+                "number": 3,
+                "title": "More practice",
+                "description": "Extended practice with vowels that appear to the right and above consonants in Tai Dam syllables.",
+                "goals": [
+                    {
+                        "characterIds": [
+                            5
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            18
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            22
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            7
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            23
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            8
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            16
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            4
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            24
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            25
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            26
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            27
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            28
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            29
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            30
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            31
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            32
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            33
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            34
+                        ],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [
+                            35
+                        ],
+                        "description": null
+                    }
+                ],
+                "combinations": [
+                    {
+                        "characterIds": [
+                            24,
+                            5
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            5
+                        ],
+                        "description": "Combining consonant 's' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            16
+                        ],
+                        "description": "Combining consonant 'ch' with vowel 'ie'"
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            5
+                        ],
+                        "description": "Combining consonant 'ng' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            7
+                        ],
+                        "description": "Combining consonant 's' with vowel 'i'"
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            13
+                        ],
+                        "description": "Combining consonant 's' with vowel 'o'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            7
+                        ],
+                        "description": "Combining consonant 's' with vowel 'i'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            23
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'am'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            7
+                        ],
+                        "description": "Combining consonant 's' with vowel 'i'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            5
+                        ],
+                        "description": "Combining consonant 's' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            18
+                        ],
+                        "description": "Combining consonant 'ch' with vowel 'ua'"
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            18
+                        ],
+                        "description": "Combining consonant 'ng' with vowel 'ua'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            22
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'an'"
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            5
+                        ],
+                        "description": "Combining consonant 'kh' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            23
+                        ],
+                        "description": "Combining consonant 'ch' with vowel 'am'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            13
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'o'"
+                    },
+                    {
+                        "characterIds": [
+                            35,
+                            5
+                        ],
+                        "description": "Combining consonant 'ny' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            35,
+                            13
+                        ],
+                        "description": "Combining consonant 'ny' with vowel 'o'"
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            5
+                        ],
+                        "description": "Combining consonant 'kh' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            16
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'ie'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            5
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            18
+                        ],
+                        "description": "Combining consonant 'kh' with vowel 'ua'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            18
+                        ],
+                        "description": "Combining consonant 's' with vowel 'ua'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            16
+                        ],
+                        "description": "Combining consonant 's' with vowel 'i'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            8
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'u'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            7
+                        ],
+                        "description": "Combining consonant 's' with vowel 'i'"
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            13
+                        ],
+                        "description": "Combining consonant 's' with vowel 'o'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            13
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'o'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            5
+                        ],
+                        "description": "Combining consonant 's' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            5
+                        ],
+                        "description": "Combining consonant 'ch' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            5
+                        ],
+                        "description": "Combining consonant 'ng' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            23
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'am'"
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            16
+                        ],
+                        "description": "Combining consonant 's' with vowel 'ie'"
+                    },
+                    {
+                        "characterIds": [
+                            28,
+                            5
+                        ],
+                        "description": "Combining consonant 'hng' with vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            23
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'am'"
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            13
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'o'"
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            5
+                        ],
+                        "description": "Combining consonant 'k' with vowel 'aa'"
+                    }
+                ]
+            }
+        },
+        {
+            "lesson": {
+                "number": 4,
+                "title": "Before consonants",
+                "description": "Some Tai Dam vowels appear before the consonant they belong to in a syllable. These pre-position vowels are written to the left of the consonant, without any space in between. Imagine a left-vowel syllable that looks like this: 𝑉 + 𝐶.\nSo:\n  ꪹ + ꪑ becomes ꪹꪑ (\"due\"),\n  ꪹꪷ + ꪑ becomes ꪹꪑꪷ (\"doe\"),\nand\n  ꪹꪸ + ꪣ becomes ꪹꪣꪸ (\"lee\").",
+                "goals": [
+                    {
+                        "characterIds": [17],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [15],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [10],
+                        "description": null
+                    },
+                    {
+                        "characterIds": [11],
+                        "description": null
+                    }
+                ],
+                "combinations": [
+                    {
+                        "characterIds": [
+                            36,
+                            17
+                        ],
+                        "description": "Combining vowel 'ue' with consonant 'd'"
+                    },
+                    {
+                        "characterIds": [
+                            37,
+                            15
+                        ],
+                        "description": "Combining vowel 'oe' with consonant 'd'"
+                    },
+                    {
+                        "characterIds": [
+                            38,
+                            10
+                        ],
+                        "description": "Combining vowel 'ee' with consonant 't'"
+                    },
+                    {
+                        "characterIds": [
+                            39,
+                            11
+                        ],
+                        "description": "Combining vowel 'ee' with consonant 't'"
+                    },
+                    {
+                        "characterIds": [
+                            40,
+                            17            
+                        ],
+                        "description": "Combining vowel 'ue' with consonant 'th'"
+                    },
+                    {
+                        "characterIds": [
+                            41,
+                            10
+                        ],
+                        "description": "Combining vowel 'ee' with consonant 'th'"
+                    }
+                ],
+                "examples": [
+                    {
+                        "characterIds": [
+                            36,
+                            17
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            39,
+                            10
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            23
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            40,
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            4
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            15                            
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            36,
+                            23
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            11
+                        ]                           
+                    },
+                    {
+                        "characterIds": [
+                            32, 
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            15
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            36,
+                            23
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            36,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            15
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            30,
+                            10
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 }
