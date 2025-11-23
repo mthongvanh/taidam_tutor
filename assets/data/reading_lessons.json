@@ -627,8 +627,8 @@
         {
             "lesson": {
                 "number": 4,
-                "title": "Before consonants",
-                "description": "Some Tai Dam vowels appear before the consonant they belong to in a syllable. These pre-position vowels are written to the left of the consonant, without any space in between. Imagine a left-vowel syllable that looks like this: 𝑉 + 𝐶.\nSo:\n  ꪹ + ꪑ becomes ꪹꪑ (\"due\"),\n  ꪹꪷ + ꪑ becomes ꪹꪑꪷ (\"doe\"),\nand\n  ꪹꪸ + ꪣ becomes ꪹꪣꪸ (\"lee\").",
+                "title": "Multi-part vowels (Before consonants)",
+                "description": "Some Tai Dam vowels have two parts. These parts can appear before and above the consonant they belong to in a syllable. Imagine a left-vowel syllable that looks like this: 𝑉₁ + 𝐶 + 𝑉₂.\nSo:\n  ꪹ + ꪎ becomes ꪹꪎ (\"sue\"),\n  ꪹꪷ + ꪁ becomes ꪹꪁꪷ (\"koe\"),\nand\n  ꪹꪸ + ꪎ becomes ꪹꪎꪸ (\"se\").",
                 "goals": [
                     {
                         "characterIds": [17],
@@ -667,7 +667,7 @@
                             38,
                             10
                         ],
-                        "description": "Combining vowel 'ee' with consonant 't'"
+                        "description": "Combining vowel 'e' with consonant 't'"
                     },
                     {
                         "characterIds": [

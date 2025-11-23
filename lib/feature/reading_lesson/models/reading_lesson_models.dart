@@ -37,13 +37,21 @@ class LessonCharacterSet extends Equatable {
 
     // for multiple characters, handle vowel combinations specially
     String combined = '';
+    final charactersAdded = <int>[];
     for (final character in characters.indexed) {
+      if (charactersAdded.contains(character.$1)) {
+        // already processed as part of a previous combination
+        continue;
+      }
+
       final component = character.$2;
       if (component.characterClass == CharacterClass.consonant) {
         // for consonants, we need to check the next character to see if it's a vowel
         // that modifies the consonant glyph
         final nextIndex = character.$1 + 1;
         if (nextIndex < characters.length) {
+          // mark the next character as added
+          charactersAdded.add(nextIndex);
           // there is a next character. Check if it's a vowel that modifies this consonant
           // e.g., a consonant followed by a vowel with pre/post components
           // The logic is:
