@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
-import 'package:taidam_tutor/core/data/characters/models/character_class.dart';
+import 'package:taidam_tutor/utils/extensions/string_ext.dart';
 
 /// Holds the canonical character IDs used in a lesson section alongside the
 /// resolved [Character] models for rendering.
@@ -29,54 +29,7 @@ class LessonCharacterSet extends Equatable {
 
   List<String> get glyphs => characters.map((c) => c.character).toList();
 
-  String get combinedGlyph {
-    // for single characters, just return the glyph
-    if (characters.length <= 1) {
-      return glyphs.join();
-    }
-
-    // for multiple characters, handle vowel combinations specially
-    String combined = '';
-    final charactersAdded = <int>[];
-    for (final character in characters.indexed) {
-      if (charactersAdded.contains(character.$1)) {
-        // already processed as part of a previous combination
-        continue;
-      }
-
-      final component = character.$2;
-      if (component.characterClass == CharacterClass.consonant) {
-        // for consonants, we need to check the next character to see if it's a vowel
-        // that modifies the consonant glyph
-        final nextIndex = character.$1 + 1;
-        if (nextIndex < characters.length) {
-          // mark the next character as added
-          charactersAdded.add(nextIndex);
-          // there is a next character. Check if it's a vowel that modifies this consonant
-          // e.g., a consonant followed by a vowel with pre/post components
-          // The logic is:
-          // - If the vowel has a pre-component, prepend it to the consonant glyph
-          // - If the vowel has a post-component, append it to the consonant glyph
-          final nextComponent = characters[nextIndex];
-          if (nextComponent.characterClass == CharacterClass.vowel) {
-            if (nextComponent.preComponent?.isNotEmpty ?? false) {
-              combined += nextComponent.preComponent!;
-            }
-            if (nextComponent.postComponent?.isNotEmpty ?? false) {
-              combined +=
-                  "${component.character}${nextComponent.postComponent ?? ''}";
-            } else {
-              combined += component.character;
-            }
-          }
-        }
-      } else {
-        // Standalone vowel or vowel not following a consonant: include its glyph
-        combined += component.character;
-      }
-    }
-    return combined;
-  }
+  String get combinedGlyph => StringX.fromCharacters(characters);
 
   String get primaryRomanization => characters
       .map(_primaryRomanizationFor)
@@ -252,7 +205,7 @@ class ReadingLesson extends Equatable {
       description: lessonData['description'] as String,
       shortDescription: (lessonData['shortDescription'] as String?) ??
           (lessonData['description'] as String),
-      goals: (lessonData['goals'] as List)
+      goals: (lessonData['goals'] as List<dynamic>? ?? const [])
           .map(
             (g) => LessonGoal.fromJson(
               g as Map<String, dynamic>,
@@ -260,7 +213,7 @@ class ReadingLesson extends Equatable {
             ),
           )
           .toList(),
-      combinations: (lessonData['combinations'] as List)
+      combinations: (lessonData['combinations'] as List<dynamic>? ?? const [])
           .map(
             (c) => Combination.fromJson(
               c as Map<String, dynamic>,
