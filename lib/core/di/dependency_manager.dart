@@ -3,6 +3,7 @@ import 'package:taidam_tutor/core/data/alphabet_practice/alphabet_practice_repos
 import 'package:taidam_tutor/core/data/characters/character_repository.dart';
 import 'package:taidam_tutor/core/data/flashcards/flashcard_repository.dart';
 import 'package:taidam_tutor/core/data/reading_lessons/reading_lessons_repository.dart';
+import 'package:taidam_tutor/core/services/word_identification_service.dart';
 
 class DependencyManager {
   static final DependencyManager _instance = DependencyManager._internal();
@@ -21,6 +22,9 @@ class DependencyManager {
     );
     GetIt.I.registerSingleton<ReadingLessonsRepository>(
       ReadingLessonsRepository(),
+    );
+    GetIt.I.registerSingleton<WordIdentificationService>(
+      WordIdentificationService(),
     );
   }
 
