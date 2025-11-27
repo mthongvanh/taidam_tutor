@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:taidam_tutor/core/constants/spacing.dart';
 import 'package:taidam_tutor/core/data/reading_lessons/reading_lessons_repository.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
+import 'package:taidam_tutor/feature/reading_lesson/models/lesson_type.dart';
 import 'package:taidam_tutor/feature/reading_lesson/reading_lesson_page.dart';
+import 'package:taidam_tutor/feature/word_identification/word_identification_page.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
 
 class LessonSelectionPage extends StatefulWidget {
@@ -75,6 +77,8 @@ class _LessonSelectionPageState extends State<LessonSelectionPage> {
               final combinations =
                   lessonData['combinations'] as List? ?? const [];
               final examples = lessonData['examples'] as List?;
+              final lessonType =
+                  LessonType.fromKey(lessonData['lessonType'] as String?);
 
               return _LessonCard(
                 lessonNumber: lessonNumber,
@@ -83,6 +87,7 @@ class _LessonSelectionPageState extends State<LessonSelectionPage> {
                 goalCount: goals.length,
                 combinationCount: combinations.length,
                 exampleCount: examples?.length ?? 0,
+                lessonType: lessonType,
               );
             },
           );
@@ -167,6 +172,7 @@ class _LessonCard extends StatelessWidget {
   final int goalCount;
   final int combinationCount;
   final int exampleCount;
+  final LessonType lessonType;
 
   const _LessonCard({
     required this.lessonNumber,
@@ -175,17 +181,30 @@ class _LessonCard extends StatelessWidget {
     required this.goalCount,
     required this.combinationCount,
     required this.exampleCount,
+    required this.lessonType,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => ReadingLessonPage(lessonNumber: lessonNumber),
-          ),
-        );
+        if (lessonType == LessonType.wordIdentification) {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => WordIdentificationPage(
+                title: title,
+              ),
+            ),
+          );
+        } else {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => ReadingLessonPage(
+                lessonNumber: lessonNumber,
+              ),
+            ),
+          );
+        }
       },
       borderRadius: BorderRadius.circular(12),
       child: TaiCard.margin(
@@ -239,19 +258,26 @@ class _LessonCard extends StatelessWidget {
               spacing: Spacing.s,
               runSpacing: Spacing.s,
               children: [
-                _InfoChip(
-                  icon: Icons.flag,
-                  label: '$goalCount Goals',
-                ),
-                _InfoChip(
-                  icon: Icons.abc,
-                  label: '$combinationCount Combinations',
-                ),
-                if (exampleCount > 0)
+                if (lessonType == LessonType.wordIdentification)
+                  const _InfoChip(
+                    icon: Icons.hearing,
+                    label: 'Word Identification Flow',
+                  )
+                else ...[
                   _InfoChip(
-                    icon: Icons.format_list_bulleted,
-                    label: '$exampleCount Examples',
+                    icon: Icons.flag,
+                    label: '$goalCount Goals',
                   ),
+                  _InfoChip(
+                    icon: Icons.abc,
+                    label: '$combinationCount Combinations',
+                  ),
+                  if (exampleCount > 0)
+                    _InfoChip(
+                      icon: Icons.format_list_bulleted,
+                      label: '$exampleCount Examples',
+                    ),
+                ],
               ],
             ),
           ],

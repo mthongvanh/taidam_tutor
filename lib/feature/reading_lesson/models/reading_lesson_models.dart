@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/feature/reading_lesson/models/lesson_type.dart';
 import 'package:taidam_tutor/utils/extensions/string_ext.dart';
 
 /// Holds the canonical character IDs used in a lesson section alongside the
@@ -178,6 +179,7 @@ class ReadingLesson extends Equatable {
   final String? titleRomanization;
   final String description;
   final String shortDescription;
+  final LessonType lessonType;
   final List<LessonGoal> goals;
   final List<Combination> combinations;
   final List<Example>? examples;
@@ -188,6 +190,7 @@ class ReadingLesson extends Equatable {
     this.titleRomanization,
     required this.description,
     required this.shortDescription,
+    this.lessonType = LessonType.defaultFlow,
     required this.goals,
     required this.combinations,
     this.examples,
@@ -205,6 +208,8 @@ class ReadingLesson extends Equatable {
       description: lessonData['description'] as String,
       shortDescription: (lessonData['shortDescription'] as String?) ??
           (lessonData['description'] as String),
+      lessonType:
+          LessonType.fromKey(lessonData['lessonType'] as String? ?? 'default'),
       goals: (lessonData['goals'] as List<dynamic>? ?? const [])
           .map(
             (g) => LessonGoal.fromJson(
@@ -244,6 +249,7 @@ class ReadingLesson extends Equatable {
         goals,
         combinations,
         examples,
+        lessonType,
       ];
 }
 

@@ -4,11 +4,13 @@ import 'package:taidam_tutor/core/data/reading_lessons/reading_lessons_repositor
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_cubit.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_state.dart';
+import 'package:taidam_tutor/feature/reading_lesson/models/lesson_type.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/combinations_view.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/completion_view.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/examples_view.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/goals_view.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/practice_view.dart';
+import 'package:taidam_tutor/feature/word_identification/word_identification_page.dart';
 
 class ReadingLessonPage extends StatefulWidget {
   final int lessonNumber;
@@ -83,6 +85,12 @@ class _ReadingLessonPageState extends State<ReadingLessonPage> {
             const <String, dynamic>{};
         final fallbackTitle =
             lessonMeta['title'] as String? ?? 'Reading Lesson';
+        final lessonType =
+          LessonType.fromKey(lessonMeta['lessonType'] as String?);
+
+        if (lessonType == LessonType.wordIdentification) {
+          return WordIdentificationPage(title: fallbackTitle);
+        }
 
         return BlocProvider(
           create: (context) => ReadingLessonCubit()..startLesson(lessonData),
@@ -156,7 +164,7 @@ class _ReadingLessonPageState extends State<ReadingLessonPage> {
       LessonStage.goalOverview => GoalsView(state: state),
       LessonStage.goalCombinations => CombinationsView(state: state),
       LessonStage.goalExamples => ExamplesView(state: state),
-      LessonStage.goalPractice => PracticeView(state: state),
+      LessonStage.goalPractice => _buildPracticeView(context, state),
       LessonStage.completed => CompletionView(
           state: ReadingLessonCompleted(
             lesson: state.lesson,
@@ -165,5 +173,12 @@ class _ReadingLessonPageState extends State<ReadingLessonPage> {
           ),
         ),
     };
+  }
+
+  Widget _buildPracticeView(BuildContext context, ReadingLessonActive state) {
+    if (state.lesson.lessonType == LessonType.wordIdentification) {
+      return WordIdentificationPage();
+    }
+    return PracticeView(state: state);
   }
 }
