@@ -3,6 +3,7 @@ import 'package:taidam_tutor/core/constants/spacing.dart';
 import 'package:taidam_tutor/feature/flashcard/flashcard_practice_page.dart';
 import 'package:taidam_tutor/feature/letter_search/letter_search.dart';
 import 'package:taidam_tutor/feature/quiz/quiz_page.dart';
+import 'package:taidam_tutor/feature/word_identification/word_identification_page.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
 
 class MorePage extends StatelessWidget {
@@ -166,6 +167,81 @@ class MorePage extends StatelessWidget {
                         SizedBox(height: Spacing.xs),
                         Text(
                           'Search for matching characters to improve your recognition skills.',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 64,
+                    child: Center(
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: Spacing.m),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const WordIdentificationPage(),
+                ),
+              );
+            },
+            borderRadius: BorderRadius.circular(12),
+            child: TaiCard.margin(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(Spacing.s),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.surfaceVariant,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(
+                      Icons.text_snippet,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      size: 32,
+                    ),
+                  ),
+                  SizedBox(width: Spacing.m),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Word Identification',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            SizedBox(width: Spacing.s),
+                            _LevelTag(
+                              label: 'Beginner - Adv',
+                              backgroundColor:
+                                  Theme.of(context).colorScheme.surfaceVariant,
+                              textColor: Theme.of(context)
+                                  .colorScheme
+                                  .onSurfaceVariant,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: Spacing.xs),
+                        Text(
+                          'Decode 6-10 character strings, highlight syllables, and match sounds.',
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],
