@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:taidam_tutor/core/constants/spacing.dart';
-import 'package:taidam_tutor/core/services/word_identification_service.dart';
 import 'package:taidam_tutor/feature/word_identification/cubit/word_identification_cubit.dart';
 import 'package:taidam_tutor/feature/word_identification/cubit/word_identification_state.dart';
+import 'package:taidam_tutor/widgets/answer_option_button.dart';
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
 
 class WordIdentificationPage extends StatelessWidget {
@@ -74,14 +74,27 @@ class _WordIdentificationView extends StatelessWidget {
                   _WordPanel(state: state),
                   const SizedBox(height: Spacing.l),
                   ...question.soundOptions.indexed.map(
-                    (entry) => _SoundOptionTile(
-                      label: entry.$2,
-                      index: entry.$1,
-                      question: question,
-                      state: state,
-                      onTap:
-                          context.read<WordIdentificationCubit>().selectOption,
-                    ),
+                    (entry) {
+                      final idx = entry.$1;
+                      final optionText = entry.$2;
+                      final hasAnswered = state.selectedOptionIndex != null;
+
+                      return Padding(
+                        padding: EdgeInsets.only(bottom: Spacing.s),
+                        child: AnswerOptionButton(
+                          label: String.fromCharCode(65 + idx),
+                          option: optionText,
+                          isSelected: state.selectedOptionIndex == idx,
+                          isCorrect: question.correctOptionIndex == idx,
+                          hasAnswered: hasAnswered,
+                          onTap: hasAnswered
+                              ? null
+                              : () => context
+                                  .read<WordIdentificationCubit>()
+                                  .selectOption(idx),
+                        ),
+                      );
+                    },
                   ),
                   const SizedBox(height: Spacing.l),
                   FilledButton.icon(
@@ -177,74 +190,6 @@ class _ScoreRow extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],
-    );
-  }
-}
-
-class _SoundOptionTile extends StatelessWidget {
-  const _SoundOptionTile({
-    required this.label,
-    required this.index,
-    required this.question,
-    required this.state,
-    required this.onTap,
-  });
-
-  final String label;
-  final int index;
-  final WordQuestion question;
-  final WordIdentificationState state;
-  final void Function(int) onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final isSelected = state.selectedOptionIndex == index;
-    final hasAnswered = state.selectedOptionIndex != null;
-    final isCorrectOption = question.correctOptionIndex == index;
-
-    final colorScheme = Theme.of(context).colorScheme;
-    Color? background;
-    Color? foreground;
-
-    if (hasAnswered) {
-      if (isCorrectOption) {
-        background = colorScheme.primaryContainer;
-        foreground = colorScheme.onPrimaryContainer;
-      } else if (isSelected) {
-        background = colorScheme.errorContainer;
-        foreground = colorScheme.onErrorContainer;
-      } else {
-        background = colorScheme.surfaceContainerHighest;
-        foreground = colorScheme.onSurface;
-      }
-    }
-
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: Spacing.xs),
-      color: background,
-      child: ListTile(
-        title: Text(
-          label,
-          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: foreground,
-              ),
-        ),
-        trailing: hasAnswered
-            ? Icon(
-                isCorrectOption
-                    ? Icons.check_circle
-                    : isSelected
-                        ? Icons.cancel
-                        : Icons.circle_outlined,
-                color: isCorrectOption
-                    ? colorScheme.primary
-                    : isSelected
-                        ? colorScheme.error
-                        : colorScheme.outline,
-              )
-            : null,
-        onTap: hasAnswered ? null : () => onTap(index),
-      ),
     );
   }
 }
