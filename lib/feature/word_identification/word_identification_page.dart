@@ -7,14 +7,19 @@ import 'package:taidam_tutor/feature/word_identification/cubit/word_identificati
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
 
 class WordIdentificationPage extends StatelessWidget {
-  const WordIdentificationPage({super.key, this.title});
+  const WordIdentificationPage({
+    super.key,
+    this.title,
+    this.presetGlyphs,
+  });
 
   final String? title;
+  final List<String>? presetGlyphs;
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => WordIdentificationCubit(),
+      create: (_) => WordIdentificationCubit(presetGlyphs: presetGlyphs),
       child: _WordIdentificationView(title: title),
     );
   }
@@ -59,15 +64,15 @@ class _WordIdentificationView extends StatelessWidget {
 
               return ListView(
                 children: [
-                  _WordPanel(state: state),
-                  const SizedBox(height: Spacing.m),
                   _ScoreRow(state: state),
                   const SizedBox(height: Spacing.m),
                   Text(
                     'Which sound matches the highlighted word?',
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
-                  const SizedBox(height: Spacing.s),
+                  const SizedBox(height: Spacing.m),
+                  _WordPanel(state: state),
+                  const SizedBox(height: Spacing.l),
                   ...question.soundOptions.indexed.map(
                     (entry) => _SoundOptionTile(
                       label: entry.$2,
@@ -117,18 +122,10 @@ class _WordPanel extends StatelessWidget {
       margin: EdgeInsets.zero,
       child: Padding(
         padding: const EdgeInsets.all(Spacing.l),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Tap the matching sound from left to right.',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            const SizedBox(height: Spacing.m),
-            RichText(
-              text: TextSpan(children: spans),
-            ),
-          ],
+        child: Center(
+          child: RichText(
+            text: TextSpan(children: spans),
+          ),
         ),
       ),
     );

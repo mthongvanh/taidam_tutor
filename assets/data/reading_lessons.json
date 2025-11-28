@@ -2,6 +2,7 @@
     "lessons": [
         {
             "lesson": {
+                "lessonType": "default",
                 "number": 1,
                 "title": "After consonants",
                 "shortDescription": "Vowels can be on the right side of consonants.",
@@ -74,6 +75,7 @@
         },
         {
             "lesson": {
+                "lessonType": "default",
                 "number": 2,
                 "title": "Above consonants",
                 "shortDescription": "Vowels can appear above consonants in syllables.",
@@ -236,6 +238,7 @@
         },
         {
             "lesson": {
+                "lessonType": "default",
                 "number": 3,
                 "title": "More practice",
                 "description": "Extended practice with vowels that appear to the right and above consonants in Tai Dam syllables.",
@@ -626,6 +629,7 @@
         },
         {
             "lesson": {
+                "lessonType": "default",
                 "number": 4,
                 "title": "Multi-part vowels (Before and above consonants)",
                 "description": "Some Tai Dam vowels have two parts. These parts can appear before and above the consonant they belong to in a syllable. Imagine a left-vowel syllable that looks like this: 𝑉₁ + 𝐶 + 𝑉₂.\nSo:\n  ꪹ + ꪎ becomes ꪹꪎ (\"sue\"),\n  ꪹꪷ + ꪁ becomes ꪹꪁꪷ (\"koe\"),\nand\n  ꪹꪸ + ꪎ becomes ꪹꪎꪸ (\"se\").",
@@ -823,6 +827,7 @@
         },
         {
             "lesson": {
+                "lessonType": "default",
                 "number": 5,
                 "title": "Below consonants, Multi-part before & after",
                 "description": "Tai Dam vowels can also sit below the consonant they belong to in a syllable. Vowels can also appear in combination before a consonant and after it. Imagine a syllable that looks like this: 𝑉₁ + 𝐶 + 𝑉₂.\nSo:\n  ꪎ +  ꪴ becomes ꪎꪴ (\"su\"),\nand\n  ꪹ + ꪎ + ꪱ becomes ꪹꪎꪱ (\"saw\").",
@@ -988,6 +993,117 @@
                             43,
                             18
                         ]
+                    }
+                ]
+            }
+        },
+        {
+            "lesson": {
+                "lessonType": "word-identification",
+                "number": 6,
+                "title": "Review",
+                "description": "A review lesson covering all consonants and vowels introduced in previous lessons.",
+                "goals": [
+                ],
+                "examples": [
+                    {
+                        "characterIds": [41, 4]
+                    },
+                    {
+                        "characterIds": [24, 17]
+                    },
+                    {
+                        "characterIds": [28, 23]
+                    },
+                    {
+                        "characterIds": [24, 4]
+                    },
+                    {
+                        "characterIds": [26, 17]
+                    },
+                    {
+                        "characterIds": [31, 17]
+                    },
+                    {
+                        "characterIds": [44, 18]
+                    },
+                    {
+                        "characterIds": [29, 18]
+                    },
+                    {
+                        "characterIds": [32, 7]
+                    },
+                    {
+                        "characterIds": [25, 22]
+                    },
+                    {
+                        "characterIds": [43, 5]
+                    },
+                    {
+                        "characterIds": [45, 5]
+                    },
+                    {
+                        "characterIds": [46, 18]
+                    },
+                    {
+                        "characterIds": [39, 8]
+                    },
+                    {
+                        "characterIds": [25, 23]
+                    },
+                    {
+                        "characterIds": [38, 23]
+                    },
+                    {
+                        "characterIds": [29, 5]
+                    },
+                    {
+                        "characterIds": [36, 4]
+                    },
+                    {
+                        "characterIds": [32, 4]
+                    },
+                    {
+                        "characterIds": [35, 5]
+                    },
+                    {
+                        "characterIds": [25, 5]
+                    },
+                    {
+                        "characterIds": [38, 9]
+                    },
+                    {
+                        "characterIds": [37, 9]
+                    },
+                    {
+                        "characterIds": [24, 9]
+                    },
+                    {
+                        "characterIds": [47, 22]
+                    },
+                    {
+                        "characterIds": [26, 22]
+                    },
+                    {
+                        "characterIds": [47, 21]
+                    },
+                    {
+                        "characterIds": [32, 21]
+                    },
+                    {
+                        "characterIds": [31, 10]
+                    },
+                    {
+                        "characterIds": [32, 9]
+                    },
+                    {
+                        "characterIds": [33, 11]
+                    },
+                    {
+                        "characterIds": [26, 5]
+                    },
+                    {
+                        "characterIds": [27, 10]
                     }
                 ]
             }

@@ -105,30 +105,68 @@ class WordIdentificationService {
         final glyph = combination.result.trim();
         final description = _sanitizeDescription(combination.description);
         final romanization = _sanitizeRomanization(combination.romanization);
-        if (glyph.isEmpty || description.isEmpty || romanization.isEmpty) {
-          continue;
-        }
-
-        final segment = WordSegment(
+        _registerCandidate(
           glyph: glyph,
           romanization: romanization,
-          soundDescription: description,
+          description: description,
         );
+      }
 
-        final candidate =
-            _SoundCandidate(segment: segment, glyphLength: _glyphLength(glyph));
-        _candidates.add(candidate);
-        _candidatesByGlyph.putIfAbsent(glyph, () => []).add(candidate);
-        if (!_romanizationPool.any(
-          (value) =>
-              value.toLowerCase().trim() == romanization.toLowerCase().trim(),
-        )) {
-          _romanizationPool.add(romanization);
-        }
+      final examples = lesson.examples ?? const <Example>[];
+      for (final example in examples) {
+        final glyph = (example.word ?? example.characters.combinedGlyph).trim();
+        final romanization = _sanitizeRomanization(example.displayRomanization);
+        final description = _sanitizeDescription(
+          example.characters.primaryIpaDescription,
+        );
+        _registerCandidate(
+          glyph: glyph,
+          romanization: romanization,
+          description: description.isNotEmpty
+              ? description
+              : 'Sound this syllable out loud.',
+        );
       }
     }
 
     _isInitialized = true;
+  }
+
+  void _registerCandidate({
+    required String glyph,
+    required String romanization,
+    required String description,
+  }) {
+    final trimmedGlyph = glyph.trim();
+    final trimmedRomanization = romanization.trim();
+    final trimmedDescription = description.trim();
+    if (trimmedGlyph.isEmpty || trimmedRomanization.isEmpty) {
+      return;
+    }
+
+    final segment = WordSegment(
+      glyph: trimmedGlyph,
+      romanization: trimmedRomanization,
+      soundDescription: trimmedDescription.isNotEmpty
+          ? trimmedDescription
+          : trimmedRomanization,
+    );
+
+    final candidate = _SoundCandidate(
+        segment: segment, glyphLength: _glyphLength(trimmedGlyph));
+    _candidates.add(candidate);
+    _candidatesByGlyph.putIfAbsent(trimmedGlyph, () => []).add(candidate);
+    _addToRomanizationPool(trimmedRomanization);
+  }
+
+  void _addToRomanizationPool(String romanization) {
+    final normalized = romanization.toLowerCase().trim();
+    final exists = _romanizationPool.any(
+      (value) => value.toLowerCase().trim() == normalized,
+    );
+    if (!exists) {
+      _romanizationPool.add(romanization);
+    }
   }
 
   /// Chooses a list of segments whose combined glyph count falls within the

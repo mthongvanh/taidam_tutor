@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/core/services/word_identification_service.dart';
 import 'package:taidam_tutor/feature/word_identification/cubit/word_identification_state.dart';
@@ -7,15 +6,22 @@ import 'package:taidam_tutor/feature/word_identification/cubit/word_identificati
 class WordIdentificationCubit extends Cubit<WordIdentificationState> {
   WordIdentificationCubit({
     WordIdentificationService? service,
-    List<Character>? characters,
+    List<String>? presetGlyphs,
   })  : _service = service ?? dm.get<WordIdentificationService>(),
-        _characters = characters,
+        _presetGlyphs = presetGlyphs
+            ?.map((glyph) => glyph.trim())
+            .where((glyph) => glyph.isNotEmpty)
+            .toList(growable: false),
         super(const WordIdentificationState(isLoading: true)) {
     loadChallenge();
   }
 
   final WordIdentificationService _service;
-  final List<Character>? _characters;
+  final List<String>? _presetGlyphs;
+  static const int _maxPresetSegmentCount = 5;
+  int _presetGlyphCursor = 0;
+  List<String>? _activePresetBatch;
+  bool _shouldAdvancePresetBatch = true;
 
   Future<void> loadChallenge() async {
     emit(
@@ -30,13 +36,15 @@ class WordIdentificationCubit extends Cubit<WordIdentificationState> {
     );
 
     try {
-      late final challenge;
-      if (_characters != null) {
+      late final WordIdentificationChallenge challenge;
+      final presetBatch = _obtainPresetBatch();
+      if (presetBatch.isNotEmpty) {
         challenge = await _service.buildChallengeFromCharacters(
-          characters: _characters.map((c) => c.character).toList(),
+          characters: presetBatch,
           optionCount: _optionCountForMode(state.mode),
         );
       } else {
+        _activePresetBatch = null;
         challenge = await _service.buildChallenge(
           optionCount: _optionCountForMode(state.mode),
         );
@@ -122,8 +130,47 @@ class WordIdentificationCubit extends Cubit<WordIdentificationState> {
         ),
       );
     } else {
+      if (_activePresetBatch != null) {
+        _shouldAdvancePresetBatch = true;
+      }
       loadChallenge();
     }
+  }
+
+  List<String> _obtainPresetBatch() {
+    final glyphs = _presetGlyphs;
+    if (glyphs == null || glyphs.isEmpty) {
+      _activePresetBatch = null;
+      return const <String>[];
+    }
+
+    if (_activePresetBatch != null && !_shouldAdvancePresetBatch) {
+      return _activePresetBatch!;
+    }
+
+    final batch = _nextPresetGlyphBatch(glyphs);
+    _activePresetBatch = batch;
+    _shouldAdvancePresetBatch = false;
+    return batch;
+  }
+
+  List<String> _nextPresetGlyphBatch(List<String> glyphs) {
+    if (glyphs.isEmpty) {
+      return const <String>[];
+    }
+
+    if (_presetGlyphCursor >= glyphs.length) {
+      _presetGlyphCursor = 0;
+    }
+
+    var end = _presetGlyphCursor + _maxPresetSegmentCount;
+    if (end > glyphs.length) {
+      end = glyphs.length;
+    }
+
+    final batch = glyphs.sublist(_presetGlyphCursor, end);
+    _presetGlyphCursor = end;
+    return batch;
   }
 
   int _optionCountForMode(WordIdentificationMode mode) {
