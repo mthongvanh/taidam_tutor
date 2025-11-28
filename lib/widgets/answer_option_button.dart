@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:taidam_tutor/core/constants/spacing.dart';
 
-/// Reusable multiple-choice answer option.
-///
-/// Handles highlighting for selected/correct/incorrect states so quiz and
-/// practice flows stay visually consistent across the app.
+/// Reusable multiple-choice answer option styled after the flashcard practice
+/// buttons so the various quiz/practice flows stay visually consistent.
 class AnswerOptionButton extends StatelessWidget {
   final String label;
   final String option;
@@ -30,33 +28,31 @@ class AnswerOptionButton extends StatelessWidget {
     final theme = Theme.of(context);
     final brightness = theme.brightness;
 
-    Color backgroundColor = theme.colorScheme.surface;
-    Color borderColor = theme.colorScheme.outline;
-    Color circleColor = theme.colorScheme.primary;
+    Color? backgroundColor;
+    Color? borderColor;
+    IconData? feedbackIcon;
+    Color? feedbackColor;
 
     if (hasAnswered) {
-      if (isSelected) {
-        if (isCorrect) {
-          backgroundColor = brightness == Brightness.dark
-              ? Colors.green.shade900
-              : Colors.green.shade100;
-          borderColor = Colors.green;
-          circleColor = Colors.green;
-        } else {
-          backgroundColor = brightness == Brightness.dark
-              ? Colors.red.shade900
-              : Colors.red.shade100;
-          borderColor = Colors.red;
-          circleColor = Colors.red;
-        }
-      } else if (isCorrect) {
+      if (isCorrect) {
         backgroundColor = brightness == Brightness.dark
-            ? Colors.green.shade900
-            : Colors.green.shade100;
+            ? Colors.green.shade900.withAlpha(100)
+            : Colors.green.shade50;
         borderColor = Colors.green;
-        circleColor = Colors.green;
+        feedbackIcon = Icons.check_circle;
+        feedbackColor = Colors.green;
+      } else if (isSelected) {
+        backgroundColor = brightness == Brightness.dark
+            ? Colors.red.shade900.withAlpha(100)
+            : Colors.red.shade50;
+        borderColor = Colors.red;
+        feedbackIcon = Icons.cancel;
+        feedbackColor = Colors.red;
       }
     }
+
+    final resolvedBackground = backgroundColor ?? theme.colorScheme.surface;
+    final resolvedBorder = borderColor ?? theme.colorScheme.outline;
 
     return InkWell(
       onTap: onTap,
@@ -64,25 +60,31 @@ class AnswerOptionButton extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(Spacing.m),
         decoration: BoxDecoration(
-          color: backgroundColor,
+          color: resolvedBackground,
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: borderColor, width: 2),
+          border: Border.all(color: resolvedBorder, width: 2),
+          boxShadow: [
+            if (!hasAnswered)
+              BoxShadow(
+                color: Colors.black.withAlpha(25),
+                blurRadius: 4,
+                offset: const Offset(0, 2),
+              ),
+          ],
         ),
         child: Row(
           children: [
             Container(
-              width: 40,
-              height: 40,
+              width: 32,
+              height: 32,
               decoration: BoxDecoration(
-                color: circleColor,
+                color: theme.colorScheme.primaryContainer,
                 shape: BoxShape.circle,
               ),
               child: Center(
                 child: Text(
                   label,
-                  style: TextStyle(
-                    color: theme.colorScheme.onPrimary,
-                    fontSize: 18,
+                  style: theme.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -92,17 +94,17 @@ class AnswerOptionButton extends StatelessWidget {
             Expanded(
               child: Text(
                 option,
-                style: theme.textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
+                style: theme.textTheme.titleMedium,
               ),
             ),
-            if (showCorrectIcon && hasAnswered && isCorrect)
+            if (showCorrectIcon && hasAnswered && feedbackIcon != null) ...[
+              SizedBox(width: Spacing.s),
               Icon(
-                Icons.check_circle,
-                color: Colors.green,
+                feedbackIcon,
+                color: feedbackColor,
                 size: 28,
               ),
+            ],
           ],
         ),
       ),

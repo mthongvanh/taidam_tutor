@@ -6,6 +6,7 @@ import 'package:taidam_tutor/core/constants/strings.dart';
 import 'package:taidam_tutor/feature/flashcard/cubit/flashcard_practice_cubit.dart';
 import 'package:taidam_tutor/feature/flashcard/cubit/flashcard_practice_state.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
+import 'package:taidam_tutor/widgets/answer_option_button.dart';
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
 
 class FlashcardPracticePage extends StatelessWidget {
@@ -287,18 +288,21 @@ class _PracticeActiveView extends StatelessWidget {
 
                 ...List.generate(
                   state.currentQuestion.options.length,
-                  (index) => _AnswerOptionButton(
-                    option: state.currentQuestion.options[index],
-                    index: index,
-                    isSelected: state.selectedAnswerIndex == index,
-                    isCorrect:
-                        index == state.currentQuestion.correctAnswerIndex,
-                    showFeedback: state.selectedAnswerIndex != null,
-                    onTap: state.selectedAnswerIndex == null
-                        ? () => context
-                            .read<FlashcardPracticeCubit>()
-                            .selectAnswer(index)
-                        : null,
+                  (index) => Padding(
+                    padding: EdgeInsets.only(bottom: Spacing.sm),
+                    child: AnswerOptionButton(
+                      label: String.fromCharCode(65 + index),
+                      option: state.currentQuestion.options[index],
+                      isSelected: state.selectedAnswerIndex == index,
+                      isCorrect:
+                          index == state.currentQuestion.correctAnswerIndex,
+                      hasAnswered: state.selectedAnswerIndex != null,
+                      onTap: state.selectedAnswerIndex == null
+                          ? () => context
+                              .read<FlashcardPracticeCubit>()
+                              .selectAnswer(index)
+                          : null,
+                    ),
                   ),
                 ),
 
@@ -325,109 +329,6 @@ class _PracticeActiveView extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class _AnswerOptionButton extends StatelessWidget {
-  final String option;
-  final int index;
-  final bool isSelected;
-  final bool isCorrect;
-  final bool showFeedback;
-  final VoidCallback? onTap;
-
-  const _AnswerOptionButton({
-    required this.option,
-    required this.index,
-    required this.isSelected,
-    required this.isCorrect,
-    required this.showFeedback,
-    this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    Color? backgroundColor;
-    Color? borderColor;
-    IconData? icon;
-
-    if (showFeedback) {
-      if (isCorrect) {
-        backgroundColor = Theme.of(context).brightness == Brightness.dark
-            ? Colors.green.shade900.withAlpha(100)
-            : Colors.green.shade50;
-        borderColor = Colors.green;
-        icon = Icons.check_circle;
-      } else if (isSelected && !isCorrect) {
-        backgroundColor = Theme.of(context).brightness == Brightness.dark
-            ? Colors.red.shade900.withAlpha(100)
-            : Colors.red.shade50;
-        borderColor = Colors.red;
-        icon = Icons.cancel;
-      }
-    }
-
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(12),
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: backgroundColor ?? Theme.of(context).colorScheme.surface,
-            border: Border.all(
-              color: borderColor ?? Theme.of(context).colorScheme.outline,
-              width: 2,
-            ),
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-              if (!showFeedback)
-                BoxShadow(
-                  color: Colors.black.withAlpha(25),
-                  blurRadius: 4,
-                  offset: const Offset(0, 2),
-                ),
-            ],
-          ),
-          child: Row(
-            children: [
-              Container(
-                width: 32,
-                height: 32,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.primaryContainer,
-                  shape: BoxShape.circle,
-                ),
-                child: Center(
-                  child: Text(
-                    String.fromCharCode(65 + index), // A, B, C, D
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Text(
-                  option,
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-              ),
-              if (icon != null) ...[
-                const SizedBox(width: 8),
-                Icon(
-                  icon,
-                  color: borderColor,
-                  size: 28,
-                ),
-              ],
-            ],
-          ),
-        ),
-      ),
     );
   }
 }
