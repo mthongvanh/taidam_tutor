@@ -1222,7 +1222,7 @@
             "lesson": {
                 "number": 7,
                 "title": "Pre-consonant dipthongs",
-                "description": "This lesson introduces three vowels (ai, ae, oo) and four consonants (f, 'f, j, 'j). The vowels ai and ae appear before the consonant, while oo also appears before the consonant. You'll practice combining these to form syllables like 'fai' (fire), 'fie' (expensive), and 'jae' (separate).",
+                "description": "This lesson introduces three vowels (-ay, -aư, -oh) and six consonants (f, 'f, m, 'm, y, 'y). The vowels ai and ae appear before the consonant, while oo also appears before the consonant. You'll practice combining these to form syllables like 'fay' (fire) and 'maư' (new).",
                 "goals": [
                     {
                         "characterIds": [
@@ -1275,43 +1275,50 @@
                         "characterIds": [
                             48,
                             20
-                        ]
+                        ],
+                        "description": "Combining consonant 'f' with vowel 'ay"
                     },
                     {
                         "characterIds": [
                             49,
                             20
-                        ]
+                        ],
+                        "description": "Combining consonant ''f' with vowel 'ay'"
                     },
                     {
                         "characterIds": [
                             49,
                             16
-                        ]
+                        ],
+                        "description": "Combining consonant ''f' with vowel 'ie'"
                     },
                     {
                         "characterIds": [
                             50,
                             19
-                        ]
+                        ],
+                        "description": "Combining consonant 'm' with vowel 'aư'"
                     },
                     {
                         "characterIds": [
                             51,
                             12
-                        ]
+                        ],
+                        "description": "Combining consonant ''m' with vowel 'oh'"
                     },
                     {
                         "characterIds": [
                             52,
                             12
-                        ]
+                        ],
+                        "description": "Combining consonant 'y' with vowel 'oh'"
                     },
                     {
                         "characterIds": [
                             53,
                             19
-                        ]
+                        ],
+                        "description": "Combining consonant ''y' with vowel 'oh'"
                     }
                 ],
                 "examples": [
