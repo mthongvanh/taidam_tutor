@@ -2,7 +2,7 @@ name: taidam_tutor
 description: "A Flutter application for learning Tai Dam language."
 publish_to: 'none'
 
-version: 1.0.2+1
+version: 1.0.2+2
 
 environment:
   sdk: ^3.6.2
