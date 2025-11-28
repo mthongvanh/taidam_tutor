@@ -8,11 +8,12 @@ Tai Dam Tutor is a Flutter learning companion that teaches the Tai Dam script an
 
 ## 🚀 Feature Highlights
 
-- **Alphabet practice** – Guided drills that pair glyph tracing with audio playback and spaced repetition tracking.
+- **Alphabet practice** – Guided drills that pair glyph tracing with audio playback, spaced repetition tracking, and a progress dashboard backed by an in-app "Understanding Your Progress" guide.
 - **Character browser** – Filterable list of consonants, vowels, combos, and special glyphs with tone/position metadata.
 - **Flashcards** – Swipe-based decks that surface pronunciation hints, regex links to related characters, and previews of common words.
 - **Letter search game** – Quick-play minigame that challenges users to spot the right glyph among distractors.
 - **Quizzes** – Multiple-choice assessments that mix listening comprehension with recognition prompts.
+- **Consistent quiz feedback** – Shared quiz feedback banner standardizes the correct/incorrect callouts across alphabet drills, reading lessons, and future quiz surfaces.
 - **Reading lessons** – Curated lesson plans that stitch characters into real Tai Dam words and phrases.
 - **More hub** – Central place for settings, reference material, and future community resources.
 
@@ -27,7 +28,7 @@ All experiences are backed by offline JSON datasets plus `.caf` audio samples, s
 - **GetIt dependency injection** (see `lib/core/di/dependency_manager.dart`) wires repositories, services, and shared utilities.
 - **Local JSON repositories** in `lib/core/data/*` load character, flashcard, quiz, and practice content via asset bundles.
 - **Business-logic services** (e.g., `CharacterGroupingService`) encapsulate domain-specific rules for sorting/grouping glyphs.
-- **Shared widgets & extensions** under `lib/widgets` and `lib/utils/extensions` enforce typography, spacing, and card behavior.
+- **Shared widgets & extensions** under `lib/widgets` and `lib/utils/extensions` enforce typography, spacing, and card behavior (e.g., `QuizFeedbackBanner`, `TaiCard`).
 
 ```
 lib/

@@ -148,6 +148,19 @@ Added analytics access from main practice page:
 - Passes current session data for accurate statistics
 - Accessible before or after practice sessions
 
+### 8. Progress Info & Feedback Consistency
+**Files**:
+- `lib/feature/alphabet_practice/progress_info_page.dart`
+- `lib/widgets/quiz_feedback_banner.dart`
+- `lib/feature/alphabet_practice/character_drill_page.dart`
+- `lib/feature/reading_lesson/widgets/practice_view.dart`
+
+UX polish to keep progress documentation and quiz responses consistent:
+
+- Updated the Progress Info page copy so every metric description matches the actual character mastery formula (≥85% accuracy with 10+ attempts) and class grouping order used throughout Alphabet Practice.
+- Introduced a reusable `QuizFeedbackBanner` widget that encapsulates the success/error styling originally built for Reading Lessons.
+- Replaced bespoke feedback containers in Character Drill and Reading Lesson flows with the shared banner, ensuring identical visuals and messaging across quiz surfaces.
+
 ## Technical Implementation
 
 ### Data Flow
