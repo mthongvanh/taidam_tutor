@@ -4,7 +4,6 @@ import 'package:taidam_tutor/core/data/reading_lessons/reading_lessons_repositor
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/reading_lesson/models/lesson_type.dart';
 import 'package:taidam_tutor/feature/reading_lesson/reading_lesson_page.dart';
-import 'package:taidam_tutor/feature/word_identification/word_identification_page.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
 
 class LessonSelectionPage extends StatefulWidget {
@@ -188,23 +187,13 @@ class _LessonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        if (lessonType == LessonType.wordIdentification) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => WordIdentificationPage(
-                title: title,
-              ),
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => ReadingLessonPage(
+              lessonNumber: lessonNumber,
             ),
-          );
-        } else {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => ReadingLessonPage(
-                lessonNumber: lessonNumber,
-              ),
-            ),
-          );
-        }
+          ),
+        );
       },
       borderRadius: BorderRadius.circular(12),
       child: TaiCard.margin(

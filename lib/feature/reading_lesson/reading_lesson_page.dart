@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:taidam_tutor/core/data/characters/character_repository.dart';
+import 'package:taidam_tutor/core/data/characters/models/character.dart';
 import 'package:taidam_tutor/core/data/reading_lessons/reading_lessons_repository.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_cubit.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_state.dart';
 import 'package:taidam_tutor/feature/reading_lesson/models/lesson_type.dart';
+import 'package:taidam_tutor/feature/reading_lesson/models/reading_lesson_models.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/combinations_view.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/completion_view.dart';
 import 'package:taidam_tutor/feature/reading_lesson/widgets/examples_view.dart';
@@ -26,12 +29,16 @@ class ReadingLessonPage extends StatefulWidget {
 
 class _ReadingLessonPageState extends State<ReadingLessonPage> {
   late final ReadingLessonsRepository _readingLessonsRepository;
+  late final CharacterRepository _characterRepository;
   late final Future<Map<String, dynamic>?> _lessonFuture;
+  Future<Map<int, Character>>? _characterMapFuture;
+  Future<ReadingLesson>? _wordIdentificationLessonFuture;
 
   @override
   void initState() {
     super.initState();
     _readingLessonsRepository = dm.get<ReadingLessonsRepository>();
+    _characterRepository = dm.get<CharacterRepository>();
     _lessonFuture =
         _readingLessonsRepository.getLessonByNumber(widget.lessonNumber);
   }
@@ -42,42 +49,22 @@ class _ReadingLessonPageState extends State<ReadingLessonPage> {
       future: _lessonFuture,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Scaffold(
-            appBar: AppBar(
-              title: const Text('Reading Lesson'),
-            ),
-            body: const Center(child: CircularProgressIndicator()),
-          );
+          return _buildLoadingScaffold('Reading Lesson');
         }
 
         if (snapshot.hasError) {
-          return Scaffold(
-            appBar: AppBar(
-              title: const Text('Reading Lesson'),
-            ),
-            body: Center(
-              child: Text(
-                'Error loading lesson: ${snapshot.error}',
-                style: Theme.of(context).textTheme.titleLarge,
-                textAlign: TextAlign.center,
-              ),
-            ),
+          return _buildErrorScaffold(
+            'Reading Lesson',
+            'Error loading lesson: ${snapshot.error}',
           );
         }
 
         final lessonData = snapshot.data;
 
         if (lessonData == null) {
-          return Scaffold(
-            appBar: AppBar(
-              title: const Text('Reading Lesson'),
-            ),
-            body: Center(
-              child: Text(
-                'Lesson ${widget.lessonNumber} not found.',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
+          return _buildErrorScaffold(
+            'Reading Lesson',
+            'Lesson ${widget.lessonNumber} not found.',
           );
         }
 
@@ -86,10 +73,47 @@ class _ReadingLessonPageState extends State<ReadingLessonPage> {
         final fallbackTitle =
             lessonMeta['title'] as String? ?? 'Reading Lesson';
         final lessonType =
-          LessonType.fromKey(lessonMeta['lessonType'] as String?);
+            LessonType.fromKey(lessonMeta['lessonType'] as String?);
 
         if (lessonType == LessonType.wordIdentification) {
-          return WordIdentificationPage(title: fallbackTitle);
+          _wordIdentificationLessonFuture ??=
+              _loadWordIdentificationLesson(lessonData);
+
+          return FutureBuilder<ReadingLesson>(
+            future: _wordIdentificationLessonFuture,
+            builder: (context, lessonSnapshot) {
+              if (lessonSnapshot.connectionState == ConnectionState.waiting) {
+                return _buildLoadingScaffold(fallbackTitle);
+              }
+
+              if (lessonSnapshot.hasError) {
+                return _buildErrorScaffold(
+                  fallbackTitle,
+                  'Error loading lesson: ${lessonSnapshot.error}',
+                );
+              }
+
+              final readingLesson = lessonSnapshot.data;
+              if (readingLesson == null) {
+                return _buildErrorScaffold(
+                  fallbackTitle,
+                  'Lesson ${widget.lessonNumber} not found.',
+                );
+              }
+
+              final glyphs = _exampleGlyphsForLesson(readingLesson);
+              final presetGlyphs = glyphs.isEmpty ? null : glyphs;
+
+              final title = readingLesson.title.isNotEmpty
+                  ? readingLesson.title
+                  : fallbackTitle;
+
+              return WordIdentificationPage(
+                title: title,
+                presetGlyphs: presetGlyphs,
+              );
+            },
+          );
         }
 
         return BlocProvider(
@@ -177,8 +201,71 @@ class _ReadingLessonPageState extends State<ReadingLessonPage> {
 
   Widget _buildPracticeView(BuildContext context, ReadingLessonActive state) {
     if (state.lesson.lessonType == LessonType.wordIdentification) {
-      return WordIdentificationPage();
+      final glyphs = _exampleGlyphsForLesson(state.lesson);
+      return WordIdentificationPage(
+        title: state.lesson.title,
+        presetGlyphs: glyphs.isEmpty ? null : glyphs,
+      );
     }
     return PracticeView(state: state);
+  }
+
+  Scaffold _buildLoadingScaffold(String title) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: const Center(child: CircularProgressIndicator()),
+    );
+  }
+
+  Scaffold _buildErrorScaffold(String title, String message) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: Text(
+          message,
+          style: Theme.of(context).textTheme.titleLarge,
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+
+  Future<ReadingLesson> _loadWordIdentificationLesson(
+    Map<String, dynamic> lessonData,
+  ) async {
+    final characterMap = await _loadCharacterMap();
+    return ReadingLesson.fromJson(lessonData, characterMap);
+  }
+
+  Future<Map<int, Character>> _loadCharacterMap() {
+    _characterMapFuture ??=
+        _characterRepository.getCharacters().then((characters) {
+      return {
+        for (final character in characters) character.characterId: character,
+      };
+    });
+    return _characterMapFuture!;
+  }
+
+  List<String> _exampleGlyphsForLesson(ReadingLesson lesson) {
+    final examples = lesson.examples;
+    if (examples == null || examples.isEmpty) {
+      return const [];
+    }
+
+    final glyphs = <String>[];
+    for (final example in examples) {
+      final candidate =
+          (example.word ?? example.characters.combinedGlyph).trim();
+      if (candidate.isEmpty) continue;
+      if (!glyphs.contains(candidate)) {
+        glyphs.add(candidate);
+      }
+    }
+    return glyphs;
   }
 }
