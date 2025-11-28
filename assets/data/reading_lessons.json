@@ -1420,6 +1420,288 @@
                     }
                 ]
             }
+        },
+        {
+            "lesson": {
+                "lessonType": "word-identification",
+                "number": 8,
+                "title": "Review",
+                "description": "A review lesson covering all consonants and vowels introduced in previous lessons.",
+                "goals": [],
+                "combinations": [],
+                "examples": [
+                    {
+                        "characterIds": [
+                            24,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            47,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            42,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            49,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            12
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            38,
+                            12
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            42,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            53,
+                            15
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            35,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            34,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            48,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            16
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            49,
+                            16
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            36,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            30,
+                            19
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            50,
+                            15
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            15
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            44,
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            8
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            28,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            48,
+                            19
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            39,
+                            23
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            36,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            43,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            30,
+                            10
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            10
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            52,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            39,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            44,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            42,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            58,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            45,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            41,
+                            20
+                        ]
+                    }
+                ]
+            }
         }
     ]
 }
