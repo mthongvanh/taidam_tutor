@@ -98,7 +98,8 @@ class CharacterGroupingService {
     final sameClass = allCharacters
         .where((char) =>
             char.characterClass == target.characterClass &&
-            char.characterId != target.characterId)
+            char.characterId != target.characterId &&
+            char.romanization != target.romanization)
         .toList();
 
     // If we have enough from same class, use those
@@ -109,7 +110,9 @@ class CharacterGroupingService {
 
     // Otherwise, include characters from other classes
     final others = allCharacters
-        .where((char) => char.characterId != target.characterId)
+        .where((char) =>
+            char.characterId != target.characterId &&
+            char.romanization != target.romanization)
         .toList();
 
     others.shuffle();
