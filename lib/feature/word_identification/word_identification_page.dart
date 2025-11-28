@@ -73,9 +73,8 @@ class _WordIdentificationView extends StatelessWidget {
                 title: 'Which sound matches the highlighted word?',
                 prompt: _WordPanel(state: state),
                 answerDescription: Text(
-                  'Tap the sound that matches the highlighted glyph.',
-                  style: Theme.of(context).textTheme.bodyLarge,
-                  textAlign: TextAlign.center,
+                  'Select the correct answer:',
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
                 answerOptions: question.soundOptions.indexed.map(
                   (entry) {

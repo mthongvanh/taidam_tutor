@@ -5,6 +5,7 @@ import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_cubit.d
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_state.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
 import 'package:taidam_tutor/widgets/answer_option_button.dart';
+import 'package:taidam_tutor/widgets/quiz_feedback_banner.dart';
 import 'package:taidam_tutor/widgets/quiz_practice_layout.dart';
 
 class PracticeView extends StatelessWidget {
@@ -16,7 +17,6 @@ class PracticeView extends StatelessWidget {
   Widget build(BuildContext context) {
     final practiceQuestions = state.practiceQuestions;
     final currentQuestion = practiceQuestions[state.currentIndex];
-    final progress = (state.currentIndex + 1) / practiceQuestions.length;
     final hasAnswered = state.selectedAnswerIndex != null;
     final totalQuestions = state.totalPracticeQuestions;
     final isLastQuestion = state.currentIndex >= practiceQuestions.length - 1;
@@ -42,50 +42,18 @@ class PracticeView extends StatelessWidget {
       ),
     );
 
+    final isAnswerCorrect =
+        state.selectedAnswerIndex == currentQuestion.correctAnswerIndex;
+
     final feedback = hasAnswered
-        ? Container(
-            padding: EdgeInsets.all(Spacing.m),
-            decoration: BoxDecoration(
-              color: state.selectedAnswerIndex ==
-                      currentQuestion.correctAnswerIndex
-                  ? Colors.green.withAlpha(26)
-                  : Colors.red.withAlpha(26),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: state.selectedAnswerIndex ==
-                        currentQuestion.correctAnswerIndex
-                    ? Colors.green
-                    : Colors.red,
-                width: 2,
-              ),
-            ),
-            child: Row(
-              children: [
-                Icon(
-                  state.selectedAnswerIndex ==
-                          currentQuestion.correctAnswerIndex
-                      ? Icons.check_circle
-                      : Icons.cancel,
-                  color: state.selectedAnswerIndex ==
-                          currentQuestion.correctAnswerIndex
-                      ? Colors.green
-                      : Colors.red,
-                  size: 32,
-                ),
-                SizedBox(width: Spacing.s),
-                Expanded(
-                  child: Text(
-                    state.selectedAnswerIndex ==
-                            currentQuestion.correctAnswerIndex
-                        ? 'Correct! Great job!'
-                        : 'Not quite. The correct answer is: ${currentQuestion.options[currentQuestion.correctAnswerIndex]}',
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                ),
-              ],
-            ),
+        ? QuizFeedbackBanner(
+            isCorrect: isAnswerCorrect,
+            title: isAnswerCorrect
+                ? 'Correct! Great job!'
+                : 'Not quite this time.',
+            message: isAnswerCorrect
+                ? 'Keep the streak going.'
+                : 'The correct answer is: ${currentQuestion.options[currentQuestion.correctAnswerIndex]}',
           )
         : null;
 
@@ -97,9 +65,8 @@ class PracticeView extends StatelessWidget {
       prompt: promptCard,
       wrapPromptInCard: false,
       answerDescription: Text(
-        'Select the description that matches this syllable.',
+        'Select the correct answer:',
         style: Theme.of(context).textTheme.titleMedium,
-        textAlign: TextAlign.center,
       ),
       answerOptions: List.generate(
         currentQuestion.options.length,

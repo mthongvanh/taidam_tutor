@@ -13,6 +13,7 @@ import 'package:taidam_tutor/feature/alphabet_practice/widgets/drill_completion_
 import 'package:taidam_tutor/widgets/answer_option_button.dart';
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
 import 'package:taidam_tutor/widgets/quiz_practice_layout.dart';
+import 'package:taidam_tutor/widgets/quiz_feedback_banner.dart';
 
 class CharacterDrillPage extends StatelessWidget {
   final List<Character> characters;
@@ -166,9 +167,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
         wrapPromptInCard: false,
         answerDescription: Text(
           'Select the correct sound:',
-          style: theme.textTheme.titleMedium?.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+          style: theme.textTheme.titleMedium,
           textAlign: TextAlign.center,
         ),
         answerOptions: state.options.asMap().entries.map((entry) {
@@ -270,7 +269,12 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
             onTap: null,
           );
         }).toList(),
-        feedback: _AnsweredFeedback(isCorrect: state.isCorrect),
+        feedback: QuizFeedbackBanner(
+          isCorrect: state.isCorrect,
+          message: state.isCorrect
+              ? 'Keep it up!'
+              : 'Review the highlighted answer and try again.',
+        ),
         answerExtras: [
           _DrillStatsRow(
             correctLabel: '${state.correctAnswers}',
@@ -387,51 +391,6 @@ class _StatChip extends StatelessWidget {
           ],
         ),
       ],
-    );
-  }
-}
-
-class _AnsweredFeedback extends StatelessWidget {
-  const _AnsweredFeedback({required this.isCorrect});
-
-  final bool isCorrect;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final color =
-        isCorrect ? theme.colorScheme.primary : theme.colorScheme.error;
-
-    return Container(
-      padding: const EdgeInsets.all(Spacing.m),
-      decoration: BoxDecoration(
-        color: color.withAlpha(32),
-        borderRadius: BorderRadius.circular(Spacing.l),
-        border: Border.all(color: color, width: 2),
-      ),
-      child: Column(
-        children: [
-          Icon(isCorrect ? Icons.check_circle : Icons.cancel,
-              color: color, size: 48),
-          const SizedBox(height: Spacing.s),
-          Text(
-            isCorrect ? 'Correct!' : 'Not quite this time.',
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: color,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: Spacing.xs),
-          Text(
-            isCorrect
-                ? 'Keep it up!'
-                : 'Review the highlighted answer and try again.',
-            style: theme.textTheme.bodyMedium,
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
     );
   }
 }
