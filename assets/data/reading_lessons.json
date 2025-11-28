@@ -635,19 +635,27 @@
                 "description": "Some Tai Dam vowels have two parts. These parts can appear before and above the consonant they belong to in a syllable. Imagine a left-vowel syllable that looks like this: 𝑉₁ + 𝐶 + 𝑉₂.\nSo:\n  ꪹ + ꪎ becomes ꪹꪎ (\"sue\"),\n  ꪹꪷ + ꪁ becomes ꪹꪁꪷ (\"koe\"),\nand\n  ꪹꪸ + ꪎ becomes ꪹꪎꪸ (\"se\").",
                 "goals": [
                     {
-                        "characterIds": [17],
+                        "characterIds": [
+                            17
+                        ],
                         "description": null
                     },
                     {
-                        "characterIds": [15],
+                        "characterIds": [
+                            15
+                        ],
                         "description": null
                     },
                     {
-                        "characterIds": [10],
+                        "characterIds": [
+                            10
+                        ],
                         "description": null
                     },
                     {
-                        "characterIds": [11],
+                        "characterIds": [
+                            11
+                        ],
                         "description": null
                     }
                 ],
@@ -683,7 +691,7 @@
                     {
                         "characterIds": [
                             40,
-                            17            
+                            17
                         ],
                         "description": "Combining vowel 'ue' with consonant 'th'"
                     },
@@ -735,7 +743,7 @@
                     {
                         "characterIds": [
                             25,
-                            15                            
+                            15
                         ]
                     },
                     {
@@ -748,11 +756,11 @@
                         "characterIds": [
                             24,
                             11
-                        ]                           
+                        ]
                     },
                     {
                         "characterIds": [
-                            32, 
+                            32,
                             11
                         ]
                     },
@@ -833,11 +841,15 @@
                 "description": "Tai Dam vowels can also sit below the consonant they belong to in a syllable. Vowels can also appear in combination before a consonant and after it. Imagine a syllable that looks like this: 𝑉₁ + 𝐶 + 𝑉₂.\nSo:\n  ꪎ +  ꪴ becomes ꪎꪴ (\"su\"),\nand\n  ꪹ + ꪎ + ꪱ becomes ꪹꪎꪱ (\"saw\").",
                 "goals": [
                     {
-                        "characterIds": [9],
+                        "characterIds": [
+                            9
+                        ],
                         "description": null
                     },
                     {
-                        "characterIds": [21],
+                        "characterIds": [
+                            21
+                        ],
                         "description": null
                     }
                 ],
@@ -873,7 +885,7 @@
                     {
                         "characterIds": [
                             46,
-                            9            
+                            9
                         ],
                         "description": "Combining consonant 'p' and vowel 'u'"
                     },
@@ -925,7 +937,7 @@
                     {
                         "characterIds": [
                             44,
-                            17                            
+                            17
                         ]
                     },
                     {
@@ -938,7 +950,7 @@
                         "characterIds": [
                             42,
                             4
-                        ]                           
+                        ]
                     },
                     {
                         "characterIds": [
@@ -1003,107 +1015,401 @@
                 "number": 6,
                 "title": "Review",
                 "description": "A review lesson covering all consonants and vowels introduced in previous lessons.",
+                "goals": [],
+                "examples": [
+                    {
+                        "characterIds": [
+                            41,
+                            4
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            17
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            28,
+                            23
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            4
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            17
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            17
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            44,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            22
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            43,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            45,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            39,
+                            8
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            23
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            38,
+                            23
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            36,
+                            4
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            4
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            35,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            25,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            38,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            37,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            47,
+                            22
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            22
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            47,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            31,
+                            10
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            9
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            27,
+                            10
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "lesson": {
+                "number": 7,
+                "title": "Pre-consonant dipthongs",
+                "description": "This lesson introduces three vowels (ai, ae, oo) and four consonants (f, 'f, j, 'j). The vowels ai and ae appear before the consonant, while oo also appears before the consonant. You'll practice combining these to form syllables like 'fai' (fire), 'fie' (expensive), and 'jae' (separate).",
                 "goals": [
+                    {
+                        "characterIds": [
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            19
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            12
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            48
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            49
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            50
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            52
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            53
+                        ]
+                    }
+                ],
+                "combinations": [
+                    {
+                        "characterIds": [
+                            48,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            49,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            49,
+                            16
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            50,
+                            19
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            12
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            52,
+                            12
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            53,
+                            19
+                        ]
+                    }
                 ],
                 "examples": [
                     {
-                        "characterIds": [41, 4]
+                        "characterIds": [
+                            48,
+                            19
+                        ]
                     },
                     {
-                        "characterIds": [24, 17]
+                        "characterIds": [
+                            48,
+                            21
+                        ]
                     },
                     {
-                        "characterIds": [28, 23]
+                        "characterIds": [
+                            49,
+                            20
+                        ]
                     },
                     {
-                        "characterIds": [24, 4]
+                        "characterIds": [
+                            48,
+                            16
+                        ]
                     },
                     {
-                        "characterIds": [26, 17]
+                        "characterIds": [
+                            46,
+                            20
+                        ]
                     },
                     {
-                        "characterIds": [31, 17]
+                        "characterIds": [
+                            43,
+                            5
+                        ]
                     },
                     {
-                        "characterIds": [44, 18]
+                        "characterIds": [
+                            49,
+                            5
+                        ]
                     },
                     {
-                        "characterIds": [29, 18]
+                        "characterIds": [
+                            50,
+                            20
+                        ]
                     },
                     {
-                        "characterIds": [32, 7]
+                        "characterIds": [
+                            33,
+                            20
+                        ]
                     },
                     {
-                        "characterIds": [25, 22]
+                        "characterIds": [
+                            52,
+                            5
+                        ]
                     },
                     {
-                        "characterIds": [43, 5]
+                        "characterIds": [
+                            51,
+                            7
+                        ]
                     },
                     {
-                        "characterIds": [45, 5]
+                        "characterIds": [
+                            38,
+                            12
+                        ]
                     },
                     {
-                        "characterIds": [46, 18]
+                        "characterIds": [
+                            50,
+                            5
+                        ]
                     },
                     {
-                        "characterIds": [39, 8]
+                        "characterIds": [
+                            53,
+                            19
+                        ]
                     },
                     {
-                        "characterIds": [25, 23]
+                        "characterIds": [
+                            24,
+                            4
+                        ]
                     },
                     {
-                        "characterIds": [38, 23]
-                    },
-                    {
-                        "characterIds": [29, 5]
-                    },
-                    {
-                        "characterIds": [36, 4]
-                    },
-                    {
-                        "characterIds": [32, 4]
-                    },
-                    {
-                        "characterIds": [35, 5]
-                    },
-                    {
-                        "characterIds": [25, 5]
-                    },
-                    {
-                        "characterIds": [38, 9]
-                    },
-                    {
-                        "characterIds": [37, 9]
-                    },
-                    {
-                        "characterIds": [24, 9]
-                    },
-                    {
-                        "characterIds": [47, 22]
-                    },
-                    {
-                        "characterIds": [26, 22]
-                    },
-                    {
-                        "characterIds": [47, 21]
-                    },
-                    {
-                        "characterIds": [32, 21]
-                    },
-                    {
-                        "characterIds": [31, 10]
-                    },
-                    {
-                        "characterIds": [32, 9]
-                    },
-                    {
-                        "characterIds": [33, 11]
-                    },
-                    {
-                        "characterIds": [26, 5]
-                    },
-                    {
-                        "characterIds": [27, 10]
+                        "characterIds": [
+                            32,
+                            5
+                        ]
                     }
                 ]
             }
