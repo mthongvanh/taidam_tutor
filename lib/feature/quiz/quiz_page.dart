@@ -7,8 +7,9 @@ import 'package:taidam_tutor/feature/quiz/core/data/models/quiz_question.dart';
 import 'package:taidam_tutor/feature/quiz/cubit/quiz_cubit.dart';
 import 'package:taidam_tutor/feature/quiz/cubit/quiz_state.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
-import 'package:taidam_tutor/widgets/error/tai_error.dart';
 import 'package:taidam_tutor/widgets/answer_option_button.dart';
+import 'package:taidam_tutor/widgets/error/tai_error.dart';
+import 'package:taidam_tutor/widgets/quiz_practice_layout.dart';
 
 class QuizPage extends StatelessWidget {
   final AudioPlayer player = AudioPlayer();
@@ -66,11 +67,12 @@ class QuizPage extends StatelessWidget {
                 ),
               QuizLoaded() => _QuizLoaded(
                   question: state.currentQuestion,
-                  progress: state.progress,
                   player: player,
                   score: state.score,
                   selectedAnswerIndex: state.selectedAnswerIndex,
                   isCorrect: state.isCorrect,
+                  currentQuestionNumber: state.currentQuestionNumber,
+                  totalQuestions: state.totalQuestions,
                 ),
               QuizFinished() => _QuizFinished(
                   state.score.toString(),
@@ -148,17 +150,18 @@ class QuizPage extends StatelessWidget {
 
 class _QuizLoaded extends StatelessWidget {
   final QuizQuestion question;
-  final double progress;
   final int score;
   final int? selectedAnswerIndex;
   final bool? isCorrect;
-
+  final int currentQuestionNumber;
+  final int totalQuestions;
   final AudioPlayer player;
 
   const _QuizLoaded({
     required this.question,
     required this.player,
-    this.progress = 0,
+    required this.currentQuestionNumber,
+    required this.totalQuestions,
     this.score = 0,
     this.selectedAnswerIndex,
     this.isCorrect,
@@ -166,107 +169,138 @@ class _QuizLoaded extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        LinearProgressIndicator(
-          value: progress,
-          // backgroundColor: Colors.grey.shade300,
-          // color: Colors.blue,
-        ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.only(
-              left: 16.0,
-              bottom: 16.0,
-              right: 16.0,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Text(
-                  'Score: $score',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                const SizedBox(height: 16),
-                ..._buildQuestionContent(context),
-                const SizedBox(height: 16),
-                ...question.options.asMap().entries.map((entry) {
-                  return _buildAnswerOption(entry, context);
-                }),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
+    final hasAnswered = selectedAnswerIndex != null;
 
-  List<Widget> _buildQuestionContent(BuildContext context) {
-    List<Widget> content = [];
-
+    final promptPieces = <Widget>[];
     if (question.textQuestion != null) {
-      content.add(
-        Padding(
-          padding: const EdgeInsets.only(bottom: 16.0),
-          child: Text(
-            question.textQuestion!,
-            style: Theme.of(context).textTheme.displayLarge,
-            textAlign: TextAlign.center,
-          ),
+      promptPieces.add(
+        Text(
+          question.textQuestion!,
+          style: Theme.of(context).textTheme.displayLarge,
+          textAlign: TextAlign.center,
         ),
       );
     }
 
     if (question.imagePath != null) {
-      content.add(
-        Image.asset(
-          question.imagePath!,
-          fit: BoxFit.cover,
+      promptPieces.add(
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: Spacing.s),
+          child: Image.asset(
+            question.imagePath!,
+            fit: BoxFit.contain,
+          ),
         ),
       );
     }
 
     if (question.audioPath != null) {
-      content.add(
-        IconButton(
-          icon: Icon(Icons.play_arrow),
+      promptPieces.add(
+        ElevatedButton.icon(
           onPressed: () => player.play(AssetSource(question.audioPath!)),
+          icon: const Icon(Icons.volume_up),
+          label: const Text('Play Audio'),
         ),
       );
     }
 
-    if (question.prompt != null) {
-      content.add(
+    if (promptPieces.isEmpty) {
+      promptPieces.add(
         Text(
-          question.prompt!,
+          question.prompt ?? 'Question',
           style: Theme.of(context).textTheme.titleLarge,
           textAlign: TextAlign.center,
         ),
       );
     }
 
-    return content;
+    return QuizPracticeLayout(
+      currentQuestion: currentQuestionNumber,
+      totalQuestions: totalQuestions,
+      scoreLabel: 'Score: $score',
+      title: question.prompt ?? 'Quiz Challenge',
+      prompt: Column(
+        mainAxisSize: MainAxisSize.min,
+        spacing: Spacing.s,
+        children: promptPieces,
+      ),
+      answerDescription: Text(
+        'Choose the correct answer:',
+        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+        textAlign: TextAlign.center,
+      ),
+      answerOptions: question.options.asMap().entries.map((entry) {
+        final idx = entry.key;
+        final optionText = entry.value;
+        return AnswerOptionButton(
+          label: String.fromCharCode(65 + idx),
+          option: optionText,
+          isSelected: selectedAnswerIndex == idx,
+          isCorrect: idx == question.correctAnswerIndex,
+          hasAnswered: hasAnswered,
+          onTap: hasAnswered
+              ? null
+              : () => context.read<QuizCubit>().selectAnswer(idx),
+        );
+      }).toList(),
+      feedback: hasAnswered
+          ? _QuizFeedback(
+              isCorrect: isCorrect ?? false,
+              correctAnswer: question.options[question.correctAnswerIndex],
+            )
+          : null,
+      bottomButton: FilledButton(
+        onPressed:
+            hasAnswered ? () => context.read<QuizCubit>().nextQuestion() : null,
+        child: Text(
+          currentQuestionNumber < totalQuestions ? 'Continue' : 'See Results',
+        ),
+      ),
+    );
   }
+}
 
-  Widget _buildAnswerOption(
-    MapEntry<int, String> entry,
-    BuildContext context,
-  ) {
-    final idx = entry.key;
-    final optionText = entry.value;
-    final hasAnswered = selectedAnswerIndex != null;
+class _QuizFeedback extends StatelessWidget {
+  const _QuizFeedback({
+    required this.isCorrect,
+    required this.correctAnswer,
+  });
 
-    return Padding(
-      padding: EdgeInsets.only(bottom: Spacing.s),
-      child: AnswerOptionButton(
-        label: String.fromCharCode(65 + idx),
-        option: optionText,
-        isSelected: selectedAnswerIndex == idx,
-        isCorrect: idx == question.correctAnswerIndex,
-        hasAnswered: hasAnswered,
-        onTap: hasAnswered
-            ? null
-            : () => context.read<QuizCubit>().selectAnswer(idx),
+  final bool isCorrect;
+  final String correctAnswer;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final color = isCorrect ? Colors.green : theme.colorScheme.error;
+
+    return Container(
+      padding: const EdgeInsets.all(Spacing.m),
+      decoration: BoxDecoration(
+        color: color.withAlpha(32),
+        borderRadius: BorderRadius.circular(Spacing.m),
+        border: Border.all(color: color, width: 2),
+      ),
+      child: Row(
+        children: [
+          Icon(
+            isCorrect ? Icons.check_circle : Icons.cancel,
+            color: color,
+          ),
+          const SizedBox(width: Spacing.s),
+          Expanded(
+            child: Text(
+              isCorrect
+                  ? 'Correct!'
+                  : 'Not quite. Correct answer: $correctAnswer',
+              style: theme.textTheme.bodyLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

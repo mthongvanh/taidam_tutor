@@ -5,6 +5,7 @@ import 'package:taidam_tutor/feature/word_identification/cubit/word_identificati
 import 'package:taidam_tutor/feature/word_identification/cubit/word_identification_state.dart';
 import 'package:taidam_tutor/widgets/answer_option_button.dart';
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
+import 'package:taidam_tutor/widgets/quiz_practice_layout.dart';
 
 class WordIdentificationPage extends StatelessWidget {
   const WordIdentificationPage({
@@ -62,57 +63,61 @@ class _WordIdentificationView extends StatelessWidget {
                 );
               }
 
-              return ListView(
-                children: [
-                  _ScoreRow(state: state),
-                  const SizedBox(height: Spacing.m),
-                  Text(
-                    'Which sound matches the highlighted word?',
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  const SizedBox(height: Spacing.m),
-                  _WordPanel(state: state),
-                  const SizedBox(height: Spacing.l),
-                  ...question.soundOptions.indexed.map(
-                    (entry) {
-                      final idx = entry.$1;
-                      final optionText = entry.$2;
-                      final hasAnswered = state.selectedOptionIndex != null;
+              final hasAnswered = state.selectedOptionIndex != null;
 
-                      return Padding(
-                        padding: EdgeInsets.only(bottom: Spacing.s),
-                        child: AnswerOptionButton(
-                          label: String.fromCharCode(65 + idx),
-                          option: optionText,
-                          isSelected: state.selectedOptionIndex == idx,
-                          isCorrect: question.correctOptionIndex == idx,
-                          hasAnswered: hasAnswered,
-                          onTap: hasAnswered
-                              ? null
-                              : () => context
-                                  .read<WordIdentificationCubit>()
-                                  .selectOption(idx),
-                        ),
-                      );
-                    },
+              return QuizPracticeLayout(
+                currentQuestion: state.currentQuestionIndex + 1,
+                totalQuestions: state.totalQuestions,
+                scoreLabel:
+                    'Score: ${state.totalCorrect}/${state.totalAnswered}',
+                title: 'Which sound matches the highlighted word?',
+                prompt: _WordPanel(state: state),
+                answerDescription: Text(
+                  'Tap the sound that matches the highlighted glyph.',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                  textAlign: TextAlign.center,
+                ),
+                answerOptions: question.soundOptions.indexed.map(
+                  (entry) {
+                    final idx = entry.$1;
+                    final optionText = entry.$2;
+                    return AnswerOptionButton(
+                      label: String.fromCharCode(65 + idx),
+                      option: optionText,
+                      isSelected: state.selectedOptionIndex == idx,
+                      isCorrect: question.correctOptionIndex == idx,
+                      hasAnswered: hasAnswered,
+                      onTap: hasAnswered
+                          ? null
+                          : () => context
+                              .read<WordIdentificationCubit>()
+                              .selectOption(idx),
+                    );
+                  },
+                ).toList(),
+                feedback: hasAnswered
+                    ? _WordIdentificationFeedback(
+                        isCorrect: state.selectedOptionIndex ==
+                            question.correctOptionIndex,
+                        correctAnswer:
+                            question.soundOptions[question.correctOptionIndex],
+                      )
+                    : null,
+                bottomButton: FilledButton.icon(
+                  onPressed: hasAnswered
+                      ? context.read<WordIdentificationCubit>().nextWord
+                      : null,
+                  icon: Icon(
+                    state.currentQuestionIndex == state.totalQuestions - 1
+                        ? Icons.refresh
+                        : Icons.arrow_forward,
                   ),
-                  const SizedBox(height: Spacing.l),
-                  FilledButton.icon(
-                    onPressed: state.selectedOptionIndex != null
-                        ? context.read<WordIdentificationCubit>().nextWord
-                        : null,
-                    icon: Icon(
-                      state.currentQuestionIndex == state.totalQuestions - 1
-                          ? Icons.refresh
-                          : Icons.arrow_forward,
-                    ),
-                    label: Text(
-                      state.currentQuestionIndex == state.totalQuestions - 1
-                          ? 'New Challenge'
-                          : 'Next Word',
-                    ),
+                  label: Text(
+                    state.currentQuestionIndex == state.totalQuestions - 1
+                        ? 'New Challenge'
+                        : 'Next Word',
                   ),
-                ],
+                ),
               );
             },
           ),
@@ -131,15 +136,9 @@ class _WordPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     final spans = _buildGlyphSpans(context, state);
 
-    return Card(
-      margin: EdgeInsets.zero,
-      child: Padding(
-        padding: const EdgeInsets.all(Spacing.l),
-        child: Center(
-          child: RichText(
-            text: TextSpan(children: spans),
-          ),
-        ),
+    return Center(
+      child: RichText(
+        text: TextSpan(children: spans),
       ),
     );
   }
@@ -171,25 +170,44 @@ class _WordPanel extends StatelessWidget {
   }
 }
 
-class _ScoreRow extends StatelessWidget {
-  const _ScoreRow({required this.state});
+class _WordIdentificationFeedback extends StatelessWidget {
+  const _WordIdentificationFeedback({
+    required this.isCorrect,
+    required this.correctAnswer,
+  });
 
-  final WordIdentificationState state;
+  final bool isCorrect;
+  final String correctAnswer;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'Progress: ${state.currentQuestionIndex + 1}/${state.totalQuestions}',
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-        Text(
-          'Score: ${state.totalCorrect}/${state.totalAnswered}',
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-      ],
+    final theme = Theme.of(context);
+    final color = isCorrect ? Colors.green : theme.colorScheme.error;
+
+    return Container(
+      padding: const EdgeInsets.all(Spacing.m),
+      decoration: BoxDecoration(
+        color: color.withAlpha(28),
+        borderRadius: BorderRadius.circular(Spacing.m),
+        border: Border.all(color: color, width: 2),
+      ),
+      child: Row(
+        children: [
+          Icon(
+            isCorrect ? Icons.check_circle : Icons.cancel,
+            color: color,
+          ),
+          const SizedBox(width: Spacing.s),
+          Expanded(
+            child: Text(
+              isCorrect ? 'Correct!' : 'Correct sound: $correctAnswer',
+              style: theme.textTheme.bodyLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

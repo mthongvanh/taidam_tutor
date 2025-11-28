@@ -70,7 +70,10 @@ class QuizCubit extends Cubit<QuizState> {
         emit(
           QuizLoaded(
             currentQuestion: _allQuestions[_currentQuestionIndex],
-            progress: _currentQuestionIndex / _allQuestions.length.toDouble(),
+            progress:
+                (_currentQuestionIndex + 1) / _allQuestions.length.toDouble(),
+            currentQuestionNumber: _currentQuestionIndex + 1,
+            totalQuestions: _allQuestions.length,
             score: _currentScore,
             quizFilters: _quizFilters,
             selectedFilter: filter,
@@ -119,12 +122,6 @@ class QuizCubit extends Cubit<QuizState> {
         isCorrect: isCorrect,
         score: _currentScore,
       ));
-
-      // Optionally, you can add a delay before moving to the next question
-      // to show the user that they got it right.
-      Future.delayed(const Duration(seconds: 2), () {
-        nextQuestion();
-      });
     }
   }
 

@@ -8,6 +8,7 @@ import 'package:taidam_tutor/feature/flashcard/cubit/flashcard_practice_state.da
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
 import 'package:taidam_tutor/widgets/answer_option_button.dart';
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
+import 'package:taidam_tutor/widgets/quiz_practice_layout.dart';
 
 class FlashcardPracticePage extends StatelessWidget {
   final AudioPlayer player = AudioPlayer();
@@ -124,211 +125,131 @@ class _PracticeActiveView extends StatelessWidget {
     final flashcard = state.currentQuestion.flashcard;
     final hasHints = flashcard.hints != null && flashcard.hints!.isNotEmpty;
 
-    return Column(
+    final promptContent = Column(
+      spacing: Spacing.s,
       children: [
-        // Progress indicator
-        LinearProgressIndicator(
-          value: state.progress,
-          minHeight: 8,
-          backgroundColor:
-              Theme.of(context).colorScheme.surfaceContainerHighest,
-          valueColor: AlwaysStoppedAnimation<Color>(
-            Theme.of(context).colorScheme.primary,
-          ),
+        Text(
+          flashcard.question,
+          style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                fontFamily: Fonts.characters,
+                fontWeight: FontWeight.bold,
+              ),
+          textAlign: TextAlign.center,
         ),
+        if (flashcard.audio?.isNotEmpty == true)
+          ElevatedButton.icon(
+            onPressed: () {
+              player.play(AssetSource('audio/${flashcard.audio}.caf'));
+            },
+            icon: const Icon(Icons.volume_up),
+            label: const Text('Play Audio'),
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24,
+                vertical: 12,
+              ),
+            ),
+          ),
+      ],
+    );
 
-        Expanded(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.all(16),
+    final hintControls = <Widget>[];
+    if (hasHints) {
+      hintControls.add(
+        Row(
+          children: [
+            Expanded(
+              child: OutlinedButton.icon(
+                onPressed: state.selectedAnswerIndex == null
+                    ? () => context.read<FlashcardPracticeCubit>().toggleHint()
+                    : null,
+                icon: Icon(
+                  state.showHint ? Icons.visibility_off : Icons.visibility,
+                ),
+                label: Text(state.showHint ? 'Hide Hint' : 'Show Hint'),
+                style: OutlinedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+
+      if (state.showHint) {
+        hintControls.add(
+          TaiCard.margin(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Question counter and score
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Question ${state.currentQuestionIndex + 1} of ${state.totalQuestions}',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: Spacing.sm,
-                        vertical: Spacing.xs,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primaryContainer,
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Text(
-                        'Score: ${state.score}',
-                        style:
-                            Theme.of(context).textTheme.titleMedium?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                      ),
-                    ),
-                  ],
-                ),
-
-                const SizedBox(height: 24),
-
-                // Question card with image and audio
-                TaiCard.margin(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: Spacing.l,
-                      bottom: Spacing.s,
-                    ),
-                    child: Column(
-                      spacing: Spacing.s,
-                      children: [
-                        // Question text
-                        Text(
-                          flashcard.question,
-                          style: Theme.of(context)
-                              .textTheme
-                              .displaySmall
-                              ?.copyWith(
-                                fontFamily: Fonts.characters,
-                                fontWeight: FontWeight.bold,
-                              ),
-                          textAlign: TextAlign.center,
-                        ),
-
-                        // Audio button
-                        if (flashcard.audio?.isNotEmpty == true)
-                          ElevatedButton.icon(
-                            onPressed: () {
-                              player.play(
-                                  AssetSource('audio/${flashcard.audio}.caf'));
-                            },
-                            icon: const Icon(Icons.volume_up),
-                            label: const Text('Play Audio'),
-                            style: ElevatedButton.styleFrom(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 24,
-                                vertical: 12,
-                              ),
-                            ),
-                          ),
-                      ],
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 16),
-
-                // Hint button and display
-                if (hasHints) ...[
-                  Row(
-                    children: [
-                      Expanded(
-                        child: OutlinedButton.icon(
-                          onPressed: state.selectedAnswerIndex == null
-                              ? () => context
-                                  .read<FlashcardPracticeCubit>()
-                                  .toggleHint()
-                              : null,
-                          icon: Icon(state.showHint
-                              ? Icons.visibility_off
-                              : Icons.visibility),
-                          label:
-                              Text(state.showHint ? 'Hide Hint' : 'Show Hint'),
-                          style: OutlinedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(vertical: 12),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  if (state.showHint) ...[
-                    TaiCard.margin(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Hint:',
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleMedium
-                                ?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                          ),
-                          const SizedBox(height: 8),
-                          ...(flashcard.hints!.toList()
-                                ..sort((a, b) => (a.hintOrder ?? 999)
-                                    .compareTo(b.hintOrder ?? 999)))
-                              .map((hint) => Padding(
-                                    padding: const EdgeInsets.only(bottom: 4),
-                                    child: Text(
-                                      '${hint.hintDisplayText ?? hint.type.name}: ${hint.content}',
-                                      style:
-                                          Theme.of(context).textTheme.bodyLarge,
-                                    ),
-                                  )),
-                        ],
-                      ),
-                    ),
-                  ],
-                ],
-
-                const SizedBox(height: 24),
-
-                // Answer options
                 Text(
-                  'Select the correct answer:',
+                  'Hint:',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                 ),
-
-                const SizedBox(height: 12),
-
-                ...List.generate(
-                  state.currentQuestion.options.length,
-                  (index) => Padding(
-                    padding: EdgeInsets.only(bottom: Spacing.sm),
-                    child: AnswerOptionButton(
-                      label: String.fromCharCode(65 + index),
-                      option: state.currentQuestion.options[index],
-                      isSelected: state.selectedAnswerIndex == index,
-                      isCorrect:
-                          index == state.currentQuestion.correctAnswerIndex,
-                      hasAnswered: state.selectedAnswerIndex != null,
-                      onTap: state.selectedAnswerIndex == null
-                          ? () => context
-                              .read<FlashcardPracticeCubit>()
-                              .selectAnswer(index)
-                          : null,
+                const SizedBox(height: 8),
+                ...(flashcard.hints!.toList()
+                      ..sort((a, b) =>
+                          (a.hintOrder ?? 999).compareTo(b.hintOrder ?? 999)))
+                    .map(
+                  (hint) => Padding(
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Text(
+                      '${hint.hintDisplayText ?? hint.type.name}: ${hint.content}',
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
                 ),
-
-                const SizedBox(height: 24),
-
-                // Next button (shown after answering)
-                if (state.selectedAnswerIndex != null)
-                  ElevatedButton(
-                    onPressed: () =>
-                        context.read<FlashcardPracticeCubit>().nextQuestion(),
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      minimumSize: const Size.fromHeight(48),
-                    ),
-                    child: Text(
-                      state.currentQuestionIndex < state.totalQuestions - 1
-                          ? 'Next Question'
-                          : 'Finish Practice',
-                      style: const TextStyle(fontSize: 18),
-                    ),
-                  ),
               ],
             ),
           ),
+        );
+      }
+    }
+
+    return QuizPracticeLayout(
+      currentQuestion: state.currentQuestionIndex + 1,
+      totalQuestions: state.totalQuestions,
+      scoreLabel: 'Score: ${state.score}',
+      title: 'Flashcard Practice',
+      prompt: promptContent,
+      promptExtras: hintControls,
+      answerDescription: Text(
+        'Select the correct answer:',
+        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+      ),
+      answerOptions: List.generate(
+        state.currentQuestion.options.length,
+        (index) => AnswerOptionButton(
+          label: String.fromCharCode(65 + index),
+          option: state.currentQuestion.options[index],
+          isSelected: state.selectedAnswerIndex == index,
+          isCorrect: index == state.currentQuestion.correctAnswerIndex,
+          hasAnswered: state.selectedAnswerIndex != null,
+          onTap: state.selectedAnswerIndex == null
+              ? () => context.read<FlashcardPracticeCubit>().selectAnswer(index)
+              : null,
         ),
-      ],
+      ),
+      bottomButton: state.selectedAnswerIndex != null
+          ? ElevatedButton(
+              onPressed: () =>
+                  context.read<FlashcardPracticeCubit>().nextQuestion(),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                minimumSize: const Size.fromHeight(48),
+              ),
+              child: Text(
+                state.currentQuestionIndex < state.totalQuestions - 1
+                    ? 'Next Question'
+                    : 'Finish Practice',
+                style: const TextStyle(fontSize: 18),
+              ),
+            )
+          : null,
     );
   }
 }

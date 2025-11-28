@@ -41,6 +41,8 @@ class QuizLoaded extends QuizState {
   final FilterType selectedFilter;
   final List<FilterType> quizFilters;
   final double progress;
+  final int currentQuestionNumber;
+  final int totalQuestions;
 
   const QuizLoaded({
     required this.currentQuestion,
@@ -50,6 +52,8 @@ class QuizLoaded extends QuizState {
     this.selectedFilter = FilterType.none,
     this.quizFilters = const [],
     this.progress = 0.0,
+    this.currentQuestionNumber = 0,
+    this.totalQuestions = 0,
   });
 
   QuizLoaded copyWith({
@@ -62,6 +66,8 @@ class QuizLoaded extends QuizState {
     FilterType? selectedFilter,
     List<FilterType>? quizFilters,
     double? progress,
+    int? currentQuestionNumber,
+    int? totalQuestions,
   }) {
     return QuizLoaded(
       currentQuestion: currentQuestion ?? this.currentQuestion,
@@ -73,6 +79,9 @@ class QuizLoaded extends QuizState {
       selectedFilter: selectedFilter ?? this.selectedFilter,
       quizFilters: quizFilters ?? this.quizFilters,
       progress: progress ?? this.progress,
+      currentQuestionNumber:
+          currentQuestionNumber ?? this.currentQuestionNumber,
+      totalQuestions: totalQuestions ?? this.totalQuestions,
     );
   }
 
@@ -85,6 +94,8 @@ class QuizLoaded extends QuizState {
         selectedFilter,
         quizFilters,
         progress,
+        currentQuestionNumber,
+        totalQuestions,
       ];
 }
 
