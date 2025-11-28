@@ -1,12 +1,14 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:taidam_tutor/core/constants/spacing.dart';
 import 'package:taidam_tutor/core/data/filter/filter_type.dart';
 import 'package:taidam_tutor/feature/quiz/core/data/models/quiz_question.dart';
 import 'package:taidam_tutor/feature/quiz/cubit/quiz_cubit.dart';
 import 'package:taidam_tutor/feature/quiz/cubit/quiz_state.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
+import 'package:taidam_tutor/widgets/answer_option_button.dart';
 
 class QuizPage extends StatelessWidget {
   final AudioPlayer player = AudioPlayer();
@@ -250,31 +252,21 @@ class _QuizLoaded extends StatelessWidget {
     MapEntry<int, String> entry,
     BuildContext context,
   ) {
-    int idx = entry.key;
-    String optionText = entry.value;
-    bool isSelected = selectedAnswerIndex == idx;
-    Color? buttonColor;
-
-    if (selectedAnswerIndex != null) {
-      if (isSelected) {
-        buttonColor = isCorrect! ? Colors.green.shade300 : Colors.red.shade300;
-      } else if (idx == question.correctAnswerIndex && !isCorrect!) {
-        // Optionally highlight correct answer if user was wrong and an answer has been selected
-        // buttonColor = Colors.green.shade200;
-      }
-    }
+    final idx = entry.key;
+    final optionText = entry.value;
+    final hasAnswered = selectedAnswerIndex != null;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: buttonColor,
-          padding: const EdgeInsets.symmetric(vertical: 16.0),
-        ),
-        onPressed: selectedAnswerIndex == null
-            ? () => context.read<QuizCubit>().selectAnswer(idx)
-            : null, // Disable after an answer is selected
-        child: Text(optionText),
+      padding: EdgeInsets.only(bottom: Spacing.s),
+      child: AnswerOptionButton(
+        label: String.fromCharCode(65 + idx),
+        option: optionText,
+        isSelected: selectedAnswerIndex == idx,
+        isCorrect: idx == question.correctAnswerIndex,
+        hasAnswered: hasAnswered,
+        onTap: hasAnswered
+            ? null
+            : () => context.read<QuizCubit>().selectAnswer(idx),
       ),
     );
   }

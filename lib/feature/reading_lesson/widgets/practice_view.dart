@@ -4,6 +4,7 @@ import 'package:taidam_tutor/core/constants/spacing.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_cubit.dart';
 import 'package:taidam_tutor/feature/reading_lesson/cubit/reading_lesson_state.dart';
 import 'package:taidam_tutor/utils/extensions/card_ext.dart';
+import 'package:taidam_tutor/widgets/answer_option_button.dart';
 
 class PracticeView extends StatelessWidget {
   final ReadingLessonActive state;
@@ -123,7 +124,7 @@ class PracticeView extends StatelessWidget {
                   currentQuestion.options.length,
                   (index) => Padding(
                     padding: EdgeInsets.only(bottom: Spacing.s),
-                    child: _AnswerOptionButton(
+                    child: AnswerOptionButton(
                       label: String.fromCharCode(65 + index), // A, B, C, D
                       option: currentQuestion.options[index],
                       isSelected: state.selectedAnswerIndex == index,
@@ -210,108 +211,6 @@ class PracticeView extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class _AnswerOptionButton extends StatelessWidget {
-  final String label;
-  final String option;
-  final bool isSelected;
-  final bool isCorrect;
-  final bool hasAnswered;
-  final VoidCallback? onTap;
-
-  const _AnswerOptionButton({
-    required this.label,
-    required this.option,
-    required this.isSelected,
-    required this.isCorrect,
-    required this.hasAnswered,
-    this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final brightness = Theme.of(context).brightness;
-
-    Color? backgroundColor;
-    Color? borderColor;
-
-    if (hasAnswered) {
-      if (isSelected) {
-        if (isCorrect) {
-          backgroundColor = brightness == Brightness.dark
-              ? Colors.green.shade900
-              : Colors.green.shade100;
-          borderColor = Colors.green;
-        } else {
-          backgroundColor = brightness == Brightness.dark
-              ? Colors.red.shade900
-              : Colors.red.shade100;
-          borderColor = Colors.red;
-        }
-      } else if (isCorrect) {
-        backgroundColor = brightness == Brightness.dark
-            ? Colors.green.shade900
-            : Colors.green.shade100;
-        borderColor = Colors.green;
-      }
-    }
-
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
-      child: Container(
-        padding: EdgeInsets.all(Spacing.m),
-        decoration: BoxDecoration(
-          color: backgroundColor ?? Theme.of(context).colorScheme.surface,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: borderColor ?? Theme.of(context).colorScheme.outline,
-            width: 2,
-          ),
-        ),
-        child: Row(
-          children: [
-            Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                color: hasAnswered && (isSelected || isCorrect)
-                    ? (isCorrect ? Colors.green : Colors.red)
-                    : Theme.of(context).colorScheme.primary,
-                shape: BoxShape.circle,
-              ),
-              child: Center(
-                child: Text(
-                  label,
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.onPrimary,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(width: Spacing.m),
-            Expanded(
-              child: Text(
-                option,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
-              ),
-            ),
-            if (hasAnswered && isCorrect)
-              Icon(
-                Icons.check_circle,
-                color: Colors.green,
-                size: 28,
-              ),
-          ],
-        ),
-      ),
     );
   }
 }
