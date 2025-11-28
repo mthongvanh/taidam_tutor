@@ -32,6 +32,7 @@ class PracticeView extends StatelessWidget {
     }
 
     final promptCard = TaiCard.margin(
+      clipBehavior: Clip.none,
       child: Text(
         currentQuestion.character,
         style: const TextStyle(

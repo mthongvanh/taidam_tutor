@@ -26,6 +26,7 @@ class QuizPracticeLayout extends StatelessWidget {
     this.padding = const EdgeInsets.all(Spacing.m),
     this.wrapPromptInCard = true,
     this.promptPadding,
+    this.clipPromptInCard = false,
   });
 
   /// 1-based current question index for display.
@@ -75,6 +76,9 @@ class QuizPracticeLayout extends StatelessWidget {
 
   /// Whether the prompt should be wrapped in a standard Tai card.
   final bool wrapPromptInCard;
+
+  /// Whether the prompt card should clip its content.
+  final bool clipPromptInCard;
 
   /// Optional padding applied inside the prompt card when wrapping.
   final EdgeInsetsGeometry? promptPadding;
@@ -158,6 +162,7 @@ class QuizPracticeLayout extends StatelessWidget {
     }
     return TaiCard.margin(
       padding: promptPadding ?? const EdgeInsets.symmetric(vertical: Spacing.l),
+      clipBehavior: clipPromptInCard ? Clip.hardEdge : Clip.none,
       child: prompt,
     );
   }
