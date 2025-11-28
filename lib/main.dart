@@ -19,6 +19,7 @@ void main() async {
   final darkText = ThemeData.dark().textTheme;
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Tai Dam Tutor',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
