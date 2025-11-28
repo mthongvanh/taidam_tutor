@@ -171,7 +171,7 @@
     "characterId": 12,
     "character": "ꪶ",
     "lao": "ໂ-,-ົ-",
-    "romanization": "aw",
+    "romanization": "oh",
     "ipa": "/o/",
     "position": "before",
     "preComponent": "ꪶ",
@@ -704,14 +704,14 @@
     "characterId": 52,
     "character": "ꪤ",
     "lao": "ຢ",
-    "romanization": "y/z",
+    "romanization": "y",
     "altRomanizations": "d",
     "ipa": "/j-/",
     "highLow": "low",
     "audio": "a34",
     "image": "a34",
     "characterClass": "consonant",
-    "ipaDescription": "Say the 'y' sound from 'yes.'"
+    "ipaDescription": "Say the 'y' sound from 'yes. And 'z' when read slowly with emphasis."
   },
   {
     "characterId": 53,
