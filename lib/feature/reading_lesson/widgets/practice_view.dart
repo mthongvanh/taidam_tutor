@@ -16,6 +16,7 @@ class PracticeView extends StatelessWidget {
   Widget build(BuildContext context) {
     final practiceQuestions = state.practiceQuestions;
     final currentQuestion = practiceQuestions[state.currentIndex];
+    final progress = (state.currentIndex + 1) / practiceQuestions.length;
     final hasAnswered = state.selectedAnswerIndex != null;
     final totalQuestions = state.totalPracticeQuestions;
     final isLastQuestion = state.currentIndex >= practiceQuestions.length - 1;
@@ -31,45 +32,13 @@ class PracticeView extends StatelessWidget {
     }
 
     final promptCard = TaiCard.margin(
-      child: Container(
-        padding: EdgeInsets.all(Spacing.xl),
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primaryContainer,
-          borderRadius: BorderRadius.circular(12),
+      child: Text(
+        currentQuestion.character,
+        style: const TextStyle(
+          fontFamily: 'Tai Heritage Pro',
+          fontSize: 96,
         ),
-        child: Text(
-          currentQuestion.character,
-          style: const TextStyle(
-            fontFamily: 'Tai Heritage Pro',
-            fontSize: 96,
-          ),
-          textAlign: TextAlign.center,
-        ),
-      ),
-    );
-
-    final goalInfo = Container(
-      padding: EdgeInsets.all(Spacing.s),
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.secondaryContainer,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Column(
-        children: [
-          Text(
-            overallScoreText,
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(height: Spacing.xs),
-          Text(
-            'Current goal: ${state.currentGoal.displayText}${state.currentGoal.romanization.isNotEmpty ? ' (${state.currentGoal.romanization})' : ''}',
-            style: Theme.of(context).textTheme.bodyMedium,
-            textAlign: TextAlign.center,
-          ),
-        ],
+        textAlign: TextAlign.center,
       ),
     );
 
@@ -127,7 +96,6 @@ class PracticeView extends StatelessWidget {
       title: 'Which description matches this syllable?',
       prompt: promptCard,
       wrapPromptInCard: false,
-      promptExtras: [goalInfo],
       answerDescription: Text(
         'Select the description that matches this syllable.',
         style: Theme.of(context).textTheme.titleMedium,

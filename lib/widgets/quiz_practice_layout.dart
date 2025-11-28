@@ -92,7 +92,8 @@ class QuizPracticeLayout extends StatelessWidget {
         LinearProgressIndicator(
           value: resolvedProgress,
           minHeight: 8,
-          backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
+          backgroundColor:
+              Theme.of(context).colorScheme.surfaceContainerHighest,
           valueColor: AlwaysStoppedAnimation<Color>(
             Theme.of(context).colorScheme.primary,
           ),
@@ -239,8 +240,8 @@ class _ScoreChip extends StatelessWidget {
       child: Text(
         label,
         style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.w600,
-            ),
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }

@@ -10,6 +10,7 @@ import 'package:taidam_tutor/core/services/character_grouping_service.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/character_drill_cubit.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/cubit/character_drill_state.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/widgets/drill_completion_card.dart';
+import 'package:taidam_tutor/widgets/answer_option_button.dart';
 import 'package:taidam_tutor/widgets/error/tai_error.dart';
 import 'package:taidam_tutor/widgets/quiz_practice_layout.dart';
 
@@ -162,7 +163,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
               ),
           ],
         ),
-        promptPadding: EdgeInsets.zero,
+        wrapPromptInCard: false,
         answerDescription: Text(
           'Select the correct sound:',
           style: theme.textTheme.titleMedium?.copyWith(
@@ -170,21 +171,28 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
           ),
           textAlign: TextAlign.center,
         ),
-        answerOptions: [
-          _buildOptionsGrid(
-            options: state.options,
-            builder: (character) {
-              final isSelected =
-                  _selectedCharacter?.characterId == character.characterId;
-              return _buildSoundOptionButton(
-                context,
-                character,
-                isSelected,
-                theme,
-              );
+        answerOptions: state.options.asMap().entries.map((entry) {
+          final idx = entry.key;
+          final character = entry.value;
+          final isSelected =
+              _selectedCharacter?.characterId == character.characterId;
+
+          return AnswerOptionButton(
+            label: String.fromCharCode(65 + idx),
+            option: character.romanization ?? character.character,
+            isSelected: isSelected,
+            isCorrect:
+                character.characterId == state.targetCharacter.characterId,
+            hasAnswered: false,
+            onTap: () {
+              setState(() {
+                _selectedCharacter = character;
+              });
+              context.read<CharacterDrillCubit>().selectAnswer(character);
             },
-          ),
-        ],
+            showCorrectIcon: false,
+          );
+        }).toList(),
         answerExtras: [
           _DrillStatsRow(
             correctLabel: '${state.correctAnswers}',
@@ -193,11 +201,7 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
             secondaryColor: theme.colorScheme.secondary,
           ),
         ],
-        bottomButton: ElevatedButton.icon(
-          onPressed: null,
-          icon: const Icon(Icons.touch_app),
-          label: const Text('Select an answer to continue'),
-        ),
+        bottomButton: null,
       ),
     );
   }
@@ -249,24 +253,23 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
           style: theme.textTheme.bodyLarge,
           textAlign: TextAlign.center,
         ),
-        answerOptions: [
-          _buildOptionsGrid(
-            options: state.options,
-            builder: (character) {
-              final isSelected =
-                  character.characterId == state.selectedCharacter.characterId;
-              final isCorrectAnswer =
-                  character.characterId == state.targetCharacter.characterId;
-              return _buildSoundOptionButtonWithFeedback(
-                context,
-                character,
-                isSelected,
-                isCorrectAnswer,
-                theme,
-              );
-            },
-          ),
-        ],
+        answerOptions: state.options.asMap().entries.map((entry) {
+          final idx = entry.key;
+          final character = entry.value;
+          final isSelected =
+              character.characterId == state.selectedCharacter.characterId;
+          final isCorrectAnswer =
+              character.characterId == state.targetCharacter.characterId;
+
+          return AnswerOptionButton(
+            label: String.fromCharCode(65 + idx),
+            option: character.romanization ?? character.character,
+            isSelected: isSelected,
+            isCorrect: isCorrectAnswer,
+            hasAnswered: true,
+            onTap: null,
+          );
+        }).toList(),
         feedback: _AnsweredFeedback(isCorrect: state.isCorrect),
         answerExtras: [
           _DrillStatsRow(
@@ -313,127 +316,6 @@ class _CharacterDrillViewState extends State<_CharacterDrillView> {
       ),
     );
   }
-
-  Widget _buildSoundOptionButtonWithFeedback(
-    BuildContext context,
-    Character character,
-    bool isSelected,
-    bool isCorrectAnswer,
-    ThemeData theme,
-  ) {
-    Color? backgroundColor;
-    Color? borderColor;
-
-    if (isCorrectAnswer) {
-      backgroundColor = theme.colorScheme.primaryContainer;
-      borderColor = theme.colorScheme.primary;
-    } else if (isSelected) {
-      backgroundColor = theme.colorScheme.errorContainer;
-      borderColor = theme.colorScheme.error;
-    } else {
-      backgroundColor = theme.colorScheme.surface;
-      borderColor = theme.colorScheme.outline.withAlpha(77);
-    }
-
-    return Container(
-      decoration: BoxDecoration(
-        color: backgroundColor,
-        border: Border.all(
-          color: borderColor,
-          width: isSelected || isCorrectAnswer ? 3 : 1,
-        ),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Stack(
-        children: [
-          Center(
-            child: Text(
-              character.romanization ?? '',
-              style: theme.textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.bold,
-                color: isCorrectAnswer
-                    ? theme.colorScheme.primary
-                    : isSelected
-                        ? theme.colorScheme.error
-                        : theme.textTheme.bodyLarge?.color,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          if (isSelected || isCorrectAnswer)
-            Positioned(
-              top: 8,
-              right: 8,
-              child: Icon(
-                isCorrectAnswer ? Icons.check_circle : Icons.cancel,
-                color: isCorrectAnswer
-                    ? theme.colorScheme.primary
-                    : theme.colorScheme.error,
-                size: 24,
-              ),
-            ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildSoundOptionButton(
-    BuildContext context,
-    Character character,
-    bool isSelected,
-    ThemeData theme,
-  ) {
-    return InkWell(
-      onTap: () {
-        setState(() {
-          _selectedCharacter = character;
-        });
-        context.read<CharacterDrillCubit>().selectAnswer(character);
-      },
-      borderRadius: BorderRadius.circular(12),
-      child: Container(
-        decoration: BoxDecoration(
-          color: isSelected
-              ? theme.colorScheme.primaryContainer
-              : theme.colorScheme.surface,
-          border: Border.all(
-            color: isSelected
-                ? theme.colorScheme.primary
-                : theme.colorScheme.outline.withAlpha(77),
-            width: isSelected ? 3 : 1,
-          ),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: Center(
-          child: Text(
-            character.romanization ?? '',
-            style: theme.textTheme.titleLarge?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: isSelected
-                  ? theme.colorScheme.primary
-                  : theme.textTheme.bodyLarge?.color,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildOptionsGrid({
-    required List<Character> options,
-    required Widget Function(Character character) builder,
-  }) {
-    return GridView.count(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      crossAxisCount: 2,
-      mainAxisSpacing: Spacing.m,
-      crossAxisSpacing: Spacing.m,
-      childAspectRatio: 2.5,
-      children: options.map(builder).toList(),
-    );
-  }
 }
 
 class _DrillStatsRow extends StatelessWidget {
@@ -454,12 +336,6 @@ class _DrillStatsRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _StatChip(
-          icon: Icons.check_circle,
-          label: 'Correct',
-          value: correctLabel,
-          color: primaryColor,
-        ),
         _StatChip(
           icon: Icons.trending_up,
           label: 'Accuracy',
