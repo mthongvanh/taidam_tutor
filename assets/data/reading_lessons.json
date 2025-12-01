@@ -1702,6 +1702,413 @@
                     }
                 ]
             }
+        },
+        {
+            "lesson": {
+                "lessonType": "default",
+                "number": 9,
+                "title": "Consonants: l, v",
+                "description": "This lesson introduces two new consonants: l and h. You'll learn how to combine these consonants with previously learned vowels to form syllables such as 'la' and 'ho'.",
+                "goals": [
+                    {
+                        "characterIds": [
+                            54
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            56
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            57
+                        ]
+                    }
+                ],
+                "combinations": [
+                    {
+                        "characterIds": [
+                            54,
+                            18
+                        ],
+                        "description": "Combining consonant 'l' and vowel 'ua'"
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            5
+                        ],
+                        "description": "Combining consonant ''l' and vowel 'aa'"
+                    },
+                    {
+                        "characterIds": [
+                            56,
+                            7
+                        ],
+                        "description": "Combining consonant 'v' and vowel 'ee'"
+                    },
+                    {
+                        "characterIds": [
+                            57,
+                            22
+                        ],
+                        "description": "Combining consonant ''v' and vowel 'an'"
+                    }
+                ],
+                "examples": [
+                    {
+                        "characterIds": [
+                            54, 
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            39,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            54,
+                            17
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            30,
+                            19
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            38,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            54,
+                            20
+                            
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            22
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            54,
+                            22
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            8
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            54,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            13
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            54,
+                            13
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            43,
+                            5
+                            
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            54,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            33,
+                            4
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            17
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            42,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            20
+
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            32,
+                            16
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            16
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            8
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            10
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            11
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            22
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            12
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            10
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            4
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            26,
+                            21
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            29,
+                            18
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            36,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            56,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            57,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            51,
+                            8
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            57,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            36,
+                            23
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            57,
+                            22
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            57,
+                            7
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            49,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            57,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            57,
+                            17
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            39,
+                            19
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            24,
+                            22
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            57,
+                            10
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            55,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            46,
+                            20
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            58,
+                            5
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            54,
+                            18
+                        ]
+                    }
+                ]
+            }
         }
     ]
 }
