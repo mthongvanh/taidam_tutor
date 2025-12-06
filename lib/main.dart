@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:taidam_tutor/core/data/characters/models/character.dart';
+import 'package:taidam_tutor/core/data/reading_lessons/reading_lessons_repository.dart';
 import 'package:taidam_tutor/core/di/dependency_manager.dart';
 import 'package:taidam_tutor/feature/alphabet_practice/alphabet_practice_page.dart';
 import 'package:taidam_tutor/feature/character_list/character_list.dart';
@@ -16,6 +17,7 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   DependencyManager().registerDependencies();
+  await dm.get<ReadingLessonsRepository>().prefetchRemoteLessons();
   final darkText = ThemeData.dark().textTheme;
   runApp(
     MaterialApp(
