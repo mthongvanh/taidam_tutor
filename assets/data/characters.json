@@ -843,5 +843,29 @@
     "prePost": "",
     "characterClass": "special",
     "ipaDescription": "IPA isn't provided; the romanization 'nung' (like 'noong') is your hint."
+  },
+  {
+    "characterId": 64,
+    "character": "꪿",
+    "audio": "",
+    "image": "",
+    "characterType": 1,
+    "highLow": "",
+    "romanization": "",
+    "prePost": "post",
+    "characterClass": "tone",
+    "ipaDescription": "High-rising tone marker."
+  },
+  {
+    "characterId": 65,
+    "character": "꫁",
+    "audio": "",
+    "image": "",
+    "characterType": 1,
+    "highLow": "",
+    "romanization": "",
+    "prePost": "post",
+    "characterClass": "tone",
+    "ipaDescription": "High-mid tone marker."
   }
 ]

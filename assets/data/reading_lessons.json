@@ -2171,7 +2171,7 @@
                 "examples": [
                     {
                         "characterIds": [
-                            58, 
+                            58,
                             5
                         ]
                     },
@@ -2528,7 +2528,7 @@
                     {
                         "characterIds": [
                             61,
-                            9                            
+                            9
                         ]
                     },
                     {
@@ -2571,6 +2571,497 @@
                         "characterIds": [
                             57,
                             22
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "lesson": {
+                "lessonType": "default",
+                "number": 11,
+                "title": "Tones: low and falling",
+                "description": "mai ek (꪿) (low tone) and mai tho (꫁) (falling tone) are introduced in this lesson. Mai ek is the second tone (high-rising) for checked and smooth syllables, while mai tho is the fifth tone (high-mid) for checked and smooth syllables.",
+                "goals": [
+                    {
+                        "characterIds": [
+                            64
+                        ]
+                    },
+                    {
+                        "characterIds": [
+                            65
+                        ]
+                    }
+                ],
+                "combinations": [
+                    {
+                        "word": "ꪜꪱ",
+                        "characterIds": [
+                            46,
+                            5
+                        ],
+                        "description": ""
+                    },
+                    {
+                        "word": "ꪜ꪿ꪱ",
+                        "characterIds": [
+                            46,
+                            64,
+                            5
+                        ],
+                        "description": ""
+                    },
+                    {
+                        "word": "ꪜ꫁ꪱ",
+                        "characterIds": [
+                            46,
+                            65,
+                            5
+                        ],
+                        "description": ""
+                    }
+                ],
+                "examples": [
+                    {
+                        "words": "ꪜꪱ",
+                        "characterIds": [
+                            46,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪀ꪿ꪱ",
+                        "characterIds": [
+                            24,
+                            64,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪜ꪿ꪱ",
+                        "characterIds": [
+                            46,
+                            64,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪁꪱ",
+                        "characterIds": [
+                            25,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪜ꫁ꪱ",
+                        "characterIds": [
+                            46,
+                            65,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪨ꫁ꪱ",
+                        "characterIds": [
+                            54,
+                            65,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪀꪷ",
+                        "characterIds": [
+                            24,
+                            13
+                        ]
+                    },
+                    {
+                        "words": "ꪀ꫁ꪱ",
+                        "characterIds": [
+                            24,
+                            65,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪀ꪿",
+                        "characterIds": [
+                            24,
+                            20,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪁꪱ",
+                        "characterIds": [
+                            25,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪜ",
+                        "characterIds": [
+                            46,
+                            20
+                        ]
+                    },
+                    {
+                        "words": "ꪁ꫁ꪱ",
+                        "characterIds": [
+                            25,
+                            65,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪁ꪿ꪱ",
+                        "characterIds": [
+                            25,
+                            64,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪣꪳ",
+                        "characterIds": [
+                            51,
+                            8
+                        ]
+                    },
+                    {
+                        "words": "ꪻꪚ",
+                        "characterIds": [
+                            44,
+                            19
+                        ]
+                    },
+                    {
+                        "words": "ꪄ꪿ꪱ",
+                        "characterIds": [
+                            26,
+                            64,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪄ꫁ꪱ",
+                        "characterIds": [
+                            26,
+                            65,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪵꪚ꫁",
+                        "characterIds": [
+                            44,
+                            11,
+                            65
+                        ]
+                    },
+                    {
+                        "words": "ꪊꪲ",
+                        "characterIds": [
+                            30,
+                            7
+                        ]
+                    },
+                    {
+                        "words": "ꪹꪐ꪿",
+                        "characterIds": [
+                            34,
+                            17,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪊꪾ꫁",
+                        "characterIds": [
+                            30,
+                            23,
+                            65
+                        ]
+                    },
+                    {
+                        "words": "ꪄ꫁ꪺ",
+                        "characterIds": [
+                            26,
+                            65,
+                            18
+                        ]
+                    },
+                    {
+                        "words": "ꪎ꪿ꪱ",
+                        "characterIds": [
+                            32,
+                            64,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪜꪱ",
+                        "characterIds": [
+                            46,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪨꪱ",
+                        "characterIds": [
+                            54,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪎꪸ꪿",
+                        "characterIds": [
+                            32,
+                            16,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪎ꪿",
+                        "characterIds": [
+                            32,
+                            20,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪀ꪿",
+                        "characterIds": [
+                            24,
+                            20,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪘꪴ",
+                        "characterIds": [
+                            42,
+                            9
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪘ꪿",
+                        "characterIds": [
+                            42,
+                            20,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪻꪚ꫁",
+                        "characterIds": [
+                            44,
+                            19,
+                            65
+                        ]
+                    },
+                    {
+                        "words": "ꪋ꫁ꪱ",
+                        "characterIds": [
+                            31,
+                            65,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪒ꪿ꪱ",
+                        "characterIds": [
+                            36,
+                            64,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪫ꪿ꪱ",
+                        "characterIds": [
+                            57,
+                            64,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪏ꫁ꪱ",
+                        "characterIds": [
+                            33,
+                            65,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪘꪷ꪿",
+                        "characterIds": [
+                            42,
+                            13,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪐ꫁ꪱ",
+                        "characterIds": [
+                            34,
+                            65,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪁꪱ",
+                        "characterIds": [
+                            25,
+                            5
+                        ]
+                    },
+                    {
+                        "words": "ꪐ꫁ꪽ",
+                        "characterIds": [
+                            34,
+                            65,
+                            22
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪒ꫁",
+                        "characterIds": [
+                            36,
+                            20,
+                            65
+                        ]
+                    },
+                    {
+                        "words": "ꪑ꫁ꪽ",
+                        "characterIds": [
+                            35,
+                            65,
+                            22
+                        ]
+                    },
+                    {
+                        "words": "ꪹꪄ꫁ꪱ",
+                        "characterIds": [
+                            26,
+                            65,
+                            21
+                        ]
+                    },
+                    {
+                        "words": "ꪁꪽ",
+                        "characterIds": [
+                            25,
+                            22
+                        ]
+                    },
+                    {
+                        "words": "ꪒ꫁ꪺ",
+                        "characterIds": [
+                            36,
+                            65,
+                            18
+                        ]
+                    },
+                    {
+                        "words": "ꪵꪒ꪿",
+                        "characterIds": [
+                            36,
+                            11,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪎꪷ",
+                        "characterIds": [
+                            32,
+                            13
+                        ]
+                    },
+                    {
+                        "words": "ꪔꪾ꪿",
+                        "characterIds": [
+                            38,
+                            23,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪔꪸ꫁",
+                        "characterIds": [
+                            38,
+                            16,
+                            65
+                        ]
+                    },
+                    {
+                        "words": "ꪹꪋ꫁ꪱ",
+                        "characterIds": [
+                            31,
+                            65,
+                            21
+                        ]
+                    },
+                    {
+                        "words": "ꪵꪀ꪿",
+                        "characterIds": [
+                            24,
+                            11,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪵꪕ꫁",
+                        "characterIds": [
+                            39,
+                            11,
+                            65
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪩ",
+                        "characterIds": [
+                            54,
+                            20
+                        ]
+                    },
+                    {
+                        "words": "ꪙꪾ꪿",
+                        "characterIds": [
+                            43,
+                            23,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪭ꪿",
+                        "characterIds": [
+                            59,
+                            20,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪔ꪿",
+                        "characterIds": [
+                            38,
+                            20,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪶꪁ꪿",
+                        "characterIds": [
+                            25,
+                            12,
+                            64
+                        ]
+                    },
+                    {
+                        "words": "ꪼꪣ꫁",
+                        "characterIds": [
+                            51,
+                            20,
+                            65
                         ]
                     }
                 ]

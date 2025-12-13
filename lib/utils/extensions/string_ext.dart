@@ -11,48 +11,105 @@ extension StringX on String {
     }
 
     // for multiple characters, handle vowel combinations specially
-    String combined = '';
-    final charactersAdded = <int>[];
-    for (final character in characters.indexed) {
-      if (charactersAdded.contains(character.$1)) {
-        // already processed as part of a previous combination
-        continue;
+    final combined = StringBuffer();
+    // tracks vowels we plan to output later (so tone marks can sit between parts)
+    final deferredVowelOutputs = <int, _DeferredVowelOutput>{};
+
+    for (var index = 0; index < characters.length; index++) {
+      // write any deferred pieces scheduled for the current index first
+      final deferred = deferredVowelOutputs.remove(index);
+      if (deferred != null) {
+        if (deferred.postComponent?.isNotEmpty ?? false) {
+          combined.write(deferred.postComponent);
+        }
+        if (deferred.skipOriginalGlyph) {
+          continue;
+        }
       }
 
-      final component = character.$2;
+      final component = characters[index];
+
       if (component.characterClass == CharacterClass.consonant) {
-        // for consonants, we need to check the next character to see if it's a vowel
-        // that modifies the consonant glyph
-        final nextIndex = character.$1 + 1;
-        if (nextIndex < characters.length) {
-          final nextComponent = characters[nextIndex];
-          if (nextComponent.characterClass == CharacterClass.vowel) {
-            // mark the next character as added only when it is part of the combination
-            charactersAdded.add(nextIndex);
-            // there is a next character. Check if it's a vowel that modifies this consonant
-            // e.g., a consonant followed by a vowel with pre/post components
-            // The logic is:
-            // - If the vowel has a pre-component, prepend it to the consonant glyph
-            // - If the vowel has a post-component, append it to the consonant glyph
-            if (nextComponent.preComponent?.isNotEmpty ?? false) {
-              combined += nextComponent.preComponent!;
-            }
-            if (nextComponent.postComponent?.isNotEmpty ?? false) {
-              combined +=
-                  "${component.character}${nextComponent.postComponent ?? ''}";
-            } else {
-              combined += component.character;
-            }
-            continue;
+        // find the next vowel that provides split glyph parts for this consonant
+        final splitVowelMatch =
+            _findSplitVowelMatch(characters, startIndex: index);
+        if (splitVowelMatch != null) {
+          if (splitVowelMatch.preComponent?.isNotEmpty ?? false) {
+            combined.write(splitVowelMatch.preComponent);
           }
+          combined.write(component.character);
+
+          // delay writing the vowel's post component until we reach its index
+          deferredVowelOutputs[splitVowelMatch.index] = _DeferredVowelOutput(
+            postComponent: splitVowelMatch.postComponent,
+            skipOriginalGlyph: true,
+          );
+          continue;
         }
-        // if there is no vowel partner, keep the consonant glyph as-is
-        combined += component.character;
-      } else {
-        // Standalone vowel or vowel not following a consonant: include its glyph
-        combined += component.character;
       }
+
+      combined.write(component.character);
     }
-    return combined;
+    return combined.toString();
   }
+}
+
+class _DeferredVowelOutput {
+  /// Holds the text we need to emit at a later character index.
+  const _DeferredVowelOutput({
+    this.postComponent,
+    this.skipOriginalGlyph = false,
+  });
+
+  final String? postComponent;
+  final bool skipOriginalGlyph;
+}
+
+class _SplitVowelMatch {
+  /// Describes a vowel that splits across a consonant (pre + post component).
+  const _SplitVowelMatch({
+    required this.index,
+    this.preComponent,
+    this.postComponent,
+  });
+
+  final int index;
+  final String? preComponent;
+  final String? postComponent;
+}
+
+_SplitVowelMatch? _findSplitVowelMatch(
+  List<Character> characters, {
+  required int startIndex,
+}) {
+  for (var i = startIndex + 1; i < characters.length; i++) {
+    final candidate = characters[i];
+
+    if (candidate.characterClass == CharacterClass.consonant) {
+      // another consonant ends the search window
+      break;
+    }
+
+    if (_isToneMarker(candidate)) {
+      // tone markers can appear between consonant and vowel parts, so skip
+      continue;
+    }
+
+    final hasComponents = (candidate.preComponent?.isNotEmpty ?? false) ||
+        (candidate.postComponent?.isNotEmpty ?? false);
+    if (candidate.characterClass == CharacterClass.vowel && hasComponents) {
+      return _SplitVowelMatch(
+        index: i,
+        preComponent: candidate.preComponent,
+        postComponent: candidate.postComponent,
+      );
+    }
+  }
+  return null;
+}
+
+bool _isToneMarker(Character character) {
+  // tone markers are stored as "unknown" with positional metadata
+  return character.characterClass == CharacterClass.unknown &&
+      (character.prePost?.isNotEmpty ?? false);
 }
