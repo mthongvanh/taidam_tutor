@@ -9,6 +9,7 @@ Character _character({
   required CharacterClass characterClass,
   String? preComponent,
   String? postComponent,
+  String? prePost,
 }) {
   return Character(
     characterId: id,
@@ -16,6 +17,7 @@ Character _character({
     characterClass: characterClass,
     preComponent: preComponent,
     postComponent: postComponent,
+    prePost: prePost,
   );
 }
 
@@ -73,10 +75,12 @@ void main() {
       expect(result, 'ꪁꪫ');
     });
 
-    test('falls back to consonant glyph when vowel has no split parts', () {
+    test(
+        'falls back to consonant glyph based on character order when vowel has no split parts',
+        () {
       final consonant = _character(
         id: 1,
-        glyph: 'ꪂ',
+        glyph: 'ꪫ',
         characterClass: CharacterClass.consonant,
       );
       final vowel = _character(
@@ -87,8 +91,7 @@ void main() {
 
       final result = StringX.fromCharacters([consonant, vowel]);
 
-      expect(result, 'ꪂ');
-      expect(result.contains('ꪺ'), isFalse);
+      expect(result, 'ꪫꪺ');
     });
 
     test('keeps standalone vowels and special glyphs intact', () {
@@ -164,6 +167,32 @@ void main() {
       final result = StringX.fromCharacters([consonant, special]);
 
       expect(result, 'ꪆ꪿');
+    });
+
+    test('retains tone marker between split vowel components', () {
+      final consonant = _character(
+        id: 1,
+        glyph: 'ꪋ',
+        characterClass: CharacterClass.consonant,
+      );
+      final toneMarker = _character(
+        id: 2,
+        glyph: '꫁',
+        characterClass: CharacterClass.unknown,
+        prePost: 'post',
+      );
+      final splitVowel = _character(
+        id: 3,
+        glyph: 'ꪹ◌ꪱ',
+        characterClass: CharacterClass.vowel,
+        preComponent: 'ꪹ',
+        postComponent: 'ꪱ',
+      );
+
+      final result =
+          StringX.fromCharacters([consonant, toneMarker, splitVowel]);
+
+      expect(result, 'ꪹꪋ꫁ꪱ');
     });
   });
 }
