@@ -123,14 +123,18 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   }
 
   void _startPractice(ReadingLessonActive currentState) {
-    // Generate practice questions from combinations
-    if (currentState.activeCombinations.isEmpty) {
+    // Generate practice questions from combinations and matching examples
+    final practiceItems = _buildPracticeItems(
+      currentState.activeCombinations,
+      currentState.activeExamples,
+    );
+
+    if (practiceItems.isEmpty) {
       _advanceToNextGoalOrComplete(currentState);
       return;
     }
 
-    _practiceQuestions =
-        _generatePracticeQuestions(currentState.activeCombinations);
+    _practiceQuestions = _generatePracticeQuestions(practiceItems);
     _totalPracticeQuestionsOverall += _practiceQuestions.length;
 
     emit(currentState.copyWith(
@@ -144,17 +148,17 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
   }
 
   List<PracticeQuestion> _generatePracticeQuestions(
-    List<Combination> combinations,
+    List<_PracticeItem> practiceItems,
   ) {
-    // Create a practice question for each combination
-    return combinations.map((combination) {
-      final wrongAnswers = combinations
-          .where((c) => c != combination)
-          .map((c) => c.practiceDescription)
+    // Create a practice question for each practice item
+    return practiceItems.map((item) {
+      final wrongAnswers = practiceItems
+          .where((candidate) => candidate != item)
+          .map((candidate) => candidate.answer)
           .toList()
         ..shuffle(_random);
 
-      final options = <String>[combination.practiceDescription];
+      final options = <String>[item.answer];
 
       for (final answer in wrongAnswers) {
         if (options.length >= 4) break;
@@ -166,9 +170,9 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
       options.shuffle(_random);
 
       return PracticeQuestion(
-        character: combination.result,
+        character: item.prompt,
         options: options,
-        correctAnswerIndex: options.indexOf(combination.practiceDescription),
+        correctAnswerIndex: options.indexOf(item.answer),
       );
     }).toList()
       ..shuffle(_random); // Shuffle question order
@@ -231,8 +235,7 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
       totalPracticeQuestions: 0,
       selectedAnswerIndex: null,
       isCorrect: null,
-      activeCombinations:
-          _combinationsForGoal(currentState.lesson, goalIndex),
+      activeCombinations: _combinationsForGoal(currentState.lesson, goalIndex),
       activeExamples: _examplesForGoal(currentState.lesson, goalIndex),
       practiceQuestions: const [],
     ));
@@ -301,6 +304,42 @@ class ReadingLessonCubit extends Cubit<ReadingLessonState> {
         .toList();
   }
 
+  List<_PracticeItem> _buildPracticeItems(
+    List<Combination> combinations,
+    List<Example> examples,
+  ) {
+    final rawItems = <_PracticeItem>[
+      for (final combination in combinations)
+        _PracticeItem(
+          prompt: combination.result,
+          answer: combination.practiceDescription,
+        ),
+      for (final example in examples)
+        _PracticeItem(
+          prompt: example.displayWord,
+          answer: example.displayRomanization,
+        ),
+    ];
+
+    final seenKeys = <String>{};
+    final filteredItems = <_PracticeItem>[];
+
+    for (final item in rawItems) {
+      final prompt = item.prompt.trim();
+      final answer = item.answer.trim();
+      if (prompt.isEmpty || answer.isEmpty) {
+        continue;
+      }
+
+      final key = '$prompt::$answer';
+      if (seenKeys.add(key)) {
+        filteredItems.add(item);
+      }
+    }
+
+    return filteredItems;
+  }
+
   bool _matchesGoalCharacters(
     LessonCharacterSet source,
     LessonGoal goal,
@@ -325,5 +364,15 @@ class PracticeQuestion {
     required this.character,
     required this.options,
     required this.correctAnswerIndex,
+  });
+}
+
+class _PracticeItem {
+  final String prompt;
+  final String answer;
+
+  const _PracticeItem({
+    required this.prompt,
+    required this.answer,
   });
 }

@@ -62,7 +62,7 @@ class PracticeView extends StatelessWidget {
       currentQuestion: state.currentIndex + 1,
       totalQuestions: practiceQuestions.length,
       scoreLabel: overallScoreText,
-      title: 'Which description matches this syllable?',
+      title: 'Which description matches this syllable or word?',
       prompt: promptCard,
       wrapPromptInCard: false,
       answerDescription: Text(
