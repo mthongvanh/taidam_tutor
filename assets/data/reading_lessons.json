@@ -2580,8 +2580,8 @@
             "lesson": {
                 "lessonType": "default",
                 "number": 11,
-                "title": "Tones: low and falling",
-                "description": "mai ek (꪿) (low tone) and mai tho (꫁) (falling tone) are introduced in this lesson. Mai ek is the second tone (high-rising) for checked and smooth syllables, while mai tho is the fifth tone (high-mid) for checked and smooth syllables.",
+                "title": "Tones marks",
+                "description": "The tone marks, mai ek (꪿) and mai tho (꫁), are introduced in this lesson. They appear above the consonant, and whether the consonant is high or low determines the actual tone value.\n\nTai Dam has six tones:\n1 - low mid,\n2 - high rising,\n3 - low falling,\n4 - high,\n5 - high-mid,\n6 - mid-falling.\n\nWith open syllables, mai ek (꪿) is second tone (high-rising) for high class consonants and fifth tone (high-mid) for low class consonants.\n\nWith open syllables, mai tho (꫁) is the third tone (low-falling) for low class consonants and sixth tone (mid-falling) for high class consonants.",
                 "goals": [
                     {
                         "characterIds": [
@@ -2601,16 +2601,16 @@
                             46,
                             5
                         ],
-                        "description": ""
+                        "description": "No tone indicator so this is an even tone. It means the intonation doesn't rise or fall."
                     },
                     {
-                        "word": "ꪜ꪿ꪱ",
+                        "word": "ꪼꪀ꪿",
                         "characterIds": [
                             46,
                             64,
                             5
                         ],
-                        "description": ""
+                        "description": "Mai ek (꪿) when paired with a high consonant, like ꪀ, is the second tone (high-rising) as in ꪼꪀ꪿ (chicken).\n\nWhen paired with a low consonant, like ꪜ, it is the fifth tone (high-mid) as in older sibling"
                     },
                     {
                         "word": "ꪜ꫁ꪱ",
@@ -2619,7 +2619,7 @@
                             65,
                             5
                         ],
-                        "description": ""
+                        "description": "Mai tho (꫁) with a low consonant is the third tone (low-falling) as in ꪹꪄ꫁ꪱ (rice).\n\nWith a high consonant, it is the sixth tone (mid-falling) as in ꪙꪾ꫁ (water)"
                     }
                 ],
                 "examples": [

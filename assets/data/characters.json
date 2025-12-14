@@ -854,7 +854,7 @@
     "romanization": "",
     "prePost": "post",
     "characterClass": "tone",
-    "ipaDescription": "High-rising tone marker."
+    "ipaDescription": "High-rising and high-mid tone marker."
   },
   {
     "characterId": 65,
@@ -866,6 +866,6 @@
     "romanization": "",
     "prePost": "post",
     "characterClass": "tone",
-    "ipaDescription": "High-mid tone marker."
+    "ipaDescription": "Low-falling and mid-falling tone marker."
   }
 ]
