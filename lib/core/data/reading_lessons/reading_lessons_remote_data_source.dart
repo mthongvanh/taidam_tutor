@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
+import 'reading_lessons_payload.dart';
+
 /// Fetches reading lessons JSON from the remote CDN endpoint.
 class ReadingLessonsRemoteDataSource {
   ReadingLessonsRemoteDataSource({http.Client? client, String? endpoint})
@@ -15,7 +17,7 @@ class ReadingLessonsRemoteDataSource {
       'https://tveye.io/taidam-tutor/assets/reading_lessons.json';
 
   /// Downloads and parses the remote lessons payload.
-  Future<List<Map<String, dynamic>>> fetchLessons() async {
+  Future<ReadingLessonsPayload> fetchLessons() async {
     final uri = Uri.parse(_endpoint);
     final response = await _client.get(uri);
 
@@ -26,10 +28,18 @@ class ReadingLessonsRemoteDataSource {
     }
 
     final decoded = json.decode(response.body) as Map<String, dynamic>;
+    final timestampRaw = decoded['lastUpdated'] as String?;
+    final lastUpdated =
+        timestampRaw != null ? DateTime.tryParse(timestampRaw) : null;
     final lessonsJson = decoded['lessons'] as List<dynamic>? ?? const [];
-    return lessonsJson
+    final lessons = lessonsJson
         .whereType<Map<String, dynamic>>()
         .map((lesson) => Map<String, dynamic>.from(lesson))
         .toList(growable: false);
+
+    return ReadingLessonsPayload(
+      lessons: lessons,
+      lastUpdated: lastUpdated,
+    );
   }
 }

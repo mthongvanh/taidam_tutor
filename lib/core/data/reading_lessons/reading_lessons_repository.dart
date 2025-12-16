@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import 'reading_lessons_local_data_source.dart';
+import 'reading_lessons_payload.dart';
 import 'reading_lessons_remote_data_source.dart';
 
 class ReadingLessonsRepository {
@@ -13,7 +14,8 @@ class ReadingLessonsRepository {
 
   final ReadingLessonsLocalDataSource _localDataSource;
   final ReadingLessonsRemoteDataSource _remoteDataSource;
-  List<Map<String, dynamic>>? _remoteLessonsCache;
+  ReadingLessonsPayload? _localLessonsCache;
+  ReadingLessonsPayload? _remoteLessonsCache;
 
   /// Attempts to warm the remote cache so that UI reads return immediately.
   Future<void> prefetchRemoteLessons() async {
@@ -22,15 +24,20 @@ class ReadingLessonsRepository {
 
   Future<List<Map<String, dynamic>>> getLessons(
       {bool preferRemote = true}) async {
+    final localPayload = await _getLocalLessons();
+
     if (preferRemote) {
-      final remoteLessons = await _getRemoteLessons();
-      if (remoteLessons != null) {
-        return remoteLessons;
+      final remotePayload = await _getRemoteLessons();
+      if (remotePayload != null) {
+        if (_shouldUseRemote(remotePayload, localPayload)) {
+          return _cloneLessons(remotePayload.lessons);
+        }
+      } else {
+        debugPrint('ReadingLessonsRepository: using bundled lessons fallback.');
       }
-      debugPrint('ReadingLessonsRepository: using bundled lessons fallback.');
     }
 
-    return _localDataSource.getLessons();
+    return _cloneLessons(localPayload.lessons);
   }
 
   Future<Map<String, dynamic>?> getLessonByNumber(
@@ -50,9 +57,14 @@ class ReadingLessonsRepository {
     return null;
   }
 
-  Future<List<Map<String, dynamic>>?> _getRemoteLessons() async {
+  Future<ReadingLessonsPayload> _getLocalLessons() async {
+    _localLessonsCache ??= await _localDataSource.getLessons();
+    return _clonePayload(_localLessonsCache!);
+  }
+
+  Future<ReadingLessonsPayload?> _getRemoteLessons() async {
     if (_remoteLessonsCache != null) {
-      return _cloneLessons(_remoteLessonsCache!);
+      return _clonePayload(_remoteLessonsCache!);
     }
 
     final fetched = await _tryFetchRemoteLessons();
@@ -61,10 +73,10 @@ class ReadingLessonsRepository {
     }
 
     _remoteLessonsCache = fetched;
-    return _cloneLessons(fetched);
+    return _clonePayload(fetched);
   }
 
-  Future<List<Map<String, dynamic>>?> _tryFetchRemoteLessons() async {
+  Future<ReadingLessonsPayload?> _tryFetchRemoteLessons() async {
     try {
       return await _remoteDataSource.fetchLessons();
     } catch (error, stackTrace) {
@@ -74,11 +86,49 @@ class ReadingLessonsRepository {
     }
   }
 
+  ReadingLessonsPayload _clonePayload(ReadingLessonsPayload payload) {
+    return ReadingLessonsPayload(
+      lessons: _cloneLessons(payload.lessons),
+      lastUpdated: payload.lastUpdated,
+    );
+  }
+
   List<Map<String, dynamic>> _cloneLessons(
     List<Map<String, dynamic>> lessons,
   ) {
     return lessons
         .map((lesson) => Map<String, dynamic>.from(lesson))
         .toList(growable: false);
+  }
+
+  bool _shouldUseRemote(
+    ReadingLessonsPayload remote,
+    ReadingLessonsPayload local,
+  ) {
+    final remoteUpdated = remote.lastUpdated;
+    final localUpdated = local.lastUpdated;
+
+    if (remoteUpdated == null && localUpdated == null) {
+      return remote.lessons.isNotEmpty;
+    }
+
+    if (remoteUpdated == null) {
+      return false;
+    }
+
+    if (localUpdated == null) {
+      return true;
+    }
+
+    if (remoteUpdated.isAfter(localUpdated)) {
+      return true;
+    }
+
+    final updatesMatch = remoteUpdated.isAtSameMomentAs(localUpdated);
+    if (updatesMatch && local.lessons.isEmpty && remote.lessons.isNotEmpty) {
+      return true;
+    }
+
+    return false;
   }
 }
